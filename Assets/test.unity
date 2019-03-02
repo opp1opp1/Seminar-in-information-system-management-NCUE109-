@@ -125,6 +125,7 @@ GameObject:
   - component: {fileID: 200993050}
   - component: {fileID: 200993049}
   - component: {fileID: 200993048}
+  - component: {fileID: 200993053}
   m_Layer: 0
   m_Name: Cylinder
   m_TagString: Untagged
@@ -214,6 +215,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &200993053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 200993047}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91c84277e9998dc4ca46beefbaa8773b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sphere: {fileID: 1752712968489358, guid: 5dcdabed58ef8aa418caf6625c83ce54, type: 2}
+  Shoot_Pos: 0.5
 --- !u!1 &465406281
 GameObject:
   m_ObjectHideFlags: 0
