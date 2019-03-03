@@ -11,11 +11,21 @@ public class Playermove : MonoBehaviour {
     private float screenWeight;             //屏幕宽度
     public Vector3 fristPos;//接触时的position 
     public Vector3 twoPos;//移动后的position 
-                          // Use this for initialization
+
+    private Vector3 moveDirection;
+    public float moveSpeed;
+    public float jumpForce;
+    public CharacterController controller;
+    public float gravityScale;
+
+
+
+
+    // Use this for initialization
     void Start () {
         m_transform = this.transform;
         screenWeight = Screen.width;        //获取屏幕宽度
-
+        controller = GetComponent<CharacterController>();  //設置controller為角色控制器
     }
 	
 	// Update is called once per frame
@@ -60,6 +70,21 @@ public class Playermove : MonoBehaviour {
             }
         }
 #endif
+
+        if (controller.isGrounded)  //如果角色是在地面上，不是跳起來的狀態
+        {
+            if (Input.GetButtonDown("Jump")) //按跳起來(預設是空白建，我改成J鍵)
+            {
+                moveDirection.y = jumpForce;  //角色Y方向增加(就是跳起來)
+            }
+        }
+
+        moveDirection.y = moveDirection.y + (Physics.gravity.y * gravityScale * Time.deltaTime);   //賦予角色跳起來後跳下來的速度
+        controller.Move(moveDirection * Time.deltaTime);  //用deltatime去控制每台顯示器不同的平衡
+
+
+
+
 
         //Translate移动控制函数
         float horizontal = Input.GetAxis("Horizontal"); //A D 左右
