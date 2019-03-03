@@ -10,8 +10,8 @@
 *.sln
 *.user
 *.userprefs
-*.meta
+#*.meta
 *.tmp
  
 # need include the meta of file
-!*.*.meta
+#!*.*.meta
