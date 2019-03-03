@@ -20,7 +20,7 @@ public class PlayerShoot : MonoBehaviour {
         CheckFiretime += Time.deltaTime;
         if (Input.GetKeyUp(KeyCode.Space)&& CheckFiretime > ShootRate && MaxCharge>=1)
         {
-            Instantiate(sphere, (this.gameObject.transform.position + new Vector3( Shoot_Pos,0f, 0f)), this.gameObject.transform.rotation);
+            Instantiate(sphere, (this.gameObject.transform.position + new Vector3( 0f,0f, Shoot_Pos)), this.gameObject.transform.rotation);
             sphere.gameObject.transform.rotation = this.gameObject.transform.rotation;
             MaxCharge -= 1;
             CheckFiretime = 0;
