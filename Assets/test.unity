@@ -548,8 +548,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdbe5813d88ff504f8bfa3fbdbcaae1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage_byplayer: 10
-  current_health: 1
+  current_health: 0
 --- !u!1 &1833864205
 GameObject:
   m_ObjectHideFlags: 0

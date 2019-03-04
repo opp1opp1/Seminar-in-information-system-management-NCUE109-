@@ -37,7 +37,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1752712968489358}
-  m_LocalRotation: {x: 0, y: 0.08140666, z: 0, w: 0.996681}
+  m_LocalRotation: {x: 0, y: 0.92865735, z: 0, w: -0.37093884}
   m_LocalPosition: {x: 0, y: 0.5, z: 0}
   m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
   m_Children: []
@@ -109,6 +109,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxTime: 3
+  bullet_damage: 5
 --- !u!135 &135015490607960864
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -116,7 +117,7 @@ SphereCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1752712968489358}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5

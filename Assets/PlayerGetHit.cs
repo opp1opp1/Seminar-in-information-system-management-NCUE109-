@@ -3,28 +3,32 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerGetHit : MonoBehaviour {
-    public float damage_byplayer;
-    public float current_health;
+    public float current_health ;
     private Rigidbody rb;
+    private float damage_count;
     // Use this for initialization
     void Start () {
-        rb = GetComponent<Rigidbody> ();
-       
+        rb = GetComponent<Rigidbody>();
+        
     }
 	
 	// Update is called once per frame
 	void Update () {
 		
 	}
-    void OnCollisionEnter(Collision col)
+    private void OnTriggerEnter(Collider other)
     {
-        if (col.gameObject.tag == "Bullet")
+        if (other.tag.CompareTo("Bullet") == 0)
         {
-            // a rigidbody tagged as "Bullet" hit the player       
-            
-            rb.AddForce(new Vector3(-col.gameObject.transform.rotation.x, -col.gameObject.transform.rotation.y, -col.gameObject.transform.rotation.z) * damage_byplayer* current_health);
-            current_health += damage_byplayer;
-            Destroy(col.gameObject);
+             float damage = other.GetComponent<bulletdestroy>().bullet_damage;
+            damage_count = rb.mass * damage*current_health;
+            if (damage_count <= 0)
+            {
+                damage_count = 1;
+            }
+            rb.AddForce(new Vector3(this.transform.position.x - other.transform.position.x, this.transform.position.y - other.transform.position.y, this.transform.position.z - other.transform.position.z) * damage_count);
+            current_health += damage;
+            Destroy(other.gameObject);
         }
     }
 }
