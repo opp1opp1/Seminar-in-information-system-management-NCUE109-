@@ -16,6 +16,8 @@
 *.booproj
 # Unity3D generated meta files
 *.meta
+# Visual Studio cache directory
+.vs/
  
 # need include the meta of file
 !*.*.meta
