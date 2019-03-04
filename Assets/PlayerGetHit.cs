@@ -6,10 +6,11 @@ public class PlayerGetHit : MonoBehaviour {
     public float current_health ;
     private Rigidbody rb;
     private float damage_count;
+    private GameObject target;
     // Use this for initialization
     void Start () {
         rb = GetComponent<Rigidbody>();
-        
+       
     }
 	
 	// Update is called once per frame
@@ -29,6 +30,10 @@ public class PlayerGetHit : MonoBehaviour {
             rb.AddForce(new Vector3(this.transform.position.x - other.transform.position.x, this.transform.position.y - other.transform.position.y, this.transform.position.z - other.transform.position.z) * damage_count);
             current_health += damage;
             Destroy(other.gameObject);
+            target = GameObject.Find("ashe");
+             target.GetComponent<PlayerShoot>().Ultmatecharge+=5f;
+          
+
         }
     }
 }
