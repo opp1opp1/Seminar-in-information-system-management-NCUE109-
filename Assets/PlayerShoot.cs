@@ -31,6 +31,6 @@ public class PlayerShoot : MonoBehaviour {
             MaxCharge += 1;
             CheckChargetime = 0;
         }
-
+        sphere.transform.parent = gameObject.transform;
     }
 }
