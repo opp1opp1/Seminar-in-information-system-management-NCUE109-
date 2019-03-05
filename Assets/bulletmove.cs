@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class bulletmove : MonoBehaviour {
     public float Bullet_Fly_speed;
-
+   
     // Use this for initialization
     void Start () {
         

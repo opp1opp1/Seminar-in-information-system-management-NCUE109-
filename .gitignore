@@ -8,10 +8,16 @@
 *.csproj
 *.unityproj
 *.sln
+*.suo
+*.tmp
 *.user
 *.userprefs
-#*.meta
-*.tmp
+*.pidb
+*.booproj
+# Unity3D generated meta files
+*.meta
+# Visual Studio cache directory
+.vs/
  
 # need include the meta of file
 #!*.*.meta
