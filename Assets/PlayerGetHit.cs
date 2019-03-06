@@ -30,7 +30,7 @@ public class PlayerGetHit : MonoBehaviour {
             rb.AddForce(new Vector3(this.transform.position.x - other.transform.position.x, this.transform.position.y - other.transform.position.y, this.transform.position.z - other.transform.position.z) * damage_count);
             current_health += damage;
             Destroy(other.gameObject);
-            target = GameObject.Find("ashe");
+            target = GameObject.Find("Ashe");
              target.GetComponent<PlayerShoot>().Ultmatecharge+=5f;
           
 
