@@ -209,7 +209,7 @@ MonoBehaviour:
   MaxCharge: 3
   ShootRate: 0.5
   ChargeTime: 1
-  Ultmatecharge: 25
+  Ultmatecharge: 0
 --- !u!114 &280166719
 MonoBehaviour:
   m_ObjectHideFlags: 0

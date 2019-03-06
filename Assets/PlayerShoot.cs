@@ -12,10 +12,10 @@ public class PlayerShoot : MonoBehaviour {
     public float Ultmatecharge = 25f;
     private float CheckUltmatetime;
     
-    Quaternion leftRota1 = Quaternion.AngleAxis(-30, Vector3.forward);
-    Quaternion RightRota1 = Quaternion.AngleAxis(30, Vector3.forward); //使用四元数制造2个旋转，分别是绕Z轴朝左右旋转30度
-    Quaternion leftRota2 = Quaternion.AngleAxis(-45, Vector3.forward);
-    Quaternion RightRota2 = Quaternion.AngleAxis(45, Vector3.forward); //使用四元数制造2个旋转，分别是绕Z轴朝左右旋转45度
+    Quaternion leftRota1 = Quaternion.AngleAxis(-30, Vector3.down);
+    Quaternion RightRota1 = Quaternion.AngleAxis(30, Vector3.down); //使用四元数制造2个旋转，分别是绕Z轴朝左右旋转30度
+    Quaternion leftRota2 = Quaternion.AngleAxis(-45, Vector3.down);
+    Quaternion RightRota2 = Quaternion.AngleAxis(45, Vector3.down); //使用四元数制造2个旋转，分别是绕Z轴朝左右旋转45度
     // Use this for initialization
     void Start () {
          
@@ -27,7 +27,7 @@ public class PlayerShoot : MonoBehaviour {
         if (Input.GetKeyUp(KeyCode.Space)&& CheckFiretime > ShootRate && MaxCharge>=1)
         {
             Instantiate(sphere, (this.gameObject.transform.position + new Vector3( 0f,0f,0f)), this.gameObject.transform.rotation);
-            sphere.gameObject.transform.rotation = this.gameObject.transform.rotation;
+            //sphere.gameObject.transform.rotation = this.gameObject.transform.rotation;
             
             MaxCharge -= 1;
             CheckFiretime = 0;
@@ -65,18 +65,23 @@ public class PlayerShoot : MonoBehaviour {
                 {
                     case 0:
                         Instantiate(sphere, (this.gameObject.transform.position + new Vector3(0f, 0f, 0f)), this.gameObject.transform.rotation);  //发射第一颗子弹，方向不需要进行旋转。参数为子弹运动方向与生成位置，函数实现未列出。
+                        
                         break;
                     case 1:
-                        Instantiate(sphere, (this.gameObject.transform.position + new Vector3(0f, 0f, 0f)), this.gameObject.transform.rotation*leftRota1);
+                        Instantiate(sphere, (this.gameObject.transform.position + new Vector3(0f, 0f, 0f)), this.gameObject.transform.rotation* leftRota1);
+                       
                         break;
                     case 2:
-                        Instantiate(sphere, (this.gameObject.transform.position + new Vector3(0f, 0f, 0f)), this.gameObject.transform.rotation * leftRota2);
+                        Instantiate(sphere, (this.gameObject.transform.position + new Vector3(0f, 0f, 0f)), this.gameObject.transform.rotation* leftRota2);
+                       
                         break;
                     case 3:
                         Instantiate(sphere, (this.gameObject.transform.position + new Vector3(0f, 0f, 0f)), this.gameObject.transform.rotation * RightRota1);
+                        
                         break;
                     case 4:
                         Instantiate(sphere, (this.gameObject.transform.position + new Vector3(0f, 0f, 0f)), this.gameObject.transform.rotation * RightRota2);
+                       
                         break;
                 }
             }
