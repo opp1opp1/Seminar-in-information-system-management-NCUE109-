@@ -82,10 +82,10 @@ public class Playermove : MonoBehaviour {
         moveDirection.y = moveDirection.y + (Physics.gravity.y * gravityScale * Time.deltaTime);   //賦予角色跳起來後跳下來的速度
         controller.Move(moveDirection * Time.deltaTime);  //用deltatime去控制每台顯示器不同的平衡
 
+        moveDirection = new Vector3(Input.GetAxis("Horizontal") * moveSpeed, moveDirection.y, Input.GetAxis("Vertical") * moveSpeed);
 
 
-
-
+        /*
         //Translate移动控制函数
         float horizontal = Input.GetAxis("Horizontal"); //A D 左右
             float vertical = Input.GetAxis("Vertical"); //W S 上 下
@@ -93,6 +93,8 @@ public class Playermove : MonoBehaviour {
             m_transform.Translate(Vector3.forward * vertical * m_speed * Time.deltaTime);//W S 上 下
             m_transform.Translate(Vector3.right * horizontal * m_speed * Time.deltaTime);//A D 左右
         }
+        
+         */
     }
 }
 
