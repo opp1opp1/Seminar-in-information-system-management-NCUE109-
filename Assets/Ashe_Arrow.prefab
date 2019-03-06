@@ -58,7 +58,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 1ba2bfe25a7b0c745806f3582f7164b4, type: 2}
+  - {fileID: 2100000, guid: 61c0b9b0c63cfee4ca2f74c865b1bb99, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -96,7 +96,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d207e54c27d94994c9fdff031a2c1fdb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxTime: 3
+  maxTime: 0.5
   bullet_damage: 5
 --- !u!114 &114650360380914956
 MonoBehaviour:
@@ -109,7 +109,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 408e59589a781a54ca656e732f9f6090, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Bullet_Fly_speed: 2
+  Bullet_Fly_speed: 7
 --- !u!135 &135083257841789384
 SphereCollider:
   m_ObjectHideFlags: 1

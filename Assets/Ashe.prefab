@@ -40,7 +40,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1259713005853116}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0.5, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
@@ -114,7 +114,7 @@ MonoBehaviour:
   rotateSpeed_Axisy: 45
   fristPos: {x: 0, y: 0, z: 0}
   twoPos: {x: 0, y: 0, z: 0}
-  moveSpeed: 10
+  moveSpeed: 7
   jumpForce: 8
   controller: {fileID: 0}
   gravityScale: 2
@@ -129,11 +129,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91c84277e9998dc4ca46beefbaa8773b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sphere: {fileID: 1632361258191614, guid: b78e667c061e89142a28fe8c822d6963, type: 2}
-  Shoot_Pos: 0.5
+  sphere: {fileID: 1357893287330070, guid: 6dced45d450719e4cb2d678888b95eeb, type: 2}
   MaxCharge: 3
   ShootRate: 0.5
   ChargeTime: 1
+  Ultmatecharge: 0
 --- !u!114 &114736822462924040
 MonoBehaviour:
   m_ObjectHideFlags: 1
