@@ -20,4 +20,4 @@
 .vs/
  
 # need include the meta of file
-!*.*.meta
+#!*.*.meta
