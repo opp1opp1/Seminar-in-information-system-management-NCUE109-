@@ -32,6 +32,7 @@ public class PlayerRotation : MonoBehaviour
                 targetPoint = hit.point;
                 //转向  
                 transform.LookAt(new Vector3(targetPoint.x, transform.position.y, targetPoint.z));
+                
             }
         }
 

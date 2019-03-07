@@ -25,7 +25,6 @@ GameObject:
   - component: {fileID: 114443064330738574}
   - component: {fileID: 114683473532179482}
   - component: {fileID: 114736822462924040}
-  - component: {fileID: 114154063315813078}
   - component: {fileID: 143956499030596598}
   m_Layer: 0
   m_Name: Ashe
@@ -88,17 +87,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1259713005853116}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &114154063315813078
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1259713005853116}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 37f7eda8ef8dbd84fbe1285cf688092f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114443064330738574
 MonoBehaviour:
   m_ObjectHideFlags: 1
