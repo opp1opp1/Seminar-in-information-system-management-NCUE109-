@@ -226,7 +226,7 @@ Prefab:
         type: 2}
       propertyPath: aiming_sprite
       value: 
-      objectReference: {fileID: 1572259171368652, guid: cf221f33fbc94aa449648734c101b5a3,
+      objectReference: {fileID: 1572259171368652, guid: 5e05b4aa8a4bd9d4bb600041d4c42bbf,
         type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 80578e19eccc31142a9e3e02a69aa601, type: 2}
