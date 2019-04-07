@@ -23,10 +23,10 @@ GameObject:
   - component: {fileID: 136026414035242666}
   - component: {fileID: 23674911793495186}
   - component: {fileID: 114936308135621406}
-  - component: {fileID: 114659452082234818}
   - component: {fileID: 114530277910749716}
   - component: {fileID: 143523819853160032}
   - component: {fileID: 114361359457236846}
+  - component: {fileID: 114695423671422692}
   m_Layer: 0
   m_Name: IceMan
   m_TagString: Untagged
@@ -41,7 +41,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1297248145828934}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.5, z: 0}
+  m_LocalPosition: {x: 1.263, y: 0.5, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 0}
@@ -112,7 +112,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   aiming_sprite: {fileID: 1572259171368652, guid: 5e05b4aa8a4bd9d4bb600041d4c42bbf,
     type: 2}
---- !u!114 &114659452082234818
+--- !u!114 &114695423671422692
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -120,14 +120,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1297248145828934}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 91c84277e9998dc4ca46beefbaa8773b, type: 3}
+  m_Script: {fileID: 11500000, guid: 34c76bd23e8b3a149a64edcb431a07b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   sphere: {fileID: 1703877997401076, guid: 6a9ddeeea184c0941a67c637f05e341a, type: 2}
   MaxCharge: 3
   ShootRate: 0.5
   ChargeTime: 1
-  Ultmatecharge: 0
+  Ultmatecharge: 25
 --- !u!114 &114936308135621406
 MonoBehaviour:
   m_ObjectHideFlags: 1

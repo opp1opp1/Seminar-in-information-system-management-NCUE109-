@@ -7,7 +7,9 @@ public class PlayerDebuff : MonoBehaviour {
     private float slowspeed;
     Color normalcolor;
     Color slowcolor = Color.blue;
+    Color Freezecolor = new Vector4(0f, 0f, 1f, 0.5f);
     public float Slowtime = 0f;
+    public float Freezetime = 0f;
     // Use this for initialization
     void Start () {
 		slowspeed = gameObject.GetComponent<Playermove>().moveSpeed*0.8f;
@@ -18,8 +20,9 @@ public class PlayerDebuff : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
        Slow();
-        
-	}
+        Freeze();
+
+    }
     void Slow() {
         Slowtime -= Time.deltaTime;
         
@@ -38,6 +41,27 @@ public class PlayerDebuff : MonoBehaviour {
             gameObject.GetComponent<Playermove>().moveSpeed=normalspeed ;
             gameObject.GetComponent<MeshRenderer>().material.color=normalcolor;
             
+        }
+    }
+    void Freeze()
+    {
+        Freezetime -= Time.deltaTime;
+
+        if (Freezetime > 0)
+        {
+            gameObject.GetComponent<Playermove>().moveSpeed = 0f;
+            gameObject.GetComponent<MeshRenderer>().material.color = Freezecolor;
+        }
+        if (Freezetime > 2.0f)
+        {
+            Freezetime = 2.0f;
+        }
+        if (Freezetime <= 0f)
+        {
+            Freezetime = 0f;
+            gameObject.GetComponent<Playermove>().moveSpeed = normalspeed;
+            gameObject.GetComponent<MeshRenderer>().material.color = normalcolor;
+
         }
     }
 }

@@ -50,5 +50,21 @@ public class PlayerGetHit : MonoBehaviour {
             target.GetComponent<PlayerShoot>().Ultmatecharge += 5f;
 
         }
+        if (other.name == "ICEMOUNTAIN(Clone)")
+        {
+            float damage = other.GetComponent<bulletdestroy>().bullet_damage;
+            //damage_count = rb.mass * damage * current_health;
+            //if (damage_count <= 0)
+            //{
+               // damage_count = 20;
+            //}
+            //rb.AddForce(new Vector3(this.transform.position.x - other.transform.position.x, 1f, this.transform.position.z - other.transform.position.z) * damage_count);
+            current_health += damage;
+            //Destroy(other.gameObject);
+            this.GetComponent<PlayerDebuff>().Freezetime += 2f;
+            target = GameObject.Find("IceMan");
+            target.GetComponent<PlayerShoot>().Ultmatecharge += 10f;
+
+        }
     }
 }

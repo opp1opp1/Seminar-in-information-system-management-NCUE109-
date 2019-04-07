@@ -9,46 +9,47 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1572259171368652}
+  m_RootGameObject: {fileID: 1811262507306288}
   m_IsPrefabParent: 1
---- !u!1 &1572259171368652
+--- !u!1 &1811262507306288
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4399882039285282}
-  - component: {fileID: 33382510940234164}
-  - component: {fileID: 64263315809385712}
-  - component: {fileID: 23748487763929844}
-  - component: {fileID: 114176553901972192}
+  - component: {fileID: 4209533466448142}
+  - component: {fileID: 33643136556120914}
+  - component: {fileID: 65159395688193298}
+  - component: {fileID: 23047029495340584}
+  - component: {fileID: 114681223241959788}
+  - component: {fileID: 114102360859604918}
   m_Layer: 0
-  m_Name: Ashe_normal_attack_aiming
+  m_Name: ICEMOUNTAIN
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4399882039285282
+--- !u!4 &4209533466448142
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1572259171368652}
-  m_LocalRotation: {x: 0.14739244, y: -0.01735869, z: 0.0025871997, w: 0.98892236}
-  m_LocalPosition: {x: 4.76, y: 3.17, z: -6.22}
-  m_LocalScale: {x: 0.1, y: 1, z: 0.7}
+  m_GameObject: {fileID: 1811262507306288}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.5, z: -0.000000029802322}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &23748487763929844
+--- !u!23 &23047029495340584
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1572259171368652}
+  m_GameObject: {fileID: 1811262507306288}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -57,7 +58,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: cbb0054578173f2478b7c594b62b5345, type: 2}
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -77,35 +78,47 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &33382510940234164
+--- !u!33 &33643136556120914
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1572259171368652}
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!64 &64263315809385712
-MeshCollider:
+  m_GameObject: {fileID: 1811262507306288}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!65 &65159395688193298
+BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1572259171368652}
+  m_GameObject: {fileID: 1811262507306288}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_SkinWidth: 0.01
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &114176553901972192
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &114102360859604918
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1572259171368652}
+  m_GameObject: {fileID: 1811262507306288}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4ad078f37a7218347838de890a40b87d, type: 3}
+  m_Script: {fileID: 11500000, guid: 9c878d68a43640f47b2b129b2687347c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  IceMountain_Raise_speed: 5
+--- !u!114 &114681223241959788
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1811262507306288}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d207e54c27d94994c9fdff031a2c1fdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxTime: 3
+  bullet_damage: 20
