@@ -15,9 +15,9 @@
 *.pidb
 *.booproj
 # Unity3D generated meta files
-*.meta
+#*.meta
 # Visual Studio cache directory
-.vs/
+/.vs/
  
 # need include the meta of file
 #!*.*.meta
