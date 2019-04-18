@@ -25,8 +25,9 @@ GameObject:
   - component: {fileID: 114936308135621406}
   - component: {fileID: 114530277910749716}
   - component: {fileID: 143523819853160032}
-  - component: {fileID: 114361359457236846}
-  - component: {fileID: 114695423671422692}
+  - component: {fileID: 114616768866491104}
+  - component: {fileID: 114301465195757644}
+  - component: {fileID: 114379398500121894}
   m_Layer: 0
   m_Name: IceMan
   m_TagString: Untagged
@@ -61,7 +62,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 61c0b9b0c63cfee4ca2f74c865b1bb99, type: 2}
+  - {fileID: 2100000, guid: 0b4adc891ba545940be0fdf1eea9bc4e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -88,7 +89,7 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1297248145828934}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &114361359457236846
+--- !u!114 &114301465195757644
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -96,9 +97,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 1297248145828934}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7c9e983690ce353489511ce07d754a98, type: 3}
+  m_Script: {fileID: 11500000, guid: 497885628d2ca044484d089eb4cdd3e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Slowtime: 0
+  Freezetime: 0
+--- !u!114 &114379398500121894
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1297248145828934}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fdbe5813d88ff504f8bfa3fbdbcaae1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  current_health: 0
 --- !u!114 &114530277910749716
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -110,9 +125,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37f7eda8ef8dbd84fbe1285cf688092f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  aiming_sprite: {fileID: 1572259171368652, guid: 5e05b4aa8a4bd9d4bb600041d4c42bbf,
-    type: 2}
---- !u!114 &114695423671422692
+  aiming: {fileID: 1572259171368652, guid: 316b1129b82a04f4d8afb4ba535e4c32, type: 2}
+--- !u!114 &114616768866491104
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -120,14 +134,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 1297248145828934}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 34c76bd23e8b3a149a64edcb431a07b6, type: 3}
+  m_Script: {fileID: 11500000, guid: db12f0a8f48d80a45b061bf9e6970d7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sphere: {fileID: 1703877997401076, guid: 6a9ddeeea184c0941a67c637f05e341a, type: 2}
+  sphere: {fileID: 1357893287330070, guid: 6dced45d450719e4cb2d678888b95eeb, type: 2}
+  UltmateObject: {fileID: 1811262507306288, guid: d53ff105dd92576489ade1096c8a0ef6,
+    type: 2}
   MaxCharge: 3
   ShootRate: 0.5
   ChargeTime: 1
-  Ultmatecharge: 25
+  Ultmatecharge: 100
 --- !u!114 &114936308135621406
 MonoBehaviour:
   m_ObjectHideFlags: 1

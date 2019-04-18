@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 33382510940234164}
   - component: {fileID: 64263315809385712}
   - component: {fileID: 23748487763929844}
-  - component: {fileID: 114176553901972192}
+  - component: {fileID: 114195367863121820}
   m_Layer: 0
   m_Name: Ashe_normal_attack_aiming
   m_TagString: Untagged
@@ -36,7 +36,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1572259171368652}
-  m_LocalRotation: {x: 0.14739244, y: -0.01735869, z: 0.0025871997, w: 0.98892236}
+  m_LocalRotation: {x: 0.15010613, y: -0.3253035, z: 0.05238438, w: 0.932149}
   m_LocalPosition: {x: 4.76, y: 3.17, z: -6.22}
   m_LocalScale: {x: 0.1, y: 1, z: 0.7}
   m_Children: []
@@ -57,7 +57,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: cbb0054578173f2478b7c594b62b5345, type: 2}
+  - {fileID: 2100000, guid: 60b1b3be44650e64b9da99e452872730, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -98,7 +98,7 @@ MeshCollider:
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &114176553901972192
+--- !u!114 &114195367863121820
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -106,6 +106,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 1572259171368652}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4ad078f37a7218347838de890a40b87d, type: 3}
+  m_Script: {fileID: 11500000, guid: 21d0dd4be98749342ba5f29fe1d00925, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

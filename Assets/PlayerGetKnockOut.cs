@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerGetKnockOut : MonoBehaviour {
     private Transform m_transform;
@@ -14,6 +15,7 @@ public class PlayerGetKnockOut : MonoBehaviour {
         if (m_transform.position.y > 20 || m_transform.position.y < -20)
 {
             Destroy(gameObject);
+            SceneManager.LoadScene("ScoreScene");
         }
     }
     }

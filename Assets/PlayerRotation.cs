@@ -6,7 +6,7 @@ public class PlayerRotation : MonoBehaviour
 
 {
      Vector3 targetPoint = Vector3.zero;     //鼠标点击的位置
-    public GameObject aiming_sprite;
+    public GameObject aiming;
 
     void Start()
     {
@@ -32,7 +32,7 @@ public class PlayerRotation : MonoBehaviour
                 targetPoint = hit.point;
                 //转向  
                 transform.LookAt(new Vector3(targetPoint.x, transform.position.y, targetPoint.z));
-                aiming_sprite.transform.LookAt(new Vector3(targetPoint.x, transform.position.y, targetPoint.z));
+                aiming.transform.LookAt(new Vector3(targetPoint.x, transform.position.y, targetPoint.z));
             }
         }
         if (Input.GetMouseButtonDown(0))
@@ -49,7 +49,7 @@ public class PlayerRotation : MonoBehaviour
                 targetPoint = hit.point;
                 //转向  
 
-                Instantiate(aiming_sprite, (this.gameObject.transform.position + new Vector3(0f, 0.1f, 0f)), this.gameObject.transform.rotation);
+                Instantiate(aiming, (this.gameObject.transform.position + new Vector3(0f, 0.1f, 0f)), this.gameObject.transform.rotation);
 
             }
         }
