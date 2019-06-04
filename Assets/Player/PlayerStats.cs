@@ -6,8 +6,11 @@ public class PlayerStats : MonoBehaviour {
     public float basicAttackDamage = 5;
     public float basicAttackSpeed = 1.0f;
     public float basicHealth = 100;
-	// Use this for initialization
-	void Start () {
+    public float currentAttackDamage = 5;
+    public float currentAttackSpeed = 1.0f;
+    public float currentHealth = 100;
+    // Use this for initialization
+    void Start () {
 		
 	}
 	
