@@ -10,7 +10,7 @@ public class EnemyBehavior : MonoBehaviour
     public float WakeUpDistance = 5.0f;
     public float ColliderDamage = 5.0f;
     private GameObject target;
-    private float targethealth;
+    public static float targethealth;
     // Use this for initialization
     void Start()
     {

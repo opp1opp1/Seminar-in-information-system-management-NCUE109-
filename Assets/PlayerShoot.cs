@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerShoot : MonoBehaviour {
-    
+    public  float Ultmatecharge;
     // Use this for initialization
     void Start () {
          
