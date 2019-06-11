@@ -17,7 +17,7 @@ public class Playermove : MonoBehaviour {
     public float jumpForce;
     public CharacterController controller;
     public float gravityScale;
-
+    public bool Characterismoving =false;
 
 
 
@@ -71,17 +71,26 @@ public class Playermove : MonoBehaviour {
         }
 #endif
 
-        if (controller.isGrounded)  //如果角色是在地面上，不是跳起來的狀態
+        /* if (controller.isGrounded)  //如果角色是在地面上，不是跳起來的狀態
+         {
+             if (Input.GetButtonDown("Jump")) //按跳起來(預設是空白建，我改成J鍵)
+             {
+                 moveDirection.y = jumpForce;  //角色Y方向增加(就是跳起來)
+             }
+         }
+         */
+        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D))
         {
-            if (Input.GetButtonDown("Jump")) //按跳起來(預設是空白建，我改成J鍵)
-            {
-                moveDirection.y = jumpForce;  //角色Y方向增加(就是跳起來)
-            }
-        }
+            Characterismoving = true;
+            moveDirection.y = moveDirection.y + (Physics.gravity.y * gravityScale * Time.deltaTime);   //賦予角色跳起來後跳下來的速度
+            controller.Move(moveDirection * Time.deltaTime);  //用deltatime去控制每台顯示器不同的平衡
+            moveDirection = new Vector3(Input.GetAxis("Horizontal") * moveSpeed, moveDirection.y, Input.GetAxis("Vertical") * moveSpeed);
 
-        moveDirection.y = moveDirection.y + (Physics.gravity.y * gravityScale * Time.deltaTime);   //賦予角色跳起來後跳下來的速度
-        controller.Move(moveDirection * Time.deltaTime);  //用deltatime去控制每台顯示器不同的平衡
-        moveDirection = new Vector3(Input.GetAxis("Horizontal") * moveSpeed, moveDirection.y, Input.GetAxis("Vertical") * moveSpeed);
+        }
+        else
+        {
+            Characterismoving = false;
+        }
 
 
         /*
