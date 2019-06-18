@@ -100,13 +100,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_speed: 5
-  rotateSpeed_Axisy: 45
   fristPos: {x: 0, y: 0, z: 0}
   twoPos: {x: 0, y: 0, z: 0}
   moveSpeed: 7
   jumpForce: 8
   controller: {fileID: 143956499030596598}
   gravityScale: 2
+  Characterismoving: 0
 --- !u!114 &114683473532179482
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -118,11 +118,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91c84277e9998dc4ca46beefbaa8773b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sphere: {fileID: 1357893287330070, guid: 6dced45d450719e4cb2d678888b95eeb, type: 2}
-  MaxCharge: 3
-  ShootRate: 0.5
-  ChargeTime: 1
-  Ultmatecharge: 100
+  arrow: {fileID: 0}
 --- !u!114 &114736822462924040
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -134,7 +130,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37f7eda8ef8dbd84fbe1285cf688092f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  aiming: {fileID: 1572259171368652, guid: 316b1129b82a04f4d8afb4ba535e4c32, type: 2}
 --- !u!114 &114763653957674868
 MonoBehaviour:
   m_ObjectHideFlags: 1
