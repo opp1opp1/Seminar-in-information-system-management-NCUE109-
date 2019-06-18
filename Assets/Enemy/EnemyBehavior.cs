@@ -12,16 +12,21 @@ public class EnemyBehavior : MonoBehaviour
     private GameObject target;
     private GameObject arrow;
     private float targethealth;
-    
+    private float EAS;
+    private float EASChecker;
+
     // Use this for initialization
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
+        EAS = this.GetComponent<EnemyStat>().enemyattackspeed;
+        EASChecker = EAS;
     }
 
     // Update is called once per frame
     void Update()
     {
+        EASChecker -= Time.deltaTime;
         float distance = Vector3.Distance(transform.position, Player.transform.position);
         if (distance < WakeUpDistance)
         {
@@ -37,11 +42,13 @@ public class EnemyBehavior : MonoBehaviour
     {
         if (other.name == "Ashe")
         {
+            if(EASChecker<=0)
             target = GameObject.Find("Ashe");
             targethealth =target.GetComponent<PlayerStats>().currentHealth;
             targethealth -= ColliderDamage;
             target.GetComponent<PlayerStats>().currentHealth = targethealth;
             Debug.Log("Health:" + target.GetComponent<PlayerStats>().currentHealth);
+            EASChecker = EAS;
         }
     }
 
