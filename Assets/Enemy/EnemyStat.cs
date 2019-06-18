@@ -36,11 +36,15 @@ public class EnemyStat : MonoBehaviour {
     }
     private void OnTriggerEnter(Collider other) //偵測敵人本身有沒有跟弓箭產生碰撞
     {
-        bullet = GameObject.Find("Ashe_Arrow(Clone)");
-        bulletdamage = bullet.GetComponent<bulletdestroy>().bullet_damage; //取得弓箭的傷害
+        
+        
         
         if (other.tag == "Bullet")      //如果碰到的物體tag為Bullet
         {
+
+            bullet = GameObject.Find("Ashe_Arrow(Clone)");
+            bulletdamage = bullet.GetComponent<bulletdestroy>().bullet_damage; //取得弓箭的傷害
+
             self = this.gameObject;
             currentenemyhealth -= bulletdamage;
 
