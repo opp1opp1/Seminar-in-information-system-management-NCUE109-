@@ -7,7 +7,7 @@ public class EnemyBehavior2 : MonoBehaviour {
     public GameObject bullet;
     private NavMeshAgent agent;
     public GameObject Player;
-    public float WakeUpDistance = 5.0f;
+    public float WakeUpDistance = 10.0f;
     public float ColliderDamage = 5.0f;
     private GameObject target;
     private float targethealth;
