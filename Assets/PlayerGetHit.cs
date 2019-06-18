@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/*
 public class PlayerGetHit : MonoBehaviour {
     public float current_health ;
     private Rigidbody rb;
@@ -68,3 +68,4 @@ public class PlayerGetHit : MonoBehaviour {
         }
     }
 }
+*/

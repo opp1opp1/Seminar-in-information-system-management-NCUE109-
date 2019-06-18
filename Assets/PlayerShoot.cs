@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerShoot : MonoBehaviour {
-    public  float Ultmatecharge;
+    //public  float Ultmatecharge;
     private GameObject target;
     public GameObject arrow;
     private float CAS;

@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class Playermove : MonoBehaviour {
     public float m_speed = 5f;
-    private Transform m_transform;          
-    private float rotationz = 0.0f;         //Z轴旋转量
-    public float rotateSpeed_Axisy = 45f;     //绕Z轴旋转速度
+    //private Transform m_transform;          
+    //private float rotationz = 0.0f;         //Z轴旋转量
+    //public float rotateSpeed_Axisy = 45f;     //绕Z轴旋转速度
     private Vector2 touchPosition;          //触摸点坐标
-    private float screenWeight;             //屏幕宽度
+    //private float screenWeight;             //屏幕宽度
     public Vector3 fristPos;//接触时的position 
     public Vector3 twoPos;//移动后的position 
 
@@ -23,7 +23,7 @@ public class Playermove : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        m_transform = this.transform;
+        //m_transform = this.transform;
         screenWeight = Screen.width;        //获取屏幕宽度
         controller = GetComponent<CharacterController>();  //設置controller為角色控制器
     }

@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/*
 public class IcemanShoot : MonoBehaviour {
     public GameObject sphere;
     public GameObject UltmateObject;
@@ -65,3 +65,4 @@ public class IcemanShoot : MonoBehaviour {
         }
     }
 }
+*/
