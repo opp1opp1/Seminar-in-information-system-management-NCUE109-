@@ -4,11 +4,11 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class PlayerGetKnockOut : MonoBehaviour {
-    private Transform m_transform;
+    //private Transform m_transform;
     private float currentHealth;
     // Use this for initialization
     void Start () {
-        m_transform = this.transform;
+        //m_transform = this.transform;
     }
 	
 	// Update is called once per frame
