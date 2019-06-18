@@ -11,16 +11,21 @@ public class EnemyBehavior2 : MonoBehaviour {
     public float ColliderDamage = 5.0f;
     private GameObject target;
     private float targethealth;
+    private float EAS;
+    private float EASChecker;
     // Use this for initialization
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
+        EAS = this.GetComponent<EnemyStat>().enemyattackspeed;
+        EASChecker = EAS;
     }
 
     // Update is called once per frame
     void Update()
     {
         float distance = Vector3.Distance(transform.position, Player.transform.position);
+        EASChecker -= Time.deltaTime;
         if (distance < WakeUpDistance)
         {
             Vector3 dirToPlayer = transform.position - Player.transform.position;
@@ -30,22 +35,30 @@ public class EnemyBehavior2 : MonoBehaviour {
         }
         else
         {
-            target = GameObject.Find("Ashe");
-            transform.LookAt(target.transform.position);
-            Instantiate(bullet, transform.position, transform.rotation);
+            if (EASChecker <= 0)
+            {
+                target = GameObject.Find("Ashe");
+                transform.LookAt(target.transform.position);
+                Instantiate(bullet, transform.position, transform.rotation);
+                EASChecker = EAS;
+            }
         }
 
 
     }
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
         if (other.name == "Ashe")
         {
-           // target = GameObject.Find("Ashe");
-            targethealth = target.GetComponent<PlayerStats>().currentHealth;
-            targethealth -= ColliderDamage;
-            target.GetComponent<PlayerStats>().currentHealth = targethealth;
-            Debug.Log("Health:" + target.GetComponent<PlayerStats>().currentHealth);
+            if (EASChecker <= 0)
+            {
+                target = GameObject.Find("Ashe");
+                targethealth = target.GetComponent<PlayerStats>().currentHealth;
+                targethealth -= ColliderDamage;
+                target.GetComponent<PlayerStats>().currentHealth = targethealth;
+                Debug.Log("Health:" + target.GetComponent<PlayerStats>().currentHealth);
+                EASChecker = EAS;
+            }
         }
     }
 }

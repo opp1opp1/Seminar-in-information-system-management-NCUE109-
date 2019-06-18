@@ -38,17 +38,19 @@ public class EnemyBehavior : MonoBehaviour
 
 
     }
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
         if (other.name == "Ashe")
         {
-            if(EASChecker<=0)
-            target = GameObject.Find("Ashe");
-            targethealth =target.GetComponent<PlayerStats>().currentHealth;
-            targethealth -= ColliderDamage;
-            target.GetComponent<PlayerStats>().currentHealth = targethealth;
-            Debug.Log("Health:" + target.GetComponent<PlayerStats>().currentHealth);
-            EASChecker = EAS;
+            if (EASChecker <= 0)
+            {
+                target = GameObject.Find("Ashe");
+                targethealth = target.GetComponent<PlayerStats>().currentHealth;
+                targethealth -= ColliderDamage;
+                target.GetComponent<PlayerStats>().currentHealth = targethealth;
+                Debug.Log("Health:" + target.GetComponent<PlayerStats>().currentHealth);
+                EASChecker = EAS;
+            }
         }
     }
 

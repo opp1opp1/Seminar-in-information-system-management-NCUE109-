@@ -23,7 +23,7 @@ public class EnemyStat : MonoBehaviour {
             {
                 case 1:
                     basicenemyhealth = 100;
-                enemyattackspeed = 0.5f;
+                enemyattackspeed = 1f;
                     break;
                 case 2:
                     basicenemyhealth = 60;
