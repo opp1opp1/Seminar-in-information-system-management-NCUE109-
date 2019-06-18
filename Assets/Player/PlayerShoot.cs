@@ -23,6 +23,9 @@ public class PlayerShoot : MonoBehaviour
     {
 
         CASChecker -= Time.deltaTime;
+        if (target.GetComponent<PlayerRotation>().enemychecker == true)
+        {
+        
         if (target.GetComponent<Playermove>().Characterismoving == false && CASChecker <= 0f)
         {
             Instantiate(arrow, transform.position, transform.rotation);
@@ -30,7 +33,7 @@ public class PlayerShoot : MonoBehaviour
             CASChecker = CAS;
         }
 
-
+    }
     }
 
 
