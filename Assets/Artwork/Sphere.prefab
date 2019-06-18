@@ -22,8 +22,10 @@ GameObject:
   - component: {fileID: 33087981117885630}
   - component: {fileID: 135897553723566404}
   - component: {fileID: 23758514845390170}
+  - component: {fileID: 114215565149087938}
+  - component: {fileID: 114468333799001464}
   m_Layer: 10
-  m_Name: Enemy1_bullet
+  m_Name: Sphere
   m_TagString: Enemy_Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -83,6 +85,31 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1511428900671028}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &114215565149087938
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1511428900671028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d207e54c27d94994c9fdff031a2c1fdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxTime: 3
+  bullet_damage: 5
+--- !u!114 &114468333799001464
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1511428900671028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 408e59589a781a54ca656e732f9f6090, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Bullet_Fly_speed: 5
 --- !u!135 &135897553723566404
 SphereCollider:
   m_ObjectHideFlags: 1
