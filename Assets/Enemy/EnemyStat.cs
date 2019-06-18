@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class EnemyStat : MonoBehaviour {
     public int enemytype; //用以判斷enemy的種類
-    private float basicenemyhealth; //初始enemy的血量
-    private float currentenemyhealth; //enemy的血量
+    public float basicenemyhealth; //初始enemy的血量
+    public float currentenemyhealth; //enemy的血量
 
     
     private GameObject self;
@@ -54,7 +54,7 @@ public class EnemyStat : MonoBehaviour {
     }
     // Update is called once per frame
     void Update () {
-      
+
     }
     
 }
