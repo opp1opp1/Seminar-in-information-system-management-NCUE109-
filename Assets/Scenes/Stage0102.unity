@@ -329,7 +329,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemytype: 0
-  enemyhealth: 0
 --- !u!195 &502778979
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -428,7 +427,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14d52467c2b34b0408ecaaa363c6a137, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 0}
+  bullet: {fileID: 1511428900671028, guid: 05d1715d801975d429cfeef34753795f, type: 2}
   Player: {fileID: 1293770363}
   WakeUpDistance: 5
   ColliderDamage: 5
@@ -1371,7 +1370,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemytype: 0
-  enemyhealth: 0
 --- !u!114 &1673209932
 MonoBehaviour:
   m_ObjectHideFlags: 0
