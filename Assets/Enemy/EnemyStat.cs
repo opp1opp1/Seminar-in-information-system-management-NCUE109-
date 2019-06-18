@@ -6,7 +6,7 @@ public class EnemyStat : MonoBehaviour {
     public int enemytype; //用以判斷enemy的種類
     public float basicenemyhealth; //初始enemy的血量
     public float currentenemyhealth; //enemy的血量
-
+    public float enemyattackspeed;//enemy的攻擊速度
     
     private GameObject self;
     private GameObject bullet;
@@ -23,9 +23,11 @@ public class EnemyStat : MonoBehaviour {
             {
                 case 1:
                     basicenemyhealth = 100;
+                enemyattackspeed = 0.5f;
                     break;
                 case 2:
                     basicenemyhealth = 60;
+                enemyattackspeed = 1f;
                     break;
                 default:
                     Debug.Log("enemy dont have health");
