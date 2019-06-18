@@ -800,8 +800,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1811004332}
-        m_MethodName: FightScene
+      - m_Target: {fileID: 1811004328}
+        m_MethodName: Stage0101
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -984,7 +984,7 @@ GameObject:
   - component: {fileID: 1811004335}
   - component: {fileID: 1811004334}
   - component: {fileID: 1811004333}
-  - component: {fileID: 1811004332}
+  - component: {fileID: 1811004328}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1104,7 +1104,7 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1811004321}
---- !u!114 &1811004332
+--- !u!114 &1811004328
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -1112,7 +1112,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1811004321}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bb634349b2734e84b99d907898a4f784, type: 3}
+  m_Script: {fileID: 11500000, guid: de79d305d92429b4598d2c30985893c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &1811004333
