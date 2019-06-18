@@ -18,7 +18,7 @@ public class Playermove : MonoBehaviour {
     public CharacterController controller;
     public float gravityScale;
     public bool Characterismoving =false;
-
+    private Animator _animator;
 
 
     // Use this for initialization
@@ -26,6 +26,7 @@ public class Playermove : MonoBehaviour {
         //m_transform = this.transform;
         //screenWeight = Screen.width;        //获取屏幕宽度
         controller = GetComponent<CharacterController>();  //設置controller為角色控制器
+        _animator = this.GetComponent<Animator>();
     }
 	
 	// Update is called once per frame
@@ -82,6 +83,7 @@ public class Playermove : MonoBehaviour {
         if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D))
         {
             Characterismoving = true;
+            _animator.SetBool("Characterismoving", true);
             moveDirection.y = moveDirection.y + (Physics.gravity.y * gravityScale * Time.deltaTime);   //賦予角色跳起來後跳下來的速度
             controller.Move(moveDirection * Time.deltaTime);  //用deltatime去控制每台顯示器不同的平衡
             moveDirection = new Vector3(Input.GetAxis("Horizontal") * moveSpeed, moveDirection.y, Input.GetAxis("Vertical") * moveSpeed);
@@ -90,6 +92,7 @@ public class Playermove : MonoBehaviour {
         else
         {
             Characterismoving = false;
+            _animator.SetBool("Characterismoving", false);
         }
 
 
