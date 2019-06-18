@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyStat : MonoBehaviour {
     public int enemytype; //用以判斷enemy的種類
-    public float enemyhealth; //enemy的血量
+    private float enemyhealth; //enemy的血量
 
 
 	// Use this for initialization
