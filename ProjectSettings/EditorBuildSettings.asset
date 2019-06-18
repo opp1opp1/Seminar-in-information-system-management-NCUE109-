@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/MainScene.unity
     guid: 7c814a63fce7f5f4bba75486f021720b
   - enabled: 1
-    path: Assets/Stage1-1.unity
+    path: Assets/Stage0101.unity
     guid: 9bd9da8a96fe1174e9bc2ed3586ccaf6
   - enabled: 1
     path: Assets/CharacterScene.unity
@@ -23,6 +23,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/BoxScene.unity
     guid: 0d956bd381cedc9458da9f2b68530bc5
+  - enabled: 1
+    path: Assets/healthbar.unity
+    guid: bac72bbb02456f24bb98ea4a35697771
+  - enabled: 1
+    path: Assets/ICEMANSCENE.unity
+    guid: b84b93163cc609c49b6b0ef59bce68c3
   - enabled: 1
     path: Assets/ScoreScene.unity
     guid: 861c7bac97e9b9c4682835dc6b298bf2
