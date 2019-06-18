@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerRotation : MonoBehaviour
-
+    
 {
     // Vector3 targetPoint = Vector3.zero;     //鼠标点击的位置
     //private GameObject target;
     //獲取所有敵人
-
+    public bool enemychecker = false;
     void Start()
     {
 
@@ -53,12 +53,14 @@ public class PlayerRotation : MonoBehaviour
                 for (int i = 0; i < cols.Length; i++)
                     if (cols[i].tag.Equals("Enemy"))
                     {
-                        return cols[i].transform;
-                       
+
+                        enemychecker = true;
+                       return cols[i].transform;
                     }
             //沒有檢測到Enemy,將檢測半徑擴大2米
             radius += 2;
         }
+        enemychecker = false;
         return null;
     }
 }
