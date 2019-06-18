@@ -38,15 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-<<<<<<< Updated upstream
-<<<<<<< HEAD
   m_IndirectSpecularColor: {r: 0.4465782, g: 0.49641252, b: 0.5748167, a: 1}
-=======
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
->>>>>>> 340a979ff256294348aefdcecb7015ff3d65b7b1
-=======
-  m_IndirectSpecularColor: {r: 0.4465782, g: 0.49641252, b: 0.5748167, a: 1}
->>>>>>> Stashed changes
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -1143,13 +1135,8 @@ Prefab:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114763653957674868, guid: 80578e19eccc31142a9e3e02a69aa601, type: 2}
-<<<<<<< Updated upstream
-    - {fileID: 114962866663084908, guid: 80578e19eccc31142a9e3e02a69aa601, type: 2}
-    - {fileID: 114237416743509440, guid: 80578e19eccc31142a9e3e02a69aa601, type: 2}
-=======
     - {fileID: 114237416743509440, guid: 80578e19eccc31142a9e3e02a69aa601, type: 2}
     - {fileID: 114962866663084908, guid: 80578e19eccc31142a9e3e02a69aa601, type: 2}
->>>>>>> Stashed changes
   m_ParentPrefab: {fileID: 100100000, guid: 80578e19eccc31142a9e3e02a69aa601, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1293770363 stripped
@@ -1170,25 +1157,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1293770363}
   m_Enabled: 1
   m_EditorHideFlags: 0
-<<<<<<< Updated upstream
   m_Script: {fileID: 11500000, guid: bb3299da36d18984b90c12b29a3a7472, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1293770367
-=======
-  m_Script: {fileID: 11500000, guid: 3082f8b359fd2c344a4f93c9b29d14d0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1293770366
->>>>>>> Stashed changes
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1293770363}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b2592f4015304e44fa454333ede0f028, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!95 &1293770374
