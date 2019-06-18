@@ -125,7 +125,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37f7eda8ef8dbd84fbe1285cf688092f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  aiming: {fileID: 1572259171368652, guid: 316b1129b82a04f4d8afb4ba535e4c32, type: 2}
 --- !u!114 &114616768866491104
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -156,13 +155,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_speed: 5
-  rotateSpeed_Axisy: 45
   fristPos: {x: 0, y: 0, z: 0}
   twoPos: {x: 0, y: 0, z: 0}
   moveSpeed: 7
   jumpForce: 8
   controller: {fileID: 0}
   gravityScale: 2
+  Characterismoving: 0
 --- !u!136 &136026414035242666
 CapsuleCollider:
   m_ObjectHideFlags: 1
