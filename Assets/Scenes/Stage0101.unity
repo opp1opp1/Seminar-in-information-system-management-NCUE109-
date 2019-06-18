@@ -203,6 +203,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb3299da36d18984b90c12b29a3a7472, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &350200708
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 350200706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74c7c931f42823a4298c50a1b18a9917, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &350200715
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1208,7 +1219,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.16666667
   m_BuildHeightMesh: 0
-  m_NavMeshData: {fileID: 23800000, guid: 64cdf03cc3f350a4882adfb17150ae9b, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 3eb9ee52589d9cd42a49099a9bfd3906, type: 2}
 --- !u!4 &1922669332
 Transform:
   m_ObjectHideFlags: 0
