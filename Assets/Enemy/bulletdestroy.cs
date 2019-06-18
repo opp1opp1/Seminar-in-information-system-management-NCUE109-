@@ -20,4 +20,13 @@ public class bulletdestroy : MonoBehaviour {
         }
         
     }
+
+    //弓箭射到物體時消失
+    private void OnTriggerEnter(Collider other) 
+    {
+        if (other.tag == "Enemy")
+        {
+            Destroy(gameObject);
+        }
+    }
 }

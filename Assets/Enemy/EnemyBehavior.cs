@@ -10,6 +10,7 @@ public class EnemyBehavior : MonoBehaviour
     public float WakeUpDistance = 5.0f;
     public float ColliderDamage = 5.0f;
     private GameObject target;
+    private GameObject arrow;
     private float targethealth;
     // Use this for initialization
     void Start()
@@ -42,4 +43,7 @@ public class EnemyBehavior : MonoBehaviour
             Debug.Log("Health:" + target.GetComponent<PlayerStats>().currentHealth);
         }
     }
+
+    
+
 }
