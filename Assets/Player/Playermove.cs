@@ -24,7 +24,7 @@ public class Playermove : MonoBehaviour {
     // Use this for initialization
     void Start () {
         //m_transform = this.transform;
-        screenWeight = Screen.width;        //获取屏幕宽度
+        //screenWeight = Screen.width;        //获取屏幕宽度
         controller = GetComponent<CharacterController>();  //設置controller為角色控制器
     }
 	
