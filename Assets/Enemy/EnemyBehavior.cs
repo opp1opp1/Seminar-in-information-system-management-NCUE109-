@@ -12,6 +12,7 @@ public class EnemyBehavior : MonoBehaviour
     private GameObject target;
     private GameObject arrow;
     private float targethealth;
+    
     // Use this for initialization
     void Start()
     {

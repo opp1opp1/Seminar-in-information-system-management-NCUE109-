@@ -4,29 +4,57 @@ using UnityEngine;
 
 public class EnemyStat : MonoBehaviour {
     public int enemytype; //用以判斷enemy的種類
-    private float enemyhealth; //enemy的血量
+    private float basicenemyhealth; //初始enemy的血量
+    private float currentenemyhealth; //enemy的血量
+
+    
+    private GameObject self;
+    private GameObject bullet;
+    private float bulletdamage;
+
+    
+ 
 
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
 
         switch (enemytype) //根據敵人種類，有不同的血量
             {
                 case 1:
-                    enemyhealth = 100;
+                    basicenemyhealth = 100;
                     break;
                 case 2:
-                    enemyhealth = 60;
+                    basicenemyhealth = 60;
                     break;
                 default:
                     Debug.Log("enemy dont have health");
                     break;
             }
+        currentenemyhealth = basicenemyhealth;
 
     }
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    private void OnTriggerEnter(Collider other) //偵測敵人本身有沒有跟弓箭產生碰撞
+    {
+        bullet = GameObject.Find("Ashe_Arrow(Clone)");
+        bulletdamage = bullet.GetComponent<bulletdestroy>().bullet_damage; //取得弓箭的傷害
+        
+        if (other.tag == "Bullet")      //如果碰到的物體tag為Bullet
+        {
+            self = this.gameObject;
+            currentenemyhealth -= bulletdamage;
+
+            Debug.Log("EnemyHealth:" + currentenemyhealth);
+
+                if (currentenemyhealth <= 0)  //如果敵人血量低於0就掰掰
+                {
+                    Destroy(gameObject);
+                }
+        }
+    }
+    // Update is called once per frame
+    void Update () {
+      
+    }
+    
 }
