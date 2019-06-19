@@ -6,7 +6,7 @@ using UnityEngine.AI;
 public class EnemyBehavior : MonoBehaviour
 {
     private NavMeshAgent agent;
-    public GameObject Player;
+    private GameObject Player;
     public float WakeUpDistance = 10.0f;
     public float ColliderDamage = 5.0f;
     private GameObject target;
@@ -18,6 +18,7 @@ public class EnemyBehavior : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        Player = GameObject.Find("Ashe");
         agent = GetComponent<NavMeshAgent>();
         EAS = this.GetComponent<EnemyStat>().enemyattackspeed;
         EASChecker = EAS;
