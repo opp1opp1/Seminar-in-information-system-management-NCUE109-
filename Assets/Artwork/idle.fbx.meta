@@ -1,0 +1,214 @@
+fileFormatVersion: 2
+guid: 6c09e7041f6783440ac79b12ebe7aa82
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: A_L_Wrist
+    100002: A_R_Wrist
+    100004: //RootNode
+    100006: ikHandle1
+    100008: ikHandle2
+    100010: ikHandle3
+    100012: ikHandle4
+    100014: J_L_Thigh
+    100016: J_R_Thigh
+    100018: joint10
+    100020: joint11
+    100022: joint12
+    100024: joint15
+    100026: joint15 1
+    100028: joint16
+    100030: joint16 1
+    100032: joint17
+    100034: joint18
+    100036: joint18 1
+    100038: joint19
+    100040: joint19 1
+    100042: joint2
+    100044: joint2 1
+    100046: joint20
+    100048: joint20 1
+    100050: joint21
+    100052: joint21 1
+    100054: joint29
+    100056: joint3
+    100058: joint3 1
+    100060: joint4
+    100062: joint4 1
+    100064: joint5
+    100066: joint5 1
+    100068: joint6
+    100070: joint7
+    100072: joint8
+    100074: joint9
+    100076: locator1
+    100078: locator2
+    100080: pCube1
+    100082: pCube4
+    100084: pCube7
+    100086: pCube8
+    100088: pCube9
+    100090: transform3
+    100092: transform4
+    100094: transform5
+    400000: A_L_Wrist
+    400002: A_R_Wrist
+    400004: //RootNode
+    400006: ikHandle1
+    400008: ikHandle2
+    400010: ikHandle3
+    400012: ikHandle4
+    400014: J_L_Thigh
+    400016: J_R_Thigh
+    400018: joint10
+    400020: joint11
+    400022: joint12
+    400024: joint15
+    400026: joint15 1
+    400028: joint16
+    400030: joint16 1
+    400032: joint17
+    400034: joint18
+    400036: joint18 1
+    400038: joint19
+    400040: joint19 1
+    400042: joint2
+    400044: joint2 1
+    400046: joint20
+    400048: joint20 1
+    400050: joint21
+    400052: joint21 1
+    400054: joint29
+    400056: joint3
+    400058: joint3 1
+    400060: joint4
+    400062: joint4 1
+    400064: joint5
+    400066: joint5 1
+    400068: joint6
+    400070: joint7
+    400072: joint8
+    400074: joint9
+    400076: locator1
+    400078: locator2
+    400080: pCube1
+    400082: pCube4
+    400084: pCube7
+    400086: pCube8
+    400088: pCube9
+    400090: transform3
+    400092: transform4
+    400094: transform5
+    2100000: lambert1
+    4300000: pCube9
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: pCube9
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Take 001
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 40
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
