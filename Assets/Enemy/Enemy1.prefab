@@ -216,7 +216,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82de2b2a71af73d48913cb1449e93c45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 1259713005853116, guid: 80578e19eccc31142a9e3e02a69aa601, type: 2}
   WakeUpDistance: 5
   ColliderDamage: 5
 --- !u!114 &114759012533255950
