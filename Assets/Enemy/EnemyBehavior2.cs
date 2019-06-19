@@ -9,6 +9,7 @@ public class EnemyBehavior2 : MonoBehaviour {
     private GameObject Player;
     public float WakeUpDistance = 10.0f;
     public float ColliderDamage = 5.0f;
+    public float fireDamage = 5.0f;
     private GameObject target;
     private float targethealth;
     private float EAS;

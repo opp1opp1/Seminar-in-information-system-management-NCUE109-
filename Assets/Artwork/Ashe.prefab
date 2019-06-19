@@ -200,7 +200,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4626530418841024}
   - component: {fileID: 33308843724266152}
-  - component: {fileID: 136549869613436502}
   - component: {fileID: 114443064330738574}
   - component: {fileID: 114683473532179482}
   - component: {fileID: 114736822462924040}
@@ -543,6 +542,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4267925826340536}
   - component: {fileID: 95226055081740848}
+  - component: {fileID: 54186830462697804}
+  - component: {fileID: 64343494703811626}
   m_Layer: 0
   m_Name: peoplewalking
   m_TagString: Untagged
@@ -1210,8 +1211,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1259713005853116}
-  m_LocalRotation: {x: -0.02937559, y: 0.27221626, z: 0.008314531, w: 0.9617517}
-  m_LocalPosition: {x: 0, y: 0, z: -3.5}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.14, z: -3.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 224672755793785944}
@@ -1470,6 +1471,35 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1259713005853116}
   m_Mesh: {fileID: 4300000, guid: 6c09e7041f6783440ac79b12ebe7aa82, type: 3}
+--- !u!54 &54186830462697804
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1701764641356114}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 4
+  m_CollisionDetection: 0
+--- !u!64 &64343494703811626
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1701764641356114}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 0}
 --- !u!95 &95226055081740848
 Animator:
   serializedVersion: 3
@@ -1623,19 +1653,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb3299da36d18984b90c12b29a3a7472, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!136 &136549869613436502
-CapsuleCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1259713005853116}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!137 &137207287145987340
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
