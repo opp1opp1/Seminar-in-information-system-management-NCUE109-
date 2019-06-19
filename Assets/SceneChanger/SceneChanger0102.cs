@@ -14,7 +14,7 @@ public class SceneChanger0102 : MonoBehaviour {
 
 	void Update()
     {
-        if (p_transform.position.z > 4)
+        if (p_transform.position.z > 13)
             SceneManager.LoadScene("Stage0102");
     }
 }

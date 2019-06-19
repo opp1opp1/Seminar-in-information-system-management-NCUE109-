@@ -14,7 +14,7 @@ public class SceneChangerVictory : MonoBehaviour {
 
     void Update()
     {
-        if (p_transform.position.z > 4)
+        if (p_transform.position.z > 11)
             SceneManager.LoadScene("MainScene");
     }
 }
