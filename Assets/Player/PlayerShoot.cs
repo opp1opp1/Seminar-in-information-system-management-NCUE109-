@@ -10,6 +10,7 @@ public class PlayerShoot : MonoBehaviour
 
     private float CAS;
     private float CASChecker;
+    public float Multipleshoot; 
     // Use this for initialization
     void Start()
     {
@@ -25,13 +26,22 @@ public class PlayerShoot : MonoBehaviour
         CASChecker -= Time.deltaTime;
         if (target.GetComponent<PlayerRotation>().enemychecker == true)
         {
-        
-        if (target.GetComponent<Playermove>().Characterismoving == false && CASChecker <= 0f)
-        {
-            Instantiate(arrow, transform.position, transform.rotation);
-            CAS = target.GetComponent<PlayerStats>().currentAttackSpeed;
-            CASChecker = CAS;
-        }
+            if (target.GetComponent<Playermove>().Characterismoving == false && CASChecker <= 0f && Multipleshoot == 1)
+            {
+                {
+                    Instantiate(arrow, transform.position, transform.rotation);
+                    Instantiate(arrow, transform.position, transform.rotation * Quaternion.AngleAxis(45, transform.up));
+                    Instantiate(arrow, transform.position, transform.rotation * Quaternion.AngleAxis(-45, transform.up));
+                    CAS = target.GetComponent<PlayerStats>().currentAttackSpeed;
+                    CASChecker = CAS;
+                }
+            }
+            else if (target.GetComponent<Playermove>().Characterismoving == false && CASChecker <= 0f)
+            {
+                Instantiate(arrow, transform.position, transform.rotation);
+                CAS = target.GetComponent<PlayerStats>().currentAttackSpeed;
+                CASChecker = CAS;
+            }
 
     }
     }
