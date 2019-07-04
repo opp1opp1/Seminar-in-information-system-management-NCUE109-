@@ -6,7 +6,10 @@ public class bulletdestroy : MonoBehaviour {
     private float lifeTime;
     public float maxTime = 3.0f;
     public float bullet_damage = 20.0f;
-    public float slowTime = 2.0f;
+    public float icebulletslowTime = 2.0f;
+    private GameObject target;
+    
+    
     // Use this for initialization
     void Start () {
         lifeTime = 0.0f;
@@ -27,12 +30,16 @@ public class bulletdestroy : MonoBehaviour {
     {
         if (other.tag == "Enemy")
         {
-            Destroy(gameObject);
+            
             if (this.gameObject.name == "Ice_Arrow(Clone)")
             {
-                slowTime += Time.deltaTime;
+              //  target = other.gameObject;
+               // icebulletslowTime = target.GetComponent<EnemyDebuff>().slowtime;
+               // target.GetComponent<EnemyDebuff>().slow=true;
+                
                 
             }
+            Destroy(gameObject);
         }
     }
 }

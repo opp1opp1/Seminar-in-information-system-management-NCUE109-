@@ -8,7 +8,7 @@ public class EnemyStat : MonoBehaviour {
     public float currentenemyhealth; //enemy的血量
     public float enemyattackspeed;//enemy的攻擊速度
     
-    private GameObject self;
+    //private GameObject self;
     private GameObject bullet;
     private float bulletdamage;
 
@@ -47,7 +47,7 @@ public class EnemyStat : MonoBehaviour {
             bullet = GameObject.Find("Ashe_Arrow(Clone)");
             bulletdamage = bullet.GetComponent<bulletdestroy>().bullet_damage; //取得弓箭的傷害
 
-            self = this.gameObject;
+            //self = this.gameObject;
             currentenemyhealth -= bulletdamage;
 
             Debug.Log("EnemyHealth:" + currentenemyhealth);

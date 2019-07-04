@@ -19,6 +19,7 @@ public class Playermove : MonoBehaviour {
     public float gravityScale;
     public bool Characterismoving =false;
     private Animator _animator;
+    //private Rigidbody rb;
 
 
     // Use this for initialization
@@ -27,6 +28,7 @@ public class Playermove : MonoBehaviour {
         //screenWeight = Screen.width;        //获取屏幕宽度
         controller = GetComponent<CharacterController>();  //設置controller為角色控制器
         _animator = this.GetComponent<Animator>();
+       // rb = GetComponent<Rigidbody>();
     }
 	
 	// Update is called once per frame
@@ -85,10 +87,11 @@ public class Playermove : MonoBehaviour {
             Characterismoving = true;
             
             _animator.SetBool("Characterismoving",true);
-            // moveDirection.y = moveDirection.y + (Physics.gravity.y * gravityScale * Time.deltaTime);   //賦予角色跳起來後跳下來的速度
-            controller.Move(moveDirection * Time.deltaTime);  //用deltatime去控制每台顯示器不同的平衡
+             moveDirection.y = moveDirection.y + (Physics.gravity.y * gravityScale * Time.deltaTime);   //賦予角色跳起來後跳下來的速度
+                controller.Move(moveDirection * Time.deltaTime);  //用deltatime去控制每台顯示器不同的平衡
             //moveDirection = new Vector3(Input.GetAxis("Horizontal") * moveSpeed, moveDirection.y, Input.GetAxis("Vertical") * moveSpeed);
             moveDirection = new Vector3(Input.GetAxis("Horizontal") * moveSpeed, 0, Input.GetAxis("Vertical") * moveSpeed);
+            //rb.velocity = new Vector3(Input.GetAxis("Horizontal") * moveSpeed, 0, Input.GetAxis("Vertical") * moveSpeed);
         }
         else
         {
