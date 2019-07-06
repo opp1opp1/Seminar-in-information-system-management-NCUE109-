@@ -16,7 +16,7 @@ public class PlayerShoot : MonoBehaviour
     {
         target = GameObject.Find("Ashe");
         CAS = target.GetComponent<PlayerStats>().currentAttackSpeed;
-        CASChecker = CAS;
+        CASChecker = 0.5f;
     }
 
     // Update is called once per frame
