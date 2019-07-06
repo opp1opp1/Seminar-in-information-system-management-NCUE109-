@@ -7,10 +7,14 @@ public class Enemyhealthbar : MonoBehaviour
     public float maxHP;
     public float currentHP;
     private GameObject target;
+    private GameObject target2;
+    private GameObject target3;
     // Use this for initialization
     void Start()
     {
-        target = GameObject.Find("Enemy1");
+        target3 = gameObject.transform.parent.gameObject;
+        target2 = target3.transform.parent.gameObject;
+        target = target2.transform.parent.gameObject;
     }
 
     // Update is called once per frame
