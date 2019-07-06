@@ -10,6 +10,8 @@ public class PlayerShoot : MonoBehaviour
 
     private float CAS;
     private float CASChecker;
+    private float CASChecker2;
+    
     public float Multipleshoot; 
     // Use this for initialization
     void Start()
@@ -24,23 +26,29 @@ public class PlayerShoot : MonoBehaviour
     {
 
         CASChecker -= Time.deltaTime;
+        CASChecker2 -= Time.deltaTime;
         if (target.GetComponent<PlayerRotation>().enemychecker == true)
         {
-            if (target.GetComponent<Playermove>().Characterismoving == false && CASChecker <= 0f && Multipleshoot == 1)
-            {
-                {
-                    Instantiate(arrow, transform.position, transform.rotation);
-                    Instantiate(arrow, transform.position, transform.rotation * Quaternion.AngleAxis(45, transform.up));
-                    Instantiate(arrow, transform.position, transform.rotation * Quaternion.AngleAxis(-45, transform.up));
-                    CAS = target.GetComponent<PlayerStats>().currentAttackSpeed;
-                    CASChecker = CAS;
-                }
+            if (target.GetComponent<Playermove>().Characterismoving == false && CASChecker <= 0f && Multipleshoot == 1) //散射
+            {            
+                Instantiate(arrow, transform.position, transform.rotation);
+                Instantiate(arrow, transform.position, transform.rotation * Quaternion.AngleAxis(45, transform.up));
+                Instantiate(arrow, transform.position, transform.rotation * Quaternion.AngleAxis(-45, transform.up));
+                CAS = target.GetComponent<PlayerStats>().currentAttackSpeed;
+                CASChecker = CAS;
             }
-            else if (target.GetComponent<Playermove>().Characterismoving == false && CASChecker <= 0f)
+            else if (target.GetComponent<Playermove>().Characterismoving == false && CASChecker <= 0f && Multipleshoot == 2)    //連射
             {
+                Instantiate(arrow, transform.position, transform.rotation);
                 Instantiate(arrow, transform.position, transform.rotation);
                 CAS = target.GetComponent<PlayerStats>().currentAttackSpeed;
                 CASChecker = CAS;
+            }
+            else if (target.GetComponent<Playermove>().Characterismoving == false && CASChecker <= 0f)  //單發
+            {
+                Instantiate(arrow, transform.position, transform.rotation);
+                CAS = target.GetComponent<PlayerStats>().currentAttackSpeed;
+                CASChecker = CAS;           
             }
 
     }
