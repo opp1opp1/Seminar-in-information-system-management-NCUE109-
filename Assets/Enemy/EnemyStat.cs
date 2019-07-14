@@ -9,7 +9,7 @@ public class EnemyStat : MonoBehaviour {
     public float enemyattackspeed;//enemy的攻擊速度
     
     
-    private GameObject bullet;
+    //private GameObject bullet;
     private float bulletdamage;
 
     
@@ -44,8 +44,8 @@ public class EnemyStat : MonoBehaviour {
         if (other.tag == "Bullet")      //如果碰到的物體tag為Bullet
         {
 
-            bullet = GameObject.Find("Ashe_Arrow(Clone)");
-            bulletdamage = bullet.GetComponent<bulletdestroy>().bullet_damage; //取得弓箭的傷害
+            //bullet = GameObject.Find("Ashe_Arrow(Clone)");
+            bulletdamage = other.GetComponent<bulletdestroy>().bullet_damage; //取得弓箭的傷害
 
             
             currentenemyhealth -= bulletdamage;

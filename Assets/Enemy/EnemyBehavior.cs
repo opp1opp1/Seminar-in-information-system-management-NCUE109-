@@ -14,14 +14,19 @@ public class EnemyBehavior : MonoBehaviour
     private float targethealth;
     private float EAS;
     private float EASChecker;
-
+    public float agentspeed  ;
+    private float slowagentspeed;
+    public float slowtimer = 0f;
     // Use this for initialization
     void Start()
     {
         Player = GameObject.Find("Ashe");
         agent = GetComponent<NavMeshAgent>();
+        agentspeed = 5.0f;
+        GetComponent<NavMeshAgent>().speed = agentspeed;
         EAS = this.GetComponent<EnemyStat>().enemyattackspeed;
         EASChecker = EAS;
+        slowagentspeed = agentspeed * 0.75f;
     }
 
     // Update is called once per frame
@@ -35,8 +40,22 @@ public class EnemyBehavior : MonoBehaviour
             //Vector3 newPos = transform.position + dirToPlayer;
             Vector3 newPos = Player.transform.position;
             agent.SetDestination(newPos);
+            
         }
+        if (slowtimer > 0.1f)
+        {
+            slowtimer -= Time.deltaTime;
 
+            GetComponent<NavMeshAgent>().speed = slowagentspeed;
+        }
+        else if (slowtimer <= 0.0f)
+        {
+            slowtimer = 0f;
+            GetComponent<NavMeshAgent>().speed = agentspeed;
+        }
+            //TEST IT works!
+            //agentspeed = 10.0f;
+           // GetComponent<NavMeshAgent>().speed = agentspeed;
 
     }
     private void OnTriggerStay(Collider other)

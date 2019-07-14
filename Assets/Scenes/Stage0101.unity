@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.4465782, g: 0.49641252, b: 0.5748167, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -409,7 +409,7 @@ Prefab:
     - target: {fileID: 114683473532179482, guid: 80578e19eccc31142a9e3e02a69aa601,
         type: 2}
       propertyPath: Muitishot
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114683473532179482, guid: 80578e19eccc31142a9e3e02a69aa601,
         type: 2}
@@ -419,8 +419,19 @@ Prefab:
     - target: {fileID: 114683473532179482, guid: 80578e19eccc31142a9e3e02a69aa601,
         type: 2}
       propertyPath: DiagonalArrow
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114683473532179482, guid: 80578e19eccc31142a9e3e02a69aa601,
+        type: 2}
+      propertyPath: IceArrow
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114683473532179482, guid: 80578e19eccc31142a9e3e02a69aa601,
+        type: 2}
+      propertyPath: IceArrowPrefab
+      value: 
+      objectReference: {fileID: 1022199727943258, guid: 6249a6d271c39ec4eb54cefd96781b7f,
+        type: 2}
     m_RemovedComponents:
     - {fileID: 136549869613436502, guid: 80578e19eccc31142a9e3e02a69aa601, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 80578e19eccc31142a9e3e02a69aa601, type: 2}
