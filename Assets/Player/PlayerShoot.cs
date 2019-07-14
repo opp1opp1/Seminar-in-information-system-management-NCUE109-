@@ -8,6 +8,7 @@ public class PlayerShoot : MonoBehaviour
     private GameObject target;
     public GameObject arrow;
     public GameObject IceArrowPrefab;
+    public GameObject FireArrowPrefab;
     private float CAS; //目前功速 (Current Attack Speed)
     private float CASChecker; //功速計時器
     public bool Muitishot = false; //連續射擊
@@ -15,13 +16,13 @@ public class PlayerShoot : MonoBehaviour
     public bool FrontArrow = false; //齊射
     public bool DiagonalArrow = false; //多重射擊
     public bool IceArrow = false; //冰屬性
+    public bool FireArrow = false; //冰屬性
     //public float Multipleshoot; 舊程式碼的判斷方式
     // Use this for initialization
 
     void Start()
     {
-        // C#
-       // IceArrowPrefab = (GameObject)Resources.Load("artwork/Ice_Arrow", typeof(GameObject));
+       
         target = GameObject.Find("Ashe");
         CAS = target.GetComponent<PlayerStats>().currentAttackSpeed;
         CASChecker = 0.5f; //整場遊戲的第一發不須等待 0.5S是考慮載入
@@ -88,6 +89,47 @@ public class PlayerShoot : MonoBehaviour
                 if (IceArrow == true) //判斷子彈是否為冰屬性
                 {
                     arrow = IceArrowPrefab;
+                    if (MuitishotSecondChecker == false) //判斷是否是第一次射擊
+                    {
+                        if (FrontArrow == true) //齊射
+                        {
+                            Instantiate(arrow, transform.position + (transform.right * 0.2f), transform.rotation);
+                            Instantiate(arrow, transform.position + (transform.right * -0.2f), transform.rotation);
+                        }
+                        else
+                            Instantiate(arrow, transform.position, transform.rotation);
+                        if (DiagonalArrow == true) //散射
+                        {
+                            Instantiate(arrow, transform.position, transform.rotation * Quaternion.AngleAxis(45, transform.up));
+                            Instantiate(arrow, transform.position, transform.rotation * Quaternion.AngleAxis(-45, transform.up));
+                        }
+                        CAS = target.GetComponent<PlayerStats>().currentAttackSpeed;
+                        CASChecker = CAS * 0.1f;
+                        MuitishotSecondChecker = true;
+
+                    }
+                    else
+                    {
+                        if (FrontArrow == true) //齊射
+                        {
+                            Instantiate(arrow, transform.position + (transform.right * 0.2f), transform.rotation);
+                            Instantiate(arrow, transform.position + (transform.right * -0.2f), transform.rotation);
+                        }
+                        else
+                            Instantiate(arrow, transform.position, transform.rotation);
+                        if (DiagonalArrow == true) //散射
+                        {
+                            Instantiate(arrow, transform.position, transform.rotation * Quaternion.AngleAxis(45, transform.up));
+                            Instantiate(arrow, transform.position, transform.rotation * Quaternion.AngleAxis(-45, transform.up));
+                        }
+                        CAS = target.GetComponent<PlayerStats>().currentAttackSpeed;
+                        CASChecker = CAS * 0.9f;
+                        MuitishotSecondChecker = false;
+                    }
+                }
+                else if (FireArrow == true) ////判斷子彈是否為火屬性
+                {
+                    arrow = FireArrowPrefab;
                     if (Muitishot == true) //判斷是否有獲得連續射擊
                     {
                         if (MuitishotSecondChecker == false) //判斷是否是第一次射擊
@@ -208,14 +250,14 @@ public class PlayerShoot : MonoBehaviour
                     }
                 }
 
-
+                }
             }
 
 
         }
 
     }
-}
+
 
 
    
