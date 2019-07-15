@@ -8,6 +8,7 @@ public class bulletdestroy : MonoBehaviour
     public float maxTime = 3.0f;
     public float bullet_damage = 20.0f;
     public float slowTime = 2.0f;
+    public float burnTime = 4.0f;
     // Use this for initialization
     void Start()
     {
@@ -35,6 +36,11 @@ public class bulletdestroy : MonoBehaviour
             {
                 //other.GetComponent<EnemyBehavior>().agentspeed = other.GetComponent<EnemyBehavior>().agentspeed * 0.8f;
                 other.GetComponent<EnemyBehavior>().slowtimer = slowTime;
+            }
+            if (this.gameObject.name == "Fire_Arrow(Clone)")
+            {
+                other.GetComponent<EnemyBehavior>().burntimer = burnTime;
+                other.GetComponent<EnemyBehavior>().burndamage = bullet_damage * 0.2f * 0.25f;
             }
         }
     }

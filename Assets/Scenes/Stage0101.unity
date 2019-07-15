@@ -432,6 +432,17 @@ Prefab:
       value: 
       objectReference: {fileID: 1022199727943258, guid: 6249a6d271c39ec4eb54cefd96781b7f,
         type: 2}
+    - target: {fileID: 114683473532179482, guid: 80578e19eccc31142a9e3e02a69aa601,
+        type: 2}
+      propertyPath: FireArrow
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114683473532179482, guid: 80578e19eccc31142a9e3e02a69aa601,
+        type: 2}
+      propertyPath: FireArrowPrefab
+      value: 
+      objectReference: {fileID: 1975173084334098, guid: 8e6dc764ddf115a42871622010e2abcd,
+        type: 2}
     m_RemovedComponents:
     - {fileID: 136549869613436502, guid: 80578e19eccc31142a9e3e02a69aa601, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 80578e19eccc31142a9e3e02a69aa601, type: 2}

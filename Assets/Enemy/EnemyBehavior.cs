@@ -17,6 +17,9 @@ public class EnemyBehavior : MonoBehaviour
     public float agentspeed  ;
     private float slowagentspeed;
     public float slowtimer = 0f;
+    public float burntimer = 0f;
+    private float burncounter = 0f;
+    public float burndamage;
     // Use this for initialization
     void Start()
     {
@@ -45,7 +48,7 @@ public class EnemyBehavior : MonoBehaviour
         if (slowtimer > 0.1f)
         {
             slowtimer -= Time.deltaTime;
-
+            
             GetComponent<NavMeshAgent>().speed = slowagentspeed;
         }
         else if (slowtimer <= 0.0f)
@@ -53,9 +56,29 @@ public class EnemyBehavior : MonoBehaviour
             slowtimer = 0f;
             GetComponent<NavMeshAgent>().speed = agentspeed;
         }
-            //TEST IT works!
-            //agentspeed = 10.0f;
-           // GetComponent<NavMeshAgent>().speed = agentspeed;
+        if (burntimer > 0.1f)
+        {
+            burncounter += Time.deltaTime;
+            burntimer -= Time.deltaTime;
+            if(burncounter >=1.0f)
+            {
+                GetComponent<EnemyStat>().currentenemyhealth -= burndamage;
+                Debug.Log("EnemyHealth:" + GetComponent<EnemyStat>().currentenemyhealth);
+                burncounter = 0f;
+            }
+            
+
+
+        }
+        else if (burntimer <= 0.0f)
+        {
+            burntimer = 0f;
+            burncounter = 0f;
+
+        }
+        //TEST IT works!
+        //agentspeed = 10.0f;
+        // GetComponent<NavMeshAgent>().speed = agentspeed;
 
     }
     private void OnTriggerStay(Collider other)
