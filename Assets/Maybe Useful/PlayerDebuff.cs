@@ -12,8 +12,8 @@ public class PlayerDebuff : MonoBehaviour {
     public float Freezetime = 0f;
     // Use this for initialization
     void Start () {
-		slowspeed = gameObject.GetComponent<Playermove>().moveSpeed*0.8f;
-        normalspeed = gameObject.GetComponent<Playermove>().moveSpeed;
+		slowspeed = gameObject.GetComponent<Playermove>().MoveSpeed*0.8f;
+        normalspeed = gameObject.GetComponent<Playermove>().MoveSpeed;
         normalcolor = gameObject.GetComponent<MeshRenderer>().material.color;
     }
 	
@@ -28,7 +28,7 @@ public class PlayerDebuff : MonoBehaviour {
         
         if (Slowtime > 0 )
         {
-            gameObject.GetComponent<Playermove>().moveSpeed = slowspeed;
+            gameObject.GetComponent<Playermove>().MoveSpeed = slowspeed;
             gameObject.GetComponent<MeshRenderer>().material.color = slowcolor;
         }
          if (Slowtime > 2.0f)
@@ -38,7 +38,7 @@ public class PlayerDebuff : MonoBehaviour {
          if (Slowtime <= 0f)
         {
             Slowtime = 0f;
-            gameObject.GetComponent<Playermove>().moveSpeed=normalspeed ;
+            gameObject.GetComponent<Playermove>().MoveSpeed=normalspeed ;
             gameObject.GetComponent<MeshRenderer>().material.color=normalcolor;
             
         }
@@ -49,7 +49,7 @@ public class PlayerDebuff : MonoBehaviour {
 
         if (Freezetime > 0)
         {
-            gameObject.GetComponent<Playermove>().moveSpeed = 0f;
+            gameObject.GetComponent<Playermove>().MoveSpeed = 0f;
             gameObject.GetComponent<MeshRenderer>().material.color = Freezecolor;
         }
         if (Freezetime > 2.0f)
@@ -59,7 +59,7 @@ public class PlayerDebuff : MonoBehaviour {
         if (Freezetime <= 0f)
         {
             Freezetime = 0f;
-            gameObject.GetComponent<Playermove>().moveSpeed = normalspeed;
+            gameObject.GetComponent<Playermove>().MoveSpeed = normalspeed;
             gameObject.GetComponent<MeshRenderer>().material.color = normalcolor;
 
         }

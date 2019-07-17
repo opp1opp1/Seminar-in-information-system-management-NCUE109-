@@ -435,7 +435,7 @@ Prefab:
     - target: {fileID: 114683473532179482, guid: 80578e19eccc31142a9e3e02a69aa601,
         type: 2}
       propertyPath: FireArrow
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114683473532179482, guid: 80578e19eccc31142a9e3e02a69aa601,
         type: 2}
@@ -443,6 +443,22 @@ Prefab:
       value: 
       objectReference: {fileID: 1975173084334098, guid: 8e6dc764ddf115a42871622010e2abcd,
         type: 2}
+    - target: {fileID: 114683473532179482, guid: 80578e19eccc31142a9e3e02a69aa601,
+        type: 2}
+      propertyPath: WindArrowPrefab
+      value: 
+      objectReference: {fileID: 1472858567370152, guid: 789832bb25d3b4746b9ffbc127c9a496,
+        type: 2}
+    - target: {fileID: 114683473532179482, guid: 80578e19eccc31142a9e3e02a69aa601,
+        type: 2}
+      propertyPath: WindArrow
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114443064330738574, guid: 80578e19eccc31142a9e3e02a69aa601,
+        type: 2}
+      propertyPath: MoveSpeed
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 136549869613436502, guid: 80578e19eccc31142a9e3e02a69aa601, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 80578e19eccc31142a9e3e02a69aa601, type: 2}

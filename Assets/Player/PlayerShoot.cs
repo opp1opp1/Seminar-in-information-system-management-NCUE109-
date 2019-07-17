@@ -9,6 +9,7 @@ public class PlayerShoot : MonoBehaviour
     public GameObject arrow;
     public GameObject IceArrowPrefab;
     public GameObject FireArrowPrefab;
+    public GameObject WindArrowPrefab;
     private float CAS; //目前功速 (Current Attack Speed)
     private float CASChecker; //功速計時器
     public bool Muitishot = false; //連續射擊
@@ -17,6 +18,7 @@ public class PlayerShoot : MonoBehaviour
     public bool DiagonalArrow = false; //多重射擊
     public bool IceArrow = false; //冰屬性
     public bool FireArrow = false; //冰屬性
+    public bool WindArrow = false;
     //public float Multipleshoot; 舊程式碼的判斷方式
     // Use this for initialization
 
@@ -130,6 +132,68 @@ public class PlayerShoot : MonoBehaviour
                 else if (FireArrow == true) ////判斷子彈是否為火屬性
                 {
                     arrow = FireArrowPrefab;
+                    if (Muitishot == true) //判斷是否有獲得連續射擊
+                    {
+                        if (MuitishotSecondChecker == false) //判斷是否是第一次射擊
+                        {
+                            if (FrontArrow == true) //齊射
+                            {
+                                Instantiate(arrow, transform.position + (transform.right * 0.2f), transform.rotation);
+                                Instantiate(arrow, transform.position + (transform.right * -0.2f), transform.rotation);
+                            }
+                            else
+                                Instantiate(arrow, transform.position, transform.rotation);
+                            if (DiagonalArrow == true) //散射
+                            {
+                                Instantiate(arrow, transform.position, transform.rotation * Quaternion.AngleAxis(45, transform.up));
+                                Instantiate(arrow, transform.position, transform.rotation * Quaternion.AngleAxis(-45, transform.up));
+                            }
+                            CAS = target.GetComponent<PlayerStats>().currentAttackSpeed;
+                            CASChecker = CAS * 0.1f;
+                            MuitishotSecondChecker = true;
+
+                        }
+                        else
+                        {
+                            if (FrontArrow == true) //齊射
+                            {
+                                Instantiate(arrow, transform.position + (transform.right * 0.2f), transform.rotation);
+                                Instantiate(arrow, transform.position + (transform.right * -0.2f), transform.rotation);
+                            }
+                            else
+                                Instantiate(arrow, transform.position, transform.rotation);
+                            if (DiagonalArrow == true) //散射
+                            {
+                                Instantiate(arrow, transform.position, transform.rotation * Quaternion.AngleAxis(45, transform.up));
+                                Instantiate(arrow, transform.position, transform.rotation * Quaternion.AngleAxis(-45, transform.up));
+                            }
+                            CAS = target.GetComponent<PlayerStats>().currentAttackSpeed;
+                            CASChecker = CAS * 0.9f;
+                            MuitishotSecondChecker = false;
+                        }
+                    }
+                    else
+                    {
+                        if (FrontArrow == true) //齊射
+                        {
+                            Instantiate(arrow, transform.position + (transform.right * 0.2f), transform.rotation);
+                            Instantiate(arrow, transform.position + (transform.right * -0.2f), transform.rotation);
+                        }
+                        else
+                            Instantiate(arrow, transform.position, transform.rotation);
+                        if (DiagonalArrow == true) //散射
+                        {
+                            Instantiate(arrow, transform.position, transform.rotation * Quaternion.AngleAxis(45, transform.up));
+                            Instantiate(arrow, transform.position, transform.rotation * Quaternion.AngleAxis(-45, transform.up));
+                        }
+                        CAS = target.GetComponent<PlayerStats>().currentAttackSpeed;
+                        CASChecker = CAS;
+                    }
+
+                }
+                else if (WindArrow == true) ////判斷子彈是否為火屬性
+                {
+                    arrow = WindArrowPrefab;
                     if (Muitishot == true) //判斷是否有獲得連續射擊
                     {
                         if (MuitishotSecondChecker == false) //判斷是否是第一次射擊

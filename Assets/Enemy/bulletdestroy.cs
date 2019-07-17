@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class bulletdestroy : MonoBehaviour
 {
+    private GameObject target;
     private float lifeTime;
     public float maxTime = 3.0f;
     public float bullet_damage = 20.0f;
@@ -41,6 +42,11 @@ public class bulletdestroy : MonoBehaviour
             {
                 other.GetComponent<EnemyBehavior>().burntimer = burnTime;
                 other.GetComponent<EnemyBehavior>().burndamage = bullet_damage * 0.2f * 0.25f;
+            }
+            if (this.gameObject.name == "Wind_Arrow(Clone)")
+            {
+                target = GameObject.Find("Ashe");
+                target.GetComponent<Playermove>().speeduptimer += 2.0f;
             }
         }
     }

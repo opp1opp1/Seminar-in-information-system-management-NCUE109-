@@ -13,7 +13,10 @@ public class Playermove : MonoBehaviour {
     public Vector3 twoPos;//移动后的position 
 
     private Vector3 moveDirection;
-    public float moveSpeed;
+    public float speeduptimer;
+    public float MoveSpeed;
+    private float NormalSpeed;
+    private float SpeedUpMoveSpeed;
     public float jumpForce;
     public CharacterController controller;
     public float gravityScale;
@@ -27,6 +30,8 @@ public class Playermove : MonoBehaviour {
         //screenWeight = Screen.width;        //获取屏幕宽度
         controller = GetComponent<CharacterController>();  //設置controller為角色控制器
         _animator = this.GetComponent<Animator>();
+        NormalSpeed = MoveSpeed;
+        SpeedUpMoveSpeed = 1.5f * MoveSpeed;
     }
 	
 	// Update is called once per frame
@@ -80,6 +85,17 @@ public class Playermove : MonoBehaviour {
              }
          }
          */
+        if (speeduptimer > 0.1f)
+        {
+            speeduptimer -= Time.deltaTime;
+
+            MoveSpeed = SpeedUpMoveSpeed;
+        }
+        else if (speeduptimer <= 0.0f)
+        {
+            MoveSpeed = NormalSpeed;
+            speeduptimer = 0.0f;
+        }
         if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D))
         {
             Characterismoving = true;
@@ -88,7 +104,7 @@ public class Playermove : MonoBehaviour {
             // moveDirection.y = moveDirection.y + (Physics.gravity.y * gravityScale * Time.deltaTime);   //賦予角色跳起來後跳下來的速度
             controller.Move(moveDirection * Time.deltaTime);  //用deltatime去控制每台顯示器不同的平衡
             //moveDirection = new Vector3(Input.GetAxis("Horizontal") * moveSpeed, moveDirection.y, Input.GetAxis("Vertical") * moveSpeed);
-            moveDirection = new Vector3(Input.GetAxis("Horizontal") * moveSpeed, 0, Input.GetAxis("Vertical") * moveSpeed);
+            moveDirection = new Vector3(Input.GetAxis("Horizontal") * MoveSpeed, 0, Input.GetAxis("Vertical") * MoveSpeed);
         }
         else
         {
