@@ -12,6 +12,7 @@ public class EnemyBehavior : MonoBehaviour
     private GameObject target;
     private GameObject arrow;
     private float targethealth;
+    private float targetShield;
     private float EAS;
     private float EASChecker;
     public float agentspeed  ;
@@ -88,11 +89,25 @@ public class EnemyBehavior : MonoBehaviour
             if (EASChecker <= 0)
             {
                 target = GameObject.Find("Ashe");
-                targethealth = target.GetComponent<PlayerStats>().currentHealth;
-                targethealth -= ColliderDamage;
-                target.GetComponent<PlayerStats>().currentHealth = targethealth;
-                Debug.Log("Health:" + target.GetComponent<PlayerStats>().currentHealth);
-                EASChecker = EAS;
+                targetShield = target.GetComponent<PlayerStats>().currentSheild;
+                if (targetShield >= ColliderDamage)
+                {
+                    targetShield -= ColliderDamage;
+                    target.GetComponent<PlayerStats>().currentSheild = targetShield;
+                }
+                else if (targetShield < ColliderDamage)
+                {
+                    target.GetComponent<PlayerStats>().currentSheild = 0;
+                    ColliderDamage -= targetShield;
+                    if (ColliderDamage > 0)
+                    {
+                    targethealth = target.GetComponent<PlayerStats>().currentHealth;
+                    targethealth -= ColliderDamage;
+                    target.GetComponent<PlayerStats>().currentHealth = targethealth;
+                    }
+                }
+                Debug.Log("Health:" + target.GetComponent<PlayerStats>().currentHealth+ "Sheild:"+ target.GetComponent<PlayerStats>().currentSheild);
+                    EASChecker = EAS;
             }
         }
     }

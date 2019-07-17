@@ -452,13 +452,24 @@ Prefab:
     - target: {fileID: 114683473532179482, guid: 80578e19eccc31142a9e3e02a69aa601,
         type: 2}
       propertyPath: WindArrow
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114443064330738574, guid: 80578e19eccc31142a9e3e02a69aa601,
         type: 2}
       propertyPath: MoveSpeed
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 114683473532179482, guid: 80578e19eccc31142a9e3e02a69aa601,
+        type: 2}
+      propertyPath: EarthArrow
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114683473532179482, guid: 80578e19eccc31142a9e3e02a69aa601,
+        type: 2}
+      propertyPath: EarthArrowPrefab
+      value: 
+      objectReference: {fileID: 1022150552382454, guid: 8eeb43dd0c5fe7a4f9b7471b62984c1a,
+        type: 2}
     m_RemovedComponents:
     - {fileID: 136549869613436502, guid: 80578e19eccc31142a9e3e02a69aa601, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 80578e19eccc31142a9e3e02a69aa601, type: 2}

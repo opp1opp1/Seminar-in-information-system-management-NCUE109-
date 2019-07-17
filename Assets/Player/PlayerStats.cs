@@ -9,6 +9,7 @@ public class PlayerStats : MonoBehaviour {
     public float currentAttackDamage = 5;
     public float currentAttackSpeed = 1.0f;
     public float currentHealth = 100;
+    public float currentSheild = 0;
     private GameObject bullet;
     private float bulletdamage;
     // Use this for initialization

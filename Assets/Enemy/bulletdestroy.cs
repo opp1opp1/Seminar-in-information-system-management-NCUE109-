@@ -48,6 +48,11 @@ public class bulletdestroy : MonoBehaviour
                 target = GameObject.Find("Ashe");
                 target.GetComponent<Playermove>().speeduptimer += 2.0f;
             }
+            if (this.gameObject.name == "Earth_Arrow(Clone)")
+            {
+                target = GameObject.Find("Ashe");
+                target.GetComponent<PlayerStats>().currentSheild += 5.0f;
+            }
         }
     }
 }
