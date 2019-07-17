@@ -38,10 +38,13 @@ public class EnemyBehavior : MonoBehaviour
     {
         EASChecker -= Time.deltaTime;
         float distance = Vector3.Distance(transform.position, Player.transform.position);
+        
         if (distance < WakeUpDistance)
         {
             //Vector3 dirToPlayer = transform.position - Player.transform.position;
             //Vector3 newPos = transform.position + dirToPlayer;
+           
+            
             Vector3 newPos = Player.transform.position;
             agent.SetDestination(newPos);
             
@@ -80,7 +83,7 @@ public class EnemyBehavior : MonoBehaviour
         //TEST IT works!
         //agentspeed = 10.0f;
         // GetComponent<NavMeshAgent>().speed = agentspeed;
-
+        Quaternion.LookRotation(Player.transform.position-this.transform.position);
     }
     private void OnTriggerStay(Collider other)
     {
