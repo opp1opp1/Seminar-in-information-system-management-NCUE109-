@@ -7,10 +7,10 @@ public class EnemyStat : MonoBehaviour {
     public float basicenemyhealth; //初始enemy的血量
     public float currentenemyhealth; //enemy的血量
     public float enemyattackspeed;//enemy的攻擊速度
-    
-    
-    //private GameObject bullet;
+    public float ColliderDamage;
+    public float WakeUpDistance;
     private float bulletdamage;
+    public float agantspeed;
 
     
  
@@ -24,11 +24,17 @@ public class EnemyStat : MonoBehaviour {
                 case 1:
                     basicenemyhealth = 100;
                 enemyattackspeed = 1f;
+                ColliderDamage = 20f;
+                WakeUpDistance = 15f;
+                agantspeed = 5f;
                     break;
                 case 2:
                     basicenemyhealth = 60;
                 enemyattackspeed = 1f;
-                    break;
+                ColliderDamage = 5f;
+                WakeUpDistance = 8f;
+                agantspeed = 10f;
+                break;
                 default:
                     Debug.Log("enemy dont have health");
                     break;

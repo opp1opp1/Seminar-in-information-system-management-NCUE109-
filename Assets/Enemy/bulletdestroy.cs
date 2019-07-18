@@ -30,7 +30,7 @@ public class bulletdestroy : MonoBehaviour
     //弓箭射到物體時消失
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Enemy")
+        if (other.tag == "Enemy_1"||other.tag == "Enemy_2")
         {
             Destroy(gameObject);
             if (this.gameObject.name == "Ice_Arrow(Clone)")

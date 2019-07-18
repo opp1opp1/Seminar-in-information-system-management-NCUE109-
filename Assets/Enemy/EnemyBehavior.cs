@@ -5,32 +5,35 @@ using UnityEngine.AI;
 
 public class EnemyBehavior : MonoBehaviour
 {
+    public GameObject Enemy2_bullet;
     private NavMeshAgent agent;
     private GameObject Player;
-    public float WakeUpDistance = 10.0f;
-    public float ColliderDamage = 5.0f;
+    //public float WakeUpDistance;
+    //public float ColliderDamage;
     private GameObject target;
     private GameObject arrow;
     private float targethealth;
     private float targetShield;
     private float EAS;
     private float EASChecker;
-    public float agentspeed  ;
+    public float agentspeed ;
     private float slowagentspeed;
     public float slowtimer = 0f;
     public float burntimer = 0f;
     private float burncounter = 0f;
     public float burndamage;
+    private float tempDamage;
     // Use this for initialization
     void Start()
     {
         Player = GameObject.Find("Ashe");
         agent = GetComponent<NavMeshAgent>();
-        agentspeed = 5.0f;
+        agentspeed = GetComponent<EnemyStat>().agantspeed;
         GetComponent<NavMeshAgent>().speed = agentspeed;
         EAS = this.GetComponent<EnemyStat>().enemyattackspeed;
         EASChecker = EAS;
         slowagentspeed = agentspeed * 0.75f;
+       
     }
 
     // Update is called once per frame
@@ -38,16 +41,36 @@ public class EnemyBehavior : MonoBehaviour
     {
         EASChecker -= Time.deltaTime;
         float distance = Vector3.Distance(transform.position, Player.transform.position);
-        
-        if (distance < WakeUpDistance)
+        if (this.gameObject.tag=="Enemy_1")
         {
-            //Vector3 dirToPlayer = transform.position - Player.transform.position;
-            //Vector3 newPos = transform.position + dirToPlayer;
-           
-            
-            Vector3 newPos = Player.transform.position;
-            agent.SetDestination(newPos);
-            
+            if (distance <= this.GetComponent<EnemyStat>().WakeUpDistance)
+            {
+                //Vector3 dirToPlayer = transform.position - Player.transform.position;
+                //Vector3 newPos = transform.position + dirToPlayer;
+                Vector3 newPos = Player.transform.position;
+                agent.SetDestination(newPos);
+
+            }
+        }
+        else if (this.gameObject.tag==  ("Enemy_2"))
+        {
+            if (distance < this.GetComponent<EnemyStat>().WakeUpDistance)
+            {
+                Vector3 dirToPlayer = transform.position - Player.transform.position;
+                Vector3 newPos = transform.position + dirToPlayer;
+                //Vector3 newPos = transform.position ;
+                agent.SetDestination(newPos);
+            }
+            else
+            {
+                if (EASChecker <= 0)
+                {
+                    target = GameObject.Find("Ashe");
+                    transform.LookAt(target.transform.position);
+                    Instantiate(Enemy2_bullet, transform.position, transform.rotation);
+                    EASChecker = EAS;
+                }
+            }
         }
         if (slowtimer > 0.1f)
         {
@@ -70,9 +93,6 @@ public class EnemyBehavior : MonoBehaviour
                 Debug.Log("EnemyHealth:" + GetComponent<EnemyStat>().currentenemyhealth);
                 burncounter = 0f;
             }
-            
-
-
         }
         else if (burntimer <= 0.0f)
         {
@@ -80,40 +100,72 @@ public class EnemyBehavior : MonoBehaviour
             burncounter = 0f;
 
         }
-        //TEST IT works!
-        //agentspeed = 10.0f;
-        // GetComponent<NavMeshAgent>().speed = agentspeed;
-        Quaternion.LookRotation(Player.transform.position-this.transform.position);
     }
     private void OnTriggerStay(Collider other)
     {
-        if (other.name == "Ashe")
+        if (gameObject.tag == "Enemy_1")
         {
-            if (EASChecker <= 0)
+            if (other.name == "Ashe")
             {
-                target = GameObject.Find("Ashe");
-                targetShield = target.GetComponent<PlayerStats>().currentSheild;
-                if (targetShield >= ColliderDamage)
+                if (EASChecker <= 0)
                 {
-                    targetShield -= ColliderDamage;
-                    target.GetComponent<PlayerStats>().currentSheild = targetShield;
-                }
-                else if (targetShield < ColliderDamage)
-                {
-                    target.GetComponent<PlayerStats>().currentSheild = 0;
-                    ColliderDamage -= targetShield;
-                    if (ColliderDamage > 0)
+                    target = GameObject.Find("Ashe");
+                    targetShield = target.GetComponent<PlayerStats>().currentSheild;
+                    if (targetShield >= GetComponent<EnemyStat>().ColliderDamage)
                     {
-                    targethealth = target.GetComponent<PlayerStats>().currentHealth;
-                    targethealth -= ColliderDamage;
-                    target.GetComponent<PlayerStats>().currentHealth = targethealth;
+                        targetShield -= GetComponent<EnemyStat>().ColliderDamage;
+                        target.GetComponent<PlayerStats>().currentSheild = targetShield;
                     }
-                }
-                Debug.Log("Health:" + target.GetComponent<PlayerStats>().currentHealth+ "Sheild:"+ target.GetComponent<PlayerStats>().currentSheild);
+                    else if (targetShield < GetComponent<EnemyStat>().ColliderDamage)
+                    {
+                        
+                        GetComponent<EnemyStat>().ColliderDamage = tempDamage;
+                        tempDamage -= targetShield;
+                        target.GetComponent<PlayerStats>().currentSheild = 0;
+                        if (tempDamage > 0)
+                        {
+                            targethealth = target.GetComponent<PlayerStats>().currentHealth;
+                            targethealth -= tempDamage;
+                            target.GetComponent<PlayerStats>().currentHealth = targethealth;
+                        }
+                    }
+                    Debug.Log("Health:" + target.GetComponent<PlayerStats>().currentHealth + "Sheild:" + target.GetComponent<PlayerStats>().currentSheild);
                     EASChecker = EAS;
+                }
             }
         }
-    }
+        else if (gameObject.tag == "Enemy_2")
+        {
+            if (other.name == "Ashe")
+            {
+                if (EASChecker <= 0)
+                {
+                    target = GameObject.Find("Ashe");
+                    targetShield = target.GetComponent<PlayerStats>().currentSheild;
+                    if (targetShield >= GetComponent<EnemyStat>().ColliderDamage)
+                    {
+                        targetShield -= GetComponent<EnemyStat>().ColliderDamage;
+                        target.GetComponent<PlayerStats>().currentSheild = targetShield;
+                    }
+                    else if (targetShield < GetComponent<EnemyStat>().ColliderDamage)
+                    {
+
+                        GetComponent<EnemyStat>().ColliderDamage = tempDamage;
+                        tempDamage -= targetShield;
+                        target.GetComponent<PlayerStats>().currentSheild = 0;
+                        if (tempDamage > 0)
+                        {
+                            targethealth = target.GetComponent<PlayerStats>().currentHealth;
+                            targethealth -= tempDamage;
+                            target.GetComponent<PlayerStats>().currentHealth = targethealth;
+                        }
+                    }
+                    Debug.Log("Health:" + target.GetComponent<PlayerStats>().currentHealth + "Sheild:" + target.GetComponent<PlayerStats>().currentSheild);
+                    EASChecker = EAS;
+                }
+            }
+        }
+        }
 
     
 

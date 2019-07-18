@@ -99,7 +99,7 @@ GameObject:
   - component: {fileID: 114825469269544968}
   m_Layer: 9
   m_Name: Enemy1
-  m_TagString: Enemy
+  m_TagString: Enemy_1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -400,8 +400,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82de2b2a71af73d48913cb1449e93c45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WakeUpDistance: 5
-  ColliderDamage: 5
+  Enemy2_bullet: {fileID: 1511428900671028, guid: 05d1715d801975d429cfeef34753795f,
+    type: 2}
   agentspeed: 5
   slowtimer: 0
   burntimer: 0
@@ -454,6 +454,8 @@ MonoBehaviour:
   basicenemyhealth: 100
   currentenemyhealth: 100
   enemyattackspeed: 1
+  ColliderDamage: 0
+  WakeUpDistance: 0
 --- !u!114 &114879556249301586
 MonoBehaviour:
   m_ObjectHideFlags: 1
