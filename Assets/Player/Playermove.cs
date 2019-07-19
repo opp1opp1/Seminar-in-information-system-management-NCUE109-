@@ -23,6 +23,12 @@ public class Playermove : MonoBehaviour {
     public bool Characterismoving =false;
     private Animator _animator;
 
+    //碰撞
+    //包含上述MoveSpeed
+    public float deltaTime;
+    public Vector3 deltaMove;
+
+    public GameObject target;
 
     // Use this for initialization
     void Start () {
@@ -76,15 +82,9 @@ public class Playermove : MonoBehaviour {
             }
         }
 #endif
+        
 
-        /* if (controller.isGrounded)  //如果角色是在地面上，不是跳起來的狀態
-         {
-             if (Input.GetButtonDown("Jump")) //按跳起來(預設是空白建，我改成J鍵)
-             {
-                 moveDirection.y = jumpForce;  //角色Y方向增加(就是跳起來)
-             }
-         }
-         */
+        //風屬性改變速度
         if (speeduptimer > 0.1f)
         {
             speeduptimer -= Time.deltaTime;
@@ -96,6 +96,8 @@ public class Playermove : MonoBehaviour {
             MoveSpeed = NormalSpeed;
             speeduptimer = 0.0f;
         }
+
+        //移動
         if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D))
         {
             Characterismoving = true;
@@ -112,6 +114,28 @@ public class Playermove : MonoBehaviour {
             _animator.SetBool("Characterismoving", false);
         }
 
+        //碰撞
+        //deltaMove = MoveSpeed * Time.deltaTime;
+        Vector3 raystart = GameObject.Find("Ashe").transform.position;
+        float updown = 1;
+        Vector3 raydir = Vector3.right;
+
+        target = GameObject.Find("peoplewalking");
+
+        BoxCollider mycollider = target.GetComponent<BoxCollider>();
+        float halfBoundY = mycollider.size.z * GameObject.Find("peoplewalking").transform.localScale.z; 
+        float rayLength = Mathf.Abs(deltaMove.z) + halfBoundY; 
+
+        RaycastHit rhf = new RaycastHit(); 
+        if (Physics.Raycast(raystart, raydir, out rhf, rayLength))
+        {
+            Debug.Log("Success");
+            if (rhf.collider != null && rhf.collider.gameObject.tag == "wall") 
+            {
+                Debug.Log("Success"+rhf.collider+rhf.collider.gameObject.tag);
+                deltaMove.z = rhf.point.z - raystart.z + halfBoundY * -updown; 
+            }
+        }
 
         /*
         //Translate移动控制函数
@@ -125,4 +149,3 @@ public class Playermove : MonoBehaviour {
          */
     }
 }
-
