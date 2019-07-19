@@ -133,7 +133,7 @@ public class PlayerShoot : MonoBehaviour
                             MuitishotSecondChecker = false;
                         }
                     }
-                    else
+                    else//沒有連射
                     {
                         if (FrontArrow == true) //齊射
                         {
@@ -194,7 +194,7 @@ public class PlayerShoot : MonoBehaviour
                             MuitishotSecondChecker = false;
                         }
                     }
-                    else
+                    else//沒有火連射
                     {
                         if (FrontArrow == true) //齊射
                         {
@@ -256,7 +256,7 @@ public class PlayerShoot : MonoBehaviour
                             MuitishotSecondChecker = false;
                         }
                     }
-                    else
+                    else//沒有風連射
                     {
                         if (FrontArrow == true) //齊射
                         {
@@ -318,7 +318,7 @@ public class PlayerShoot : MonoBehaviour
                             MuitishotSecondChecker = false;
                         }
                     }
-                    else
+                    else//沒有土連射
                     {
                         if (FrontArrow == true) //齊射
                         {
