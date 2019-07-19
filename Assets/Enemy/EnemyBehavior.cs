@@ -23,6 +23,7 @@ public class EnemyBehavior : MonoBehaviour
     private float burncounter = 0f;
     public float burndamage;
     private float tempDamage;
+
     // Use this for initialization
     void Start()
     {
@@ -118,8 +119,8 @@ public class EnemyBehavior : MonoBehaviour
                     }
                     else if (targetShield < GetComponent<EnemyStat>().ColliderDamage)
                     {
+                        tempDamage = GetComponent<EnemyStat>().ColliderDamage;
                         
-                        GetComponent<EnemyStat>().ColliderDamage = tempDamage;
                         tempDamage -= targetShield;
                         target.GetComponent<PlayerStats>().currentSheild = 0;
                         if (tempDamage > 0)
