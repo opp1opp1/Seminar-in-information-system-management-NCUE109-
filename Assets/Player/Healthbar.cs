@@ -17,6 +17,19 @@ public class Healthbar : MonoBehaviour {
         
         currentHP = target.GetComponent<PlayerStats>().currentHealth;
         currentSheild = target.GetComponent<PlayerStats>().currentSheild;
-        this.transform.localPosition = new Vector3(-155+105*(currentHP/maxHP+currentSheild/100), 0.0f, 0.0f);
+        
+        if (currentSheild > 0)
+        {
+            if (currentHP == maxHP)
+            this.transform.localPosition = new Vector3(-105 + 105 * (currentHP / maxHP-currentSheild/100), 0.0f, 0.0f);
+            else
+            {
+                this.transform.localPosition = new Vector3(-105 + 105 * (currentHP / maxHP), 0.0f, 0.0f);
+            }
+        }
+        else
+        {
+            this.transform.localPosition = new Vector3(-105 + 105 * (currentHP / maxHP), 0.0f, 0.0f);
+        }
 	}
 }
