@@ -119,7 +119,7 @@ public class EnemyBehavior : MonoBehaviour
                     else if (targetShield < GetComponent<EnemyStat>().ColliderDamage)
                     {
                         
-                        tempDamage=GetComponent<EnemyStat>().ColliderDamage;
+                        GetComponent<EnemyStat>().ColliderDamage = tempDamage;
                         tempDamage -= targetShield;
                         target.GetComponent<PlayerStats>().currentSheild = 0;
                         if (tempDamage > 0)
