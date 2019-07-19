@@ -24,7 +24,7 @@ public class EnemyStat : MonoBehaviour {
                 case 1:
                     basicenemyhealth = 100;
                 enemyattackspeed = 1f;
-                ColliderDamage = 20f;
+                ColliderDamage = 10f;
                 WakeUpDistance = 15f;
                 agantspeed = 5f;
                     break;
