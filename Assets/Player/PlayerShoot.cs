@@ -90,7 +90,68 @@ public class PlayerShoot : MonoBehaviour
 
             if (target.GetComponent<Playermove>().Characterismoving == false && CASChecker <= 0f)//判斷腳色是否可以發射 是否處於靜止狀態
             {
-                if (IceArrow == true) //判斷子彈是否為冰屬性
+                if (IceArrow && FireArrow == true) //冰+火 =無敵
+                {
+                    target.GetComponent<PlayerStats>().invincible = true;
+                    if (Muitishot == true) //判斷是否有獲得連續射擊
+                    {
+                        if (MuitishotSecondChecker == false) //判斷是否是第一次射擊
+                        {
+                            if (FrontArrow == true) //齊射
+                            {
+                                Instantiate(arrow, transform.position + (transform.right * 0.2f), transform.rotation);
+                                Instantiate(arrow, transform.position + (transform.right * -0.2f), transform.rotation);
+                            }
+                            else
+                                Instantiate(arrow, transform.position, transform.rotation);
+                            if (DiagonalArrow == true) //散射
+                            {
+                                Instantiate(arrow, transform.position, transform.rotation * Quaternion.AngleAxis(45, transform.up));
+                                Instantiate(arrow, transform.position, transform.rotation * Quaternion.AngleAxis(-45, transform.up));
+                            }
+                            CAS = target.GetComponent<PlayerStats>().currentAttackSpeed;
+                            CASChecker = CAS * 0.1f;
+                            MuitishotSecondChecker = true;
+
+                        }
+                        else
+                        {
+                            if (FrontArrow == true) //齊射
+                            {
+                                Instantiate(arrow, transform.position + (transform.right * 0.2f), transform.rotation);
+                                Instantiate(arrow, transform.position + (transform.right * -0.2f), transform.rotation);
+                            }
+                            else
+                                Instantiate(arrow, transform.position, transform.rotation);
+                            if (DiagonalArrow == true) //散射
+                            {
+                                Instantiate(arrow, transform.position, transform.rotation * Quaternion.AngleAxis(45, transform.up));
+                                Instantiate(arrow, transform.position, transform.rotation * Quaternion.AngleAxis(-45, transform.up));
+                            }
+                            CAS = target.GetComponent<PlayerStats>().currentAttackSpeed;
+                            CASChecker = CAS * 0.9f;
+                            MuitishotSecondChecker = false;
+                        }
+                    }
+                    else//沒有連射
+                    {
+                        if (FrontArrow == true) //齊射
+                        {
+                            Instantiate(arrow, transform.position + (transform.right * 0.2f), transform.rotation);
+                            Instantiate(arrow, transform.position + (transform.right * -0.2f), transform.rotation);
+                        }
+                        else
+                            Instantiate(arrow, transform.position, transform.rotation);
+                        if (DiagonalArrow == true) //散射
+                        {
+                            Instantiate(arrow, transform.position, transform.rotation * Quaternion.AngleAxis(45, transform.up));
+                            Instantiate(arrow, transform.position, transform.rotation * Quaternion.AngleAxis(-45, transform.up));
+                        }
+                        CAS = target.GetComponent<PlayerStats>().currentAttackSpeed;
+                        CASChecker = CAS;
+                    }
+                }
+                else if (IceArrow == true) //判斷子彈是否為冰屬性
                 {
                     arrow = IceArrowPrefab;
                     if (Muitishot == true) //判斷是否有獲得連續射擊

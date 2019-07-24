@@ -110,19 +110,21 @@ public class EnemyBehavior : MonoBehaviour
             {
                 if (EASChecker <= 0)
                 {
+                    
                     target = GameObject.Find("Ashe");
-                    targetShield = target.GetComponent<PlayerStats>().currentSheild;
-                    if (targetShield >= GetComponent<EnemyStat>().ColliderDamage)
-                    {
-                        targetShield -= GetComponent<EnemyStat>().ColliderDamage;
-                        target.GetComponent<PlayerStats>().currentSheild = targetShield;
-                    }
-                    else if (targetShield < GetComponent<EnemyStat>().ColliderDamage)
-                    {
-                        tempDamage = GetComponent<EnemyStat>().ColliderDamage;
-                        
-                        tempDamage -= targetShield;
-                        target.GetComponent<PlayerStats>().currentSheild = 0;
+                    if (target.GetComponent<PlayerStats>().itisinvincinble != true)
+                    { 
+                        targetShield = target.GetComponent<PlayerStats>().currentSheild;
+                        if (targetShield >= GetComponent<EnemyStat>().ColliderDamage)
+                        {
+                            targetShield -= GetComponent<EnemyStat>().ColliderDamage;
+                            target.GetComponent<PlayerStats>().currentSheild = targetShield;
+                        }
+                        else if (targetShield < GetComponent<EnemyStat>().ColliderDamage)
+                        {
+                            tempDamage = GetComponent<EnemyStat>().ColliderDamage;                       
+                            tempDamage -= targetShield;
+                            target.GetComponent<PlayerStats>().currentSheild = 0;
                         if (tempDamage > 0)
                         {
                             targethealth = target.GetComponent<PlayerStats>().currentHealth;
@@ -130,8 +132,13 @@ public class EnemyBehavior : MonoBehaviour
                             target.GetComponent<PlayerStats>().currentHealth = targethealth;
                         }
                     }
+                    else
+                        {
+                            Debug.Log("invincinble");
+                        }
                     Debug.Log("Health:" + target.GetComponent<PlayerStats>().currentHealth + "Sheild:" + target.GetComponent<PlayerStats>().currentSheild);
                     EASChecker = EAS;
+                    }
                 }
             }
         }
@@ -142,27 +149,30 @@ public class EnemyBehavior : MonoBehaviour
                 if (EASChecker <= 0)
                 {
                     target = GameObject.Find("Ashe");
-                    targetShield = target.GetComponent<PlayerStats>().currentSheild;
-                    if (targetShield >= GetComponent<EnemyStat>().ColliderDamage)
+                    if (target.GetComponent<PlayerStats>().itisinvincinble != true)
                     {
-                        targetShield -= GetComponent<EnemyStat>().ColliderDamage;
-                        target.GetComponent<PlayerStats>().currentSheild = targetShield;
-                    }
-                    else if (targetShield < GetComponent<EnemyStat>().ColliderDamage)
-                    {
-
-                        GetComponent<EnemyStat>().ColliderDamage = tempDamage;
-                        tempDamage -= targetShield;
-                        target.GetComponent<PlayerStats>().currentSheild = 0;
-                        if (tempDamage > 0)
+                        targetShield = target.GetComponent<PlayerStats>().currentSheild;
+                        if (targetShield >= GetComponent<EnemyStat>().ColliderDamage)
                         {
-                            targethealth = target.GetComponent<PlayerStats>().currentHealth;
-                            targethealth -= tempDamage;
-                            target.GetComponent<PlayerStats>().currentHealth = targethealth;
+                            targetShield -= GetComponent<EnemyStat>().ColliderDamage;
+                            target.GetComponent<PlayerStats>().currentSheild = targetShield;
                         }
+                        else if (targetShield < GetComponent<EnemyStat>().ColliderDamage)
+                        {
+
+                            GetComponent<EnemyStat>().ColliderDamage = tempDamage;
+                            tempDamage -= targetShield;
+                            target.GetComponent<PlayerStats>().currentSheild = 0;
+                            if (tempDamage > 0)
+                            {
+                                targethealth = target.GetComponent<PlayerStats>().currentHealth;
+                                targethealth -= tempDamage;
+                                target.GetComponent<PlayerStats>().currentHealth = targethealth;
+                            }
+                        }
+                        Debug.Log("Health:" + target.GetComponent<PlayerStats>().currentHealth + "Sheild:" + target.GetComponent<PlayerStats>().currentSheild);
+                        EASChecker = EAS;
                     }
-                    Debug.Log("Health:" + target.GetComponent<PlayerStats>().currentHealth + "Sheild:" + target.GetComponent<PlayerStats>().currentSheild);
-                    EASChecker = EAS;
                 }
             }
         }

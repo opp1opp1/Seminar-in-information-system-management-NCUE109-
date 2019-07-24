@@ -13,10 +13,16 @@ public class PlayerStats : MonoBehaviour {
     private GameObject bullet;
     private float bulletdamage;
     private float removedshieldtime = 0.5f;
-    private float removedshieldtimer; 
+    private float removedshieldtimer;
+    public bool invincible = false;
+    private float invincinbletime = 2.0f;
+    public float invincinbletimer;
+    public bool itisinvincinble;
+    private float nextinvincinbletime =0.5f;
     // Use this for initialization
     void Start () {
         removedshieldtimer = removedshieldtime;
+        
             }
 
     // Update is called once per frame
@@ -38,6 +44,30 @@ public class PlayerStats : MonoBehaviour {
                     Debug.Log("Sheild:" + currentSheild);
                 }
                 removedshieldtimer = removedshieldtime;
+            }
+        }
+        if (invincible == true)
+        {
+            if (nextinvincinbletime > 0f)
+            {
+                nextinvincinbletime -= Time.deltaTime;
+
+            }
+            else 
+            {
+                invincinbletimer = invincinbletime;
+                nextinvincinbletime = 10f;
+            }
+
+            if (invincinbletimer > 0f) //無敵
+            {
+                invincinbletimer -= Time.deltaTime;
+                itisinvincinble = true;
+                
+            }
+            else //沒無敵
+            {
+                itisinvincinble = false;
             }
         }
     }
