@@ -19,6 +19,8 @@ public class PlayerStats : MonoBehaviour {
     public float invincinbletimer;
     public bool itisinvincinble;
     private float nextinvincinbletime =0.5f;
+    public bool reflectdamage = false;
+    public float reflectdamageratio = 0.35f;
     // Use this for initialization
     void Start () {
         removedshieldtimer = removedshieldtime;

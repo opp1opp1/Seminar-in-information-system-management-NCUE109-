@@ -115,6 +115,7 @@ public class EnemyBehavior : MonoBehaviour
                     if (target.GetComponent<PlayerStats>().itisinvincinble != true)
                     { 
                         targetShield = target.GetComponent<PlayerStats>().currentSheild;
+                        
                         if (targetShield >= GetComponent<EnemyStat>().ColliderDamage)
                         {
                             targetShield -= GetComponent<EnemyStat>().ColliderDamage;
@@ -136,7 +137,11 @@ public class EnemyBehavior : MonoBehaviour
                         {
                             Debug.Log("invincinble");
                         }
-                    Debug.Log("Health:" + target.GetComponent<PlayerStats>().currentHealth + "Sheild:" + target.GetComponent<PlayerStats>().currentSheild);
+                        if (target.GetComponent<PlayerStats>().reflectdamage == true)
+                        {
+                            GetComponent<EnemyStat>().currentenemyhealth -= GetComponent<EnemyStat>().ColliderDamage * target.GetComponent<PlayerStats>().reflectdamageratio;
+                        }
+                        Debug.Log("Health:" + target.GetComponent<PlayerStats>().currentHealth + "Sheild:" + target.GetComponent<PlayerStats>().currentSheild+"EnemyHealth"+GetComponent<EnemyStat>().currentenemyhealth);
                     EASChecker = EAS;
                     }
                 }
@@ -170,6 +175,14 @@ public class EnemyBehavior : MonoBehaviour
                                 target.GetComponent<PlayerStats>().currentHealth = targethealth;
                             }
                         }
+                else
+                     {
+                        Debug.Log("invincinble");
+                     }
+                if (target.GetComponent<PlayerStats>().reflectdamage == true)
+                    {
+                        GetComponent<EnemyStat>().currentenemyhealth -= GetComponent<EnemyStat>().ColliderDamage * target.GetComponent<PlayerStats>().reflectdamageratio;
+                    }
                         Debug.Log("Health:" + target.GetComponent<PlayerStats>().currentHealth + "Sheild:" + target.GetComponent<PlayerStats>().currentSheild);
                         EASChecker = EAS;
                     }
