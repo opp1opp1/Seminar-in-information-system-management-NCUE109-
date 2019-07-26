@@ -420,7 +420,7 @@ Prefab:
     - target: {fileID: 114683473532179482, guid: 80578e19eccc31142a9e3e02a69aa601,
         type: 2}
       propertyPath: IceArrow
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114683473532179482, guid: 80578e19eccc31142a9e3e02a69aa601,
         type: 2}
@@ -430,7 +430,7 @@ Prefab:
     - target: {fileID: 114683473532179482, guid: 80578e19eccc31142a9e3e02a69aa601,
         type: 2}
       propertyPath: WindArrow
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114683473532179482, guid: 80578e19eccc31142a9e3e02a69aa601,
         type: 2}
@@ -453,6 +453,12 @@ Prefab:
       propertyPath: ExplosionArrowPrefab
       value: 
       objectReference: {fileID: 1199807583155558, guid: 357626f1c6824714f8363248a5ae401e,
+        type: 2}
+    - target: {fileID: 114683473532179482, guid: 80578e19eccc31142a9e3e02a69aa601,
+        type: 2}
+      propertyPath: FireWindArrowPrefab
+      value: 
+      objectReference: {fileID: 1771918162061064, guid: 529b9222117a0124b9916336b694be21,
         type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 80578e19eccc31142a9e3e02a69aa601, type: 2}

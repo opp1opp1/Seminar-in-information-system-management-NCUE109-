@@ -9,9 +9,8 @@ public class EnemyStat : MonoBehaviour {
     public float enemyattackspeed;//enemy的攻擊速度
     public float ColliderDamage;
     public float WakeUpDistance;
-    private float Incomingdamage;
     public float agantspeed;
-
+    public float BurnGroundTime =2.0f;
     
  
 
@@ -42,43 +41,10 @@ public class EnemyStat : MonoBehaviour {
         currentenemyhealth = basicenemyhealth;
 
     }
-    private void OnTriggerEnter(Collider other) //偵測敵人本身有沒有跟弓箭產生碰撞
-    {
-        
-        
-        
-        if (other.tag == "Bullet")      //如果碰到的物體tag為Bullet
-        {
-
-
-            Incomingdamage = other.GetComponent<bulletdestroy>().bullet_damage; //取得弓箭的傷害
-
-            
-            currentenemyhealth -= Incomingdamage;
-
-            Debug.Log("EnemyHealth:" + currentenemyhealth);
-
-                if (currentenemyhealth <= 0)  //如果敵人血量低於0就掰掰
-                {
-                    Destroy(gameObject);
-                }
-        }
-        if (other.tag == "Explosion")
-        {
-            Incomingdamage = other.GetComponent<bulletdestroy>().Explosion_damage;
-            currentenemyhealth -= Incomingdamage;
-
-            Debug.Log("EnemyHealth:" + currentenemyhealth);
-
-            if (currentenemyhealth <= 0)  //如果敵人血量低於0就掰掰
-            {
-                Destroy(gameObject);
-            }
-        }
-    }
+    
     // Update is called once per frame
     void Update () {
-
+       
     }
     
 }

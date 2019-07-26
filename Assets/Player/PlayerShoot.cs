@@ -13,6 +13,7 @@ public class PlayerShoot : MonoBehaviour
     public GameObject EarthArrowPrefab;
     public GameObject StunArrowPrefab;
     public GameObject ExplosionArrowPrefab;
+    public GameObject FireWindArrowPrefab;
     private float CAS; //目前功速 (Current Attack Speed)
     private float CASChecker; //功速計時器
     public bool Muitishot = false; //連續射擊
@@ -158,6 +159,67 @@ public class PlayerShoot : MonoBehaviour
                 if (FireArrow && IceArrow == true) //火+冰 =爆炸傷害
                 {
                     arrow = ExplosionArrowPrefab;
+                    if (Muitishot == true) //判斷是否有獲得連續射擊
+                    {
+                        if (MuitishotSecondChecker == false) //判斷是否是第一次射擊
+                        {
+                            if (FrontArrow == true) //齊射
+                            {
+                                Instantiate(arrow, transform.position + (transform.right * 0.2f), transform.rotation);
+                                Instantiate(arrow, transform.position + (transform.right * -0.2f), transform.rotation);
+                            }
+                            else
+                                Instantiate(arrow, transform.position, transform.rotation);
+                            if (DiagonalArrow == true) //散射
+                            {
+                                Instantiate(arrow, transform.position, transform.rotation * Quaternion.AngleAxis(45, transform.up));
+                                Instantiate(arrow, transform.position, transform.rotation * Quaternion.AngleAxis(-45, transform.up));
+                            }
+                            CAS = target.GetComponent<PlayerStats>().currentAttackSpeed;
+                            CASChecker = CAS * 0.1f;
+                            MuitishotSecondChecker = true;
+
+                        }
+                        else
+                        {
+                            if (FrontArrow == true) //齊射
+                            {
+                                Instantiate(arrow, transform.position + (transform.right * 0.2f), transform.rotation);
+                                Instantiate(arrow, transform.position + (transform.right * -0.2f), transform.rotation);
+                            }
+                            else
+                                Instantiate(arrow, transform.position, transform.rotation);
+                            if (DiagonalArrow == true) //散射
+                            {
+                                Instantiate(arrow, transform.position, transform.rotation * Quaternion.AngleAxis(45, transform.up));
+                                Instantiate(arrow, transform.position, transform.rotation * Quaternion.AngleAxis(-45, transform.up));
+                            }
+                            CAS = target.GetComponent<PlayerStats>().currentAttackSpeed;
+                            CASChecker = CAS * 0.9f;
+                            MuitishotSecondChecker = false;
+                        }
+                    }
+                    else//沒有連射
+                    {
+                        if (FrontArrow == true) //齊射
+                        {
+                            Instantiate(arrow, transform.position + (transform.right * 0.2f), transform.rotation);
+                            Instantiate(arrow, transform.position + (transform.right * -0.2f), transform.rotation);
+                        }
+                        else
+                            Instantiate(arrow, transform.position, transform.rotation);
+                        if (DiagonalArrow == true) //散射
+                        {
+                            Instantiate(arrow, transform.position, transform.rotation * Quaternion.AngleAxis(45, transform.up));
+                            Instantiate(arrow, transform.position, transform.rotation * Quaternion.AngleAxis(-45, transform.up));
+                        }
+                        CAS = target.GetComponent<PlayerStats>().currentAttackSpeed;
+                        CASChecker = CAS;
+                    }
+                }
+                else if (FireArrow && WindArrow == true) //火+風 =經過路徑造成傷害
+                {
+                    arrow = FireWindArrowPrefab;
                     if (Muitishot == true) //判斷是否有獲得連續射擊
                     {
                         if (MuitishotSecondChecker == false) //判斷是否是第一次射擊

@@ -95,7 +95,7 @@ public class EnemyBehavior : MonoBehaviour
             stuntimer = 0f;
             GetComponent<NavMeshAgent>().speed = agentspeed;
         }
-        if (burntimer > 0.1f)
+        if (burntimer >  0f)
         {
             burncounter += Time.deltaTime;
             burntimer -= Time.deltaTime;
@@ -134,7 +134,7 @@ public class EnemyBehavior : MonoBehaviour
                                 targetShield -= tempDamage;
                                 target.GetComponent<PlayerStats>().currentSheild = targetShield;
                             }
-                            else if (targetShield < tempDamage)
+                            else
                             {
                                 tempDamage -= targetShield;
                                 target.GetComponent<PlayerStats>().currentSheild = 0;
@@ -143,27 +143,28 @@ public class EnemyBehavior : MonoBehaviour
                                     targethealth = target.GetComponent<PlayerStats>().currentHealth;
                                     targethealth -= tempDamage;
                                     target.GetComponent<PlayerStats>().currentHealth = targethealth;
+
                                 }
                             }
-                            else
+                        }
+                        else
+                        {
+                            if (targetShield >= GetComponent<EnemyStat>().ColliderDamage)
                             {
-                                if (targetShield >= GetComponent<EnemyStat>().ColliderDamage)
-                                {
-                                    targetShield -= GetComponent<EnemyStat>().ColliderDamage;
-                                    target.GetComponent<PlayerStats>().currentSheild = targetShield;
-                                }
-                                else if (targetShield < GetComponent<EnemyStat>().ColliderDamage)
-                                {
-                                    tempDamage = GetComponent<EnemyStat>().ColliderDamage;
-                                    tempDamage -= targetShield;
-                                    target.GetComponent<PlayerStats>().currentSheild = 0;
-                                }
-                                if (tempDamage > 0)
-                                {
-                                    targethealth = target.GetComponent<PlayerStats>().currentHealth;
-                                    targethealth -= tempDamage;
-                                    target.GetComponent<PlayerStats>().currentHealth = targethealth;
-                                }
+                                targetShield -= GetComponent<EnemyStat>().ColliderDamage;
+                                target.GetComponent<PlayerStats>().currentSheild = targetShield;
+                            }
+                            else if (targetShield < GetComponent<EnemyStat>().ColliderDamage)
+                            {
+                                tempDamage = GetComponent<EnemyStat>().ColliderDamage;
+                                tempDamage -= targetShield;
+                                target.GetComponent<PlayerStats>().currentSheild = 0;
+                            }
+                            if (tempDamage > 0)
+                            {
+                                targethealth = target.GetComponent<PlayerStats>().currentHealth;
+                                targethealth -= tempDamage;
+                                target.GetComponent<PlayerStats>().currentHealth = targethealth;
                             }
                         }
                     }
@@ -171,22 +172,23 @@ public class EnemyBehavior : MonoBehaviour
                     {
                         Debug.Log("invincinble");
                     }
+                        }
                     if (target.GetComponent<PlayerStats>().reflectdamage == true)
                     {
                         GetComponent<EnemyStat>().currentenemyhealth -= GetComponent<EnemyStat>().ColliderDamage * target.GetComponent<PlayerStats>().reflectdamageratio;
                     }
                     Debug.Log("Health:" + target.GetComponent<PlayerStats>().currentHealth + "Sheild:" + target.GetComponent<PlayerStats>().currentSheild + "EnemyHealth" + GetComponent<EnemyStat>().currentenemyhealth);
                     EASChecker = EAS;
-                }
-            }
+            }   
         }
-
+            
         else if (gameObject.tag == "Enemy_2")
         {
             if (other.name == "Ashe")
             {
                 if (EASChecker <= 0)
                 {
+
                     target = GameObject.Find("Ashe");
                     if (target.GetComponent<PlayerStats>().itisinvincinble != true)
                     {
@@ -199,7 +201,7 @@ public class EnemyBehavior : MonoBehaviour
                                 targetShield -= tempDamage;
                                 target.GetComponent<PlayerStats>().currentSheild = targetShield;
                             }
-                            else if (targetShield < tempDamage)
+                            else
                             {
                                 tempDamage -= targetShield;
                                 target.GetComponent<PlayerStats>().currentSheild = 0;
@@ -208,27 +210,28 @@ public class EnemyBehavior : MonoBehaviour
                                     targethealth = target.GetComponent<PlayerStats>().currentHealth;
                                     targethealth -= tempDamage;
                                     target.GetComponent<PlayerStats>().currentHealth = targethealth;
+
                                 }
                             }
-                            else
+                        }
+                        else
+                        {
+                            if (targetShield >= GetComponent<EnemyStat>().ColliderDamage)
                             {
-                                if (targetShield >= GetComponent<EnemyStat>().ColliderDamage)
-                                {
-                                    targetShield -= GetComponent<EnemyStat>().ColliderDamage;
-                                    target.GetComponent<PlayerStats>().currentSheild = targetShield;
-                                }
-                                else if (targetShield < GetComponent<EnemyStat>().ColliderDamage)
-                                {
-                                    tempDamage = GetComponent<EnemyStat>().ColliderDamage;
-                                    tempDamage -= targetShield;
-                                    target.GetComponent<PlayerStats>().currentSheild = 0;
-                                }
-                                if (tempDamage > 0)
-                                {
-                                    targethealth = target.GetComponent<PlayerStats>().currentHealth;
-                                    targethealth -= tempDamage;
-                                    target.GetComponent<PlayerStats>().currentHealth = targethealth;
-                                }
+                                targetShield -= GetComponent<EnemyStat>().ColliderDamage;
+                                target.GetComponent<PlayerStats>().currentSheild = targetShield;
+                            }
+                            else if (targetShield < GetComponent<EnemyStat>().ColliderDamage)
+                            {
+                                tempDamage = GetComponent<EnemyStat>().ColliderDamage;
+                                tempDamage -= targetShield;
+                                target.GetComponent<PlayerStats>().currentSheild = 0;
+                            }
+                            if (tempDamage > 0)
+                            {
+                                targethealth = target.GetComponent<PlayerStats>().currentHealth;
+                                targethealth -= tempDamage;
+                                target.GetComponent<PlayerStats>().currentHealth = targethealth;
                             }
                         }
                     }
@@ -236,15 +239,57 @@ public class EnemyBehavior : MonoBehaviour
                     {
                         Debug.Log("invincinble");
                     }
-                    if (target.GetComponent<PlayerStats>().reflectdamage == true)
-                    {
-                        GetComponent<EnemyStat>().currentenemyhealth -= GetComponent<EnemyStat>().ColliderDamage * target.GetComponent<PlayerStats>().reflectdamageratio;
-                    }
-                    Debug.Log("Health:" + target.GetComponent<PlayerStats>().currentHealth + "Sheild:" + target.GetComponent<PlayerStats>().currentSheild + "EnemyHealth" + GetComponent<EnemyStat>().currentenemyhealth);
-                    EASChecker = EAS;
                 }
+                if (target.GetComponent<PlayerStats>().reflectdamage == true)
+                {
+                    GetComponent<EnemyStat>().currentenemyhealth -= GetComponent<EnemyStat>().ColliderDamage * target.GetComponent<PlayerStats>().reflectdamageratio;
+                }
+                Debug.Log("Health:" + target.GetComponent<PlayerStats>().currentHealth + "Sheild:" + target.GetComponent<PlayerStats>().currentSheild + "EnemyHealth" + GetComponent<EnemyStat>().currentenemyhealth);
+                EASChecker = EAS;
             }
         }
+
+    }
+    private void OnTriggerEnter(Collider other) //偵測敵人本身有沒有跟弓箭產生碰撞
+    {
+
+
+
+        if (other.tag == "Bullet")      //如果碰到的物體tag為Bullet
+        {
+
+
+            tempDamage = other.GetComponent<bulletdestroy>().bullet_damage; //取得弓箭的傷害
+
+
+            GetComponent<EnemyStat>().currentenemyhealth -= tempDamage;
+
+            Debug.Log("EnemyHealth:" + GetComponent<EnemyStat>().currentenemyhealth);
+
+            if (GetComponent<EnemyStat>().currentenemyhealth <= 0)  //如果敵人血量低於0就掰掰
+            {
+                Destroy(gameObject);
+            }
+        }
+        if (other.tag == "Explosion")
+        {
+            tempDamage = other.GetComponent<bulletdestroy>().Explosion_damage;
+            GetComponent<EnemyStat>().currentenemyhealth -= tempDamage;
+
+            Debug.Log("EnemyHealth:" + GetComponent<EnemyStat>().currentenemyhealth);
+
+            if (GetComponent<EnemyStat>().currentenemyhealth <= 0)  //如果敵人血量低於0就掰掰
+            {
+                Destroy(gameObject);
+            }
+        }
+        if (other.name == "BurnGround")
+        {
+            Debug.Log("Hit");
+            burntimer = GetComponent<EnemyStat>().BurnGroundTime;
+            burndamage  = GetComponent<EnemyStat>().currentenemyhealth*0.1f;
+        }
+
     }
 }
         

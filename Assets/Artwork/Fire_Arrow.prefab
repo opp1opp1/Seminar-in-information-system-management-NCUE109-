@@ -115,6 +115,12 @@ MonoBehaviour:
   maxTime: 5
   bullet_damage: 20
   slowTime: 2
+  burnTime: 4
+  stunTime: 0.5
+  Explosion: {fileID: 0}
+  BurnGround: {fileID: 0}
+  ExplosionTime: 0.5
+  Explosion_damage: 0
 --- !u!114 &114175316139770838
 MonoBehaviour:
   m_ObjectHideFlags: 1

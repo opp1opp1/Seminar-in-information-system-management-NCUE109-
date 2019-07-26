@@ -12,19 +12,30 @@ public class bulletdestroy : MonoBehaviour
     public float burnTime = 4.0f;
     public float stunTime = 0.5f;
     public GameObject Explosion;
+    public GameObject BurnGround;
     public float ExplosionTime =0.5f;
     private float ExplosionTimeChecker =0;
     public float Explosion_damage;
-
+    //public float InstantiateGroundTime = 0.15f;
+    //public float InstantiateGroundTimer;
     // Use this for initialization
     void Start()
     {
         lifeTime = 0.0f;
         Explosion_damage = 0.25f * bullet_damage;
-        if (this.gameObject.name == "Explosion")
+        if (this.gameObject.tag == "Explosion")
         {
-            maxTime = 0.5f;
+            maxTime = 0.25f;
         }
+        if (this.gameObject.tag == "BurnGround")
+        {
+            maxTime = 0.75f;
+        }
+        /*if (this.gameObject.name == "FireWind_Arrow(Clone)")
+        {
+            InstantiateGroundTimer = InstantiateGroundTime;
+            InstantiateGroundTimer -= Time.deltaTime;
+        }*/
     }
 
     // Update is called once per frame
@@ -42,6 +53,15 @@ public class bulletdestroy : MonoBehaviour
             ExplosionTimeChecker = ExplosionTime;
         }
         */
+        if (this.gameObject.name == "FireWind_Arrow(Clone)")
+        {
+            
+           // if (InstantiateGroundTimer <= 0)
+           // {
+                Instantiate(BurnGround, transform.position+new Vector3(0,-0.0f,0), transform.rotation);
+                //InstantiateGroundTimer = InstantiateGroundTime;
+            //}
+        }
     }
 
     //弓箭射到物體時消失
@@ -49,34 +69,37 @@ public class bulletdestroy : MonoBehaviour
     {
         if (other.tag == "Enemy_1"||other.tag == "Enemy_2")
         {
-            Destroy(gameObject);
-            if (this.gameObject.name == "Ice_Arrow(Clone)")
+            if (this.gameObject.tag == "Bullet")
             {
-                //other.GetComponent<EnemyBehavior>().agentspeed = other.GetComponent<EnemyBehavior>().agentspeed * 0.8f;
-                other.GetComponent<EnemyBehavior>().slowtimer = slowTime;
-            }
-            if (this.gameObject.name == "Fire_Arrow(Clone)")
-            {
-                other.GetComponent<EnemyBehavior>().burntimer = burnTime;
-                other.GetComponent<EnemyBehavior>().burndamage = bullet_damage * 0.2f * 0.25f;
-            }
-            if (this.gameObject.name == "Wind_Arrow(Clone)")
-            {
-                target = GameObject.Find("Ashe");
-                target.GetComponent<Playermove>().speeduptimer += 2.0f;
-            }
-            if (this.gameObject.name == "Earth_Arrow(Clone)")
-            {
-                target = GameObject.Find("Ashe");
-                target.GetComponent<PlayerStats>().currentSheild += 5.0f;
-            }
-            if (this.gameObject.name == "Stun_Arrow(Clone)")
-            {
-                other.GetComponent<EnemyBehavior>().stuntimer = stunTime;
-            }
-            if (this.gameObject.name == "Explosion_Arrow(Clone)")
-            {
-                Instantiate(Explosion, transform.position, transform.rotation);
+                Destroy(gameObject);
+                if (this.gameObject.name == "Ice_Arrow(Clone)")
+                {
+                    //other.GetComponent<EnemyBehavior>().agentspeed = other.GetComponent<EnemyBehavior>().agentspeed * 0.8f;
+                    other.GetComponent<EnemyBehavior>().slowtimer = slowTime;
+                }
+                if (this.gameObject.name == "Fire_Arrow(Clone)")
+                {
+                    other.GetComponent<EnemyBehavior>().burntimer = burnTime;
+                    other.GetComponent<EnemyBehavior>().burndamage = bullet_damage * 0.2f * 0.25f;
+                }
+                if (this.gameObject.name == "Wind_Arrow(Clone)")
+                {
+                    target = GameObject.Find("Ashe");
+                    target.GetComponent<Playermove>().speeduptimer += 2.0f;
+                }
+                if (this.gameObject.name == "Earth_Arrow(Clone)")
+                {
+                    target = GameObject.Find("Ashe");
+                    target.GetComponent<PlayerStats>().currentSheild += 5.0f;
+                }
+                if (this.gameObject.name == "Stun_Arrow(Clone)")
+                {
+                    other.GetComponent<EnemyBehavior>().stuntimer = stunTime;
+                }
+                if (this.gameObject.name == "Explosion_Arrow(Clone)")
+                {
+                    Instantiate(Explosion, transform.position, transform.rotation);
+                }
             }
            
         }

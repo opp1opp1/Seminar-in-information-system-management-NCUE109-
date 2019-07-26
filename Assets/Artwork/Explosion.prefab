@@ -107,7 +107,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1723578457840196}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 408e59589a781a54ca656e732f9f6090, type: 3}
   m_Name: 
@@ -130,6 +130,7 @@ MonoBehaviour:
   burnTime: 4
   stunTime: 0.5
   Explosion: {fileID: 1723578457840196}
+  BurnGround: {fileID: 0}
   ExplosionTime: 0.5
   Explosion_damage: 0
 --- !u!135 &135374621139455942
