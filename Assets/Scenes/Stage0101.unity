@@ -420,12 +420,12 @@ Prefab:
     - target: {fileID: 114683473532179482, guid: 80578e19eccc31142a9e3e02a69aa601,
         type: 2}
       propertyPath: IceArrow
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114683473532179482, guid: 80578e19eccc31142a9e3e02a69aa601,
         type: 2}
       propertyPath: FireArrow
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114683473532179482, guid: 80578e19eccc31142a9e3e02a69aa601,
         type: 2}

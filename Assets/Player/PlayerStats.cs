@@ -21,6 +21,7 @@ public class PlayerStats : MonoBehaviour {
     private float nextinvincinbletime =0.5f;
     public bool reflectdamage = false;
     public float reflectdamageratio = 0.35f;
+    public bool reducedamage = false;
     // Use this for initialization
     void Start () {
         removedshieldtimer = removedshieldtime;
