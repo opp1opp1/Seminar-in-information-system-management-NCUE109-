@@ -420,7 +420,7 @@ Prefab:
     - target: {fileID: 114683473532179482, guid: 80578e19eccc31142a9e3e02a69aa601,
         type: 2}
       propertyPath: IceArrow
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114683473532179482, guid: 80578e19eccc31142a9e3e02a69aa601,
         type: 2}
@@ -430,7 +430,7 @@ Prefab:
     - target: {fileID: 114683473532179482, guid: 80578e19eccc31142a9e3e02a69aa601,
         type: 2}
       propertyPath: WindArrow
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114683473532179482, guid: 80578e19eccc31142a9e3e02a69aa601,
         type: 2}
@@ -442,6 +442,12 @@ Prefab:
       propertyPath: currentHealth
       value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: 114683473532179482, guid: 80578e19eccc31142a9e3e02a69aa601,
+        type: 2}
+      propertyPath: StunArrowPrefab
+      value: 
+      objectReference: {fileID: 1258696830655784, guid: e0dfba727adcaa043a09c9a40ca2b29e,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 80578e19eccc31142a9e3e02a69aa601, type: 2}
   m_IsPrefabParent: 0

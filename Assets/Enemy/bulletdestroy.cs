@@ -10,6 +10,7 @@ public class bulletdestroy : MonoBehaviour
     public float bullet_damage = 20.0f;
     public float slowTime = 2.0f;
     public float burnTime = 4.0f;
+    public float stunTime = 0.5f;
     // Use this for initialization
     void Start()
     {
@@ -52,6 +53,10 @@ public class bulletdestroy : MonoBehaviour
             {
                 target = GameObject.Find("Ashe");
                 target.GetComponent<PlayerStats>().currentSheild += 5.0f;
+            }
+            if (this.gameObject.name == "Stun_Arrow(Clone)")
+            {
+                other.GetComponent<EnemyBehavior>().stuntimer = stunTime;
             }
         }
     }

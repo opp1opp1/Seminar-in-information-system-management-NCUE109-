@@ -23,7 +23,7 @@ public class EnemyBehavior : MonoBehaviour
     private float burncounter = 0f;
     public float burndamage;
     private float tempDamage;
-
+    public float stuntimer = 0f;
     // Use this for initialization
     void Start()
     {
@@ -82,6 +82,17 @@ public class EnemyBehavior : MonoBehaviour
         else if (slowtimer <= 0.0f)
         {
             slowtimer = 0f;
+            GetComponent<NavMeshAgent>().speed = agentspeed;
+        }
+        if (stuntimer > 0.1f)
+        {
+            stuntimer -= Time.deltaTime;
+
+            GetComponent<NavMeshAgent>().speed = 0f;
+        }
+        else if (stuntimer <= 0.0f)
+        {
+            stuntimer = 0f;
             GetComponent<NavMeshAgent>().speed = agentspeed;
         }
         if (burntimer > 0.1f)
