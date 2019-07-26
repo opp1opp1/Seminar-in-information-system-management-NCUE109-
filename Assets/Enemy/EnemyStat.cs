@@ -9,7 +9,7 @@ public class EnemyStat : MonoBehaviour {
     public float enemyattackspeed;//enemy的攻擊速度
     public float ColliderDamage;
     public float WakeUpDistance;
-    private float bulletdamage;
+    private float Incomingdamage;
     public float agantspeed;
 
     
@@ -50,11 +50,11 @@ public class EnemyStat : MonoBehaviour {
         if (other.tag == "Bullet")      //如果碰到的物體tag為Bullet
         {
 
-            //bullet = GameObject.Find("Ashe_Arrow(Clone)");
-            bulletdamage = other.GetComponent<bulletdestroy>().bullet_damage; //取得弓箭的傷害
+
+            Incomingdamage = other.GetComponent<bulletdestroy>().bullet_damage; //取得弓箭的傷害
 
             
-            currentenemyhealth -= bulletdamage;
+            currentenemyhealth -= Incomingdamage;
 
             Debug.Log("EnemyHealth:" + currentenemyhealth);
 
@@ -62,6 +62,18 @@ public class EnemyStat : MonoBehaviour {
                 {
                     Destroy(gameObject);
                 }
+        }
+        if (other.tag == "Explosion")
+        {
+            Incomingdamage = other.GetComponent<bulletdestroy>().Explosion_damage;
+            currentenemyhealth -= Incomingdamage;
+
+            Debug.Log("EnemyHealth:" + currentenemyhealth);
+
+            if (currentenemyhealth <= 0)  //如果敵人血量低於0就掰掰
+            {
+                Destroy(gameObject);
+            }
         }
     }
     // Update is called once per frame

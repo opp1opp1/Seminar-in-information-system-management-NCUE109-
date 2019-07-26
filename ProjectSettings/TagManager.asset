@@ -10,6 +10,7 @@ TagManager:
   - Enemy_1
   - Enemy_2
   - wall
+  - Explosion
   layers:
   - Default
   - TransparentFX
