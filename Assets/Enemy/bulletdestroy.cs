@@ -16,8 +16,8 @@ public class bulletdestroy : MonoBehaviour
     public float ExplosionTime =0.5f;
     private float ExplosionTimeChecker =0;
     public float Explosion_damage;
-    //public float InstantiateGroundTime = 0.15f;
-    //public float InstantiateGroundTimer;
+    public float InstantiateGroundTime = 0.15f;
+    public float InstantiateGroundTimer;
     // Use this for initialization
     void Start()
     {
@@ -31,11 +31,11 @@ public class bulletdestroy : MonoBehaviour
         {
             maxTime = 0.75f;
         }
-        /*if (this.gameObject.name == "FireWind_Arrow(Clone)")
+        if (this.gameObject.name == "FireWind_Arrow(Clone)")
         {
             InstantiateGroundTimer = InstantiateGroundTime;
-            InstantiateGroundTimer -= Time.deltaTime;
-        }*/
+            
+        }
     }
 
     // Update is called once per frame
@@ -55,12 +55,12 @@ public class bulletdestroy : MonoBehaviour
         */
         if (this.gameObject.name == "FireWind_Arrow(Clone)")
         {
-            
-           // if (InstantiateGroundTimer <= 0)
-           // {
+            InstantiateGroundTimer -= Time.deltaTime;
+            if (InstantiateGroundTimer <= 0)
+            {
                 Instantiate(BurnGround, transform.position+new Vector3(0,-0.0f,0), transform.rotation);
-                //InstantiateGroundTimer = InstantiateGroundTime;
-            //}
+                InstantiateGroundTimer = InstantiateGroundTime;
+            }
         }
     }
 
@@ -121,7 +121,7 @@ public class bulletdestroy : MonoBehaviour
             if (collider.tag == "Enemy_1" || collider.tag == "Enemy_2")
             {
                 Debug.Log("Hit");
-                collider.GetComponent<EnemyBehavior>().burntimer = collider.GetComponent<EnemyStat>().BurnGroundTime;
+                collider.GetComponent<EnemyBehavior>().burntimer += collider.GetComponent<EnemyStat>().BurnGroundTime;
                 collider.GetComponent<EnemyBehavior>().burndamage = collider.GetComponent<EnemyStat>().currentenemyhealth * 0.1f;
             }
         }

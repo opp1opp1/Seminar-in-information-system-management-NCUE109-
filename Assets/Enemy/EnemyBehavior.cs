@@ -42,6 +42,10 @@ public class EnemyBehavior : MonoBehaviour
     {
         EASChecker -= Time.deltaTime;
         float distance = Vector3.Distance(transform.position, Player.transform.position);
+        if (GetComponent<EnemyStat>().currentenemyhealth <= 0)  //如果敵人血量低於0就掰掰
+        {
+            Destroy(gameObject);
+        }
         if (this.gameObject.tag == "Enemy_1")
         {
             if (distance <= this.GetComponent<EnemyStat>().WakeUpDistance)
@@ -105,6 +109,11 @@ public class EnemyBehavior : MonoBehaviour
                 Debug.Log("EnemyHealth:" + GetComponent<EnemyStat>().currentenemyhealth);
                 burncounter = 0f;
             }
+
+        }
+        if (burntimer >= 2.0f)
+        {
+            burntimer = 2.0f;
         }
         else if (burntimer <= 0.0f)
         {
