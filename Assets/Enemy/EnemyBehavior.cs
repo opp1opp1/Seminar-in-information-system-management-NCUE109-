@@ -283,12 +283,6 @@ public class EnemyBehavior : MonoBehaviour
                 Destroy(gameObject);
             }
         }
-        if (other.name == "BurnGround")
-        {
-            Debug.Log("Hit");
-            burntimer = GetComponent<EnemyStat>().BurnGroundTime;
-            burndamage  = GetComponent<EnemyStat>().currentenemyhealth*0.1f;
-        }
 
     }
 }

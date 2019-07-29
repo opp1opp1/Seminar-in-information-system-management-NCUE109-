@@ -110,10 +110,20 @@ public class bulletdestroy : MonoBehaviour
         {
             if (ExplosionTimeChecker <= 0)
             {
-
+                
                 ExplosionTimeChecker = ExplosionTime;
+
             }
             
+        }
+        if (this.gameObject.tag == "BurnGround")
+        {
+            if (collider.tag == "Enemy_1" || collider.tag == "Enemy_2")
+            {
+                Debug.Log("Hit");
+                collider.GetComponent<EnemyBehavior>().burntimer = collider.GetComponent<EnemyStat>().BurnGroundTime;
+                collider.GetComponent<EnemyBehavior>().burndamage = collider.GetComponent<EnemyStat>().currentenemyhealth * 0.1f;
+            }
         }
     }
 }
