@@ -107,7 +107,7 @@ public class Playermove : MonoBehaviour {
                  //moveDirection.y = moveDirection.y + (Physics.gravity.y * gravityScale * Time.deltaTime);   //賦予角色跳起來後跳下來的速度
             controller.Move(moveDirection * Time.deltaTime);  //用deltatime去控制每台顯示器不同的平衡
             //moveDirection = new Vector3(Input.GetAxis("Horizontal") * MoveSpeed, moveDirection.y, Input.GetAxis("Vertical") * MoveSpeed);
-            moveDirection = new Vector3(Input.GetAxis("Horizontal") * MoveSpeed, -2, Input.GetAxis("Vertical") * MoveSpeed);
+            moveDirection = new Vector3(Input.GetAxis("Horizontal") * MoveSpeed, 0 , Input.GetAxis("Vertical") * MoveSpeed);
         }
         else
         {
@@ -121,10 +121,10 @@ public class Playermove : MonoBehaviour {
         float updown = 1;
         Vector3 raydir = Vector3.right;
 
-        target = GameObject.Find("peoplewalking");
+        target = GameObject.Find("Ashe");
 
         BoxCollider mycollider = target.GetComponent<BoxCollider>();
-        float halfBoundY = mycollider.size.z * GameObject.Find("peoplewalking").transform.localScale.z; 
+        float halfBoundY = mycollider.size.z * GameObject.Find("Ashe").transform.localScale.z; 
         float rayLength = Mathf.Abs(deltaMove.z) + halfBoundY; 
 
         RaycastHit rhf = new RaycastHit(); 
