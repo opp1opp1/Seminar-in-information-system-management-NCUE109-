@@ -11,8 +11,9 @@ public class EnemyStat : MonoBehaviour {
     public float WakeUpDistance;
     public float agantspeed;
     public float BurnGroundTime =2.0f;
-    
- 
+    public float IceGroundTime = 0.5f;
+
+
 
 
     // Use this for initialization

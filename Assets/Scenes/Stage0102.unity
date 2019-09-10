@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.4465782, g: 0.49641252, b: 0.5748167, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -637,34 +637,56 @@ Prefab:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1259713005853116, guid: 80578e19eccc31142a9e3e02a69aa601, type: 2}
-      propertyPath: m_Name
-      value: Ashe
-      objectReference: {fileID: 0}
     - target: {fileID: 114683473532179482, guid: 80578e19eccc31142a9e3e02a69aa601,
         type: 2}
-      propertyPath: FireArrow
-      value: 0
-      objectReference: {fileID: 0}
+      propertyPath: StunArrowPrefab
+      value: 
+      objectReference: {fileID: 1258696830655784, guid: e0dfba727adcaa043a09c9a40ca2b29e,
+        type: 2}
+    - target: {fileID: 114683473532179482, guid: 80578e19eccc31142a9e3e02a69aa601,
+        type: 2}
+      propertyPath: ExplosionArrowPrefab
+      value: 
+      objectReference: {fileID: 1199807583155558, guid: 357626f1c6824714f8363248a5ae401e,
+        type: 2}
+    - target: {fileID: 114683473532179482, guid: 80578e19eccc31142a9e3e02a69aa601,
+        type: 2}
+      propertyPath: FireWindArrowPrefab
+      value: 
+      objectReference: {fileID: 1771918162061064, guid: 529b9222117a0124b9916336b694be21,
+        type: 2}
+    - target: {fileID: 114683473532179482, guid: 80578e19eccc31142a9e3e02a69aa601,
+        type: 2}
+      propertyPath: IceWindArrowPrefab
+      value: 
+      objectReference: {fileID: 1704584529107266, guid: dcce1f3b1ae08bb4d8b023344d634479,
+        type: 2}
     - target: {fileID: 114683473532179482, guid: 80578e19eccc31142a9e3e02a69aa601,
         type: 2}
       propertyPath: IceArrow
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 143956499030596598, guid: 80578e19eccc31142a9e3e02a69aa601,
+    - target: {fileID: 114683473532179482, guid: 80578e19eccc31142a9e3e02a69aa601,
         type: 2}
-      propertyPath: m_Radius
-      value: 0.5
+      propertyPath: WindArrow
+      value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 64343494703811626, guid: 80578e19eccc31142a9e3e02a69aa601,
+    - target: {fileID: 65517366062903672, guid: 80578e19eccc31142a9e3e02a69aa601,
         type: 2}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 4300000, guid: c28db791d09f44946980cb4c12693141, type: 3}
-    m_RemovedComponents:
-    - {fileID: 64850978817169404, guid: 80578e19eccc31142a9e3e02a69aa601, type: 2}
-    - {fileID: 54135381198522012, guid: 80578e19eccc31142a9e3e02a69aa601, type: 2}
-    - {fileID: 64343494703811626, guid: 80578e19eccc31142a9e3e02a69aa601, type: 2}
+      propertyPath: m_Size.z
+      value: 0.06
+      objectReference: {fileID: 0}
+    - target: {fileID: 65517366062903672, guid: 80578e19eccc31142a9e3e02a69aa601,
+        type: 2}
+      propertyPath: m_Size.x
+      value: 0.06
+      objectReference: {fileID: 0}
+    - target: {fileID: 65517366062903672, guid: 80578e19eccc31142a9e3e02a69aa601,
+        type: 2}
+      propertyPath: m_Size.y
+      value: 0.1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 80578e19eccc31142a9e3e02a69aa601, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &993281618
@@ -843,23 +865,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1094933568}
---- !u!1 &1288483468 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1701764641356114, guid: 80578e19eccc31142a9e3e02a69aa601,
-    type: 2}
-  m_PrefabInternal: {fileID: 929002013}
---- !u!65 &1288483469
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1288483468}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.06, y: 0.1, z: 0.06}
-  m_Center: {x: 0, y: 0.05, z: 0.005}
 --- !u!1001 &1418339949
 Prefab:
   m_ObjectHideFlags: 0
@@ -961,7 +966,7 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_SkinWidth: 0.01
-  m_Mesh: {fileID: 4300000, guid: 9e3113180940c7e419bf2c0ef58669ea, type: 3}
+  m_Mesh: {fileID: 0}
 --- !u!1 &1442160480 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100050, guid: 7b7110e087cedc743bdadb53ccd57d38, type: 3}

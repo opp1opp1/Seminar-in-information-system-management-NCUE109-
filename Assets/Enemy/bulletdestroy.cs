@@ -13,6 +13,7 @@ public class bulletdestroy : MonoBehaviour
     public float stunTime = 0.5f;
     public GameObject Explosion;
     public GameObject BurnGround;
+    public GameObject IceGround;
     public float ExplosionTime =0.5f;
     private float ExplosionTimeChecker =0;
     public float Explosion_damage;
@@ -59,6 +60,15 @@ public class bulletdestroy : MonoBehaviour
             if (InstantiateGroundTimer <= 0)
             {
                 Instantiate(BurnGround, transform.position+new Vector3(0,-0.0f,0), transform.rotation);
+                InstantiateGroundTimer = InstantiateGroundTime;
+            }
+        }
+        if (this.gameObject.name == "IceWind_Arrow(Clone)")
+        {
+            InstantiateGroundTimer -= Time.deltaTime;
+            if (InstantiateGroundTimer <= 0)
+            {
+                Instantiate(IceGround, transform.position + new Vector3(0, -0.0f, 0), transform.rotation);
                 InstantiateGroundTimer = InstantiateGroundTime;
             }
         }
@@ -120,9 +130,18 @@ public class bulletdestroy : MonoBehaviour
         {
             if (collider.tag == "Enemy_1" || collider.tag == "Enemy_2")
             {
-                Debug.Log("Hit");
+                Debug.Log("Hit by BurnGround");
                 collider.GetComponent<EnemyBehavior>().burntimer += collider.GetComponent<EnemyStat>().BurnGroundTime;
                 collider.GetComponent<EnemyBehavior>().burndamage = collider.GetComponent<EnemyStat>().currentenemyhealth * 0.1f;
+            }
+        }
+        if (this.gameObject.tag == "IceGround")
+        {
+            if (collider.tag == "Enemy_1" || collider.tag == "Enemy_2")
+            {
+                Debug.Log("Hit by IceGround");
+                collider.GetComponent<EnemyBehavior>().slowtimer += collider.GetComponent<EnemyStat>().IceGroundTime;
+                
             }
         }
     }

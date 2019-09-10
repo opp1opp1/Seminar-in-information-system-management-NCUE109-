@@ -12,6 +12,7 @@ TagManager:
   - wall
   - Explosion
   - BurnGround
+  - IceGround
   layers:
   - Default
   - TransparentFX
