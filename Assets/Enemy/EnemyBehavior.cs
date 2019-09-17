@@ -12,6 +12,7 @@ public class EnemyBehavior : MonoBehaviour
     //public float ColliderDamage;
     private GameObject target;
     private GameObject arrow;
+    public GameObject PowerUp;
     private float targethealth;
     private float targetShield;
     private float EAS;
@@ -24,6 +25,7 @@ public class EnemyBehavior : MonoBehaviour
     public float burndamage;
     private float tempDamage;
     public float stuntimer = 0f;
+    private bool Instantiateonce = false;
     // Use this for initialization
     void Start()
     {
@@ -277,6 +279,21 @@ public class EnemyBehavior : MonoBehaviour
 
             if (GetComponent<EnemyStat>().currentenemyhealth <= 0)  //如果敵人血量低於0就掰掰
             {
+               
+                if (Instantiateonce == false)
+                {
+                    int f = Random.Range(0, 100);
+                    if (f >= 0)
+                    {
+                        Instantiate(PowerUp, transform.position, transform.rotation);
+                        Instantiateonce = true;
+                    }
+                    else
+                        Destroy(gameObject);
+                }
+                        
+                    
+
                 Destroy(gameObject);
             }
         }
@@ -289,6 +306,20 @@ public class EnemyBehavior : MonoBehaviour
 
             if (GetComponent<EnemyStat>().currentenemyhealth <= 0)  //如果敵人血量低於0就掰掰
             {
+                if (Instantiateonce == false)
+                {
+                    int f = Random.Range(0, 100);
+                    if (f >= 0)
+                    {
+                        Instantiate(PowerUp, transform.position, transform.rotation);
+                        Instantiateonce = true;
+                    }
+                    else
+                        Destroy(gameObject);
+                }
+
+
+
                 Destroy(gameObject);
             }
         }
