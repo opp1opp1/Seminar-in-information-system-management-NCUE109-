@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 77e82479e9bfb0d42b1679f3485177fd
+guid: 1abc5e277915235448af79fbd114361f
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
@@ -46,50 +46,36 @@ ModelImporter:
     100080: pasted__pasted__pCylinder2 1
     100082: pasted__pasted__pCylinder2 2
     100084: pasted__pasted__pCylinder2 3
-    100086: pasted__pCube9
-    100088: pasted__pCube9 1
+    100086: pasted__pCube8
+    100088: pasted__pCube8 1
     100090: pasted__pCylinder2
     100092: pasted__pCylinder2 1
-    100094: pCube10
-    100096: pCube11
-    100098: pCube12
-    100100: pCube2
-    100102: pCube3
-    100104: pCube4
-    100106: pCube5
-    100108: pCube6
-    100110: pCube7
-    100112: pCube8
-    100114: pCube9
-    100116: pCylinder1
-    100118: pPlane1
-    100120: pSphere1
-    100122: pSphere2
-    100124: transform1
-    100126: transform10
-    100128: transform11
-    100130: transform12
-    100132: transform13
-    100134: transform14
-    100136: transform15
-    100138: transform16
-    100140: transform17
-    100142: transform18
-    100144: transform19
-    100146: transform2
-    100148: transform20
-    100150: transform21
-    100152: transform22
-    100154: transform23
-    100156: transform24
-    100158: transform25
-    100160: transform3
-    100162: transform4
-    100164: transform5
-    100166: transform6
-    100168: transform7
-    100170: transform8
-    100172: transform9
+    100094: pCube2
+    100096: pCube3
+    100098: pCube4
+    100100: pCube5
+    100102: pCube6
+    100104: pCube7
+    100106: pCube8
+    100108: pCylinder1
+    100110: pSphere1
+    100112: transform1
+    100114: transform10
+    100116: transform11
+    100118: transform12
+    100120: transform13
+    100122: transform14
+    100124: transform15
+    100126: transform16
+    100128: transform17
+    100130: transform2
+    100132: transform3
+    100134: transform4
+    100136: transform5
+    100138: transform6
+    100140: transform7
+    100142: transform8
+    100144: transform9
     400000: //RootNode
     400002: group
     400004: group1
@@ -133,68 +119,61 @@ ModelImporter:
     400080: pasted__pasted__pCylinder2 1
     400082: pasted__pasted__pCylinder2 2
     400084: pasted__pasted__pCylinder2 3
-    400086: pasted__pCube9
-    400088: pasted__pCube9 1
+    400086: pasted__pCube8
+    400088: pasted__pCube8 1
     400090: pasted__pCylinder2
     400092: pasted__pCylinder2 1
-    400094: pCube10
-    400096: pCube11
-    400098: pCube12
-    400100: pCube2
-    400102: pCube3
-    400104: pCube4
-    400106: pCube5
-    400108: pCube6
-    400110: pCube7
-    400112: pCube8
-    400114: pCube9
-    400116: pCylinder1
-    400118: pPlane1
-    400120: pSphere1
-    400122: pSphere2
-    400124: transform1
-    400126: transform10
-    400128: transform11
-    400130: transform12
-    400132: transform13
-    400134: transform14
-    400136: transform15
-    400138: transform16
-    400140: transform17
-    400142: transform18
-    400144: transform19
-    400146: transform2
-    400148: transform20
-    400150: transform21
-    400152: transform22
-    400154: transform23
-    400156: transform24
-    400158: transform25
-    400160: transform3
-    400162: transform4
-    400164: transform5
-    400166: transform6
-    400168: transform7
-    400170: transform8
-    400172: transform9
-    2100000: lambert4
+    400094: pCube2
+    400096: pCube3
+    400098: pCube4
+    400100: pCube5
+    400102: pCube6
+    400104: pCube7
+    400106: pCube8
+    400108: pCylinder1
+    400110: pSphere1
+    400112: transform1
+    400114: transform10
+    400116: transform11
+    400118: transform12
+    400120: transform13
+    400122: transform14
+    400124: transform15
+    400126: transform16
+    400128: transform17
+    400130: transform2
+    400132: transform3
+    400134: transform4
+    400136: transform5
+    400138: transform6
+    400140: transform7
+    400142: transform8
+    400144: transform9
+    2100000: lambert5
     2100002: lambert2
     2100004: lambert3
-    2100006: lambert1
-    2100008: blinn1
-    2100010: anisotropic1
-    2300000: pasted__pCylinder2
-    2300002: pCube12
-    2300004: pCube6
-    2300006: pPlane1
-    3300000: pasted__pCylinder2
-    3300002: pCube12
-    3300004: pCube6
-    3300006: pPlane1
+    2100006: lambert4
+    2100008: pasted__lambert4
+    2100010: pasted__lambert5
+    2100012: anisotropic1
+    2300000: pasted__pCube8
+    2300002: pasted__pCube8 1
+    2300004: pasted__pCylinder2
+    2300006: pCube6
+    2300008: pCube7
+    2300010: pCube8
+    3300000: pasted__pCube8
+    3300002: pasted__pCube8 1
+    3300004: pasted__pCylinder2
+    3300006: pCube6
+    3300008: pCube7
+    3300010: pCube8
     4300000: pCube6
-    4300002: pCube12
-    4300004: pPlane1
-    4300006: pasted__pCylinder2
+    4300002: pCube7
+    4300004: pCube8
+    4300006: pasted__pCube8
+    4300008: pasted__pCube8
+    4300010: pasted__pCylinder2
     7400000: Take 001
     9500000: //RootNode
   externalObjects: {}
