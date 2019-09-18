@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 6e11b07b554217e419702d0af5051d44
+guid: 6c53a85c5b46fda4b8194dcf7d6662f9
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
@@ -158,6 +158,8 @@ ModelImporter:
     4300020: pasted__pasted__pasted__pCylinder2
     4300022: pasted__pasted__pasted__pCylinder2
     4300024: pCube7
+    7400000: Take 001
+    9500000: //RootNode
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -232,7 +234,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 0
+  animationType: 2
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
