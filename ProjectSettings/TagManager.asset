@@ -9,7 +9,6 @@ TagManager:
   - Enemy_Bullet
   - Enemy_1
   - Enemy_2
-  - wall
   - Explosion
   - BurnGround
   - IceGround

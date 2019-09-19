@@ -7,7 +7,7 @@ public class bulletdestroy : MonoBehaviour
     private GameObject target;
     private float lifeTime;
     public float maxTime = 3.0f;
-    public float bullet_damage = 20.0f;
+    public float bullet_damage = 5.0f;
     public float slowTime = 2.0f;
     public float burnTime = 4.0f;
     public float stunTime = 0.5f;
@@ -19,6 +19,8 @@ public class bulletdestroy : MonoBehaviour
     public float Explosion_damage;
     public float InstantiateGroundTime = 0.15f;
     public float InstantiateGroundTimer;
+    private float targetShield;
+    private float tempDamage;
     // Use this for initialization
     void Start()
     {
@@ -77,7 +79,7 @@ public class bulletdestroy : MonoBehaviour
     //弓箭射到物體時消失
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Enemy_1"||other.tag == "Enemy_2")
+        if (other.tag == "Enemy_1" || other.tag == "Enemy_2")
         {
             if (this.gameObject.tag == "Bullet")
             {
@@ -111,7 +113,65 @@ public class bulletdestroy : MonoBehaviour
                     Instantiate(Explosion, transform.position, transform.rotation);
                 }
             }
-           
+
+        }
+        if (this.gameObject.name == "Sphere(Clone)")
+        {
+            if (other.gameObject.tag == "Player")
+            {
+                target = GameObject.Find("Ashe");
+                if (target.GetComponent<PlayerStats>().itisinvincinble != true)
+                {
+                    targetShield = target.GetComponent<PlayerStats>().currentSheild;
+                    if (target.GetComponent<PlayerStats>().reducedamage == true)
+                    {
+                        tempDamage = bullet_damage * 0.8f;
+                        if (targetShield >= tempDamage)
+                        {
+                            targetShield -= tempDamage;
+                            target.GetComponent<PlayerStats>().currentSheild = targetShield;
+                        }
+                        else
+                        {
+                            tempDamage -= targetShield;
+                            target.GetComponent<PlayerStats>().currentSheild = 0;
+                            if (tempDamage > 0)
+                            {
+                                /*targethealth = target.GetComponent<PlayerStats>().currentHealth;
+                                targethealth -= tempDamage;*/
+                                PlayerIni.currentHealth -= tempDamage;
+                                target.GetComponent<PlayerStats>().currentHealth = PlayerIni.currentHealth;
+                            }
+                        }
+                    }
+                    else
+                    {
+                        if (targetShield >= bullet_damage)
+                        {
+                            targetShield -= bullet_damage;
+                            target.GetComponent<PlayerStats>().currentSheild = targetShield;
+                        }
+                        else if (targetShield < bullet_damage)
+                        {
+                            tempDamage = bullet_damage;
+                            tempDamage -= targetShield;
+                            target.GetComponent<PlayerStats>().currentSheild = 0;
+                        }
+                        if (tempDamage > 0)
+                        {
+                            /*targethealth = target.GetComponent<PlayerStats>().currentHealth;
+                            targethealth -= tempDamage;*/
+                            PlayerIni.currentHealth -= tempDamage;
+                            target.GetComponent<PlayerStats>().currentHealth = PlayerIni.currentHealth;
+
+                        }
+                    }
+                }
+                else
+                {
+                    Debug.Log("invincinble");
+                }
+            }
         }
     }
     private void OnTriggerStay(Collider collider)
@@ -144,5 +204,7 @@ public class bulletdestroy : MonoBehaviour
                 
             }
         }
+       
+        }
     }
-}
+

@@ -20,7 +20,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4061326102780372}
   - component: {fileID: 33996698157719888}
-  - component: {fileID: 65141943746931420}
   - component: {fileID: 23259810408040494}
   - component: {fileID: 195293129516929802}
   - component: {fileID: 114463262070142380}
@@ -39,7 +38,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1852033866476200}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3, y: 0.5, z: 3}
+  m_LocalPosition: {x: -5, y: 0.5, z: 7}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 0}
@@ -86,18 +85,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1852033866476200}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!65 &65141943746931420
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1852033866476200}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &114463262070142380
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -113,9 +100,11 @@ MonoBehaviour:
   basicenemyhealth: 100
   currentenemyhealth: 100
   enemyattackspeed: 1
-  ColliderDamage: 0
-  WakeUpDistance: 0
+  ColliderDamage: 10
+  WakeUpDistance: 2
   agantspeed: 0
+  BurnGroundTime: 2
+  IceGroundTime: 0.5
 --- !u!114 &114994052768037632
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -129,10 +118,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Enemy2_bullet: {fileID: 1511428900671028, guid: 05d1715d801975d429cfeef34753795f,
     type: 2}
-  agentspeed: 0
+  PowerUp: {fileID: 1283495710257734, guid: 05c22f36fa28759459b2a73b0f37b5fe, type: 2}
+  agentspeed: 3
   slowtimer: 0
   burntimer: 0
   burndamage: 0
+  stuntimer: 0
 --- !u!195 &195293129516929802
 NavMeshAgent:
   m_ObjectHideFlags: 1
