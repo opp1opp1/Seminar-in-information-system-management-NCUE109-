@@ -26,6 +26,7 @@ public class EnemyBehavior : MonoBehaviour
     private float tempDamage;
     public float stuntimer = 0f;
     private bool Instantiateonce = false;
+
     // Use this for initialization
     void Start()
     {
@@ -101,7 +102,7 @@ public class EnemyBehavior : MonoBehaviour
             stuntimer = 0f;
             GetComponent<NavMeshAgent>().speed = agentspeed;
         }
-        if (burntimer >  0f)
+        if (burntimer > 0f)
         {
             burncounter += Time.deltaTime;
             burntimer -= Time.deltaTime;
@@ -151,10 +152,10 @@ public class EnemyBehavior : MonoBehaviour
                                 target.GetComponent<PlayerStats>().currentSheild = 0;
                                 if (tempDamage > 0)
                                 {
-                                    targethealth = target.GetComponent<PlayerStats>().currentHealth;
-                                    targethealth -= tempDamage;
-                                    target.GetComponent<PlayerStats>().currentHealth = targethealth;
-
+                                    /*targethealth = target.GetComponent<PlayerStats>().currentHealth;
+                                    targethealth -= tempDamage;*/
+                                    PlayerIni.currentHealth -= tempDamage;
+                                    target.GetComponent<PlayerStats>().currentHealth = PlayerIni.currentHealth;
                                 }
                             }
                         }
@@ -173,9 +174,10 @@ public class EnemyBehavior : MonoBehaviour
                             }
                             if (tempDamage > 0)
                             {
-                                targethealth = target.GetComponent<PlayerStats>().currentHealth;
-                                targethealth -= tempDamage;
-                                target.GetComponent<PlayerStats>().currentHealth = targethealth;
+                                /* targethealth = target.GetComponent<PlayerStats>().currentHealth;
+                                 targethealth -= tempDamage;*/
+                                PlayerIni.currentHealth -= tempDamage;
+                                target.GetComponent<PlayerStats>().currentHealth = PlayerIni.currentHealth;
                             }
                         }
                     }
@@ -183,16 +185,16 @@ public class EnemyBehavior : MonoBehaviour
                     {
                         Debug.Log("invincinble");
                     }
-                        }
-                    if (target.GetComponent<PlayerStats>().reflectdamage == true)
-                    {
-                        GetComponent<EnemyStat>().currentenemyhealth -= GetComponent<EnemyStat>().ColliderDamage * target.GetComponent<PlayerStats>().reflectdamageratio;
-                    }
-                    Debug.Log("Health:" + target.GetComponent<PlayerStats>().currentHealth + "Sheild:" + target.GetComponent<PlayerStats>().currentSheild + "EnemyHealth" + GetComponent<EnemyStat>().currentenemyhealth);
-                    EASChecker = EAS;
-            }   
+                }
+                if (target.GetComponent<PlayerStats>().reflectdamage == true)
+                {
+                    GetComponent<EnemyStat>().currentenemyhealth -= GetComponent<EnemyStat>().ColliderDamage * target.GetComponent<PlayerStats>().reflectdamageratio;
+                }
+                Debug.Log("Health:" + target.GetComponent<PlayerStats>().currentHealth + "Sheild:" + target.GetComponent<PlayerStats>().currentSheild + "EnemyHealth" + GetComponent<EnemyStat>().currentenemyhealth);
+                EASChecker = EAS;
+            }
         }
-            
+
         else if (gameObject.tag == "Enemy_2")
         {
             if (other.name == "Ashe")
@@ -218,10 +220,10 @@ public class EnemyBehavior : MonoBehaviour
                                 target.GetComponent<PlayerStats>().currentSheild = 0;
                                 if (tempDamage > 0)
                                 {
-                                    targethealth = target.GetComponent<PlayerStats>().currentHealth;
-                                    targethealth -= tempDamage;
-                                    target.GetComponent<PlayerStats>().currentHealth = targethealth;
-
+                                    /*targethealth = target.GetComponent<PlayerStats>().currentHealth;
+                                    targethealth -= tempDamage;*/
+                                    PlayerIni.currentHealth -= tempDamage;
+                                    target.GetComponent<PlayerStats>().currentHealth = PlayerIni.currentHealth;
                                 }
                             }
                         }
@@ -240,9 +242,11 @@ public class EnemyBehavior : MonoBehaviour
                             }
                             if (tempDamage > 0)
                             {
-                                targethealth = target.GetComponent<PlayerStats>().currentHealth;
-                                targethealth -= tempDamage;
-                                target.GetComponent<PlayerStats>().currentHealth = targethealth;
+                                /*targethealth = target.GetComponent<PlayerStats>().currentHealth;
+                                targethealth -= tempDamage;*/
+                                PlayerIni.currentHealth -= tempDamage;
+                                target.GetComponent<PlayerStats>().currentHealth = PlayerIni.currentHealth;
+
                             }
                         }
                     }
@@ -279,7 +283,7 @@ public class EnemyBehavior : MonoBehaviour
 
             if (GetComponent<EnemyStat>().currentenemyhealth <= 0)  //如果敵人血量低於0就掰掰
             {
-               
+
                 if (Instantiateonce == false)
                 {
                     int f = Random.Range(0, 100);
@@ -291,8 +295,8 @@ public class EnemyBehavior : MonoBehaviour
                     else
                         Destroy(gameObject);
                 }
-                        
-                    
+
+
 
                 Destroy(gameObject);
             }
@@ -326,8 +330,8 @@ public class EnemyBehavior : MonoBehaviour
 
     }
 }
-        
-    
 
-    
+
+
+
 
