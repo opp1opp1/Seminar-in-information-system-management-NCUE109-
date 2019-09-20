@@ -120,15 +120,18 @@ public class bulletdestroy : MonoBehaviour
             if (other.gameObject.tag == "Player")
             {
                 target = GameObject.Find("Ashe");
-                if (target.GetComponent<PlayerStats>().itisinvincinble != true)
+                if (target.GetComponent<PlayerStats>().itisinvincinble != true)//如果沒有無敵的話
                 {
+                    Debug.Log("reduce damage!");
                     targetShield = target.GetComponent<PlayerStats>().currentSheild;
-                    if (target.GetComponent<PlayerStats>().reducedamage == true)
+                    if (target.GetComponent<PlayerStats>().reducedamage == true)//檢查是否有減傷
                     {
+
                         tempDamage = bullet_damage * 0.8f;
-                        if (targetShield >= tempDamage)
+                        if (targetShield >= tempDamage)//檢查護盾是不是可以擋下傷害
                         {
                             targetShield -= tempDamage;
+                            Debug.Log("bullet block by shield");
                             target.GetComponent<PlayerStats>().currentSheild = targetShield;
                         }
                         else
@@ -139,6 +142,7 @@ public class bulletdestroy : MonoBehaviour
                             {
                                 /*targethealth = target.GetComponent<PlayerStats>().currentHealth;
                                 targethealth -= tempDamage;*/
+                                Debug.Log("hit by bullet");
                                 PlayerIni.currentHealth -= tempDamage;
                                 target.GetComponent<PlayerStats>().currentHealth = PlayerIni.currentHealth;
                             }
@@ -148,6 +152,7 @@ public class bulletdestroy : MonoBehaviour
                     {
                         if (targetShield >= bullet_damage)
                         {
+                            Debug.Log("bullet block by shield");
                             targetShield -= bullet_damage;
                             target.GetComponent<PlayerStats>().currentSheild = targetShield;
                         }
@@ -159,6 +164,7 @@ public class bulletdestroy : MonoBehaviour
                         }
                         if (tempDamage > 0)
                         {
+                            Debug.Log("hit by bullet");
                             /*targethealth = target.GetComponent<PlayerStats>().currentHealth;
                             targethealth -= tempDamage;*/
                             PlayerIni.currentHealth -= tempDamage;
