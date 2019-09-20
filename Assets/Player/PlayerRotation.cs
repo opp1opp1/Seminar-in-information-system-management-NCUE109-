@@ -9,11 +9,13 @@ public class PlayerRotation : MonoBehaviour
     //private GameObject target;
     //獲取所有敵人
     public bool enemychecker = false;
+    
+    
     void Start()
     {
 
         // targetPoint = transform.position;
-
+       
     }
 
     void Update()
@@ -38,6 +40,8 @@ public class PlayerRotation : MonoBehaviour
 
 
         transform.LookAt(OnGetEnemy());
+       
+        
     }
     public Transform OnGetEnemy()
     {
