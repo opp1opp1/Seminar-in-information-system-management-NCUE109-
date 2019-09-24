@@ -9,6 +9,7 @@ public class EnemyStat : MonoBehaviour {
     public float enemyattackspeed;//enemy的攻擊速度
     public float ColliderDamage;
     public float WakeUpDistance;
+    public float AttackDistance;
     public float agantspeed;
     public float BurnGroundTime =2.0f;
     public float IceGroundTime = 0.5f;
@@ -35,7 +36,15 @@ public class EnemyStat : MonoBehaviour {
                 WakeUpDistance = 8f;
                 agantspeed = 10f;
                 break;
-                default:
+                case 3:
+                    basicenemyhealth = 700;
+                enemyattackspeed = 2f;
+                ColliderDamage = 20f;
+                WakeUpDistance = 15f;
+                AttackDistance = 2f;
+                agantspeed = 7f;
+                break;
+            default:
                     Debug.Log("enemy dont have health");
                     break;
             }
