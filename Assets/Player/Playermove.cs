@@ -117,7 +117,7 @@ public class Playermove : MonoBehaviour {
 
         //碰撞
         //deltaMove = MoveSpeed * Time.deltaTime;
-        Vector3 raystart = GameObject.Find("Ashe").transform.position;
+        /*(Vector3 raystart = GameObject.Find("Ashe").transform.position;
         float updown = 1;
         Vector3 raydir = Vector3.right;
 
@@ -130,14 +130,14 @@ public class Playermove : MonoBehaviour {
         RaycastHit rhf = new RaycastHit(); 
         if (Physics.Raycast(raystart, raydir, out rhf, rayLength))
         {
-            Debug.Log("Success");
+            
             if (rhf.collider != null && rhf.collider.gameObject.tag == "wall") 
             {
                 Debug.Log("Success"+rhf.collider+rhf.collider.gameObject.tag);
                 deltaMove.z = rhf.point.z - raystart.z + halfBoundY * -updown; 
             }
         }
-
+        */
         /*
         //Translate移动控制函数
         float horizontal = Input.GetAxis("Horizontal"); //A D 左右

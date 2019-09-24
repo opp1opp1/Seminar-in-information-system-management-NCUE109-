@@ -9,11 +9,13 @@ public class PlayerRotation : MonoBehaviour
     //private GameObject target;
     //獲取所有敵人
     public bool enemychecker = false;
+    
+    
     void Start()
     {
 
         // targetPoint = transform.position;
-
+       
     }
 
     void Update()
@@ -38,6 +40,8 @@ public class PlayerRotation : MonoBehaviour
 
 
         transform.LookAt(OnGetEnemy());
+       
+        
     }
     public Transform OnGetEnemy()
     {
@@ -51,7 +55,8 @@ public class PlayerRotation : MonoBehaviour
             //判斷檢測到的物件中有沒有Enemy
             if (cols.Length > 0)
                 for (int i = 0; i < cols.Length; i++)
-                    if (cols[i].tag==("Enemy_1") || cols[i].tag==("Enemy_2"))
+                    if (cols[i].tag=="Enemy_2" || cols[i].tag=="Enemy_1")
+                    
                     {
 
                         enemychecker = true;

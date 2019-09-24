@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44950128, g: 0.49649638, b: 0.5591477, a: 1}
+  m_IndirectSpecularColor: {r: 0.44950187, g: 0.4964971, b: 0.5591488, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -1323,6 +1323,10 @@ Prefab:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 261f2d79d045c4a4f81aa2c569432402, type: 2}
+    - target: {fileID: 100000, guid: 528bcb8f3a990344790c11af88ea48eb, type: 3}
+      propertyPath: m_Name
+      value: Stage1-1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 528bcb8f3a990344790c11af88ea48eb, type: 3}
   m_IsPrefabParent: 0
@@ -1533,8 +1537,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1922669332}
   - component: {fileID: 1922669331}
-  - component: {fileID: 1922669333}
-  - component: {fileID: 1922669334}
   m_Layer: 0
   m_Name: LEVEL
   m_TagString: Untagged
@@ -1567,9 +1569,9 @@ MonoBehaviour:
   m_OverrideTileSize: 0
   m_TileSize: 256
   m_OverrideVoxelSize: 0
-  m_VoxelSize: 0.16666667
+  m_VoxelSize: 0.06666667
   m_BuildHeightMesh: 0
-  m_NavMeshData: {fileID: 23800000, guid: bc3b84040a36f5146871ab6e14eb8bcc, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 7f8c851af14c62148846b9f21ae38b97, type: 2}
 --- !u!4 &1922669332
 Transform:
   m_ObjectHideFlags: 0
@@ -1584,34 +1586,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &1922669333
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1922669330}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: aaf2bf6521e2b1141a5169d6284f0d7e, type: 3}
-  m_Controller: {fileID: 9100000, guid: 871aa59ec796d944ba7fa317c1e8c0ad, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &1922669334
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1922669330}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2076527b9f4c11d479766949cd987bec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1990863275
 Prefab:
   m_ObjectHideFlags: 0
@@ -1667,6 +1641,21 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 528bcb8f3a990344790c11af88ea48eb, type: 3}
   m_PrefabInternal: {fileID: 1734471294}
+--- !u!1 &2055059144 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100000, guid: 528bcb8f3a990344790c11af88ea48eb, type: 3}
+  m_PrefabInternal: {fileID: 1734471294}
+--- !u!114 &2055059145
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2055059144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d21656861f09b9f40a7c9bee918e113d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2144342414
 GameObject:
   m_ObjectHideFlags: 0
