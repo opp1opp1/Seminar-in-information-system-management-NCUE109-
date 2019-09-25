@@ -79,7 +79,7 @@ public class bulletdestroy : MonoBehaviour
     //弓箭射到物體時消失
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Enemy_1" || other.tag == "Enemy_2")
+        if (other.tag == "Enemy_1" || other.tag == "Enemy_2" || other.tag == "Enemy_3")
         {
             if (this.gameObject.tag == "Bullet")
             {
@@ -165,6 +165,70 @@ public class bulletdestroy : MonoBehaviour
                         if (tempDamage > 0)
                         {
                             Debug.Log("hit by bullet");
+                            /*targethealth = target.GetComponent<PlayerStats>().currentHealth;
+                            targethealth -= tempDamage;*/
+                            PlayerIni.currentHealth -= tempDamage;
+                            target.GetComponent<PlayerStats>().currentHealth = PlayerIni.currentHealth;
+
+                        }
+                    }
+                }
+                else
+                {
+                    Debug.Log("invincinble");
+                }
+            }
+        }
+        if (this.gameObject.name == "Enemy_3_Sword(Clone)")
+        {
+            if (other.gameObject.tag == "Player")
+            {
+                target = GameObject.Find("Ashe");
+                if (target.GetComponent<PlayerStats>().itisinvincinble != true)//如果沒有無敵的話
+                {
+                    Debug.Log("reduce damage!");
+                    targetShield = target.GetComponent<PlayerStats>().currentSheild;
+                    if (target.GetComponent<PlayerStats>().reducedamage == true)//檢查是否有減傷
+                    {
+
+                        tempDamage = bullet_damage * 0.8f;
+                        if (targetShield >= tempDamage)//檢查護盾是不是可以擋下傷害
+                        {
+                            targetShield -= tempDamage;
+                            Debug.Log("bullet block by shield");
+                            target.GetComponent<PlayerStats>().currentSheild = targetShield;
+                        }
+                        else
+                        {
+                            tempDamage -= targetShield;
+                            target.GetComponent<PlayerStats>().currentSheild = 0;
+                            if (tempDamage > 0)
+                            {
+                                /*targethealth = target.GetComponent<PlayerStats>().currentHealth;
+                                targethealth -= tempDamage;*/
+                                Debug.Log("hit by Sword");
+                                PlayerIni.currentHealth -= tempDamage;
+                                target.GetComponent<PlayerStats>().currentHealth = PlayerIni.currentHealth;
+                            }
+                        }
+                    }
+                    else
+                    {
+                        if (targetShield >= bullet_damage)
+                        {
+                            Debug.Log("Sword block by shield");
+                            targetShield -= bullet_damage;
+                            target.GetComponent<PlayerStats>().currentSheild = targetShield;
+                        }
+                        else if (targetShield < bullet_damage)
+                        {
+                            tempDamage = bullet_damage;
+                            tempDamage -= targetShield;
+                            target.GetComponent<PlayerStats>().currentSheild = 0;
+                        }
+                        if (tempDamage > 0)
+                        {
+                            Debug.Log("hit by Sword");
                             /*targethealth = target.GetComponent<PlayerStats>().currentHealth;
                             targethealth -= tempDamage;*/
                             PlayerIni.currentHealth -= tempDamage;

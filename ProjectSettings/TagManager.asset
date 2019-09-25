@@ -12,6 +12,7 @@ TagManager:
   - Explosion
   - BurnGround
   - IceGround
+  - Enemy_3
   layers:
   - Default
   - TransparentFX

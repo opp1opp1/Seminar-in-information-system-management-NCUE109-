@@ -17,14 +17,17 @@ public class PlayerShoot : MonoBehaviour
     public GameObject IceWindArrowPrefab;
     private float CAS; //目前功速 (Current Attack Speed)
     private float CASChecker; //功速計時器
-    public bool Muitishot = false; //連續射擊
-    private bool MuitishotSecondChecker = false; //連續射擊的第二發判斷器
-    public bool FrontArrow = false; //齊射
-    public bool DiagonalArrow = false; //多重射擊
-    public bool IceArrow = false; //冰屬性
-    public bool FireArrow = false; //冰屬性
-    public bool WindArrow = false; //風屬性
-    public bool EarthArrow = false; //土屬性
+
+    private bool Muitishot ; //連續射擊Z
+    private bool MuitishotSecondChecker ; //連續射擊的第二發判斷器
+    private bool FrontArrow ; //齊射
+    private bool DiagonalArrow; //多重射擊
+    private bool IceArrow; //冰屬性
+    private bool FireArrow; //冰屬性
+    private bool WindArrow; //風屬性
+    private bool EarthArrow; //土屬性
+
+
     //public float Multipleshoot; 舊程式碼的判斷方式
     // Use this for initialization
 
@@ -35,8 +38,17 @@ public class PlayerShoot : MonoBehaviour
         CAS = target.GetComponent<PlayerStats>().currentAttackSpeed;
         CASChecker = 0.5f; //整場遊戲的第一發不須等待 0.5S是考慮載入
 
+         Muitishot = PlayerIni.Muitishot; //連續射擊Z
+         MuitishotSecondChecker = PlayerIni.MuitishotSecondChecker; //連續射擊的第二發判斷器
+         FrontArrow = PlayerIni.FrontArrow; //齊射
+         DiagonalArrow = PlayerIni.DiagonalArrow; //多重射擊
+         IceArrow = PlayerIni.IceArrow; //冰屬性
+         FireArrow = PlayerIni.FireArrow; //冰屬性
+         WindArrow = PlayerIni.WindArrow; //風屬性
+         EarthArrow = PlayerIni.EarthArrow; //土屬性
 
-    }
+
+}
 
     // Update is called once per frame
     void Update()

@@ -6,6 +6,7 @@ using UnityEngine.AI;
 public class EnemyBehavior : MonoBehaviour
 {
     public GameObject Enemy2_bullet;
+    public GameObject Enemy3_Sword;
     private NavMeshAgent agent;
     private GameObject Player;
     //public float WakeUpDistance;
@@ -32,7 +33,8 @@ public class EnemyBehavior : MonoBehaviour
     {
         Player = GameObject.Find("Ashe");
         agent = GetComponent<NavMeshAgent>();
-        agentspeed = GetComponent<EnemyStat>().agantspeed;
+        agentspeed = GetComponent<EnemyStat>().agentspeed;
+        Debug.Log("Agentspeed:" + GetComponent<EnemyStat>().agentspeed);
         GetComponent<NavMeshAgent>().speed = agentspeed;
         EAS = this.GetComponent<EnemyStat>().enemyattackspeed;
         EASChecker = EAS;
@@ -69,8 +71,7 @@ public class EnemyBehavior : MonoBehaviour
                 //Vector3 newPos = transform.position ;
                 agent.SetDestination(newPos);
             }
-            else
-            {
+            
                 if (EASChecker <= 0)
                 {
                     target = GameObject.Find("Ashe");
@@ -78,7 +79,29 @@ public class EnemyBehavior : MonoBehaviour
                     Instantiate(Enemy2_bullet, transform.position, transform.rotation);
                     EASChecker = EAS;
                 }
+            
+        }
+        else if (this.gameObject.tag == ("Enemy_3"))
+        {
+            if (distance < this.GetComponent<EnemyStat>().WakeUpDistance)
+            {
+                Vector3 newPos = Player.transform.position;
+                //Vector3 newPos = transform.position ;
+                agent.SetDestination(newPos);
             }
+            
+            
+                if(distance <this.GetComponent<EnemyStat>().AttackDistance){
+                    if (EASChecker <= 0)
+                    {
+
+                        target = GameObject.Find("Ashe");
+                        transform.LookAt(target.transform.position);
+                        Instantiate(Enemy3_Sword,new Vector3(transform.position.x, 1, transform.position.z), transform.rotation);
+                        EASChecker = EAS;
+                    }
+                }
+            
         }
         if (slowtimer > 0.1f)
         {
