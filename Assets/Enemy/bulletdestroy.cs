@@ -30,8 +30,7 @@ public class bulletdestroy : MonoBehaviour
         {
             maxTime = 0.25f;
         }
-        if (this.gameObject.tag == "BurnGround")
-        {
+        if (this.gameObject.tag == "BurnGround")        {
             maxTime = 0.75f;
         }
         if (this.gameObject.name == "FireWind_Arrow(Clone)")
