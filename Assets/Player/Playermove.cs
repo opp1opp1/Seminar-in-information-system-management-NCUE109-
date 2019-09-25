@@ -117,14 +117,9 @@ public class Playermove : MonoBehaviour {
 
         //碰撞
         //deltaMove = MoveSpeed * Time.deltaTime;
-<<<<<<< HEAD
-        /*Vector3 raystart = GameObject.Find("Ashe").transform.position;
-        float updown = 1;
-        Vector3 raydir = Vector3.right;
 
-        target = GameObject.Find("Ashe");*/
 
-=======
+
         /*(Vector3 raystart = GameObject.Find("Ashe").transform.position;
         float updown = 1;
         Vector3 raydir = Vector3.right;
@@ -146,7 +141,7 @@ public class Playermove : MonoBehaviour {
             }
         }
         */
->>>>>>> 2a81c91e374674bdb09d62eadcfaca66a1de186c
+
         /*
         //Translate移动控制函数
         float horizontal = Input.GetAxis("Horizontal"); //A D 左右
