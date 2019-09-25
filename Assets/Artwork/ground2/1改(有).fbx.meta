@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f9320266962efd142bda7915a084d767
+guid: 3d6e9a3759a59bb4bb34d38375cc8c17
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
@@ -10,55 +10,57 @@ ModelImporter:
     100008: group11
     100010: group12
     100012: group13
-    100014: group2
-    100016: group3
-    100018: group4
-    100020: group5
-    100022: group6
-    100024: group7
-    100026: group8
-    100028: group9
-    100030: pasted__group3
-    100032: pasted__group3 1
-    100034: pasted__group3 2
-    100036: pasted__group3 3
-    100038: pasted__group7
-    100040: pasted__group7 1
-    100042: pasted__group7 2
-    100044: pasted__group7 3
-    100046: pasted__group7 4
-    100048: pasted__group7 5
-    100050: pasted__pasted__group3
-    100052: pasted__pasted__group3 1
-    100054: pasted__pasted__group3 2
-    100056: pasted__pasted__group3 3
-    100058: pasted__pasted__group3 4
-    100060: pasted__pasted__group3 5
-    100062: pasted__pasted__pasted__pCylinder2
-    100064: pasted__pasted__pasted__pCylinder2 1
-    100066: pasted__pasted__pasted__pCylinder2 2
-    100068: pasted__pasted__pasted__pCylinder2 3
-    100070: pasted__pasted__pasted__pCylinder2 4
-    100072: pasted__pasted__pasted__pCylinder2 5
-    100074: pasted__pasted__pCylinder2
-    100076: pasted__pasted__pCylinder2 1
-    100078: pasted__pasted__pCylinder2 2
-    100080: pasted__pasted__pCylinder2 3
-    100082: pasted__pCylinder2
-    100084: pCube2
-    100086: pCube3
-    100088: pCube4
-    100090: pCube5
-    100092: pCube6
-    100094: pCube7
-    100096: pCylinder1
-    100098: pSphere1
-    100100: transform1
-    100102: transform2
-    100104: transform3
-    100106: transform4
-    100108: transform5
-    100110: transform6
+    100014: group14
+    100016: group15
+    100018: group2
+    100020: group3
+    100022: group4
+    100024: group5
+    100026: group6
+    100028: group7
+    100030: group8
+    100032: group9
+    100034: pasted__group3
+    100036: pasted__group3 1
+    100038: pasted__group3 2
+    100040: pasted__group3 3
+    100042: pasted__group7
+    100044: pasted__group7 1
+    100046: pasted__group7 2
+    100048: pasted__group7 3
+    100050: pasted__group7 4
+    100052: pasted__group7 5
+    100054: pasted__pasted__group3
+    100056: pasted__pasted__group3 1
+    100058: pasted__pasted__group3 2
+    100060: pasted__pasted__group3 3
+    100062: pasted__pasted__group3 4
+    100064: pasted__pasted__group3 5
+    100066: pasted__pasted__pasted__pCylinder2
+    100068: pasted__pasted__pasted__pCylinder2 1
+    100070: pasted__pasted__pasted__pCylinder2 2
+    100072: pasted__pasted__pasted__pCylinder2 3
+    100074: pasted__pasted__pasted__pCylinder2 4
+    100076: pasted__pasted__pasted__pCylinder2 5
+    100078: pasted__pasted__pCylinder2
+    100080: pasted__pasted__pCylinder2 1
+    100082: pasted__pasted__pCylinder2 2
+    100084: pasted__pasted__pCylinder2 3
+    100086: pasted__pCube7
+    100088: pasted__pCylinder2
+    100090: pCube2
+    100092: pCube3
+    100094: pCube4
+    100096: pCube5
+    100098: pCube6
+    100100: pCylinder1
+    100102: pSphere1
+    100104: transform1
+    100106: transform2
+    100108: transform3
+    100110: transform4
+    100112: transform5
+    100114: transform6
     400000: //RootNode
     400002: group
     400004: group1
@@ -66,59 +68,63 @@ ModelImporter:
     400008: group11
     400010: group12
     400012: group13
-    400014: group2
-    400016: group3
-    400018: group4
-    400020: group5
-    400022: group6
-    400024: group7
-    400026: group8
-    400028: group9
-    400030: pasted__group3
-    400032: pasted__group3 1
-    400034: pasted__group3 2
-    400036: pasted__group3 3
-    400038: pasted__group7
-    400040: pasted__group7 1
-    400042: pasted__group7 2
-    400044: pasted__group7 3
-    400046: pasted__group7 4
-    400048: pasted__group7 5
-    400050: pasted__pasted__group3
-    400052: pasted__pasted__group3 1
-    400054: pasted__pasted__group3 2
-    400056: pasted__pasted__group3 3
-    400058: pasted__pasted__group3 4
-    400060: pasted__pasted__group3 5
-    400062: pasted__pasted__pasted__pCylinder2
-    400064: pasted__pasted__pasted__pCylinder2 1
-    400066: pasted__pasted__pasted__pCylinder2 2
-    400068: pasted__pasted__pasted__pCylinder2 3
-    400070: pasted__pasted__pasted__pCylinder2 4
-    400072: pasted__pasted__pasted__pCylinder2 5
-    400074: pasted__pasted__pCylinder2
-    400076: pasted__pasted__pCylinder2 1
-    400078: pasted__pasted__pCylinder2 2
-    400080: pasted__pasted__pCylinder2 3
-    400082: pasted__pCylinder2
-    400084: pCube2
-    400086: pCube3
-    400088: pCube4
-    400090: pCube5
-    400092: pCube6
-    400094: pCube7
-    400096: pCylinder1
-    400098: pSphere1
-    400100: transform1
-    400102: transform2
-    400104: transform3
-    400106: transform4
-    400108: transform5
-    400110: transform6
+    400014: group14
+    400016: group15
+    400018: group2
+    400020: group3
+    400022: group4
+    400024: group5
+    400026: group6
+    400028: group7
+    400030: group8
+    400032: group9
+    400034: pasted__group3
+    400036: pasted__group3 1
+    400038: pasted__group3 2
+    400040: pasted__group3 3
+    400042: pasted__group7
+    400044: pasted__group7 1
+    400046: pasted__group7 2
+    400048: pasted__group7 3
+    400050: pasted__group7 4
+    400052: pasted__group7 5
+    400054: pasted__pasted__group3
+    400056: pasted__pasted__group3 1
+    400058: pasted__pasted__group3 2
+    400060: pasted__pasted__group3 3
+    400062: pasted__pasted__group3 4
+    400064: pasted__pasted__group3 5
+    400066: pasted__pasted__pasted__pCylinder2
+    400068: pasted__pasted__pasted__pCylinder2 1
+    400070: pasted__pasted__pasted__pCylinder2 2
+    400072: pasted__pasted__pasted__pCylinder2 3
+    400074: pasted__pasted__pasted__pCylinder2 4
+    400076: pasted__pasted__pasted__pCylinder2 5
+    400078: pasted__pasted__pCylinder2
+    400080: pasted__pasted__pCylinder2 1
+    400082: pasted__pasted__pCylinder2 2
+    400084: pasted__pasted__pCylinder2 3
+    400086: pasted__pCube7
+    400088: pasted__pCylinder2
+    400090: pCube2
+    400092: pCube3
+    400094: pCube4
+    400096: pCube5
+    400098: pCube6
+    400100: pCylinder1
+    400102: pSphere1
+    400104: transform1
+    400106: transform2
+    400108: transform3
+    400110: transform4
+    400112: transform5
+    400114: transform6
     2100000: lambert4
     2100002: anisotropic1
-    2100004: lambert2
-    2100006: lambert3
+    2100004: pasted__lambert4
+    2100006: pasted__lambert5
+    2100008: lambert5
+    2100010: lambert2
     2300000: pasted__pasted__pasted__pCylinder2
     2300002: pasted__pasted__pasted__pCylinder2 1
     2300004: pasted__pasted__pasted__pCylinder2 2
@@ -129,9 +135,9 @@ ModelImporter:
     2300014: pasted__pasted__pCylinder2 1
     2300016: pasted__pasted__pCylinder2 2
     2300018: pasted__pasted__pCylinder2 3
-    2300020: pasted__pCylinder2
-    2300022: pCube6
-    2300024: pCube7
+    2300020: pasted__pCube7
+    2300022: pasted__pCylinder2
+    2300024: pCube6
     3300000: pasted__pasted__pasted__pCylinder2
     3300002: pasted__pasted__pasted__pCylinder2 1
     3300004: pasted__pasted__pasted__pCylinder2 2
@@ -142,9 +148,9 @@ ModelImporter:
     3300014: pasted__pasted__pCylinder2 1
     3300016: pasted__pasted__pCylinder2 2
     3300018: pasted__pasted__pCylinder2 3
-    3300020: pasted__pCylinder2
-    3300022: pCube6
-    3300024: pCube7
+    3300020: pasted__pCube7
+    3300022: pasted__pCylinder2
+    3300024: pCube6
     4300000: pCube6
     4300002: pasted__pCylinder2
     4300004: pasted__pasted__pCylinder2
@@ -157,7 +163,7 @@ ModelImporter:
     4300018: pasted__pasted__pasted__pCylinder2
     4300020: pasted__pasted__pasted__pCylinder2
     4300022: pasted__pasted__pasted__pCylinder2
-    4300024: pCube7
+    4300024: pasted__pCube7
     7400000: Take 001
     9500000: //RootNode
   externalObjects: {}
