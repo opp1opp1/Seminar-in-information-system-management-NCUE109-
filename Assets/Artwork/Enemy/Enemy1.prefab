@@ -402,6 +402,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Enemy2_bullet: {fileID: 1511428900671028, guid: 05d1715d801975d429cfeef34753795f,
     type: 2}
+  Enemy3_Sword: {fileID: 0}
   PowerUp: {fileID: 1283495710257734, guid: 05c22f36fa28759459b2a73b0f37b5fe, type: 2}
   agentspeed: 5
   slowtimer: 0
@@ -458,7 +459,8 @@ MonoBehaviour:
   enemyattackspeed: 1
   ColliderDamage: 0
   WakeUpDistance: 0
-  agantspeed: 0
+  AttackDistance: 0
+  agentspeed: 0
   BurnGroundTime: 2
   IceGroundTime: 0.5
 --- !u!114 &114879556249301586

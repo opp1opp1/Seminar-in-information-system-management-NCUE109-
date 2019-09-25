@@ -119,8 +119,11 @@ MonoBehaviour:
   stunTime: 0.5
   Explosion: {fileID: 0}
   BurnGround: {fileID: 0}
+  IceGround: {fileID: 0}
   ExplosionTime: 0.5
   Explosion_damage: 0
+  InstantiateGroundTime: 0.15
+  InstantiateGroundTimer: 0
 --- !u!114 &114782185325545178
 MonoBehaviour:
   m_ObjectHideFlags: 1

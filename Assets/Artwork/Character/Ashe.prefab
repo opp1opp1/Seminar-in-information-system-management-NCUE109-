@@ -1546,13 +1546,6 @@ MonoBehaviour:
     type: 2}
   IceWindArrowPrefab: {fileID: 1704584529107266, guid: dcce1f3b1ae08bb4d8b023344d634479,
     type: 2}
-  Muitishot: 0
-  FrontArrow: 0
-  DiagonalArrow: 0
-  IceArrow: 1
-  FireArrow: 0
-  WindArrow: 1
-  EarthArrow: 0
 --- !u!114 &114621910743523428
 MonoBehaviour:
   m_ObjectHideFlags: 1
