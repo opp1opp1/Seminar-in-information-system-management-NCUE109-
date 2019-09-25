@@ -1,4 +1,4 @@
-﻿using System.Collections;
+﻿    using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -10,7 +10,7 @@ public class EnemyStat : MonoBehaviour {
     public float ColliderDamage;
     public float WakeUpDistance;
     public float AttackDistance;
-    public float agantspeed;
+    public float agentspeed;
     public float BurnGroundTime =2.0f;
     public float IceGroundTime = 0.5f;
 
@@ -27,14 +27,14 @@ public class EnemyStat : MonoBehaviour {
                 enemyattackspeed = 1f;
                 ColliderDamage = 20f;
                 WakeUpDistance = 15f;
-                agantspeed = 5f;
+                agentspeed = 5f;
                     break;
                 case 2:
                     basicenemyhealth = 60;
                 enemyattackspeed = 1f;
                 ColliderDamage = 5f;
                 WakeUpDistance = 8f;
-                agantspeed = 10f;
+                agentspeed = 10f;
                 break;
                 case 3:
                     basicenemyhealth = 700;
@@ -42,7 +42,7 @@ public class EnemyStat : MonoBehaviour {
                 ColliderDamage = 20f;
                 WakeUpDistance = 15f;
                 AttackDistance = 2f;
-                agantspeed = 7f;
+                agentspeed = 7.0f;
                 break;
             default:
                     Debug.Log("enemy dont have health");

@@ -33,7 +33,8 @@ public class EnemyBehavior : MonoBehaviour
     {
         Player = GameObject.Find("Ashe");
         agent = GetComponent<NavMeshAgent>();
-        agentspeed = GetComponent<EnemyStat>().agantspeed;
+        agentspeed = GetComponent<EnemyStat>().agentspeed;
+        Debug.Log("Agentspeed:" + GetComponent<EnemyStat>().agentspeed);
         GetComponent<NavMeshAgent>().speed = agentspeed;
         EAS = this.GetComponent<EnemyStat>().enemyattackspeed;
         EASChecker = EAS;
