@@ -6,7 +6,9 @@ public class FButtonInstantiate : MonoBehaviour
 {
     public GameObject Instantiate_FButton1;    //物件生成點
     public GameObject FButton1;    //要生成的物件
-                                   // Use this for initialization
+    public GameObject clone;
+    private bool stop = true;
+                               
     void Start()
     { //一開始就執行生成物件
 
@@ -15,11 +17,14 @@ public class FButtonInstantiate : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (FButton1.gameObject.activeSelf)
+        if (FButton1.gameObject.activeSelf && stop == true)
         {
-            Instantiate(FButton1, Instantiate_FButton1.transform.position,  //生成(物件,位置,旋轉值)
+            clone = Instantiate(FButton1, Instantiate_FButton1.transform.position,  //生成(物件,位置,旋轉值)
             Instantiate_FButton1.transform.rotation);                       //Instantiate實例化
+            clone.SetActive(true);
+            stop = false;
             Debug.Log("hit");
         }
+
     }
 }
