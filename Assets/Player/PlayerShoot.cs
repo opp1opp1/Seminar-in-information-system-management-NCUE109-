@@ -18,14 +18,14 @@ public class PlayerShoot : MonoBehaviour
     private float CAS; //目前功速 (Current Attack Speed)
     private float CASChecker; //功速計時器
 
-    public bool Muitishot ; //連續射擊Z
-    public bool MuitishotSecondChecker ; //連續射擊的第二發判斷器
-    public bool FrontArrow ; //齊射
-    public bool DiagonalArrow; //多重射擊
-    public bool IceArrow; //冰屬性
-    public bool FireArrow; //冰屬性
-    public bool WindArrow; //風屬性
-    public bool EarthArrow; //土屬性
+    private bool Muitishot ; //連續射擊Z
+    private bool MuitishotSecondChecker ; //連續射擊的第二發判斷器
+    private bool FrontArrow ; //齊射
+    private bool DiagonalArrow; //多重射擊
+    private bool IceArrow; //冰屬性
+    private bool FireArrow; //冰屬性
+    private bool WindArrow; //風屬性
+    private bool EarthArrow; //土屬性
 
 
     //public float Multipleshoot; 舊程式碼的判斷方式
