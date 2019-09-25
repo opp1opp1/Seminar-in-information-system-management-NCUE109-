@@ -117,12 +117,36 @@ public class Playermove : MonoBehaviour {
 
         //碰撞
         //deltaMove = MoveSpeed * Time.deltaTime;
+<<<<<<< HEAD
         /*Vector3 raystart = GameObject.Find("Ashe").transform.position;
         float updown = 1;
         Vector3 raydir = Vector3.right;
 
         target = GameObject.Find("Ashe");*/
 
+=======
+        /*(Vector3 raystart = GameObject.Find("Ashe").transform.position;
+        float updown = 1;
+        Vector3 raydir = Vector3.right;
+
+        target = GameObject.Find("Ashe");
+
+        BoxCollider mycollider = target.GetComponent<BoxCollider>();
+        float halfBoundY = mycollider.size.z * GameObject.Find("Ashe").transform.localScale.z; 
+        float rayLength = Mathf.Abs(deltaMove.z) + halfBoundY; 
+
+        RaycastHit rhf = new RaycastHit(); 
+        if (Physics.Raycast(raystart, raydir, out rhf, rayLength))
+        {
+            
+            if (rhf.collider != null && rhf.collider.gameObject.tag == "wall") 
+            {
+                Debug.Log("Success"+rhf.collider+rhf.collider.gameObject.tag);
+                deltaMove.z = rhf.point.z - raystart.z + halfBoundY * -updown; 
+            }
+        }
+        */
+>>>>>>> 2a81c91e374674bdb09d62eadcfaca66a1de186c
         /*
         //Translate移动控制函数
         float horizontal = Input.GetAxis("Horizontal"); //A D 左右

@@ -2,13 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerStats : MonoBehaviour {
+public class PlayerStats : MonoBehaviour
+{
     public float basicAttackDamage = 5;
     public float basicAttackSpeed = 1.0f;
-    public float basicHealth = 100;
+    public float basicHealth;
     public float currentAttackDamage = 5;
     public float currentAttackSpeed = 1.0f;
-    public float currentHealth = 100;
+    public float currentHealth;
     public float currentSheild = 0;
     private GameObject bullet;
     private float bulletdamage;
@@ -18,19 +19,24 @@ public class PlayerStats : MonoBehaviour {
     private float invincinbletime = 2.0f;
     public float invincinbletimer;
     public bool itisinvincinble;
-    private float nextinvincinbletime =0.5f;
+    private float nextinvincinbletime = 0.5f;
     public bool reflectdamage = false;
     public float reflectdamageratio = 0.35f;
     public bool reducedamage = false;
     // Use this for initialization
-    void Start () {
+    void Start()
+    {
         removedshieldtimer = removedshieldtime;
-        
-            }
+        basicHealth = PlayerIni.basicHealth;
+        currentHealth = PlayerIni.currentHealth;
+
+
+    }
 
     // Update is called once per frame
     void Update()
     {
+
         if (currentSheild > 0f)
         {
             removedshieldtimer -= Time.deltaTime;
@@ -56,7 +62,7 @@ public class PlayerStats : MonoBehaviour {
                 nextinvincinbletime -= Time.deltaTime;
 
             }
-            else 
+            else
             {
                 invincinbletimer = invincinbletime;
                 nextinvincinbletime = 10f;
@@ -66,7 +72,7 @@ public class PlayerStats : MonoBehaviour {
             {
                 invincinbletimer -= Time.deltaTime;
                 itisinvincinble = true;
-                
+
             }
             else //沒無敵
             {
@@ -74,6 +80,6 @@ public class PlayerStats : MonoBehaviour {
             }
         }
     }
-    
+
 
 }
