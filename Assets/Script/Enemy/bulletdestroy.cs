@@ -38,6 +38,11 @@ public class bulletdestroy : MonoBehaviour
             InstantiateGroundTimer = InstantiateGroundTime;
             
         }
+        if (this.gameObject.name == "Sword(Clone)")
+        {
+            maxTime = 0.25f;
+
+        }
     }
 
     // Update is called once per frame
@@ -178,7 +183,7 @@ public class bulletdestroy : MonoBehaviour
                 }
             }
         }
-        if (this.gameObject.name == "Enemy_3_Sword(Clone)")
+        if (this.gameObject.name == "Sword(Clone)")
         {
             if (other.gameObject.tag == "Player")
             {

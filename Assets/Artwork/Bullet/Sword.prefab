@@ -9,47 +9,47 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1011639084749860}
+  m_RootGameObject: {fileID: 1770260321628026}
   m_IsPrefabParent: 1
---- !u!1 &1011639084749860
+--- !u!1 &1770260321628026
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4590507564909644}
-  - component: {fileID: 33489926871240386}
-  - component: {fileID: 65839993281478346}
-  - component: {fileID: 23221432853695426}
-  - component: {fileID: 114976092031198592}
-  - component: {fileID: 114546768823393460}
+  - component: {fileID: 4470791978763840}
+  - component: {fileID: 33314128198635470}
+  - component: {fileID: 65228123592475298}
+  - component: {fileID: 23337783488112462}
+  - component: {fileID: 114289622778092232}
+  - component: {fileID: 114881482694265750}
   m_Layer: 0
-  m_Name: Enemy_3_Sword
+  m_Name: Sword
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4590507564909644
+--- !u!4 &4470791978763840
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1011639084749860}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.5, z: 0}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 2}
+  m_GameObject: {fileID: 1770260321628026}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0.5}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &23221432853695426
+--- !u!23 &23337783488112462
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1011639084749860}
+  m_GameObject: {fileID: 1770260321628026}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -78,43 +78,31 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &33489926871240386
+--- !u!33 &33314128198635470
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1011639084749860}
+  m_GameObject: {fileID: 1770260321628026}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!65 &65839993281478346
+--- !u!65 &65228123592475298
 BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1011639084749860}
+  m_GameObject: {fileID: 1770260321628026}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &114546768823393460
+--- !u!114 &114289622778092232
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1011639084749860}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 408e59589a781a54ca656e732f9f6090, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Bullet_Fly_speed: 0
---- !u!114 &114976092031198592
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1011639084749860}
+  m_GameObject: {fileID: 1770260321628026}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d207e54c27d94994c9fdff031a2c1fdb, type: 3}
@@ -132,3 +120,15 @@ MonoBehaviour:
   Explosion_damage: 0
   InstantiateGroundTime: 0.15
   InstantiateGroundTimer: 0
+--- !u!114 &114881482694265750
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1770260321628026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 408e59589a781a54ca656e732f9f6090, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Bullet_Fly_speed: 0
