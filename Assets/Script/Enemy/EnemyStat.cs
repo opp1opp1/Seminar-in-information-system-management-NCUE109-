@@ -18,8 +18,8 @@ public class EnemyStat : MonoBehaviour {
 
 
     // Use this for initialization
-    void Start () {
-
+    void Awake () {
+        
         switch (enemytype) //根據敵人種類，有不同的血量
             {
                 case 1:
@@ -35,14 +35,14 @@ public class EnemyStat : MonoBehaviour {
                 ColliderDamage = 5f;
                 WakeUpDistance = 8f;
                 agentspeed = 10f;
-                break;
+                    break;
                 case 3:
                     basicenemyhealth = 700;
                 enemyattackspeed = 2f;
                 ColliderDamage = 20f;
                 WakeUpDistance = 15f;
                 AttackDistance = 2f;
-                agentspeed = 7.0f;
+                agentspeed = 7f;
                 break;
             default:
                     Debug.Log("enemy dont have health");

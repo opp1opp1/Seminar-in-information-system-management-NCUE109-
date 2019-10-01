@@ -7,7 +7,11 @@ public class bulletmove : MonoBehaviour {
    
     // Use this for initialization
     void Start () {
-        
+        if (this.gameObject.name == "Sword(Clone)")
+        {
+            Bullet_Fly_speed = 5f;
+
+        }
     }
 	
 	// Update is called once per frame

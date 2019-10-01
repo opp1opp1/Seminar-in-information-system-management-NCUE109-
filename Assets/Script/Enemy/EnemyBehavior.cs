@@ -16,7 +16,7 @@ public class EnemyBehavior : MonoBehaviour
     public GameObject PowerUp;
     private float targethealth;
     private float targetShield;
-    private float EAS;
+    public float EAS;
     private float EASChecker;
     public float agentspeed;
     private float slowagentspeed;
@@ -33,10 +33,10 @@ public class EnemyBehavior : MonoBehaviour
     {
         Player = GameObject.Find("Ashe");
         agent = GetComponent<NavMeshAgent>();
-        agentspeed = GetComponent<EnemyStat>().agentspeed;
+        //agentspeed = GetComponent<EnemyStat>().agentspeed;
         Debug.Log("Agentspeed:" + GetComponent<EnemyStat>().agentspeed);
         GetComponent<NavMeshAgent>().speed = agentspeed;
-        EAS = this.GetComponent<EnemyStat>().enemyattackspeed;
+        EAS = GetComponent<EnemyStat>().enemyattackspeed;
         EASChecker = EAS;
         slowagentspeed = agentspeed * 0.75f;
 
@@ -83,7 +83,22 @@ public class EnemyBehavior : MonoBehaviour
         }
         else if (this.gameObject.tag == ("Enemy_3"))
         {
-            if (distance < this.GetComponent<EnemyStat>().WakeUpDistance)
+            if (distance < this.GetComponent<EnemyStat>().AttackDistance)
+            {
+
+                if (EASChecker <= 0f)
+                {
+                    target = GameObject.Find("Ashe");
+                    Vector3 lookatposition = new Vector3(target.transform.position.x, 0.5f, target.transform.position.z);
+                    transform.LookAt(lookatposition);
+                    //Instantiate(Enemy3_Sword,new Vector3(transform.position.x, 1, transform.position.z), transform.rotation);
+                    //Vector3.Lerp(transform.position, Player.transform.position, 0.5f)
+                    Instantiate(Enemy3_Sword, new Vector3(Mathf.Lerp(transform.position.x, Player.transform.position.x, 0.5f), 0.5f, Mathf.Lerp(transform.position.z, Player.transform.position.z, 0.5f)), transform.rotation);
+
+                    EASChecker = EAS;
+                }
+            }
+            else if (distance < this.GetComponent<EnemyStat>().WakeUpDistance)
             {
                 Vector3 newPos = Player.transform.position;
                 //Vector3 newPos = transform.position ;
@@ -91,16 +106,7 @@ public class EnemyBehavior : MonoBehaviour
             }
             
             
-                if(distance <this.GetComponent<EnemyStat>().AttackDistance){
-                    if (EASChecker <= 0)
-                    {
-
-                        target = GameObject.Find("Ashe");
-                        transform.LookAt(target.transform.position);
-                        Instantiate(Enemy3_Sword,new Vector3(transform.position.x, 1, transform.position.z), transform.rotation);
-                        EASChecker = EAS;
-                    }
-                }
+                
             
         }
         if (slowtimer > 0.1f)
