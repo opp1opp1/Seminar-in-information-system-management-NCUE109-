@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FUIAppear : MonoBehaviour {
+public class FUIAppear : MonoBehaviour {//套在Ashe身上
     
     GameObject gameFPanel;
 	// Use this for initialization
