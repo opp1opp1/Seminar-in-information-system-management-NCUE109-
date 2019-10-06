@@ -55,7 +55,7 @@ public class PlayerRotation : MonoBehaviour
             //判斷檢測到的物件中有沒有Enemy
             if (cols.Length > 0)
                 for (int i = 0; i < cols.Length; i++)
-                    if (cols[i].tag=="Enemy_2" || cols[i].tag=="Enemy_1")
+                    if (cols[i].tag=="Enemy_2" || cols[i].tag=="Enemy_1" || cols[i].tag == "Enemy_3")
                     
                     {
 
