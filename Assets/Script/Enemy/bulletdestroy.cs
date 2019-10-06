@@ -8,6 +8,7 @@ public class bulletdestroy : MonoBehaviour
     private float lifeTime;
     public float maxTime = 3.0f;
     public float bullet_damage = 5.0f;
+    public float sword_damage = 80.0f;
     public float slowTime = 2.0f;
     public float burnTime = 4.0f;
     public float stunTime = 0.5f;
@@ -195,7 +196,7 @@ public class bulletdestroy : MonoBehaviour
                     if (target.GetComponent<PlayerStats>().reducedamage == true)//檢查是否有減傷
                     {
 
-                        tempDamage = bullet_damage * 0.8f;
+                        tempDamage = sword_damage * 0.8f;
                         if (targetShield >= tempDamage)//檢查護盾是不是可以擋下傷害
                         {
                             targetShield -= tempDamage;
@@ -218,15 +219,15 @@ public class bulletdestroy : MonoBehaviour
                     }
                     else
                     {
-                        if (targetShield >= bullet_damage)
+                        if (targetShield >= sword_damage)
                         {
                             Debug.Log("Sword block by shield");
-                            targetShield -= bullet_damage;
+                            targetShield -= sword_damage;
                             target.GetComponent<PlayerStats>().currentSheild = targetShield;
                         }
-                        else if (targetShield < bullet_damage)
+                        else if (targetShield < sword_damage)
                         {
-                            tempDamage = bullet_damage;
+                            tempDamage = sword_damage;
                             tempDamage -= targetShield;
                             target.GetComponent<PlayerStats>().currentSheild = 0;
                         }

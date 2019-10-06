@@ -8,12 +8,12 @@ public static class PlayerIni {
 
     public static bool Muitishot = true; //連續射擊
     public static bool MuitishotSecondChecker = true; //連續射擊的第二發判斷器
-    public static bool FrontArrow = true; //齊射
-    public static bool DiagonalArrow = true; //多重射擊
-    public static bool IceArrow = true; //冰屬性
-    public static bool FireArrow = true; //冰屬性
-    public static bool WindArrow = true; //風屬性
-    public static bool EarthArrow = true; //土屬性
+    public static bool FrontArrow = false; //齊射
+    public static bool DiagonalArrow = false; //多重射擊
+    public static bool IceArrow = false; //冰屬性
+    public static bool FireArrow = false; //冰屬性
+    public static bool WindArrow = false; //風屬性
+    public static bool EarthArrow = false; //土屬性
 
 
 
