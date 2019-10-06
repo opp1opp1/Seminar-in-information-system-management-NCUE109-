@@ -9,32 +9,38 @@ EditorBuildSettings:
     path: Assets/Scenes/MainScene.unity
     guid: 7c814a63fce7f5f4bba75486f021720b
   - enabled: 1
-    path: Assets/Scenes/Stage0101.unity
-    guid: 9bd9da8a96fe1174e9bc2ed3586ccaf6
-  - enabled: 1
     path: Assets/Scenes/CharacterScene.unity
     guid: 9eab571d3d54736448c4bcafac136c6f
   - enabled: 1
-    path: Assets/Maybe Useful/LoadScene.unity
+    path: Assets/Script/Maybe Useful/LoadScene.unity
     guid: fa15a7290d02d044a8487dce9b957982
   - enabled: 1
     path: Assets/Scenes/BoxScene.unity
     guid: 0d956bd381cedc9458da9f2b68530bc5
   - enabled: 1
-    path: Assets/Player/healthbar.unity
-    guid: bac72bbb02456f24bb98ea4a35697771
-  - enabled: 1
-    path: Assets/Useless/ICEMANSCENE.unity
-    guid: b84b93163cc609c49b6b0ef59bce68c3
-  - enabled: 1
-    path: Assets/Maybe Useful/ScoreScene.unity
+    path: Assets/Script/Maybe Useful/ScoreScene.unity
     guid: 861c7bac97e9b9c4682835dc6b298bf2
-  - enabled: 1
-    path: Assets/Scenes/Stage0102.unity
-    guid: 0eb7e6bd393875443a1727cae4b9dc9c
   - enabled: 1
     path: Assets/Scenes/SetScene.unity
     guid: 13de4a8359f8e9440abb20dd0a8caa7f
   - enabled: 1
-    path: Assets/Maybe Useful/StartScene.unity
+    path: Assets/Script/Maybe Useful/StartScene.unity
     guid: 6c62685db21331b4086585804fc875e5
+  - enabled: 1
+    path: Assets/Scenes/Stage0101.unity
+    guid: 9bd9da8a96fe1174e9bc2ed3586ccaf6
+  - enabled: 1
+    path: Assets/Scenes/Stage0102.unity
+    guid: 0eb7e6bd393875443a1727cae4b9dc9c
+  - enabled: 1
+    path: Assets/Scenes/Stage0103.unity
+    guid: f653de016898860478e2bfc91e12276f
+  - enabled: 1
+    path: Assets/Scenes/Stage0104.unity
+    guid: edfccbe5563834545b5b110b919ab546
+  - enabled: 1
+    path: Assets/Scenes/Stage0105.unity
+    guid: 2b53603f7b1036d4babcb1550be756ea
+  - enabled: 1
+    path: Assets/Scenes/Stage0106.unity
+    guid: 50fb28b18c4f7a44ebf88d6c2ec3ae50

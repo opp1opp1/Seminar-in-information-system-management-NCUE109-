@@ -20,5 +20,5 @@
 /.vs/
 # need include the meta of file
 #!*.*.meta
-
+!/[Pp]rojectSettings
 
