@@ -94,7 +94,7 @@ public class EnemyBehavior : MonoBehaviour
                     transform.LookAt(lookatposition);
                     //Instantiate(Enemy3_Sword,new Vector3(transform.position.x, 1, transform.position.z), transform.rotation);
                     //Vector3.Lerp(transform.position, Player.transform.position, 0.5f)
-                    Instantiate(Enemy3_Sword, new Vector3(Mathf.Lerp(transform.position.x, Player.transform.position.x, 0.5f), 0.5f, Mathf.Lerp(transform.position.z, Player.transform.position.z, 0.5f)), transform.rotation);
+                    Instantiate(Enemy3_Sword, new Vector3(Mathf.Lerp(transform.position.x, Player.transform.position.x, 0.5f), 1f, Mathf.Lerp(transform.position.z, Player.transform.position.z, 0.5f)), transform.rotation);
 
                     EASChecker = EAS;
                 }
