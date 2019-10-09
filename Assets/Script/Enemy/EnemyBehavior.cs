@@ -7,6 +7,7 @@ public class EnemyBehavior : MonoBehaviour
 {
     public GameObject Enemy2_bullet;
     public GameObject Enemy3_Sword;
+    public GameObject Enemy4_ball;
     private NavMeshAgent agent;
     private GameObject Player;
     //public float WakeUpDistance;
@@ -108,6 +109,25 @@ public class EnemyBehavior : MonoBehaviour
             
                 
             
+        }
+        else if (this.gameObject.tag == ("Enemy_4"))
+        {
+            if (distance < this.GetComponent<EnemyStat>().WakeUpDistance)
+            {
+                Vector3 dirToPlayer = transform.position - Player.transform.position;
+                Vector3 newPos = transform.position + dirToPlayer;
+                //Vector3 newPos = transform.position ;
+                agent.SetDestination(newPos);
+            }
+
+            if (EASChecker <= 0)
+            {
+                target = GameObject.Find("Ashe");
+                transform.LookAt(target.transform.position);
+                Instantiate(Enemy2_bullet, transform.position, transform.rotation);
+                EASChecker = EAS;
+            }
+
         }
         if (slowtimer > 0.1f)
         {
