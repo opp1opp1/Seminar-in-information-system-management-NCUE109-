@@ -28,7 +28,7 @@ public class PlayerStats : MonoBehaviour
     {
         removedshieldtimer = removedshieldtime;
         basicHealth = PlayerIni.basicHealth;
-        currentHealth = PlayerIni.currentHealth;
+        currentHealth = PlayerIni.basicHealth;
 
 
     }

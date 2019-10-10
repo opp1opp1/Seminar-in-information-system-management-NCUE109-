@@ -21,7 +21,11 @@ public class PlayerGetKnockOut : MonoBehaviour {
         */
         currentHealth = GetComponent<PlayerStats>().currentHealth;
         if (currentHealth <= 0)
+        {
             SceneManager.LoadScene("MainScene");
+            
         }
+        
+    }
     }
     
