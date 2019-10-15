@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Enemyhealthbar : MonoBehaviour
 {
@@ -23,6 +24,7 @@ public class Enemyhealthbar : MonoBehaviour
 
         currentHP = target.GetComponent<EnemyStat>().currentenemyhealth;
         maxHP = target.GetComponent<EnemyStat>().basicenemyhealth;
-        this.transform.localPosition = new Vector3(-105 + 105 * (currentHP / maxHP), 0.0f, 0.0f);
+        GetComponent<Image>().fillAmount = currentHP / maxHP;
+        //this.transform.localPosition = new Vector3(-105 + 105 * (), 0.0f, 0.0f);
     }
 }
