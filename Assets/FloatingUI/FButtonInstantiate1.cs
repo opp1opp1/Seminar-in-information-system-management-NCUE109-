@@ -21,7 +21,7 @@ public class FButtonInstantiate1 : MonoBehaviour //放在欲生成點上
         if (FButton.gameObject.activeSelf && stop == true)
         {
             clone1 = Instantiate(FButton, Instantiate_FButton1.transform.position,  //生成(物件,位置,旋轉值)
-            Instantiate_FButton1.transform.rotation);                       //Instantiate實例化
+                Instantiate_FButton1.transform.rotation);                       //Instantiate實例化
             clone1.transform.parent = gameFPanel.transform;  //複製出FButton後，將他放到FPanel底下，才顯現得出來
             clone1.SetActive(true);  //讓clone顯現
             stop = false;   //避免無限複製
