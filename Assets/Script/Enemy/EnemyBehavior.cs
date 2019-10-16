@@ -28,10 +28,12 @@ public class EnemyBehavior : MonoBehaviour
     private float tempDamage;
     public float stuntimer = 0f;
     private bool Instantiateonce = false;
+    public Transform emission;
 
     // Use this for initialization
     void Start()
     {
+
         Player = GameObject.Find("Ashe");
         agent = GetComponent<NavMeshAgent>();
         //agentspeed = GetComponent<EnemyStat>().agentspeed;
@@ -40,7 +42,6 @@ public class EnemyBehavior : MonoBehaviour
         EAS = GetComponent<EnemyStat>().enemyattackspeed;
         EASChecker = EAS;
         slowagentspeed = agentspeed * 0.75f;
-
     }
 
     // Update is called once per frame
@@ -321,8 +322,7 @@ public class EnemyBehavior : MonoBehaviour
 
         if (other.tag == "Bullet")      //如果碰到的物體tag為Bullet
         {
-
-
+            
             tempDamage = other.GetComponent<bulletdestroy>().bullet_damage; //取得弓箭的傷害
 
 
@@ -349,6 +349,7 @@ public class EnemyBehavior : MonoBehaviour
 
                 Destroy(gameObject);
             }
+
         }
         if (other.tag == "Explosion")
         {
