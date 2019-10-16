@@ -9,13 +9,13 @@ public class controlparticle : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        emission.GetComponent<ParticleSystem>().enableEmission = false;
+        //emission.GetComponent<ParticleSystem>().enableEmission = false;
     }
 	
 	// Update is called once per frame
 	void OnTriggerEnter() {
 
-        emission.GetComponent<ParticleSystem>().enableEmission = true;
+        //emission.GetComponent<ParticleSystem>().enableEmission = true;
         StartCoroutine(stop_emission());
 
     }
