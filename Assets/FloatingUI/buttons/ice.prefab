@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 114341900283154784}
   - component: {fileID: 114390283566477372}
   m_Layer: 5
-  m_Name: atk
+  m_Name: ice
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
