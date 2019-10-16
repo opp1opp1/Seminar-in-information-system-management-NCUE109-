@@ -14,7 +14,7 @@ TagManager:
   - IceGround
   - Enemy_3
   - Enemy_4
-  - BorderWall
+  - Wall
   layers:
   - Default
   - TransparentFX

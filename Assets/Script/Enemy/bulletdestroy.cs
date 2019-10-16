@@ -248,6 +248,10 @@ public class bulletdestroy : MonoBehaviour
                 }
             }
         }
+        if (other.tag == "Wall"&& (this.gameObject.name != "Explosion"|| this.gameObject.tag != "BurnGround"|| this.gameObject.tag != "IceGround"))
+        {
+            Destroy(this.gameObject);
+        }
     }
     private void OnTriggerStay(Collider collider)
     {

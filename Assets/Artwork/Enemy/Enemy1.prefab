@@ -99,6 +99,7 @@ GameObject:
   - component: {fileID: 114825469269544968}
   - component: {fileID: 198146413763531072}
   - component: {fileID: 199155909389271060}
+  - component: {fileID: 114457302893308048}
   m_Layer: 9
   m_Name: Enemy1
   m_TagString: Enemy_1
@@ -365,6 +366,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHP: 100
   currentHP: 100
+--- !u!114 &114457302893308048
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1768816727181462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3e44b4c8f6c482488826ceaeb6de8f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  emission: {fileID: 0}
 --- !u!114 &114516440233055792
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -413,6 +426,7 @@ MonoBehaviour:
   burntimer: 0
   burndamage: 0
   stuntimer: 0
+  emission: {fileID: 0}
 --- !u!114 &114793262677546234
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -587,7 +601,7 @@ ParticleSystem:
   stopAction: 0
   looping: 0
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   useRigidbodyForVelocity: 1
