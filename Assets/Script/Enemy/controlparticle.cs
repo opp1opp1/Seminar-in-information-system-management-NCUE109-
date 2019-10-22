@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class controlparticle : MonoBehaviour {
 
-    public Transform emission;
+    /*public Transform emission;
 
 
 	// Use this for initialization
@@ -16,15 +16,16 @@ public class controlparticle : MonoBehaviour {
 	void OnTriggerEnter() {
 
         //emission.GetComponent<ParticleSystem>().enableEmission = true;
-        StartCoroutine(stop_emission());
+       // StartCoroutine(stop_emission());
 
     }
 
 
     IEnumerator stop_emission()
     {
-        yield return new WaitForSeconds(.4f);
-        emission.GetComponent<ParticleSystem>().enableEmission = false;
+        //yield return new WaitForSeconds(.4f);
+       // emission.GetComponent<ParticleSystem>().enableEmission = false;
     }
+    */
 }
 
