@@ -15,12 +15,18 @@ public class Healthbar : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        
+
         //currentSheild = target.GetComponent<PlayerStats>().currentSheild;
 
-        maxHP = target.GetComponent<PlayerStats>().basicHealth;
+        /*maxHP = target.GetComponent<PlayerStats>().basicHealth;
         currentHP = target.GetComponent<PlayerStats>().currentHealth;
-        currentSheild = target.GetComponent<PlayerStats>().currentSheild;
+        currentSheild = target.GetComponent<PlayerStats>().currentSheild;*/
+
+        maxHP = PlayerIni.basicHealth;
+        currentHP = PlayerIni.currentHealth;
+        currentSheild = PlayerIni.currentSheild;
+
+
 
 
         if (currentSheild > 0)

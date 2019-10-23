@@ -17,7 +17,13 @@ public class SceneChanger0102 : MonoBehaviour {
         if (SceneManager.GetActiveScene().name == "Stage0101")
         {
             if (p_transform.position.z > 13)
+            {
                 SceneManager.LoadScene("Stage0102");
+                //PlayerIni.basicHealth = GetComponent<PlayerStats>().basicHealth;
+                //PlayerIni.currentHealth = GetComponent<PlayerStats>().currentHealth;
+               // GetComponent<Healthbar>().maxHP = GetComponent<PlayerStats>().basicHealth;
+                //GetComponent<Healthbar>().currentHP = GetComponent<PlayerStats>().currentHealth;
+                    }
         }
         else if (SceneManager.GetActiveScene().name == "Stage0102")
         {
