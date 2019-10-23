@@ -9,18 +9,22 @@ public class AttackUpScript : MonoBehaviour {
     // Use this for initialization
     void Start () {
         Button btn = this.GetComponent<Button>();
-        btn.onClick.AddListener(Click);
+        btn.onClick.AddListener(OnClick);
     }
 	
 	// Update is called once per frame
 	void Update () {
 		
 	}
-    public void Click()
+    public void OnClick()
     {
-        Debug.Log("Button Clicked. Atk.");
+       
         Player = GameObject.Find("Ashe");
-        Player.GetComponent<PlayerStats>().currentAttackDamage += Player.GetComponent<PlayerStats>().basicAttackDamage * AttackUpPercent;
-        Debug.Log(Player.GetComponent<PlayerStats>().currentAttackDamage);
+        PlayerIni.currentAttackDamage += Player.GetComponent<PlayerStats>().basicAttackDamage * AttackUpPercent;
+        Player.GetComponent<PlayerStats>().currentAttackDamage = PlayerIni.currentAttackDamage;
+        
+        Debug.Log(PlayerIni.currentAttackDamage +""+AttackUpPercent);
+       
+        Debug.Log(Player.GetComponent<PlayerStats>().currentAttackDamage +""+ Player.GetComponent<PlayerStats>().basicAttackDamage);
     }
 }

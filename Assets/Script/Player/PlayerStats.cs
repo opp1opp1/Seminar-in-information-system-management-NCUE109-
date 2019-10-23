@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class PlayerStats : MonoBehaviour
 {
-    public float basicAttackDamage = 5;
+    public float basicAttackDamage =20;
     public float basicAttackSpeed = 1.0f;
     public float basicHealth;
-    public float currentAttackDamage = 5;
+    public float currentAttackDamage = 20;
     public float currentAttackSpeed = 1.0f;
     public float currentHealth;
     public float currentSheild = 0;
@@ -29,7 +29,8 @@ public class PlayerStats : MonoBehaviour
         removedshieldtimer = removedshieldtime;
         basicHealth = PlayerIni.basicHealth;
         currentHealth = PlayerIni.basicHealth;
-
+        currentAttackDamage = PlayerIni.currentAttackDamage;
+        currentAttackSpeed = PlayerIni.currentAttackSpeed;
 
     }
 
