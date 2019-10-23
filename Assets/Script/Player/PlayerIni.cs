@@ -5,6 +5,7 @@ using UnityEngine;
 public static class PlayerIni {
     public static float basicHealth = 100;
     public static float currentHealth = 100;
+    public static float currentSheild = 100;
 
     public static bool Muitishot = true; //連續射擊
     public static bool MuitishotSecondChecker = true; //連續射擊的第二發判斷器
