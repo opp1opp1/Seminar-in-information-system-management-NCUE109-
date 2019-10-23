@@ -44,6 +44,10 @@ public class bulletdestroy : MonoBehaviour
             maxTime = 0.25f;
 
         }
+        if (this.gameObject.name == "Ashe_Arrow(Clone)")
+        {
+            bullet_damage = PlayerIni.currentAttackDamage;
+        }
     }
 
     // Update is called once per frame
