@@ -347,6 +347,7 @@ GameObject:
   - component: {fileID: 114621910743523428}
   - component: {fileID: 114695581007468870}
   - component: {fileID: 114414298799677842}
+  - component: {fileID: 114093330822900726}
   m_Layer: 8
   m_Name: Ashe
   m_TagString: Player
@@ -1482,6 +1483,17 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
+--- !u!114 &114093330822900726
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1528883516536896}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8cf31f2f6df0e3b4fa3c7df762495bcb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114414298799677842
 MonoBehaviour:
   m_ObjectHideFlags: 1
