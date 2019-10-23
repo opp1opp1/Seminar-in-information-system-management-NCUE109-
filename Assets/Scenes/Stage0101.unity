@@ -5526,13 +5526,13 @@ MonoBehaviour:
   point_02: {fileID: 1010205469}
   point_03: {fileID: 2201581}
   Objects:
-  - {fileID: 0}
+  - {fileID: 1722479327774376, guid: 1a675fe8da0dcea4ebcc1466b0020e10, type: 2}
   - {fileID: 1251890044416278, guid: a950d1291a2eeeb40b828c5b522e813a, type: 2}
   - {fileID: 1439099192938268, guid: 2ac39ec921a4c524192932376992802a, type: 2}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 1449617825142208, guid: 97214423b50811540b65273a2ad1888f, type: 2}
+  - {fileID: 1059825601558818, guid: bc4dbedc32b05414d840b344654491d6, type: 2}
   - {fileID: 1358800386203096, guid: 705b34477bf6b8d47915527d393272d5, type: 2}
-  - {fileID: 0}
+  - {fileID: 1364934058629574, guid: d59f6ece9feae904b9de7bf23feb6c79, type: 2}
   clone_01: {fileID: 0}
   clone_02: {fileID: 0}
   clone_03: {fileID: 0}
