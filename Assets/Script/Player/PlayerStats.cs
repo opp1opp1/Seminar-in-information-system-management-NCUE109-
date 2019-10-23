@@ -7,6 +7,7 @@ public class PlayerStats : MonoBehaviour
     public float basicAttackDamage =20;
     public float basicAttackSpeed = 1.0f;
     public float basicHealth;
+    public float currentHealthLimit = 100f;
     public float currentAttackDamage = 20;
     public float currentAttackSpeed = 1.0f;
     public float currentHealth;
@@ -31,7 +32,7 @@ public class PlayerStats : MonoBehaviour
         currentHealth = PlayerIni.basicHealth;
         currentAttackDamage = PlayerIni.currentAttackDamage;
         currentAttackSpeed = PlayerIni.currentAttackSpeed;
-
+        currentHealthLimit = PlayerIni.currentHealthLimit;
     }
 
     // Update is called once per frame
