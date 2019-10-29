@@ -29,11 +29,11 @@ public class EnemyBehavior : MonoBehaviour
     public float stuntimer = 0f;
     private bool Instantiateonce = false;
     public Transform emission;
+    
 
     // Use this for initialization
     void Start()
     {
-
         Player = GameObject.Find("Ashe");
         agent = GetComponent<NavMeshAgent>();
         //agentspeed = GetComponent<EnemyStat>().agentspeed;
@@ -317,7 +317,8 @@ public class EnemyBehavior : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other) //偵測敵人本身有沒有跟弓箭產生碰撞
     {
-
+        
+       GetComponent<ParticleSystem>().Play();
 
 
         if (other.tag == "Bullet")      //如果碰到的物體tag為Bullet

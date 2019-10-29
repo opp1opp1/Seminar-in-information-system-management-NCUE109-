@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44950128, g: 0.49649638, b: 0.5591477, a: 1}
+  m_IndirectSpecularColor: {r: 0.44950122, g: 0.49649686, b: 0.5591482, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -307,6 +307,11 @@ Prefab:
         type: 2}
       propertyPath: m_Type
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114721832934290624, guid: d244b02b734e36b49a7f1e9dc5e7835a,
+        type: 2}
+      propertyPath: BulletHitParticle
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d244b02b734e36b49a7f1e9dc5e7835a, type: 2}
@@ -3305,6 +3310,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHP: 100
   currentHP: 100
+  currentlimitHP: 0
 --- !u!114 &988514053
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3894,6 +3900,16 @@ Prefab:
         type: 2}
       propertyPath: m_Type
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198146413763531072, guid: d244b02b734e36b49a7f1e9dc5e7835a,
+        type: 2}
+      propertyPath: randomSeed
+      value: -377238388
+      objectReference: {fileID: 0}
+    - target: {fileID: 114721832934290624, guid: d244b02b734e36b49a7f1e9dc5e7835a,
+        type: 2}
+      propertyPath: BulletHitParticle
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d244b02b734e36b49a7f1e9dc5e7835a, type: 2}
@@ -5141,6 +5157,16 @@ Prefab:
       value: 
       objectReference: {fileID: 21300000, guid: 599212d0ad70dcf4fb97900d6ce8778f,
         type: 3}
+    - target: {fileID: 198146413763531072, guid: d244b02b734e36b49a7f1e9dc5e7835a,
+        type: 2}
+      propertyPath: randomSeed
+      value: 1126982178
+      objectReference: {fileID: 0}
+    - target: {fileID: 114721832934290624, guid: d244b02b734e36b49a7f1e9dc5e7835a,
+        type: 2}
+      propertyPath: BulletHitParticle
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d244b02b734e36b49a7f1e9dc5e7835a, type: 2}
   m_IsPrefabParent: 0
@@ -5351,6 +5377,16 @@ Prefab:
         type: 2}
       propertyPath: m_Type
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198146413763531072, guid: d244b02b734e36b49a7f1e9dc5e7835a,
+        type: 2}
+      propertyPath: randomSeed
+      value: -1932620993
+      objectReference: {fileID: 0}
+    - target: {fileID: 114721832934290624, guid: d244b02b734e36b49a7f1e9dc5e7835a,
+        type: 2}
+      propertyPath: BulletHitParticle
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d244b02b734e36b49a7f1e9dc5e7835a, type: 2}
