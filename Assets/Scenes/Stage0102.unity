@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.4465782, g: 0.49641252, b: 0.5748167, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -617,6 +617,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHP: 100
   currentHP: 100
+  currentlimitHP: 0
 --- !u!114 &433486279
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -720,7 +721,6 @@ MonoBehaviour:
   clone_02: {fileID: 0}
   clone_03: {fileID: 0}
   gameFPanel: {fileID: 0}
-  touched: 0
 --- !u!114 &538100895
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1403,6 +1403,16 @@ Prefab:
     - target: {fileID: 4061326102780372, guid: 63c439e91d4186c4db6ed448e83f434b, type: 2}
       propertyPath: m_RootOrder
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 198871933988112636, guid: 63c439e91d4186c4db6ed448e83f434b,
+        type: 2}
+      propertyPath: playOnAwake
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198871933988112636, guid: 63c439e91d4186c4db6ed448e83f434b,
+        type: 2}
+      propertyPath: randomSeed
+      value: -1938428245
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 63c439e91d4186c4db6ed448e83f434b, type: 2}
