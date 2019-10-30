@@ -187,7 +187,7 @@ public class EnemyBehavior : MonoBehaviour
                     target = GameObject.Find("Ashe");
                     if (target.GetComponent<PlayerStats>().itisinvincinble != true)
                     {
-                        targetShield = target.GetComponent<PlayerStats>().currentSheild;
+                        targetShield =PlayerIni.currentSheild;
                         if (target.GetComponent<PlayerStats>().reducedamage == true)
                         {
                             tempDamage = GetComponent<EnemyStat>().ColliderDamage * 0.8f;
@@ -213,16 +213,22 @@ public class EnemyBehavior : MonoBehaviour
                         {
                             if (targetShield >= GetComponent<EnemyStat>().ColliderDamage)
                             {
-                                targetShield -= GetComponent<EnemyStat>().ColliderDamage;
-                                target.GetComponent<PlayerStats>().currentSheild = targetShield;
+                                PlayerIni.currentSheild -= tempDamage;
+                                target.GetComponent<PlayerStats>().currentSheild = PlayerIni.currentSheild;
+                                //targetShield -= GetComponent<EnemyStat>().ColliderDamage;
+                                //target.GetComponent<PlayerStats>().currentSheild = targetShield;
                             }
                             else if (targetShield < GetComponent<EnemyStat>().ColliderDamage)
                             {
-                                tempDamage = GetComponent<EnemyStat>().ColliderDamage;
+                                PlayerIni.currentSheild -= tempDamage;
+                                target.GetComponent<PlayerStats>().currentSheild = PlayerIni.currentSheild;
+                                PlayerIni.currentSheild = 0;
+
+                                /*tempDamage = GetComponent<EnemyStat>().ColliderDamage;
                                 tempDamage -= targetShield;
-                                target.GetComponent<PlayerStats>().currentSheild = 0;
+                                target.GetComponent<PlayerStats>().currentSheild = 0;*/
                             }
-                            if (tempDamage > 0)
+                            if (PlayerIni.currentSheild <= 0)
                             {
                                 /* targethealth = target.GetComponent<PlayerStats>().currentHealth;
                                  targethealth -= tempDamage;*/

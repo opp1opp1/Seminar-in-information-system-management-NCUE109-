@@ -7,6 +7,7 @@ public class PlayerStats : MonoBehaviour
     public float basicAttackDamage =20;
     public float basicAttackSpeed = 1.0f;
     public float basicHealth;
+    public float basicSheild;
     public float currentHealthLimit = 100f;
     public float currentAttackDamage = 20;
     public float currentAttackSpeed = 1.0f;
@@ -29,30 +30,34 @@ public class PlayerStats : MonoBehaviour
     {
         removedshieldtimer = removedshieldtime;
         basicHealth = PlayerIni.basicHealth;
+        basicSheild = PlayerIni.basicSheild;
         currentHealth = PlayerIni.basicHealth;
         currentAttackDamage = PlayerIni.currentAttackDamage;
         currentAttackSpeed = PlayerIni.currentAttackSpeed;
         currentHealthLimit = PlayerIni.currentHealthLimit;
+        //currentSheild = PlayerIni.currentSheild;
+        
     }
 
     // Update is called once per frame
     void Update()
     {
 
-        if (currentSheild > 0f)
+
+        if (PlayerIni.currentSheild > 0f)
         {
             removedshieldtimer -= Time.deltaTime;
             if (removedshieldtimer <= 0f)
             {
-                if (currentSheild > basicHealth * 0.1f)
+                if (PlayerIni.currentSheild > basicHealth * 0.1f)
                 {
-                    currentSheild -= basicHealth * 0.1f;
-                    Debug.Log("Sheild:" + currentSheild);
+                    PlayerIni.currentSheild -= basicHealth * 0.1f;
+                    Debug.Log("Sheild:" + PlayerIni.currentSheild);
                 }
                 else
                 {
-                    currentSheild = 0f;
-                    Debug.Log("Sheild:" + currentSheild);
+                    PlayerIni.currentSheild = 0f;
+                    Debug.Log("Sheild:" + PlayerIni.currentSheild);
                 }
                 removedshieldtimer = removedshieldtime;
             }
