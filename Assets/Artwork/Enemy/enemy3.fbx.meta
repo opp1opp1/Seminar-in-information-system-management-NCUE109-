@@ -1,0 +1,222 @@
+fileFormatVersion: 2
+guid: 88568a28020e95249aec9580abf0b43d
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Arm_Left
+    100002: Arm_Right
+    100004: BackBone
+    100006: BackBone_1
+    100008: BackBone_2
+    100010: //RootNode
+    100012: Hand_Left
+    100014: Hand_Left1
+    100016: Hand_Right
+    100018: Hand_Right1
+    100020: Head
+    100022: imagePlane1
+    100024: imagePlane2
+    100026: joint13
+    100028: joint13 1
+    100030: joint18
+    100032: joint18 1
+    100034: joint19
+    100036: joint19 1
+    100038: joint20
+    100040: joint20 1
+    100042: Left_Arm_jnt
+    100044: Left_Leg_jnt
+    100046: Leg_Left
+    100048: Leg_Right
+    100050: pCube1
+    100052: pCube2
+    100054: pCube3
+    100056: pCylinder2
+    100058: pCylinder3
+    100060: pCylinder4
+    100062: pCylinder6
+    100064: pCylinder7
+    100066: pCylinder8
+    100068: pCylinder9
+    100070: Pelvis
+    100072: Pelvis1
+    100074: Pelvis2
+    100076: pPipe1
+    100078: Right_Arm_jnt
+    100080: Right_Leg_jnt
+    100082: Torso
+    100084: transform1
+    100086: transform10
+    100088: transform11
+    100090: transform12
+    100092: transform13
+    100094: transform14
+    100096: transform15
+    100098: transform16
+    100100: transform17
+    100102: transform18
+    100104: transform2
+    100106: transform3
+    100108: transform4
+    100110: transform5
+    100112: transform6
+    100114: transform7
+    100116: transform8
+    100118: transform9
+    400000: Arm_Left
+    400002: Arm_Right
+    400004: BackBone
+    400006: BackBone_1
+    400008: BackBone_2
+    400010: //RootNode
+    400012: Hand_Left
+    400014: Hand_Left1
+    400016: Hand_Right
+    400018: Hand_Right1
+    400020: Head
+    400022: imagePlane1
+    400024: imagePlane2
+    400026: joint13
+    400028: joint13 1
+    400030: joint18
+    400032: joint18 1
+    400034: joint19
+    400036: joint19 1
+    400038: joint20
+    400040: joint20 1
+    400042: Left_Arm_jnt
+    400044: Left_Leg_jnt
+    400046: Leg_Left
+    400048: Leg_Right
+    400050: pCube1
+    400052: pCube2
+    400054: pCube3
+    400056: pCylinder2
+    400058: pCylinder3
+    400060: pCylinder4
+    400062: pCylinder6
+    400064: pCylinder7
+    400066: pCylinder8
+    400068: pCylinder9
+    400070: Pelvis
+    400072: Pelvis1
+    400074: Pelvis2
+    400076: pPipe1
+    400078: Right_Arm_jnt
+    400080: Right_Leg_jnt
+    400082: Torso
+    400084: transform1
+    400086: transform10
+    400088: transform11
+    400090: transform12
+    400092: transform13
+    400094: transform14
+    400096: transform15
+    400098: transform16
+    400100: transform17
+    400102: transform18
+    400104: transform2
+    400106: transform3
+    400108: transform4
+    400110: transform5
+    400112: transform6
+    400114: transform7
+    400116: transform8
+    400118: transform9
+    2100000: lambert1
+    2300000: Head
+    2300002: Pelvis2
+    3300000: Head
+    3300002: Pelvis2
+    4300000: Head
+    4300002: Leg_Left
+    4300004: Leg_Right
+    4300006: Pelvis2
+    4300008: Hand_Left1
+    4300010: Hand_Right1
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: Hand_Left1
+    13700002: Hand_Right1
+    13700004: Leg_Left
+    13700006: Leg_Right
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
