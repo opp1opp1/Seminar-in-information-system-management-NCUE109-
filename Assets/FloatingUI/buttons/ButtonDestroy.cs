@@ -6,10 +6,12 @@ using UnityEngine.UI;
 public class ButtonDestroy : MonoBehaviour {
     public GameObject[] Buttons;
     public GameObject gameFPanel;
+    public GameObject ash;
 
 	// Use this for initialization
 	void Start () {
         gameFPanel = GameObject.Find("FPanel");
+        ash = GameObject.Find("Ashe");
         Button btn = this.GetComponent<Button>();
         btn.onClick.AddListener(OnClick);
         Buttons = GameObject.FindGameObjectsWithTag("UIButton");
@@ -34,5 +36,6 @@ public class ButtonDestroy : MonoBehaviour {
     void ResumeGame()
     {
         Time.timeScale = 1;
+        ash.GetComponent<FUIAppear>().ani.enabled = true;
     }
 }

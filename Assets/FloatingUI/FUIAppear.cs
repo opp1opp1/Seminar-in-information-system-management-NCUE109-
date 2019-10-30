@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class FUIAppear : MonoBehaviour {//套在Ashe身上
-    
     GameObject gameFPanel;
+    public Animator ani;
+
 	// Use this for initialization
 	void Start () {
         gameFPanel = GameObject.Find("FPanel"); //找到FPanel
@@ -29,6 +30,6 @@ public class FUIAppear : MonoBehaviour {//套在Ashe身上
     void PauseGame()
     {
         Time.timeScale = 0;
-        
+        ani.enabled = false;
     }
 }
