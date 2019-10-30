@@ -43,6 +43,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Buttons: []
+  stopme: 0
 --- !u!114 &114651506574851172
 MonoBehaviour:
   m_ObjectHideFlags: 1
