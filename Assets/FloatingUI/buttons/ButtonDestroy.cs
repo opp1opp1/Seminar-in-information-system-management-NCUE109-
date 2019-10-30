@@ -6,7 +6,6 @@ using UnityEngine.UI;
 public class ButtonDestroy : MonoBehaviour {
     public GameObject[] Buttons;
     public GameObject gameFPanel;
-    public bool stopme = true;
 
 	// Use this for initialization
 	void Start () {
@@ -25,7 +24,15 @@ public class ButtonDestroy : MonoBehaviour {
     {
         for (var i = 0; i < Buttons.Length; i++)
         {
-            Destroy(Buttons[i]);            
+            Destroy(Buttons[i]);
+            gameFPanel.GetComponent<FButtonInstantiate0>().stop = true; //吃到powerup時則會出現panel
+            gameFPanel.SetActive(false);    //先設置FPanel隱藏
+            ResumeGame();
         }
+    }
+
+    void ResumeGame()
+    {
+        Time.timeScale = 1;
     }
 }
