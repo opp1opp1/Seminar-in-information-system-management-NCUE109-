@@ -1,36 +1,20 @@
 fileFormatVersion: 2
-guid: ad7557cfd2af06140bfd1c51e072849f
+guid: 39a249342f650ca4c9a6bd3247a9eb9a
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
-    100000: dragField1
-    100002: emitter1
-    100004: //RootNode
-    100006: gravityField1
-    100008: group1
-    100010: particle1
-    100012: particleShape1_fireDirection
-    100014: particleShape1_fireOrientation
-    100016: place3dTexture1
-    100018: pSphere1
-    100020: turbulenceField1
-    400000: dragField1
-    400002: emitter1
-    400004: //RootNode
-    400006: gravityField1
-    400008: group1
-    400010: particle1
-    400012: particleShape1_fireDirection
-    400014: particleShape1_fireOrientation
-    400016: place3dTexture1
-    400018: pSphere1
-    400020: turbulenceField1
+    100000: //RootNode
+    100002: place3dTexture1
+    100004: pSphere1
+    100006: textureDeformerHandle1
+    400000: //RootNode
+    400002: place3dTexture1
+    400004: pSphere1
+    400006: textureDeformerHandle1
     2100000: lambert1
     2300000: pSphere1
     3300000: pSphere1
     4300000: pSphere1
-    7400000: Take 001
-    9500000: //RootNode
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -105,7 +89,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 0
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
