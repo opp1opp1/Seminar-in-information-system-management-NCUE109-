@@ -112,7 +112,7 @@ public class bulletdestroy : MonoBehaviour
                 {
                     target = GameObject.Find("Ashe");
                     //target.GetComponent<PlayerStats>().currentSheild += 7.5f;
-                    PlayerIni.currentSheild+= 7.5f;
+                    PlayerIni.currentSheild+= 10f;
                 }
                 if (this.gameObject.name == "Stun_Arrow(Clone)")
                 {
