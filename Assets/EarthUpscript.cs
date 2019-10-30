@@ -21,10 +21,7 @@ public class EarthUpscript : MonoBehaviour
     }
     public void OnClick()
     {
-
         PlayerIni.EarthArrow = true;
-        
-
-
+        Debug.Log("Yes! Earth is on!!!");
     }
 }

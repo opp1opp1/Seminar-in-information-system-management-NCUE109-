@@ -38,14 +38,14 @@ public class PlayerShoot : MonoBehaviour
         CAS = target.GetComponent<PlayerStats>().currentAttackSpeed;
         CASChecker = 0.5f; //整場遊戲的第一發不須等待 0.5S是考慮載入
 
-         Muitishot = PlayerIni.Muitishot; //連續射擊Z
+         /*Muitishot = PlayerIni.Muitishot; //連續射擊Z
          MuitishotSecondChecker = PlayerIni.MuitishotSecondChecker; //連續射擊的第二發判斷器
          FrontArrow = PlayerIni.FrontArrow; //齊射
          DiagonalArrow = PlayerIni.DiagonalArrow; //多重射擊
          IceArrow = PlayerIni.IceArrow; //冰屬性
          FireArrow = PlayerIni.FireArrow; //冰屬性
          WindArrow = PlayerIni.WindArrow; //風屬性
-         EarthArrow = PlayerIni.EarthArrow; //土屬性
+         EarthArrow = PlayerIni.EarthArrow; //土屬性*/
 
 
 }
@@ -53,6 +53,14 @@ public class PlayerShoot : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Muitishot = PlayerIni.Muitishot; //連續射擊Z
+        MuitishotSecondChecker = PlayerIni.MuitishotSecondChecker; //連續射擊的第二發判斷器
+        FrontArrow = PlayerIni.FrontArrow; //齊射
+        DiagonalArrow = PlayerIni.DiagonalArrow; //多重射擊
+        IceArrow = PlayerIni.IceArrow; //冰屬性
+        FireArrow = PlayerIni.FireArrow; //冰屬性
+        WindArrow = PlayerIni.WindArrow; //風屬性
+        EarthArrow = PlayerIni.EarthArrow; //土屬性
 
         CASChecker -= Time.deltaTime;
 
