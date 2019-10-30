@@ -111,7 +111,8 @@ public class bulletdestroy : MonoBehaviour
                 if (this.gameObject.name == "Earth_Arrow(Clone)")
                 {
                     target = GameObject.Find("Ashe");
-                    target.GetComponent<PlayerStats>().currentSheild += 7.5f;
+                    //target.GetComponent<PlayerStats>().currentSheild += 7.5f;
+                    PlayerIni.currentSheild+= 7.5f;
                 }
                 if (this.gameObject.name == "Stun_Arrow(Clone)")
                 {
