@@ -29,7 +29,7 @@ public class EnemyBehavior : MonoBehaviour
     public float stuntimer = 0f;
     private bool Instantiateonce = false;
     public Transform emission;
-    
+    public GameObject XiangYu;
 
     // Use this for initialization
     void Start()
@@ -42,6 +42,10 @@ public class EnemyBehavior : MonoBehaviour
         EAS = GetComponent<EnemyStat>().enemyattackspeed;
         EASChecker = EAS;
         slowagentspeed = agentspeed * 0.75f;
+        if (this.gameObject.tag == "Enemy_3")
+        {
+            XiangYu = GameObject.Find("enemy3");
+        }
     }
 
     // Update is called once per frame
@@ -85,11 +89,14 @@ public class EnemyBehavior : MonoBehaviour
         }
         else if (this.gameObject.tag == ("Enemy_3"))
         {
+            
             if (distance < this.GetComponent<EnemyStat>().AttackDistance)
             {
 
                 if (EASChecker <= 0f)
                 {
+
+                    XiangYu.GetComponent<XiangYuAnimation>().XiangYu_animator.SetBool("Attacking",true);
                     target = GameObject.Find("Ashe");
                     Vector3 lookatposition = new Vector3(target.transform.position.x, 0.5f, target.transform.position.z);
                     transform.LookAt(lookatposition);
@@ -99,6 +106,7 @@ public class EnemyBehavior : MonoBehaviour
 
                     EASChecker = EAS;
                 }
+                
             }
             else if (distance < this.GetComponent<EnemyStat>().WakeUpDistance)
             {

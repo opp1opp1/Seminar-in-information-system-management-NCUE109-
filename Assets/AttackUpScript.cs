@@ -23,7 +23,7 @@ public class AttackUpScript : MonoBehaviour {
         PlayerIni.currentAttackDamage += Player.GetComponent<PlayerStats>().basicAttackDamage * AttackUpPercent;
         Player.GetComponent<PlayerStats>().currentAttackDamage = PlayerIni.currentAttackDamage;
         
-        Debug.Log(PlayerIni.currentAttackDamage +""+AttackUpPercent);
+    
        
         Debug.Log(Player.GetComponent<PlayerStats>().currentAttackDamage +""+ Player.GetComponent<PlayerStats>().basicAttackDamage);
     }
