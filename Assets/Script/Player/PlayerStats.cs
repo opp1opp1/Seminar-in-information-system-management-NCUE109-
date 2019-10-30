@@ -44,9 +44,9 @@ public class PlayerStats : MonoBehaviour
             removedshieldtimer -= Time.deltaTime;
             if (removedshieldtimer <= 0f)
             {
-                if (currentSheild > basicHealth * 0.02f)
+                if (currentSheild > basicHealth * 0.1f)
                 {
-                    currentSheild -= basicHealth * 0.02f;
+                    currentSheild -= basicHealth * 0.1f;
                     Debug.Log("Sheild:" + currentSheild);
                 }
                 else

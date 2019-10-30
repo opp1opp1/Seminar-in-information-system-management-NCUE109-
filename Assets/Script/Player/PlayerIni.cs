@@ -17,7 +17,7 @@ public static class PlayerIni {
     public static bool IceArrow = false; //冰屬性
     public static bool FireArrow = false; //冰屬性
     public static bool WindArrow = false; //風屬性
-    public static bool EarthArrow = false; //土屬性
+    public static bool EarthArrow = true; //土屬性
 
    
     
