@@ -38,7 +38,9 @@ public class EnemyBehavior : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         //agentspeed = GetComponent<EnemyStat>().agentspeed;
         Debug.Log("Agentspeed:" + GetComponent<EnemyStat>().agentspeed);
+        agentspeed = GetComponent<EnemyStat>().agentspeed;
         GetComponent<NavMeshAgent>().speed = agentspeed;
+        Debug.Log("Agentspeed:" + agentspeed);
         EAS = GetComponent<EnemyStat>().enemyattackspeed;
         EASChecker = EAS;
         slowagentspeed = agentspeed * 0.75f;
@@ -47,6 +49,7 @@ public class EnemyBehavior : MonoBehaviour
             XiangYu = GameObject.Find("enemy3");
         }
     }
+  
 
     // Update is called once per frame
     void Update()
@@ -95,7 +98,7 @@ public class EnemyBehavior : MonoBehaviour
 
                 if (EASChecker <= 0f)
                 {
-
+    
                     XiangYu.GetComponent<XiangYuAnimation>().XiangYu_animator.SetBool("Attacking",true);
                     target = GameObject.Find("Ashe");
                     Vector3 lookatposition = new Vector3(target.transform.position.x, 0.5f, target.transform.position.z);
