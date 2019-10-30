@@ -4,8 +4,9 @@ using UnityEngine;
 
 public static class PlayerIni {
     public static float basicHealth = 100;
+    public static float basicSheild = 100;
     public static float currentHealth = 100;
-    public static float currentSheild = 100;
+    public static float currentSheild = 0;
     public static float currentAttackDamage = 20;
     public static float currentAttackSpeed = 1.0f;
     public static float currentHealthLimit = 100;

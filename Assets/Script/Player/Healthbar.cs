@@ -35,7 +35,7 @@ public class Healthbar : MonoBehaviour {
             if (currentHP == currentlimitHP)
             {
                 //this.transform.localPosition = new Vector3(-105 + 105 * (currentHP / maxHP - currentSheild / 100), 0.0f, 0.0f);
-                GetComponent<Image>().fillAmount = currentHP / (currentlimitHP - currentSheild);
+                GetComponent<Image>().fillAmount = currentHP / (currentlimitHP);
             }
 
             else
