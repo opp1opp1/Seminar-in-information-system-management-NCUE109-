@@ -19,7 +19,7 @@ public class ButtonDestroy : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+        
 	}
 
     private void OnClick()
@@ -36,6 +36,6 @@ public class ButtonDestroy : MonoBehaviour {
     void ResumeGame()
     {
         Time.timeScale = 1;
-        ash.GetComponent<FUIAppear>().ani.enabled = true;
+        ash.GetComponent<FUIAppear>().isPaused = false;
     }
 }
