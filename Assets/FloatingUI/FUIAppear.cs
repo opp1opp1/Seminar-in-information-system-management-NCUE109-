@@ -21,6 +21,7 @@ public class FUIAppear : MonoBehaviour {//套在Ashe身上
         {
             
             gameFPanel.gameObject.SetActive(true);  //產生FPanel
+            Destroy(col.gameObject);
         }
     }
 }
