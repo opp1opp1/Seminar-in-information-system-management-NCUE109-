@@ -24,6 +24,7 @@ public class PlayerGetKnockOut : MonoBehaviour {
         {
             SceneManager.LoadScene("MainScene");
             PlayerIni.currentHealth = PlayerIni.basicHealth;
+            PlayerIni.currentSheild = PlayerIni.basicSheild;    
         }
         
     }

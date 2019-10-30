@@ -17,13 +17,16 @@ public class shieldbar : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        maxHP = PlayerIni.basicHealth;
-        currentHP = PlayerIni.currentHealth;
-        currentSheild = PlayerIni.currentSheild;
+       // maxHP = PlayerIni.basicHealth;
+       // currentHP = PlayerIni.currentHealth;
+        //currentSheild =GetComponent<PlayerStats>().currentSheild;
+        currentSheild =PlayerIni.currentSheild;
+        //maxSheild = GetComponent<PlayerStats>().basicSheild;
         maxSheild = PlayerIni.basicSheild;
 
-        
-        if(currentSheild>0)
+
+        GetComponent<Image>().fillAmount = (currentSheild / maxSheild);
+       /* if (currentSheild>0)
         {
             GetComponent<Image>().fillAmount = (currentSheild / maxSheild);
         }
@@ -32,7 +35,7 @@ public class shieldbar : MonoBehaviour {
             GetComponent<Image>().fillAmount = (currentSheild / maxSheild);
         }
 
-        
+        */
             
     }
 }
