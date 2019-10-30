@@ -30,6 +30,7 @@ public class EnemyBehavior : MonoBehaviour
     private bool Instantiateonce = false;
     public Transform emission;
     public GameObject XiangYu;
+    public GameObject hand;
 
     // Use this for initialization
     void Start()
@@ -47,6 +48,10 @@ public class EnemyBehavior : MonoBehaviour
         if (this.gameObject.tag == "Enemy_3")
         {
             XiangYu = GameObject.Find("enemy3");
+        }
+        else if (this.gameObject.tag == "Enemy_2")
+        {
+            hand = GameObject.Find("enemy2");
         }
     }
   
