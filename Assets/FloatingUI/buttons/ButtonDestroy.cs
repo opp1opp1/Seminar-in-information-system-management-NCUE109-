@@ -23,6 +23,7 @@ public class ButtonDestroy : MonoBehaviour {
         for (var i = 0; i < Buttons.Length; i++)
         {
             Destroy(Buttons[i]);
+            
         }
     }
 }
