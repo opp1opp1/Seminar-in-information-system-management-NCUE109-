@@ -82,12 +82,14 @@ public class EnemyBehavior : MonoBehaviour
             {
                 Vector3 dirToPlayer = transform.position - Player.transform.position;
                 Vector3 newPos = transform.position + dirToPlayer;
+                hand.GetComponent<handanimation>().hand_animator.SetBool("Escaping", true);
                 //Vector3 newPos = transform.position ;
                 agent.SetDestination(newPos);
             }
             
                 if (EASChecker <= 0)
                 {
+                    hand.GetComponent<handanimation>().hand_animator.SetBool("Attacking", true);
                     target = GameObject.Find("Ashe");
                     transform.LookAt(target.transform.position);
                     Instantiate(Enemy2_bullet, transform.position, transform.rotation);
