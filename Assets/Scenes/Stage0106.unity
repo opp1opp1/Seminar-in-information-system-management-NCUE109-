@@ -1566,7 +1566,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 729567036}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
   m_Name: 
@@ -1577,8 +1577,8 @@ MonoBehaviour:
   m_Center: {x: 0, y: 2, z: 0}
   m_LayerMask:
     serializedVersion: 2
-    m_Bits: 4294967295
-  m_UseGeometry: 0
+    m_Bits: 4294966527
+  m_UseGeometry: 1
   m_DefaultArea: 0
   m_IgnoreNavMeshAgent: 1
   m_IgnoreNavMeshObstacle: 1
@@ -1587,7 +1587,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.06666667
   m_BuildHeightMesh: 0
-  m_NavMeshData: {fileID: 23800000, guid: 0e5229d344122a34482dcc7a5c182658, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 2cd6fb9353ace2f4894daecbfd57c9b1, type: 2}
 --- !u!114 &729567039
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1602,7 +1602,7 @@ MonoBehaviour:
   m_AgentTypeID: -334000983
   m_CollectObjects: 1
   m_Size: {x: 25, y: 1, z: 15}
-  m_Center: {x: 0, y: 0.3, z: 0}
+  m_Center: {x: 0, y: 0.2, z: 0}
   m_LayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -1615,7 +1615,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.033333335
   m_BuildHeightMesh: 0
-  m_NavMeshData: {fileID: 23800000, guid: 5c8dbc2f1c2a11d4884d00f3b0e1efbf, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 234d869b270ef21479b035fb64ae69de, type: 2}
 --- !u!1 &796050333 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100248, guid: 6c4bb31b6a481764887ae722b141439c, type: 3}

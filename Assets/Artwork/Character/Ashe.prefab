@@ -347,7 +347,7 @@ GameObject:
   - component: {fileID: 114621910743523428}
   - component: {fileID: 114695581007468870}
   - component: {fileID: 114414298799677842}
-  - component: {fileID: 114093330822900726}
+  - component: {fileID: 114518368166243054}
   m_Layer: 8
   m_Name: Ashe
   m_TagString: Player
@@ -1359,7 +1359,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1528883516536896}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.13999999, z: -3.5}
+  m_LocalPosition: {x: 0, y: 0.13999999, z: -9.5}
   m_LocalScale: {x: 10, y: 10, z: 10}
   m_Children:
   - {fileID: 4787050365032596}
@@ -1483,17 +1483,6 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
---- !u!114 &114093330822900726
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1528883516536896}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8cf31f2f6df0e3b4fa3c7df762495bcb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114414298799677842
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1505,9 +1494,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 880d902069482434482ded9536b500a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  basicAttackDamage: 5
+  basicAttackDamage: 20
   basicAttackSpeed: 1
   basicHealth: 100
+  basicSheild: 0
+  currentHealthLimit: 100
   currentAttackDamage: 5
   currentAttackSpeed: 1
   currentHealth: 100
@@ -1530,6 +1521,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemychecker: 1
+--- !u!114 &114518368166243054
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1528883516536896}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8cf31f2f6df0e3b4fa3c7df762495bcb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isPaused: 0
 --- !u!114 &114523119960540650
 MonoBehaviour:
   m_ObjectHideFlags: 1

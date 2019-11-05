@@ -96,8 +96,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d207e54c27d94994c9fdff031a2c1fdb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxTime: 3
+  maxTime: 5
   bullet_damage: 5
+  sword_damage: 80
   slowTime: 2
   burnTime: 4
   stunTime: 0.5

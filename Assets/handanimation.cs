@@ -7,7 +7,7 @@ public class handanimation : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        
+        hand_animator = this.GetComponent<Animator>();
     }
     void Awake()
     {

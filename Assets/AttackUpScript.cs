@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class AttackUpScript : MonoBehaviour {
     private GameObject Player;
-    private float AttackUpPercent =0.25f;
+    private float AttackUpPercent =0.5f;
     // Use this for initialization
     void Start () {
         Button btn = this.GetComponent<Button>();

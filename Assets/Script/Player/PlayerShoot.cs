@@ -18,7 +18,7 @@ public class PlayerShoot : MonoBehaviour
     private float CAS; //目前功速 (Current Attack Speed)
     private float CASChecker; //功速計時器
 
-    private bool Muitishot ; //連續射擊Z
+    private bool Muitishot ; //連續射擊
     private bool MuitishotSecondChecker ; //連續射擊的第二發判斷器
     private bool FrontArrow ; //齊射
     private bool DiagonalArrow; //多重射擊
@@ -35,7 +35,7 @@ public class PlayerShoot : MonoBehaviour
     {
        
         target = GameObject.Find("Ashe");
-        CAS = target.GetComponent<PlayerStats>().currentAttackSpeed;
+        CAS = 1/target.GetComponent<PlayerStats>().currentAttackSpeed;
         CASChecker = 0.5f; //整場遊戲的第一發不須等待 0.5S是考慮載入
 
          /*Muitishot = PlayerIni.Muitishot; //連續射擊Z
@@ -53,7 +53,7 @@ public class PlayerShoot : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Muitishot = PlayerIni.Muitishot; //連續射擊Z
+        Muitishot = PlayerIni.Muitishot; //連續射擊
         MuitishotSecondChecker = PlayerIni.MuitishotSecondChecker; //連續射擊的第二發判斷器
         FrontArrow = PlayerIni.FrontArrow; //齊射
         DiagonalArrow = PlayerIni.DiagonalArrow; //多重射擊
@@ -72,28 +72,28 @@ public class PlayerShoot : MonoBehaviour
                 Instantiate(arrow, transform.position, transform.rotation);
                 Instantiate(arrow, transform.position, transform.rotation * Quaternion.AngleAxis(45, transform.up));
                 Instantiate(arrow, transform.position, transform.rotation * Quaternion.AngleAxis(-45, transform.up));
-                CAS = target.GetComponent<PlayerStats>().currentAttackSpeed;
+                CAS = 1/target.GetComponent<PlayerStats>().currentAttackSpeed;
                 CASChecker = CAS;
             }
             else if (target.GetComponent<Playermove>().Characterismoving == false && CASChecker <= 0f && Multipleshoot == 0)    //單發
             {
                 Instantiate(arrow, transform.position, transform.rotation);
                 
-                CAS = target.GetComponent<PlayerStats>().currentAttackSpeed;
+                CAS = 1/target.GetComponent<PlayerStats>().currentAttackSpeed;
                 CASChecker = CAS;
             }
             else if (target.GetComponent<Playermove>().Characterismoving == false && CASChecker <= 0f && Multipleshoot == 2)  //連射
             {
                 if (rapidshoot == false)
                 { Instantiate(arrow, transform.position, transform.rotation);
-                    CAS = target.GetComponent<PlayerStats>().currentAttackSpeed;
+                    CAS = 1/target.GetComponent<PlayerStats>().currentAttackSpeed;
                     CASChecker = CAS * 0.1f;
                     rapidshoot = true;
                 }
                 else if(rapidshoot == true)
                 {
                     Instantiate(arrow, transform.position, transform.rotation);
-                    CAS = target.GetComponent<PlayerStats>().currentAttackSpeed;
+                    CAS = 1/target.GetComponent<PlayerStats>().currentAttackSpeed;
                     CASChecker = CAS * 0.9f;
                     rapidshoot = false;
                 }
@@ -104,7 +104,7 @@ public class PlayerShoot : MonoBehaviour
                     
                     Instantiate(arrow, transform.position+(transform.right*0.2f), transform.rotation);
                     Instantiate(arrow, transform.position+(transform.right*-0.2f) , transform.rotation);
-                    CAS = target.GetComponent<PlayerStats>().currentAttackSpeed;
+                    CAS = 1/target.GetComponent<PlayerStats>().currentAttackSpeed;
                     CASChecker = CAS;
                 }
             
@@ -134,7 +134,7 @@ public class PlayerShoot : MonoBehaviour
                                 Instantiate(arrow, transform.position, transform.rotation * Quaternion.AngleAxis(45, transform.up));
                                 Instantiate(arrow, transform.position, transform.rotation * Quaternion.AngleAxis(-45, transform.up));
                             }
-                            CAS = target.GetComponent<PlayerStats>().currentAttackSpeed;
+                            CAS = 1/target.GetComponent<PlayerStats>().currentAttackSpeed;
                             CASChecker = CAS * 0.1f;
                             MuitishotSecondChecker = true;
 
@@ -153,7 +153,7 @@ public class PlayerShoot : MonoBehaviour
                                 Instantiate(arrow, transform.position, transform.rotation * Quaternion.AngleAxis(45, transform.up));
                                 Instantiate(arrow, transform.position, transform.rotation * Quaternion.AngleAxis(-45, transform.up));
                             }
-                            CAS = target.GetComponent<PlayerStats>().currentAttackSpeed;
+                            CAS = 1/target.GetComponent<PlayerStats>().currentAttackSpeed;
                             CASChecker = CAS * 0.9f;
                             MuitishotSecondChecker = false;
                         }
@@ -172,7 +172,7 @@ public class PlayerShoot : MonoBehaviour
                             Instantiate(arrow, transform.position, transform.rotation * Quaternion.AngleAxis(45, transform.up));
                             Instantiate(arrow, transform.position, transform.rotation * Quaternion.AngleAxis(-45, transform.up));
                         }
-                        CAS = target.GetComponent<PlayerStats>().currentAttackSpeed;
+                        CAS = 1/target.GetComponent<PlayerStats>().currentAttackSpeed;
                         CASChecker = CAS;
                     }
                 }
@@ -196,7 +196,7 @@ public class PlayerShoot : MonoBehaviour
                                 Instantiate(arrow, transform.position, transform.rotation * Quaternion.AngleAxis(45, transform.up));
                                 Instantiate(arrow, transform.position, transform.rotation * Quaternion.AngleAxis(-45, transform.up));
                             }
-                            CAS = target.GetComponent<PlayerStats>().currentAttackSpeed;
+                            CAS = 1/target.GetComponent<PlayerStats>().currentAttackSpeed;
                             CASChecker = CAS * 0.1f;
                             MuitishotSecondChecker = true;
 
@@ -215,7 +215,8 @@ public class PlayerShoot : MonoBehaviour
                                 Instantiate(arrow, transform.position, transform.rotation * Quaternion.AngleAxis(45, transform.up));
                                 Instantiate(arrow, transform.position, transform.rotation * Quaternion.AngleAxis(-45, transform.up));
                             }
-                            CAS = target.GetComponent<PlayerStats>().currentAttackSpeed;
+                            //CAS = 1/target.GetComponent<PlayerStats>().currentAttackSpeed;
+                            CAS = 1/target.GetComponent<PlayerStats>().currentAttackSpeed;
                             CASChecker = CAS * 0.9f;
                             MuitishotSecondChecker = false;
                         }
@@ -234,7 +235,7 @@ public class PlayerShoot : MonoBehaviour
                             Instantiate(arrow, transform.position, transform.rotation * Quaternion.AngleAxis(45, transform.up));
                             Instantiate(arrow, transform.position, transform.rotation * Quaternion.AngleAxis(-45, transform.up));
                         }
-                        CAS = target.GetComponent<PlayerStats>().currentAttackSpeed;
+                        CAS = 1/target.GetComponent<PlayerStats>().currentAttackSpeed;
                         CASChecker = CAS;
                     }
                 }
@@ -257,7 +258,7 @@ public class PlayerShoot : MonoBehaviour
                                 Instantiate(arrow, transform.position, transform.rotation * Quaternion.AngleAxis(45, transform.up));
                                 Instantiate(arrow, transform.position, transform.rotation * Quaternion.AngleAxis(-45, transform.up));
                             }
-                            CAS = target.GetComponent<PlayerStats>().currentAttackSpeed;
+                            CAS = 1/target.GetComponent<PlayerStats>().currentAttackSpeed;
                             CASChecker = CAS * 0.1f;
                             MuitishotSecondChecker = true;
 
@@ -276,7 +277,7 @@ public class PlayerShoot : MonoBehaviour
                                 Instantiate(arrow, transform.position, transform.rotation * Quaternion.AngleAxis(45, transform.up));
                                 Instantiate(arrow, transform.position, transform.rotation * Quaternion.AngleAxis(-45, transform.up));
                             }
-                            CAS = target.GetComponent<PlayerStats>().currentAttackSpeed;
+                            CAS = 1/target.GetComponent<PlayerStats>().currentAttackSpeed;
                             CASChecker = CAS * 0.9f;
                             MuitishotSecondChecker = false;
                         }
@@ -295,7 +296,7 @@ public class PlayerShoot : MonoBehaviour
                             Instantiate(arrow, transform.position, transform.rotation * Quaternion.AngleAxis(45, transform.up));
                             Instantiate(arrow, transform.position, transform.rotation * Quaternion.AngleAxis(-45, transform.up));
                         }
-                        CAS = target.GetComponent<PlayerStats>().currentAttackSpeed;
+                        CAS = 1/target.GetComponent<PlayerStats>().currentAttackSpeed;
                         CASChecker = CAS;
                     }
                 }
@@ -318,7 +319,7 @@ public class PlayerShoot : MonoBehaviour
                                 Instantiate(arrow, transform.position, transform.rotation * Quaternion.AngleAxis(45, transform.up));
                                 Instantiate(arrow, transform.position, transform.rotation * Quaternion.AngleAxis(-45, transform.up));
                             }
-                            CAS = target.GetComponent<PlayerStats>().currentAttackSpeed;
+                            CAS = 1/target.GetComponent<PlayerStats>().currentAttackSpeed;
                             CASChecker = CAS * 0.1f;
                             MuitishotSecondChecker = true;
 
@@ -337,7 +338,7 @@ public class PlayerShoot : MonoBehaviour
                                 Instantiate(arrow, transform.position, transform.rotation * Quaternion.AngleAxis(45, transform.up));
                                 Instantiate(arrow, transform.position, transform.rotation * Quaternion.AngleAxis(-45, transform.up));
                             }
-                            CAS = target.GetComponent<PlayerStats>().currentAttackSpeed;
+                            CAS = 1/target.GetComponent<PlayerStats>().currentAttackSpeed;
                             CASChecker = CAS * 0.9f;
                             MuitishotSecondChecker = false;
                         }
@@ -356,7 +357,7 @@ public class PlayerShoot : MonoBehaviour
                             Instantiate(arrow, transform.position, transform.rotation * Quaternion.AngleAxis(45, transform.up));
                             Instantiate(arrow, transform.position, transform.rotation * Quaternion.AngleAxis(-45, transform.up));
                         }
-                        CAS = target.GetComponent<PlayerStats>().currentAttackSpeed;
+                        CAS = 1/target.GetComponent<PlayerStats>().currentAttackSpeed;
                         CASChecker = CAS;
                     }
                 }
@@ -379,7 +380,7 @@ public class PlayerShoot : MonoBehaviour
                                 Instantiate(arrow, transform.position, transform.rotation * Quaternion.AngleAxis(45, transform.up));
                                 Instantiate(arrow, transform.position, transform.rotation * Quaternion.AngleAxis(-45, transform.up));
                             }
-                            CAS = target.GetComponent<PlayerStats>().currentAttackSpeed;
+                            CAS = 1/target.GetComponent<PlayerStats>().currentAttackSpeed;
                             CASChecker = CAS * 0.1f;
                             MuitishotSecondChecker = true;
 
@@ -398,7 +399,7 @@ public class PlayerShoot : MonoBehaviour
                                 Instantiate(arrow, transform.position, transform.rotation * Quaternion.AngleAxis(45, transform.up));
                                 Instantiate(arrow, transform.position, transform.rotation * Quaternion.AngleAxis(-45, transform.up));
                             }
-                            CAS = target.GetComponent<PlayerStats>().currentAttackSpeed;
+                            CAS = 1/target.GetComponent<PlayerStats>().currentAttackSpeed;
                             CASChecker = CAS * 0.9f;
                             MuitishotSecondChecker = false;
                         }
@@ -417,7 +418,7 @@ public class PlayerShoot : MonoBehaviour
                             Instantiate(arrow, transform.position, transform.rotation * Quaternion.AngleAxis(45, transform.up));
                             Instantiate(arrow, transform.position, transform.rotation * Quaternion.AngleAxis(-45, transform.up));
                         }
-                        CAS = target.GetComponent<PlayerStats>().currentAttackSpeed;
+                        CAS = 1/target.GetComponent<PlayerStats>().currentAttackSpeed;
                         CASChecker = CAS;
                     }
                 }
@@ -440,7 +441,7 @@ public class PlayerShoot : MonoBehaviour
                                 Instantiate(arrow, transform.position, transform.rotation * Quaternion.AngleAxis(45, transform.up));
                                 Instantiate(arrow, transform.position, transform.rotation * Quaternion.AngleAxis(-45, transform.up));
                             }
-                            CAS = target.GetComponent<PlayerStats>().currentAttackSpeed;
+                            CAS = 1/target.GetComponent<PlayerStats>().currentAttackSpeed;
                             CASChecker = CAS * 0.1f;
                             MuitishotSecondChecker = true;
 
@@ -459,7 +460,7 @@ public class PlayerShoot : MonoBehaviour
                                 Instantiate(arrow, transform.position, transform.rotation * Quaternion.AngleAxis(45, transform.up));
                                 Instantiate(arrow, transform.position, transform.rotation * Quaternion.AngleAxis(-45, transform.up));
                             }
-                            CAS = target.GetComponent<PlayerStats>().currentAttackSpeed;
+                            CAS = 1/target.GetComponent<PlayerStats>().currentAttackSpeed;
                             CASChecker = CAS * 0.9f;
                             MuitishotSecondChecker = false;
                         }
@@ -478,7 +479,7 @@ public class PlayerShoot : MonoBehaviour
                             Instantiate(arrow, transform.position, transform.rotation * Quaternion.AngleAxis(45, transform.up));
                             Instantiate(arrow, transform.position, transform.rotation * Quaternion.AngleAxis(-45, transform.up));
                         }
-                        CAS = target.GetComponent<PlayerStats>().currentAttackSpeed;
+                        CAS = 1/target.GetComponent<PlayerStats>().currentAttackSpeed;
                         CASChecker = CAS;
                     }
                 }
@@ -501,7 +502,7 @@ public class PlayerShoot : MonoBehaviour
                                 Instantiate(arrow, transform.position, transform.rotation * Quaternion.AngleAxis(45, transform.up));
                                 Instantiate(arrow, transform.position, transform.rotation * Quaternion.AngleAxis(-45, transform.up));
                             }
-                            CAS = target.GetComponent<PlayerStats>().currentAttackSpeed;
+                            CAS = 1/target.GetComponent<PlayerStats>().currentAttackSpeed;
                             CASChecker = CAS * 0.1f;
                             MuitishotSecondChecker = true;
 
@@ -520,7 +521,7 @@ public class PlayerShoot : MonoBehaviour
                                 Instantiate(arrow, transform.position, transform.rotation * Quaternion.AngleAxis(45, transform.up));
                                 Instantiate(arrow, transform.position, transform.rotation * Quaternion.AngleAxis(-45, transform.up));
                             }
-                            CAS = target.GetComponent<PlayerStats>().currentAttackSpeed;
+                            CAS = 1/target.GetComponent<PlayerStats>().currentAttackSpeed;
                             CASChecker = CAS * 0.9f;
                             MuitishotSecondChecker = false;
                         }
@@ -539,7 +540,7 @@ public class PlayerShoot : MonoBehaviour
                             Instantiate(arrow, transform.position, transform.rotation * Quaternion.AngleAxis(45, transform.up));
                             Instantiate(arrow, transform.position, transform.rotation * Quaternion.AngleAxis(-45, transform.up));
                         }
-                        CAS = target.GetComponent<PlayerStats>().currentAttackSpeed;
+                        CAS = 1/target.GetComponent<PlayerStats>().currentAttackSpeed;
                         CASChecker = CAS;
                     }
                 }
@@ -562,7 +563,7 @@ public class PlayerShoot : MonoBehaviour
                                 Instantiate(arrow, transform.position, transform.rotation * Quaternion.AngleAxis(45, transform.up));
                                 Instantiate(arrow, transform.position, transform.rotation * Quaternion.AngleAxis(-45, transform.up));
                             }
-                            CAS = target.GetComponent<PlayerStats>().currentAttackSpeed;
+                            CAS = 1/target.GetComponent<PlayerStats>().currentAttackSpeed;
                             CASChecker = CAS * 0.1f;
                             MuitishotSecondChecker = true;
 
@@ -581,7 +582,7 @@ public class PlayerShoot : MonoBehaviour
                                 Instantiate(arrow, transform.position, transform.rotation * Quaternion.AngleAxis(45, transform.up));
                                 Instantiate(arrow, transform.position, transform.rotation * Quaternion.AngleAxis(-45, transform.up));
                             }
-                            CAS = target.GetComponent<PlayerStats>().currentAttackSpeed;
+                            CAS = 1/target.GetComponent<PlayerStats>().currentAttackSpeed;
                             CASChecker = CAS * 0.9f;
                             MuitishotSecondChecker = false;
                         }
@@ -600,7 +601,7 @@ public class PlayerShoot : MonoBehaviour
                             Instantiate(arrow, transform.position, transform.rotation * Quaternion.AngleAxis(45, transform.up));
                             Instantiate(arrow, transform.position, transform.rotation * Quaternion.AngleAxis(-45, transform.up));
                         }
-                        CAS = target.GetComponent<PlayerStats>().currentAttackSpeed;
+                        CAS = 1/target.GetComponent<PlayerStats>().currentAttackSpeed;
                         CASChecker = CAS;
                     }
                 }
@@ -623,7 +624,7 @@ public class PlayerShoot : MonoBehaviour
                                 Instantiate(arrow, transform.position, transform.rotation * Quaternion.AngleAxis(45, transform.up));
                                 Instantiate(arrow, transform.position, transform.rotation * Quaternion.AngleAxis(-45, transform.up));
                             }
-                            CAS = target.GetComponent<PlayerStats>().currentAttackSpeed;
+                            CAS = 1/target.GetComponent<PlayerStats>().currentAttackSpeed;
                             CASChecker = CAS * 0.1f;
                             MuitishotSecondChecker = true;
 
@@ -642,7 +643,7 @@ public class PlayerShoot : MonoBehaviour
                                 Instantiate(arrow, transform.position, transform.rotation * Quaternion.AngleAxis(45, transform.up));
                                 Instantiate(arrow, transform.position, transform.rotation * Quaternion.AngleAxis(-45, transform.up));
                             }
-                            CAS = target.GetComponent<PlayerStats>().currentAttackSpeed;
+                            CAS = 1/target.GetComponent<PlayerStats>().currentAttackSpeed;
                             CASChecker = CAS * 0.9f;
                             MuitishotSecondChecker = false;
                         }
@@ -661,7 +662,7 @@ public class PlayerShoot : MonoBehaviour
                             Instantiate(arrow, transform.position, transform.rotation * Quaternion.AngleAxis(45, transform.up));
                             Instantiate(arrow, transform.position, transform.rotation * Quaternion.AngleAxis(-45, transform.up));
                         }
-                        CAS = target.GetComponent<PlayerStats>().currentAttackSpeed;
+                        CAS = 1/target.GetComponent<PlayerStats>().currentAttackSpeed;
                         CASChecker = CAS;
                     }
 
@@ -685,7 +686,7 @@ public class PlayerShoot : MonoBehaviour
                                 Instantiate(arrow, transform.position, transform.rotation * Quaternion.AngleAxis(45, transform.up));
                                 Instantiate(arrow, transform.position, transform.rotation * Quaternion.AngleAxis(-45, transform.up));
                             }
-                            CAS = target.GetComponent<PlayerStats>().currentAttackSpeed;
+                            CAS = 1/target.GetComponent<PlayerStats>().currentAttackSpeed;
                             CASChecker = CAS * 0.1f;
                             MuitishotSecondChecker = true;
 
@@ -704,7 +705,7 @@ public class PlayerShoot : MonoBehaviour
                                 Instantiate(arrow, transform.position, transform.rotation * Quaternion.AngleAxis(45, transform.up));
                                 Instantiate(arrow, transform.position, transform.rotation * Quaternion.AngleAxis(-45, transform.up));
                             }
-                            CAS = target.GetComponent<PlayerStats>().currentAttackSpeed;
+                            CAS = 1/target.GetComponent<PlayerStats>().currentAttackSpeed;
                             CASChecker = CAS * 0.9f;
                             MuitishotSecondChecker = false;
                         }
@@ -723,7 +724,7 @@ public class PlayerShoot : MonoBehaviour
                             Instantiate(arrow, transform.position, transform.rotation * Quaternion.AngleAxis(45, transform.up));
                             Instantiate(arrow, transform.position, transform.rotation * Quaternion.AngleAxis(-45, transform.up));
                         }
-                        CAS = target.GetComponent<PlayerStats>().currentAttackSpeed;
+                        CAS = 1/target.GetComponent<PlayerStats>().currentAttackSpeed;
                         CASChecker = CAS;
                     }
 
@@ -747,7 +748,7 @@ public class PlayerShoot : MonoBehaviour
                                 Instantiate(arrow, transform.position, transform.rotation * Quaternion.AngleAxis(45, transform.up));
                                 Instantiate(arrow, transform.position, transform.rotation * Quaternion.AngleAxis(-45, transform.up));
                             }
-                            CAS = target.GetComponent<PlayerStats>().currentAttackSpeed;
+                            CAS = 1/target.GetComponent<PlayerStats>().currentAttackSpeed;
                             CASChecker = CAS * 0.1f;
                             MuitishotSecondChecker = true;
 
@@ -766,7 +767,7 @@ public class PlayerShoot : MonoBehaviour
                                 Instantiate(arrow, transform.position, transform.rotation * Quaternion.AngleAxis(45, transform.up));
                                 Instantiate(arrow, transform.position, transform.rotation * Quaternion.AngleAxis(-45, transform.up));
                             }
-                            CAS = target.GetComponent<PlayerStats>().currentAttackSpeed;
+                            CAS = 1/target.GetComponent<PlayerStats>().currentAttackSpeed;
                             CASChecker = CAS * 0.9f;
                             MuitishotSecondChecker = false;
                         }
@@ -785,7 +786,7 @@ public class PlayerShoot : MonoBehaviour
                             Instantiate(arrow, transform.position, transform.rotation * Quaternion.AngleAxis(45, transform.up));
                             Instantiate(arrow, transform.position, transform.rotation * Quaternion.AngleAxis(-45, transform.up));
                         }
-                        CAS = target.GetComponent<PlayerStats>().currentAttackSpeed;
+                        CAS = 1/target.GetComponent<PlayerStats>().currentAttackSpeed;
                         CASChecker = CAS;
                     }
 
@@ -808,7 +809,7 @@ public class PlayerShoot : MonoBehaviour
                                 Instantiate(arrow, transform.position, transform.rotation * Quaternion.AngleAxis(45, transform.up));
                                 Instantiate(arrow, transform.position, transform.rotation * Quaternion.AngleAxis(-45, transform.up));
                             }
-                            CAS = target.GetComponent<PlayerStats>().currentAttackSpeed;
+                            CAS = 1/target.GetComponent<PlayerStats>().currentAttackSpeed;
                             CASChecker = CAS * 0.1f;
                             MuitishotSecondChecker = true;
 
@@ -827,7 +828,7 @@ public class PlayerShoot : MonoBehaviour
                                 Instantiate(arrow, transform.position, transform.rotation * Quaternion.AngleAxis(45, transform.up));
                                 Instantiate(arrow, transform.position, transform.rotation * Quaternion.AngleAxis(-45, transform.up));
                             }
-                            CAS = target.GetComponent<PlayerStats>().currentAttackSpeed;
+                            CAS = 1/target.GetComponent<PlayerStats>().currentAttackSpeed;
                             CASChecker = CAS * 0.9f;
                             MuitishotSecondChecker = false;
                         }
@@ -846,7 +847,7 @@ public class PlayerShoot : MonoBehaviour
                             Instantiate(arrow, transform.position, transform.rotation * Quaternion.AngleAxis(45, transform.up));
                             Instantiate(arrow, transform.position, transform.rotation * Quaternion.AngleAxis(-45, transform.up));
                         }
-                        CAS = target.GetComponent<PlayerStats>().currentAttackSpeed;
+                        CAS = 1/target.GetComponent<PlayerStats>().currentAttackSpeed;
                         CASChecker = CAS;
                     }
                 }
