@@ -45,16 +45,20 @@ public class EnemyBehavior : MonoBehaviour
         EAS = GetComponent<EnemyStat>().enemyattackspeed;
         EASChecker = EAS;
         slowagentspeed = agentspeed * 0.75f;
+        
+    }
+     void Awake()
+    {
         if (this.gameObject.tag == "Enemy_3")
         {
-            XiangYu = GameObject.Find("enemy3");
+            XiangYu = this.gameObject.transform.GetChild(2).gameObject;
         }
         else if (this.gameObject.tag == "Enemy_2")
         {
-            hand = GameObject.Find("enemy2");
+            hand = this.gameObject.transform.GetChild(2).gameObject; 
         }
     }
-  
+
 
     // Update is called once per frame
     void Update()
