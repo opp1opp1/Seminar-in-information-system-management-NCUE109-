@@ -120,6 +120,7 @@ public class EnemyBehavior : MonoBehaviour
             }
             else if (distance < this.GetComponent<EnemyStat>().WakeUpDistance)
             {
+                transform.LookAt(Player.transform.position);
                 Vector3 newPos = Player.transform.position;
                 //Vector3 newPos = transform.position ;
                 agent.SetDestination(newPos);
