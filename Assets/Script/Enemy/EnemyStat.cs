@@ -51,6 +51,13 @@ public class EnemyStat : MonoBehaviour {
                 WakeUpDistance = 8f;
                 agentspeed = 10f;
                 break;
+            case 5:
+                basicenemyhealth = 50;
+                enemyattackspeed = 0.7f;
+                ColliderDamage = 15f;
+                WakeUpDistance = 8f;
+                agentspeed = 4f;
+                break;
             default:
                     Debug.Log("enemy dont have health");
                     break;

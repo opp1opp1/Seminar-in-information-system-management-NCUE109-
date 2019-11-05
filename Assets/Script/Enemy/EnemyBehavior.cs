@@ -149,6 +149,17 @@ public class EnemyBehavior : MonoBehaviour
             }
 
         }
+        else if (this.gameObject.tag == "Enemy_5")
+        {
+            if (distance <= this.GetComponent<EnemyStat>().WakeUpDistance)
+            {
+                //Vector3 dirToPlayer = transform.position - Player.transform.position;
+                //Vector3 newPos = transform.position + dirToPlayer;
+                Vector3 newPos = Player.transform.position;
+                agent.SetDestination(newPos);
+
+            }
+        }
         if (slowtimer > 0.1f)
         {
             slowtimer -= Time.deltaTime;
@@ -196,22 +207,25 @@ public class EnemyBehavior : MonoBehaviour
     }
     private void OnTriggerStay(Collider other)
     {
-        if (gameObject.tag == "Enemy_1")
+        if (gameObject.tag == "Enemy_1"|| gameObject.tag == "Enemy_2"|| gameObject.tag == "Enemy_3"|| gameObject.tag == "Enemy_4"|| gameObject.tag == "Enemy_5")
         {
             if (other.name == "Ashe")
             {
                 if (EASChecker <= 0)
                 {
-
+                    
                     target = GameObject.Find("Ashe");
                     if (target.GetComponent<PlayerStats>().itisinvincinble != true)
                     {
-                        targetShield =PlayerIni.currentSheild;
+                        Debug.Log("沒有無敵");
+                        targetShield = PlayerIni.currentSheild;
                         if (target.GetComponent<PlayerStats>().reducedamage == true)
                         {
+                            Debug.Log("有減傷");
                             tempDamage = GetComponent<EnemyStat>().ColliderDamage * 0.8f;
                             if (targetShield >= tempDamage)
                             {
+                                Debug.Log("護盾擋住了(有減傷)");
                                 targetShield -= tempDamage;
                                 target.GetComponent<PlayerStats>().currentSheild = targetShield;
                             }
@@ -221,6 +235,7 @@ public class EnemyBehavior : MonoBehaviour
                                 target.GetComponent<PlayerStats>().currentSheild = 0;
                                 if (tempDamage > 0)
                                 {
+                                    Debug.Log("承受傷害!(有減傷)");
                                     /*targethealth = target.GetComponent<PlayerStats>().currentHealth;
                                     targethealth -= tempDamage;*/
                                     PlayerIni.currentHealth -= tempDamage;
@@ -230,15 +245,19 @@ public class EnemyBehavior : MonoBehaviour
                         }
                         else
                         {
-                            if (targetShield >= GetComponent<EnemyStat>().ColliderDamage)
+                            Debug.Log("沒有減傷");
+                            tempDamage = GetComponent<EnemyStat>().ColliderDamage ;
+                            if (targetShield >= tempDamage)
                             {
+                                Debug.Log("護盾擋住了");
                                 PlayerIni.currentSheild -= tempDamage;
                                 target.GetComponent<PlayerStats>().currentSheild = PlayerIni.currentSheild;
                                 //targetShield -= GetComponent<EnemyStat>().ColliderDamage;
                                 //target.GetComponent<PlayerStats>().currentSheild = targetShield;
                             }
-                            else if (targetShield < GetComponent<EnemyStat>().ColliderDamage)
+                            else if (targetShield < tempDamage)
                             {
+                                Debug.Log("承受傷害!(護盾承受階段)");
                                 PlayerIni.currentSheild -= tempDamage;
                                 target.GetComponent<PlayerStats>().currentSheild = PlayerIni.currentSheild;
                                 PlayerIni.currentSheild = 0;
@@ -249,6 +268,7 @@ public class EnemyBehavior : MonoBehaviour
                             }
                             if (PlayerIni.currentSheild <= 0)
                             {
+                                Debug.Log("承受傷害!");
                                 /* targethealth = target.GetComponent<PlayerStats>().currentHealth;
                                  targethealth -= tempDamage;*/
                                 PlayerIni.currentHealth -= tempDamage;
@@ -269,7 +289,7 @@ public class EnemyBehavior : MonoBehaviour
                 EASChecker = EAS;
             }
         }
-
+        /*
         else if (gameObject.tag == "Enemy_2")
         {
             if (other.name == "Ashe")
@@ -295,8 +315,9 @@ public class EnemyBehavior : MonoBehaviour
                                 target.GetComponent<PlayerStats>().currentSheild = 0;
                                 if (tempDamage > 0)
                                 {
-                                    /*targethealth = target.GetComponent<PlayerStats>().currentHealth;
-                                    targethealth -= tempDamage;*/
+                                    //targethealth = target.GetComponent<PlayerStats>().currentHealth;
+                                    //targethealth -= tempDamage;
+                                    
                                     PlayerIni.currentHealth -= tempDamage;
                                     target.GetComponent<PlayerStats>().currentHealth = PlayerIni.currentHealth;
                                 }
@@ -317,8 +338,8 @@ public class EnemyBehavior : MonoBehaviour
                             }
                             if (tempDamage > 0)
                             {
-                                /*targethealth = target.GetComponent<PlayerStats>().currentHealth;
-                                targethealth -= tempDamage;*/
+                                //targethealth = target.GetComponent<PlayerStats>().currentHealth;
+                                //targethealth -= tempDamage;
                                 PlayerIni.currentHealth -= tempDamage;
                                 target.GetComponent<PlayerStats>().currentHealth = PlayerIni.currentHealth;
 
@@ -339,6 +360,8 @@ public class EnemyBehavior : MonoBehaviour
             }
         }
 
+    }
+    */
     }
     private void OnTriggerEnter(Collider other) //偵測敵人本身有沒有跟弓箭產生碰撞
     {

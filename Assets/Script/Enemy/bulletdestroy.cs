@@ -88,7 +88,7 @@ public class bulletdestroy : MonoBehaviour
     //弓箭射到物體時消失
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Enemy_1" || other.tag == "Enemy_2" || other.tag == "Enemy_3")
+        if (other.tag == "Enemy_1" || other.tag == "Enemy_2" || other.tag == "Enemy_3" || other.tag == "Enemy_4" || other.tag == "Enemy_5")
         {
             if (this.gameObject.tag == "Bullet")
             {
@@ -272,7 +272,7 @@ public class bulletdestroy : MonoBehaviour
         }
         if (this.gameObject.tag == "BurnGround")
         {
-            if (collider.tag == "Enemy_1" || collider.tag == "Enemy_2")
+            if (collider.tag == "Enemy_1" || collider.tag == "Enemy_2" || collider.tag == "Enemy_3" || collider.tag == "Enemy_4" || collider.tag == "Enemy_5")
             {
                 Debug.Log("Hit by BurnGround");
                 collider.GetComponent<EnemyBehavior>().burntimer += collider.GetComponent<EnemyStat>().BurnGroundTime;
@@ -281,7 +281,7 @@ public class bulletdestroy : MonoBehaviour
         }
         if (this.gameObject.tag == "IceGround")
         {
-            if (collider.tag == "Enemy_1" || collider.tag == "Enemy_2")
+            if (collider.tag == "Enemy_1" || collider.tag == "Enemy_2" || collider.tag == "Enemy_3" || collider.tag == "Enemy_4" || collider.tag == "Enemy_5")
             {
                 Debug.Log("Hit by IceGround");
                 collider.GetComponent<EnemyBehavior>().slowtimer += collider.GetComponent<EnemyStat>().IceGroundTime;

@@ -37,10 +37,14 @@ public class PlayerRotation : MonoBehaviour
              }
          }
          */
-
-
-        transform.LookAt(OnGetEnemy());
-       
+        if (OnGetEnemy() != null)
+        {
+            transform.LookAt(new Vector3(OnGetEnemy().position.x, 0.5f, OnGetEnemy().position.z));
+        }
+        else
+        {
+            transform.rotation = Quaternion.Euler(0,0,0);
+        }
         
     }
     public Transform OnGetEnemy()
@@ -55,12 +59,13 @@ public class PlayerRotation : MonoBehaviour
             //判斷檢測到的物件中有沒有Enemy
             if (cols.Length > 0)
                 for (int i = 0; i < cols.Length; i++)
-                    if (cols[i].tag=="Enemy_2" || cols[i].tag=="Enemy_1" || cols[i].tag == "Enemy_3")
+                    if (cols[i].tag=="Enemy_2" || cols[i].tag=="Enemy_1" || cols[i].tag == "Enemy_3" || cols[i].tag == "Enemy_4" || cols[i].tag == "Enemy_5")
                     
                     {
 
                         enemychecker = true;
                        return cols[i].transform;
+                        
                     }
             //沒有檢測到Enemy,將檢測半徑擴大2米
             radius += 2;

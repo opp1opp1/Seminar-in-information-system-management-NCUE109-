@@ -17,6 +17,8 @@ TagManager:
   - Wall
   - Undefined
   - UIButton
+  - Enemy5
+  - Enemy_5
   layers:
   - Default
   - TransparentFX
