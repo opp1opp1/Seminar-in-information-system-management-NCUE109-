@@ -99,6 +99,7 @@ GameObject:
   - component: {fileID: 114825469269544968}
   - component: {fileID: 198146413763531072}
   - component: {fileID: 199155909389271060}
+  - component: {fileID: 95616963584508318}
   m_Layer: 9
   m_Name: Enemy1
   m_TagString: Enemy_1
@@ -336,6 +337,23 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!95 &95616963584508318
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1768816727181462}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: acc3964b7a9039e4eac59c7b5a10071f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &114285462944406048
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -406,7 +424,7 @@ MonoBehaviour:
     type: 2}
   Enemy3_Sword: {fileID: 0}
   Enemy4_ball: {fileID: 0}
-  PowerUp: {fileID: 1283495710257734, guid: 05c22f36fa28759459b2a73b0f37b5fe, type: 2}
+  PowerUp: {fileID: 1947008128475744, guid: 159df70f9cfdead4580051007043f032, type: 2}
   EAS: 0
   agentspeed: 5
   slowtimer: 0
@@ -414,6 +432,8 @@ MonoBehaviour:
   burndamage: 0
   stuntimer: 0
   emission: {fileID: 0}
+  XiangYu: {fileID: 0}
+  hand: {fileID: 0}
 --- !u!114 &114793262677546234
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -487,8 +507,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 181b5cabec7cb6141b8ace2bbf3e11e8, type: 3}
-  m_Type: 0
+  m_Sprite: {fileID: 10917, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -514,11 +534,11 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 8476c85e159a01c4baf24deba4f15e8c, type: 3}
-  m_Type: 0
+  m_Sprite: {fileID: 21300000, guid: 599212d0ad70dcf4fb97900d6ce8778f, type: 3}
+  m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
-  m_FillMethod: 4
+  m_FillMethod: 0
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
@@ -636,7 +656,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -1468744219
+  randomSeed: 2100551014
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -4109,7 +4129,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -373.38547, y: 640.19507}
-  m_SizeDelta: {x: 100, y: 20}
+  m_SizeDelta: {x: 100, y: 12}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224336512898748928
 RectTransform:

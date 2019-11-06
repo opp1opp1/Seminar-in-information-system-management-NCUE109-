@@ -6,7 +6,12 @@ MonoImporter:
   defaultReferences:
   - Enemy2_bullet: {fileID: 1511428900671028, guid: 05d1715d801975d429cfeef34753795f,
       type: 2}
-  - PowerUp: {fileID: 1283495710257734, guid: 05c22f36fa28759459b2a73b0f37b5fe, type: 2}
+  - Enemy3_Sword: {instanceID: 0}
+  - Enemy4_ball: {instanceID: 0}
+  - PowerUp: {fileID: 100038, guid: a58d65a949a9df343aeb9a4581f9e2f5, type: 3}
+  - emission: {instanceID: 0}
+  - XiangYu: {instanceID: 0}
+  - hand: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
