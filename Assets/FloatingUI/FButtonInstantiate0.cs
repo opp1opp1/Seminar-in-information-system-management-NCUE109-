@@ -15,7 +15,8 @@ public class FButtonInstantiate0 : MonoBehaviour {  //隨機生成三個指定�
 
     // Use this for initialization
     void Start () {
-        gameFPanel = GameObject.Find("FPanel"); //拿來把clone放到FPanel底下之用        
+        gameFPanel = GameObject.Find("FPanel"); //拿來把clone放到FPanel底下之用
+        
     }
 
     // Update is called once per frame
@@ -32,10 +33,10 @@ public class FButtonInstantiate0 : MonoBehaviour {  //隨機生成三個指定�
     int Ins_Objs1()    //生成第一個點的物件
     {
         int Random_Objects = Random.Range(0, Objects.Length);   //隨機挑一個物件
-        if(Random_Objects == 0)
+        /*if(Random_Objects == null)
         {
             Ins_Objs1();
-        }
+        }*/
         clone_01 = Instantiate(Objects[Random_Objects], point_01.transform.position,    //生成物件
             point_01.transform.rotation);
         clone_01.transform.parent = gameFPanel.transform;  //複製出FButton後，將他放到FPanel底下，才顯現得出來
@@ -45,10 +46,10 @@ public class FButtonInstantiate0 : MonoBehaviour {  //隨機生成三個指定�
     int Ins_Objs2()
     {
         int Random_Objects = Random.Range(0, Objects.Length);
-        if (Random_Objects == 0)
+        /*if (Random_Objects == null)
         {
             Ins_Objs2();
-        }
+        }*/
         clone_02 = Instantiate(Objects[Random_Objects], point_02.transform.position,
             point_02.transform.rotation);
         clone_02.transform.parent = gameFPanel.transform;  //複製出FButton後，將他放到FPanel底下，才顯現得出來
@@ -58,10 +59,10 @@ public class FButtonInstantiate0 : MonoBehaviour {  //隨機生成三個指定�
     int Ins_Objs3()
     {
         int Random_Objects = Random.Range(0, Objects.Length);
-        if (Random_Objects == 0)
+        /*if (Random_Objects == null)
         {
             Ins_Objs3();
-        }
+        }*/
         clone_03 = Instantiate(Objects[Random_Objects], point_03.transform.position,
             point_03.transform.rotation);
         clone_03.transform.parent = gameFPanel.transform;  //複製出FButton後，將他放到FPanel底下，才顯現得出來

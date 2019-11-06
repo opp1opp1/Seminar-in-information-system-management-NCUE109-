@@ -27,46 +27,46 @@ public class Elementalpower : MonoBehaviour {
         {
             PlayerIni.EarthArrow = true;
             Debug.Log("Yes! Earth is on!!!");
-            obj.GetComponent<FButtonInstantiate0>().Objects[3] = null;
+            //obj.GetComponent<FButtonInstantiate0>().Objects[3] = null;
         }
         if (this.gameObject.name == "fire(Clone)")
         {
             PlayerIni.FireArrow = true;
             Debug.Log("Yes! Fire is on!!!");
-            obj.GetComponent<FButtonInstantiate0>().Objects[4] = null;
+            //obj.GetComponent<FButtonInstantiate0>().Objects[4] = null;
 
         }
         if (this.gameObject.name == "ice(Clone)")
         {
             PlayerIni.IceArrow = true;
             Debug.Log("Yes! Ice is on!!!");
-            obj.GetComponent<FButtonInstantiate0>().Objects[5] = null;
+            //obj.GetComponent<FButtonInstantiate0>().Objects[5] = null;
 
         }
         if (this.gameObject.name == "wind(Clone)")
         {
             PlayerIni.WindArrow = true;
             Debug.Log("Yes! Wind is on!!!");
-            obj.GetComponent<FButtonInstantiate0>().Objects[6] = null;
+            //obj.GetComponent<FButtonInstantiate0>().Objects[6] = null;
 
         }
         if (this.gameObject.name == "out(Clone)")
         {
             PlayerIni.DiagonalArrow =  true;
             Debug.Log("Yes! 多重射擊 is on!!!");
-            obj.GetComponent<FButtonInstantiate0>().Objects[7] = null;
+            //obj.GetComponent<FButtonInstantiate0>().Objects[7] = null;
         }
         if (this.gameObject.name == "plus(Clone)")
         {
             PlayerIni.FrontArrow = true;
             Debug.Log("Yes! 齊射 is on!!!");
-            obj.GetComponent<FButtonInstantiate0>().Objects[8] = null;
+            //obj.GetComponent<FButtonInstantiate0>().Objects[8] = null;
         }
         if (this.gameObject.name == "repeated(Clone)")
         {
             PlayerIni.Muitishot = true;
             Debug.Log("Yes! 連續射擊 is on!!!");
-            obj.GetComponent<FButtonInstantiate0>().Objects[9] = null;
+            //obj.GetComponent<FButtonInstantiate0>().Objects[9] = null;
         }
     }
 }

@@ -99,6 +99,7 @@ MonoBehaviour:
   - {fileID: 1934006417325614, guid: 3f3fef86a9f009f40b60c96d1f441d0f, type: 2}
   - {fileID: 1175670580814518, guid: f20eb2f3188043d4b94139141c8f1513, type: 2}
   - {fileID: 1281789866521130, guid: 9685e06ee078bc5499f9e83b0b2c14be, type: 2}
+  - {fileID: 1281789866521130, guid: 9685e06ee078bc5499f9e83b0b2c14be, type: 2}
   clone_01: {fileID: 0}
   clone_02: {fileID: 0}
   clone_03: {fileID: 0}
