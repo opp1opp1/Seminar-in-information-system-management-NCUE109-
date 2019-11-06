@@ -50,5 +50,20 @@ public class Elementalpower : MonoBehaviour {
             obj.GetComponent<FButtonInstantiate0>().Objects[6] = null;
 
         }
+        if (this.gameObject.name == "out(Clone)")
+        {
+            PlayerIni.DiagonalArrow =  true;
+            Debug.Log("Yes! 多重射擊 is on!!!");
+        }
+        if (this.gameObject.name == "plus(Clone)")
+        {
+            PlayerIni.FrontArrow = true;
+            Debug.Log("Yes! 齊射 is on!!!");
+        }
+        if (this.gameObject.name == "repeated(Clone)")
+        {
+            PlayerIni.Muitishot = true;
+            Debug.Log("Yes! 連續射擊 is on!!!");
+        }
     }
 }
