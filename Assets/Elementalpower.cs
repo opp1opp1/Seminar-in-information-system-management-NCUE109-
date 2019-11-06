@@ -4,10 +4,14 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class Elementalpower : MonoBehaviour {
+    public GameObject gameFPanel;
+    public GameObject obj;
 
     // Use this for initialization
     void Start()
     {
+        gameFPanel = GameObject.Find("FPanel");
+        
         Button btn = this.GetComponent<Button>();
         btn.onClick.AddListener(OnClick);
     }
@@ -23,6 +27,12 @@ public class Elementalpower : MonoBehaviour {
         {
             PlayerIni.EarthArrow = true;
             Debug.Log("Yes! Earth is on!!!");
+            /*obj.GetComponent<FButtonInstantiate0>().Objects[3] = null;
+            for(int i = 3; i < obj.GetComponent<FButtonInstantiate0>().Objects.Length; i++)
+            {
+                obj.GetComponent<FButtonInstantiate0>().Objects[i] = obj.GetComponent<FButtonInstantiate0>().Objects[i + 1];
+            }
+            obj.GetComponent<FButtonInstantiate0>().Objects.*/
         }
         if (this.gameObject.name == "fire(Clone)")
         {
