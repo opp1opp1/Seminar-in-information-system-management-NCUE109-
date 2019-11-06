@@ -87,14 +87,14 @@ public class PlayerShoot : MonoBehaviour
                 if (rapidshoot == false)
                 { Instantiate(arrow, transform.position, transform.rotation);
                     CAS = 1/target.GetComponent<PlayerStats>().currentAttackSpeed;
-                    CASChecker = CAS * 0.1f;
+                    CASChecker = CAS * 2.3f;
                     rapidshoot = true;
                 }
                 else if(rapidshoot == true)
                 {
                     Instantiate(arrow, transform.position, transform.rotation);
                     CAS = 1/target.GetComponent<PlayerStats>().currentAttackSpeed;
-                    CASChecker = CAS * 0.9f;
+                    CASChecker = CAS * 0.7f;
                     rapidshoot = false;
                 }
                 
@@ -135,7 +135,7 @@ public class PlayerShoot : MonoBehaviour
                                 Instantiate(arrow, transform.position, transform.rotation * Quaternion.AngleAxis(-45, transform.up));
                             }
                             CAS = 1/target.GetComponent<PlayerStats>().currentAttackSpeed;
-                            CASChecker = CAS * 0.1f;
+                            CASChecker = CAS * 2.3f;
                             MuitishotSecondChecker = true;
 
                         }
@@ -154,7 +154,7 @@ public class PlayerShoot : MonoBehaviour
                                 Instantiate(arrow, transform.position, transform.rotation * Quaternion.AngleAxis(-45, transform.up));
                             }
                             CAS = 1/target.GetComponent<PlayerStats>().currentAttackSpeed;
-                            CASChecker = CAS * 0.9f;
+                            CASChecker = CAS * 0.7f;
                             MuitishotSecondChecker = false;
                         }
                     }
@@ -197,7 +197,7 @@ public class PlayerShoot : MonoBehaviour
                                 Instantiate(arrow, transform.position, transform.rotation * Quaternion.AngleAxis(-45, transform.up));
                             }
                             CAS = 1/target.GetComponent<PlayerStats>().currentAttackSpeed;
-                            CASChecker = CAS * 0.1f;
+                            CASChecker = CAS * 2.3f;
                             MuitishotSecondChecker = true;
 
                         }
@@ -217,7 +217,7 @@ public class PlayerShoot : MonoBehaviour
                             }
                             //CAS = 1/target.GetComponent<PlayerStats>().currentAttackSpeed;
                             CAS = 1/target.GetComponent<PlayerStats>().currentAttackSpeed;
-                            CASChecker = CAS * 0.9f;
+                            CASChecker = CAS * 0.7f;
                             MuitishotSecondChecker = false;
                         }
                     }
@@ -259,7 +259,7 @@ public class PlayerShoot : MonoBehaviour
                                 Instantiate(arrow, transform.position, transform.rotation * Quaternion.AngleAxis(-45, transform.up));
                             }
                             CAS = 1/target.GetComponent<PlayerStats>().currentAttackSpeed;
-                            CASChecker = CAS * 0.1f;
+                            CASChecker = CAS * 2.3f;
                             MuitishotSecondChecker = true;
 
                         }
@@ -278,7 +278,7 @@ public class PlayerShoot : MonoBehaviour
                                 Instantiate(arrow, transform.position, transform.rotation * Quaternion.AngleAxis(-45, transform.up));
                             }
                             CAS = 1/target.GetComponent<PlayerStats>().currentAttackSpeed;
-                            CASChecker = CAS * 0.9f;
+                            CASChecker = CAS * 0.7f;
                             MuitishotSecondChecker = false;
                         }
                     }
@@ -320,7 +320,7 @@ public class PlayerShoot : MonoBehaviour
                                 Instantiate(arrow, transform.position, transform.rotation * Quaternion.AngleAxis(-45, transform.up));
                             }
                             CAS = 1/target.GetComponent<PlayerStats>().currentAttackSpeed;
-                            CASChecker = CAS * 0.1f;
+                            CASChecker = CAS * 2.3f;
                             MuitishotSecondChecker = true;
 
                         }
@@ -339,7 +339,7 @@ public class PlayerShoot : MonoBehaviour
                                 Instantiate(arrow, transform.position, transform.rotation * Quaternion.AngleAxis(-45, transform.up));
                             }
                             CAS = 1/target.GetComponent<PlayerStats>().currentAttackSpeed;
-                            CASChecker = CAS * 0.9f;
+                            CASChecker = CAS * 0.7f;
                             MuitishotSecondChecker = false;
                         }
                     }
@@ -381,7 +381,7 @@ public class PlayerShoot : MonoBehaviour
                                 Instantiate(arrow, transform.position, transform.rotation * Quaternion.AngleAxis(-45, transform.up));
                             }
                             CAS = 1/target.GetComponent<PlayerStats>().currentAttackSpeed;
-                            CASChecker = CAS * 0.1f;
+                            CASChecker = CAS * 2.3f;
                             MuitishotSecondChecker = true;
 
                         }
@@ -400,7 +400,7 @@ public class PlayerShoot : MonoBehaviour
                                 Instantiate(arrow, transform.position, transform.rotation * Quaternion.AngleAxis(-45, transform.up));
                             }
                             CAS = 1/target.GetComponent<PlayerStats>().currentAttackSpeed;
-                            CASChecker = CAS * 0.9f;
+                            CASChecker = CAS * 0.7f;
                             MuitishotSecondChecker = false;
                         }
                     }
@@ -442,7 +442,7 @@ public class PlayerShoot : MonoBehaviour
                                 Instantiate(arrow, transform.position, transform.rotation * Quaternion.AngleAxis(-45, transform.up));
                             }
                             CAS = 1/target.GetComponent<PlayerStats>().currentAttackSpeed;
-                            CASChecker = CAS * 0.1f;
+                            CASChecker = CAS * 2.3f;
                             MuitishotSecondChecker = true;
 
                         }
@@ -461,7 +461,7 @@ public class PlayerShoot : MonoBehaviour
                                 Instantiate(arrow, transform.position, transform.rotation * Quaternion.AngleAxis(-45, transform.up));
                             }
                             CAS = 1/target.GetComponent<PlayerStats>().currentAttackSpeed;
-                            CASChecker = CAS * 0.9f;
+                            CASChecker = CAS * 0.7f;
                             MuitishotSecondChecker = false;
                         }
                     }
@@ -503,7 +503,7 @@ public class PlayerShoot : MonoBehaviour
                                 Instantiate(arrow, transform.position, transform.rotation * Quaternion.AngleAxis(-45, transform.up));
                             }
                             CAS = 1/target.GetComponent<PlayerStats>().currentAttackSpeed;
-                            CASChecker = CAS * 0.1f;
+                            CASChecker = CAS * 2.3f;
                             MuitishotSecondChecker = true;
 
                         }
@@ -522,7 +522,7 @@ public class PlayerShoot : MonoBehaviour
                                 Instantiate(arrow, transform.position, transform.rotation * Quaternion.AngleAxis(-45, transform.up));
                             }
                             CAS = 1/target.GetComponent<PlayerStats>().currentAttackSpeed;
-                            CASChecker = CAS * 0.9f;
+                            CASChecker = CAS * 0.7f;
                             MuitishotSecondChecker = false;
                         }
                     }
@@ -564,7 +564,7 @@ public class PlayerShoot : MonoBehaviour
                                 Instantiate(arrow, transform.position, transform.rotation * Quaternion.AngleAxis(-45, transform.up));
                             }
                             CAS = 1/target.GetComponent<PlayerStats>().currentAttackSpeed;
-                            CASChecker = CAS * 0.1f;
+                            CASChecker = CAS * 2.3f;
                             MuitishotSecondChecker = true;
 
                         }
@@ -583,7 +583,7 @@ public class PlayerShoot : MonoBehaviour
                                 Instantiate(arrow, transform.position, transform.rotation * Quaternion.AngleAxis(-45, transform.up));
                             }
                             CAS = 1/target.GetComponent<PlayerStats>().currentAttackSpeed;
-                            CASChecker = CAS * 0.9f;
+                            CASChecker = CAS * 0.7f;
                             MuitishotSecondChecker = false;
                         }
                     }
@@ -625,7 +625,7 @@ public class PlayerShoot : MonoBehaviour
                                 Instantiate(arrow, transform.position, transform.rotation * Quaternion.AngleAxis(-45, transform.up));
                             }
                             CAS = 1/target.GetComponent<PlayerStats>().currentAttackSpeed;
-                            CASChecker = CAS * 0.1f;
+                            CASChecker = CAS * 2.3f;
                             MuitishotSecondChecker = true;
 
                         }
@@ -644,7 +644,7 @@ public class PlayerShoot : MonoBehaviour
                                 Instantiate(arrow, transform.position, transform.rotation * Quaternion.AngleAxis(-45, transform.up));
                             }
                             CAS = 1/target.GetComponent<PlayerStats>().currentAttackSpeed;
-                            CASChecker = CAS * 0.9f;
+                            CASChecker = CAS * 0.7f;
                             MuitishotSecondChecker = false;
                         }
                     }
@@ -687,7 +687,7 @@ public class PlayerShoot : MonoBehaviour
                                 Instantiate(arrow, transform.position, transform.rotation * Quaternion.AngleAxis(-45, transform.up));
                             }
                             CAS = 1/target.GetComponent<PlayerStats>().currentAttackSpeed;
-                            CASChecker = CAS * 0.1f;
+                            CASChecker = CAS * 2.3f;
                             MuitishotSecondChecker = true;
 
                         }
@@ -706,7 +706,7 @@ public class PlayerShoot : MonoBehaviour
                                 Instantiate(arrow, transform.position, transform.rotation * Quaternion.AngleAxis(-45, transform.up));
                             }
                             CAS = 1/target.GetComponent<PlayerStats>().currentAttackSpeed;
-                            CASChecker = CAS * 0.9f;
+                            CASChecker = CAS * 0.7f;
                             MuitishotSecondChecker = false;
                         }
                     }
@@ -749,7 +749,7 @@ public class PlayerShoot : MonoBehaviour
                                 Instantiate(arrow, transform.position, transform.rotation * Quaternion.AngleAxis(-45, transform.up));
                             }
                             CAS = 1/target.GetComponent<PlayerStats>().currentAttackSpeed;
-                            CASChecker = CAS * 0.1f;
+                            CASChecker = CAS * 0.3f;
                             MuitishotSecondChecker = true;
 
                         }
@@ -768,7 +768,7 @@ public class PlayerShoot : MonoBehaviour
                                 Instantiate(arrow, transform.position, transform.rotation * Quaternion.AngleAxis(-45, transform.up));
                             }
                             CAS = 1/target.GetComponent<PlayerStats>().currentAttackSpeed;
-                            CASChecker = CAS * 0.9f;
+                            CASChecker = CAS * 0.7f;
                             MuitishotSecondChecker = false;
                         }
                     }
@@ -810,7 +810,7 @@ public class PlayerShoot : MonoBehaviour
                                 Instantiate(arrow, transform.position, transform.rotation * Quaternion.AngleAxis(-45, transform.up));
                             }
                             CAS = 1/target.GetComponent<PlayerStats>().currentAttackSpeed;
-                            CASChecker = CAS * 0.1f;
+                            CASChecker = CAS * 2.3f;
                             MuitishotSecondChecker = true;
 
                         }
@@ -829,7 +829,7 @@ public class PlayerShoot : MonoBehaviour
                                 Instantiate(arrow, transform.position, transform.rotation * Quaternion.AngleAxis(-45, transform.up));
                             }
                             CAS = 1/target.GetComponent<PlayerStats>().currentAttackSpeed;
-                            CASChecker = CAS * 0.9f;
+                            CASChecker = CAS * 0.7f;
                             MuitishotSecondChecker = false;
                         }
                     }

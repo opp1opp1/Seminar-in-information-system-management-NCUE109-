@@ -1138,7 +1138,7 @@ MonoBehaviour:
     type: 2}
   Enemy3_Sword: {fileID: 0}
   Enemy4_ball: {fileID: 0}
-  PowerUp: {fileID: 1283495710257734, guid: 05c22f36fa28759459b2a73b0f37b5fe, type: 2}
+  PowerUp: {fileID: 1947008128475744, guid: 159df70f9cfdead4580051007043f032, type: 2}
   EAS: 0
   agentspeed: 0
   slowtimer: 0
@@ -1333,7 +1333,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -763304075
+  randomSeed: 1826301113
   InitialModule:
     serializedVersion: 3
     enabled: 1

@@ -962,15 +962,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 7
       objectReference: {fileID: 0}
-    - target: {fileID: 1093003640944480, guid: 0ec848b5776dbdb4288e4795baa18a87, type: 2}
-      propertyPath: m_Name
-      value: Enemy2
-      objectReference: {fileID: 0}
-    - target: {fileID: 198130941757798834, guid: 0ec848b5776dbdb4288e4795baa18a87,
-        type: 2}
-      propertyPath: randomSeed
-      value: 1826301113
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0ec848b5776dbdb4288e4795baa18a87, type: 2}
   m_IsPrefabParent: 0
