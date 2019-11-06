@@ -20,7 +20,7 @@ public class FUIAppear : MonoBehaviour {//套在Ashe身上
     {
         if(col.gameObject.name == "powerup(Clone)") //如果Ashe撞到powerup
         {
-            
+            gameFPanel.GetComponent<FButtonInstantiate0>().stop = true; //吃到powerup時則會出現panel
             gameFPanel.gameObject.SetActive(true);  //產生FPanel
             Destroy(col.gameObject);    //摧毀powerup
             PauseGame();

@@ -27,27 +27,28 @@ public class Elementalpower : MonoBehaviour {
         {
             PlayerIni.EarthArrow = true;
             Debug.Log("Yes! Earth is on!!!");
-            /*obj.GetComponent<FButtonInstantiate0>().Objects[3] = null;
-            for(int i = 3; i < obj.GetComponent<FButtonInstantiate0>().Objects.Length; i++)
-            {
-                obj.GetComponent<FButtonInstantiate0>().Objects[i] = obj.GetComponent<FButtonInstantiate0>().Objects[i + 1];
-            }
-            obj.GetComponent<FButtonInstantiate0>().Objects.*/
+            obj.GetComponent<FButtonInstantiate0>().Objects[3] = null;
         }
         if (this.gameObject.name == "fire(Clone)")
         {
             PlayerIni.FireArrow = true;
             Debug.Log("Yes! Fire is on!!!");
+            obj.GetComponent<FButtonInstantiate0>().Objects[4] = null;
+
         }
         if (this.gameObject.name == "ice(Clone)")
         {
             PlayerIni.IceArrow = true;
             Debug.Log("Yes! Ice is on!!!");
+            obj.GetComponent<FButtonInstantiate0>().Objects[5] = null;
+
         }
         if (this.gameObject.name == "wind(Clone)")
         {
             PlayerIni.WindArrow = true;
             Debug.Log("Yes! Wind is on!!!");
+            obj.GetComponent<FButtonInstantiate0>().Objects[6] = null;
+
         }
     }
 }
