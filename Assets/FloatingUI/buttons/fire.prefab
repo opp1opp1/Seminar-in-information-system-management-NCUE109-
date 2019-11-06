@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 114445886047527828}
   - component: {fileID: 114743984127402038}
   - component: {fileID: 114735483376915122}
+  - component: {fileID: 114537970412562578}
   m_Layer: 5
   m_Name: fire
   m_TagString: UIButton
@@ -57,6 +58,17 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114537970412562578
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1439099192938268}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 650c58cc8b1b27c4ebe14c53a2dbbf1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114735483376915122
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -69,6 +81,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Buttons: []
+  gameFPanel: {fileID: 0}
+  ash: {fileID: 0}
 --- !u!114 &114743984127402038
 MonoBehaviour:
   m_ObjectHideFlags: 1

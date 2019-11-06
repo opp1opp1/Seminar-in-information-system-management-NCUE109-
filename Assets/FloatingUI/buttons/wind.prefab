@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 114916276715609120}
   - component: {fileID: 114411405342125816}
   - component: {fileID: 114363636923448770}
+  - component: {fileID: 114172768681991656}
   m_Layer: 5
   m_Name: wind
   m_TagString: UIButton
@@ -30,6 +31,17 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &114172768681991656
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1364934058629574}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 650c58cc8b1b27c4ebe14c53a2dbbf1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114363636923448770
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -42,6 +54,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Buttons: []
+  gameFPanel: {fileID: 0}
+  ash: {fileID: 0}
 --- !u!114 &114411405342125816
 MonoBehaviour:
   m_ObjectHideFlags: 1
