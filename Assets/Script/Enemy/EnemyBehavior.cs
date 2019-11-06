@@ -146,9 +146,25 @@ public class EnemyBehavior : MonoBehaviour
 
             if (EASChecker <= 0)
             {
+                //Quaternion change_angle = Quaternion.Euler(0, 0, 90);
+              
                 target = GameObject.Find("Ashe");
+
                 transform.LookAt(target.transform.position);
-                Instantiate(Enemy2_bullet, transform.position, transform.rotation);
+                // transform.rotation = Quaternion.Slerp(transform.rotation, change_angle, 0.2f);
+                //transform.position += new Vector3(0.0f, 3.0f, 0.0f);
+                Vector3 dir1 = transform.position  +new Vector3(1.0f, 3.0f, 0.0f);
+                Vector3 dir2 = transform.position  +new Vector3(0.0f, 3.0f, 0.0f);
+                Vector3 dir3 = transform.position  +new Vector3(-1.0f, 3.0f, 0.0f);
+                Vector3 dir4 = transform.position  +new Vector3(0.0f, 3.0f, 1.0f);
+                Vector3 dir5 = transform.position  +new Vector3(0.0f, 3.0f, -1.0f);
+
+                Instantiate(Enemy4_ball, dir1, transform.rotation);
+                Instantiate(Enemy4_ball, dir2, transform.rotation);
+                Instantiate(Enemy4_ball, dir3, transform.rotation);
+                Instantiate(Enemy4_ball, dir4, transform.rotation);
+                Instantiate(Enemy4_ball, dir5, transform.rotation);
+
                 EASChecker = EAS;
             }
 

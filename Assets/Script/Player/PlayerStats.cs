@@ -42,7 +42,7 @@ public class PlayerStats : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        currentHealth = PlayerIni.basicHealth;
+        currentHealth = PlayerIni.currentHealth;
         currentAttackDamage = PlayerIni.currentAttackDamage;
         currentAttackSpeed = PlayerIni.currentAttackSpeed;
         currentHealthLimit = PlayerIni.currentHealthLimit;
