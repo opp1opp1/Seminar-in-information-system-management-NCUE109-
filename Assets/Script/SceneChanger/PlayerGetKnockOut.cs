@@ -19,7 +19,7 @@ public class PlayerGetKnockOut : MonoBehaviour {
 
         SceneManager.LoadScene("ScoreScene");
         */
-        currentHealth = GetComponent<PlayerStats>().currentHealth;
+        currentHealth = PlayerIni.currentHealth;
         if (currentHealth <= 0)
         {
             SceneManager.LoadScene("MainScene");

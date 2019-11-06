@@ -12,7 +12,7 @@ public static class PlayerIni
     public static float currentAttackSpeed = 1.0f;
     public static float currentHealthLimit = 100;
 
-    public static bool Muitishot = false; //連續射擊
+    public static bool Muitishot = true; //連續射擊
     public static bool MuitishotSecondChecker = false; //連續射擊的第二發判斷器
     public static bool FrontArrow = false; //齊射
     public static bool DiagonalArrow = false; //多重射擊

@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 114215565149087938}
   - component: {fileID: 114468333799001464}
   m_Layer: 10
-  m_Name: Sphere
+  m_Name: Enemy2bullet
   m_TagString: Enemy_Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

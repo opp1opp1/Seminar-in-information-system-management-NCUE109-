@@ -125,7 +125,7 @@ public class bulletdestroy : MonoBehaviour
             }
 
         }
-        if (this.gameObject.name == "Sphere(Clone)")
+        if (this.gameObject.name == "Enemy2bullet(Clone)" || this.gameObject.name == "Enemy4bullet(Clone)")
         {
             if (other.gameObject.tag == "Player")
             {
