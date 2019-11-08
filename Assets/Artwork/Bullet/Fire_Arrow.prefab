@@ -219,6 +219,7 @@ MonoBehaviour:
   Explosion_damage: 0
   InstantiateGroundTime: 0.15
   InstantiateGroundTimer: 0
+  Hitsound: {fileID: 1900760773586354, guid: 82a02bd8b7888ad439793d1b69eaf3ee, type: 2}
 --- !u!114 &114175316139770838
 MonoBehaviour:
   m_ObjectHideFlags: 1

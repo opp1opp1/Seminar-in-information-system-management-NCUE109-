@@ -6,8 +6,9 @@ MonoImporter:
   defaultReferences:
   - Explosion: {fileID: 1723578457840196, guid: f3344b5c1c783db4f8434bf3133de445,
       type: 2}
-  - BurnGround: {fileID: 1180640830120114, guid: b86ab7b6787ae50439e14d33b9fd346a,
-      type: 2}
+  - BurnGround: {instanceID: 0}
+  - IceGround: {instanceID: 0}
+  - Hitsound: {fileID: 1900760773586354, guid: 82a02bd8b7888ad439793d1b69eaf3ee, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

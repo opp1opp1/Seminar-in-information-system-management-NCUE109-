@@ -126,6 +126,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxTime: 5
   bullet_damage: 20
+  sword_damage: 80
   slowTime: 2
   burnTime: 4
   stunTime: 0.5
@@ -136,6 +137,7 @@ MonoBehaviour:
   Explosion_damage: 0
   InstantiateGroundTime: 1
   InstantiateGroundTimer: 0
+  Hitsound: {fileID: 1900760773586354, guid: 82a02bd8b7888ad439793d1b69eaf3ee, type: 2}
 --- !u!135 &135943478847243944
 SphereCollider:
   m_ObjectHideFlags: 1

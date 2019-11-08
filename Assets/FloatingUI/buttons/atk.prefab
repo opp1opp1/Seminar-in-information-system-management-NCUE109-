@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 114986291410902966}
   - component: {fileID: 114308431112934190}
   - component: {fileID: 114651506574851172}
+  - component: {fileID: 114373482618188366}
   m_Layer: 5
   m_Name: atk
   m_TagString: UIButton
@@ -43,7 +44,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Buttons: []
-  stopme: 0
+  gameFPanel: {fileID: 0}
+  ash: {fileID: 0}
+--- !u!114 &114373482618188366
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1722479327774376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69267a842afe38149af2a5a4d02629a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Showmusic: {fileID: 1224422523742434, guid: e44ed5898bf4ad146a3dabd84d5044a0, type: 2}
 --- !u!114 &114651506574851172
 MonoBehaviour:
   m_ObjectHideFlags: 1

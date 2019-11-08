@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 114388562668208872}
   - component: {fileID: 114858290476335720}
   - component: {fileID: 114423168031126782}
+  - component: {fileID: 114847693832163150}
   m_Layer: 5
   m_Name: spd
   m_TagString: UIButton
@@ -121,6 +122,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa2d665033031ba4abbc5ba55bdea4d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114847693832163150
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1358800386203096}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69267a842afe38149af2a5a4d02629a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Showmusic: {fileID: 1224422523742434, guid: e44ed5898bf4ad146a3dabd84d5044a0, type: 2}
 --- !u!114 &114858290476335720
 MonoBehaviour:
   m_ObjectHideFlags: 1

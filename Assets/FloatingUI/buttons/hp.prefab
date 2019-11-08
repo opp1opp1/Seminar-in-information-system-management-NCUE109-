@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 114883287032013844}
   - component: {fileID: 114192217705739580}
   - component: {fileID: 114842062814654814}
+  - component: {fileID: 114999105694462474}
   m_Layer: 5
   m_Name: hp
   m_TagString: UIButton
@@ -43,6 +44,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Buttons: []
+  gameFPanel: {fileID: 0}
+  ash: {fileID: 0}
 --- !u!114 &114513709593305354
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -133,6 +136,18 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &114999105694462474
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1449617825142208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69267a842afe38149af2a5a4d02629a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Showmusic: {fileID: 1224422523742434, guid: e44ed5898bf4ad146a3dabd84d5044a0, type: 2}
 --- !u!222 &222288106887260138
 CanvasRenderer:
   m_ObjectHideFlags: 1

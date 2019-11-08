@@ -54,7 +54,7 @@ public class PlayerStats : MonoBehaviour
             {
                 if (PlayerIni.currentSheild > basicHealth * 0.1f)
                 {
-                    PlayerIni.currentSheild -= basicHealth * 0.01f;
+                    PlayerIni.currentSheild -= basicHealth * 0.2f;
                     Debug.Log("Sheild:" + PlayerIni.currentSheild);
                 }
                 else

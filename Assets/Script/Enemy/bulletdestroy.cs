@@ -22,9 +22,11 @@ public class bulletdestroy : MonoBehaviour
     public float InstantiateGroundTimer;
     private float targetShield;
     private float tempDamage;
+    public GameObject Hitsound;
     // Use this for initialization
     void Start()
     {
+        
         lifeTime = 0.0f;
         Explosion_damage = 0.25f * bullet_damage;
         if (this.gameObject.tag == "Explosion")
@@ -92,7 +94,9 @@ public class bulletdestroy : MonoBehaviour
         {
             if (this.gameObject.tag == "Bullet")
             {
+                Instantiate(Hitsound, transform.position, transform.rotation);
                 Destroy(gameObject);
+                
                 if (this.gameObject.name == "Ice_Arrow(Clone)")
                 {
                     //other.GetComponent<EnemyBehavior>().agentspeed = other.GetComponent<EnemyBehavior>().agentspeed * 0.8f;

@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 114465334382198386}
   - component: {fileID: 114954020022377656}
   - component: {fileID: 114765398823401136}
+  - component: {fileID: 114026436171312546}
   m_Layer: 5
   m_Name: earth
   m_TagString: UIButton
@@ -31,6 +32,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &114026436171312546
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1251890044416278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69267a842afe38149af2a5a4d02629a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Showmusic: {fileID: 1224422523742434, guid: e44ed5898bf4ad146a3dabd84d5044a0, type: 2}
 --- !u!114 &114465334382198386
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -94,6 +107,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 650c58cc8b1b27c4ebe14c53a2dbbf1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameFPanel: {fileID: 0}
+  obj: {fileID: 0}
 --- !u!114 &114954020022377656
 MonoBehaviour:
   m_ObjectHideFlags: 1

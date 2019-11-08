@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 114741784923393474}
   - component: {fileID: 114446594623775892}
   - component: {fileID: 114752522572972004}
+  - component: {fileID: 114577105131343694}
   m_Layer: 5
   m_Name: out
   m_TagString: UIButton
@@ -72,6 +73,18 @@ MonoBehaviour:
   Buttons: []
   gameFPanel: {fileID: 0}
   ash: {fileID: 0}
+--- !u!114 &114577105131343694
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1934006417325614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69267a842afe38149af2a5a4d02629a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Showmusic: {fileID: 1224422523742434, guid: e44ed5898bf4ad146a3dabd84d5044a0, type: 2}
 --- !u!114 &114741784923393474
 MonoBehaviour:
   m_ObjectHideFlags: 1
