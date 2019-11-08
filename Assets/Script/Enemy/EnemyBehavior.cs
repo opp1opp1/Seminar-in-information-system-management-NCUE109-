@@ -31,7 +31,7 @@ public class EnemyBehavior : MonoBehaviour
     public Transform emission;
     public GameObject XiangYu;
     public GameObject hand;
-
+    private bool onlyshootonce;
     // Use this for initialization
     void Start()
     {
@@ -90,50 +90,70 @@ public class EnemyBehavior : MonoBehaviour
                 //Vector3 newPos = transform.position ;
                 agent.SetDestination(newPos);
             }
-            
-                if (EASChecker <= 0)
-                {
-                    hand.GetComponent<handanimation>().hand_animator.SetBool("Attacking", true);
-                    target = GameObject.Find("Ashe");
-                    transform.LookAt(target.transform.position);
-                    Instantiate(Enemy2_bullet, transform.position, transform.rotation);
-                    EASChecker = EAS;
-                }
-            
+
+            if (EASChecker <= 0)
+            {
+                hand.GetComponent<handanimation>().hand_animator.SetBool("Attacking", true);
+                target = GameObject.Find("Ashe");
+                transform.LookAt(target.transform.position);
+                Instantiate(Enemy2_bullet, transform.position, transform.rotation);
+                EASChecker = EAS;
+            }
+
         }
         else if (this.gameObject.tag == ("Enemy_3"))
         {
-            
+            target = GameObject.Find("Ashe");
             if (distance < this.GetComponent<EnemyStat>().AttackDistance)
             {
-
                 if (EASChecker <= 0f)
                 {
-    
-                    XiangYu.GetComponent<XiangYuAnimation>().XiangYu_animator.SetBool("Attacking",true);
-                    target = GameObject.Find("Ashe");
-                    Vector3 lookatposition = new Vector3(target.transform.position.x, 0.5f, target.transform.position.z);
-                    transform.LookAt(lookatposition);
-                    //Instantiate(Enemy3_Sword,new Vector3(transform.position.x, 1, transform.position.z), transform.rotation);
-                    //Vector3.Lerp(transform.position, Player.transform.position, 0.5f)
-                    Instantiate(Enemy3_Sword, new Vector3(Mathf.Lerp(transform.position.x, Player.transform.position.x, 0.5f), 1f, Mathf.Lerp(transform.position.z, Player.transform.position.z, 0.5f)), transform.rotation);
-
+                    XiangYu.GetComponent<XiangYuAnimation>().XiangYu_animator.SetBool("Attacking", true);
+                    onlyshootonce = true;
                     EASChecker = EAS;
+
                 }
-                
+
+
+                //Instantiate(Enemy3_Sword,new Vector3(transform.position.x, 1, transform.position.z), transform.rotation);
+                //Vector3.Lerp(transform.position, Player.transform.position, 0.5f)
+
+
+            }
+
+
+            if (onlyshootonce == true)
+            {
+                if (XiangYu.GetComponent<XiangYuAnimation>().AnimatorIsPlaying("Throw"))
+                {
+
+                    
+                    Vector3 lookatposition = new Vector3(target.transform.position.x, 1f, target.transform.position.z);
+                    transform.LookAt(lookatposition);
+                    do
+                    {
+                        Instantiate(Enemy3_Sword, new Vector3(Mathf.Lerp(transform.position.x, Player.transform.position.x, 0.5f), 1f, Mathf.Lerp(transform.position.z, Player.transform.position.z, 0.5f)), transform.rotation);
+                        EASChecker = EAS;
+                        XiangYu.GetComponent<XiangYuAnimation>().XiangYu_animator.SetBool("Attacking", false);
+                        onlyshootonce = false;
+                    }
+                    while (onlyshootonce == true);
+                }
             }
             else if (distance < this.GetComponent<EnemyStat>().WakeUpDistance)
             {
-                transform.LookAt(Player.transform.position);
+                
+                Vector3 lookatposition = new Vector3(target.transform.position.x, 1f, target.transform.position.z);
+                transform.LookAt(lookatposition);
                 Vector3 newPos = Player.transform.position;
                 //Vector3 newPos = transform.position ;
                 agent.SetDestination(newPos);
             }
-            
-            
+
+        }    
                 
             
-        }
+        
         else if (this.gameObject.tag == ("Enemy_4"))
         {
             if (distance < this.GetComponent<EnemyStat>().WakeUpDistance)
@@ -231,10 +251,11 @@ public class EnemyBehavior : MonoBehaviour
         {
             if (other.name == "Ashe")
             {
+                target = GameObject.Find("Ashe");
                 if (EASChecker <= 0)
                 {
                     
-                    target = GameObject.Find("Ashe");
+                    
                     if (target.GetComponent<PlayerStats>().itisinvincinble != true)
                     {
                         Debug.Log("沒有無敵");
