@@ -25,7 +25,6 @@ GameObject:
   - component: {fileID: 114645301848470376}
   - component: {fileID: 114796249004843098}
   - component: {fileID: 114597963903905618}
-  - component: {fileID: 114060873963894424}
   m_Layer: 5
   m_Name: repeated
   m_TagString: UIButton
@@ -33,18 +32,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &114060873963894424
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1281789866521130}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 69267a842afe38149af2a5a4d02629a3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Showmusic: {fileID: 0}
 --- !u!114 &114597963903905618
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -426,7 +426,7 @@ public class EnemyBehavior : MonoBehaviour
                 if (Instantiateonce == false)
                 {
                     int f = Random.Range(0, 100);
-                    if (f >= 0)
+                    if (f >= 40)
                     {
                         Instantiate(PowerUp, transform.position, transform.rotation);
                         Instantiateonce = true;

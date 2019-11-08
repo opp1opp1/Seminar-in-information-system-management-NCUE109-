@@ -3,7 +3,9 @@ guid: 69267a842afe38149af2a5a4d02629a3
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - Showmusic: {fileID: 1224422523742434, guid: e44ed5898bf4ad146a3dabd84d5044a0,
+      type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
