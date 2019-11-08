@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44950122, g: 0.49649686, b: 0.5591482, a: 1}
+  m_IndirectSpecularColor: {r: 0.44950128, g: 0.49649638, b: 0.5591477, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -3945,6 +3945,50 @@ Prefab:
       value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 100238, guid: 6c4bb31b6a481764887ae722b141439c, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
+    - target: {fileID: 100212, guid: 6c4bb31b6a481764887ae722b141439c, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
+    - target: {fileID: 100162, guid: 6c4bb31b6a481764887ae722b141439c, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
+    - target: {fileID: 100164, guid: 6c4bb31b6a481764887ae722b141439c, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
+    - target: {fileID: 100166, guid: 6c4bb31b6a481764887ae722b141439c, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
+    - target: {fileID: 100156, guid: 6c4bb31b6a481764887ae722b141439c, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
+    - target: {fileID: 100208, guid: 6c4bb31b6a481764887ae722b141439c, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
+    - target: {fileID: 100158, guid: 6c4bb31b6a481764887ae722b141439c, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
+    - target: {fileID: 100210, guid: 6c4bb31b6a481764887ae722b141439c, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
+    - target: {fileID: 100118, guid: 6c4bb31b6a481764887ae722b141439c, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
+    - target: {fileID: 100122, guid: 6c4bb31b6a481764887ae722b141439c, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
+    - target: {fileID: 100160, guid: 6c4bb31b6a481764887ae722b141439c, type: 3}
       propertyPath: m_TagString
       value: Wall
       objectReference: {fileID: 0}
