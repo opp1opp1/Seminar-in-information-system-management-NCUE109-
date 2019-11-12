@@ -34,6 +34,7 @@ public class EnemyBehavior : MonoBehaviour
     private bool onlyshootonce;
     private float enemy6_teleport = 5.0f;
     private float enemy6_teleport_checker;
+    public GameObject Enemy6_warning_square;
     // Use this for initialization
     void Start()
     {
@@ -210,21 +211,47 @@ public class EnemyBehavior : MonoBehaviour
         {
             
             enemy6_teleport_checker -= Time.deltaTime;
-            if (distance < this.GetComponent<EnemyStat>().WakeUpDistance)
+            
+            if (distance < this.GetComponent<EnemyStat>().AttackDistance)
+            {
+                if (EASChecker <= 0)
+                {
+                    target = GameObject.Find("Ashe");
+                    Vector3 lookatposition = new Vector3(target.transform.position.x, 0.1f, target.transform.position.z);
+                    transform.LookAt(lookatposition);
+                    Instantiate(Enemy6_warning_square, new Vector3(Mathf.Lerp(transform.position.x, Player.transform.position.x, 0.5f), 0.1f, Mathf.Lerp(transform.position.z, Player.transform.position.z, 0.5f)), Quaternion.Euler(0f,this.transform.rotation.y , 0f));
+                    EASChecker = EAS;
+                }
+                else
+                {
+                    target = GameObject.Find("Ashe");
+                    Vector3 lookatposition = new Vector3(target.transform.position.x, 0.5f, target.transform.position.z);
+                    transform.LookAt(lookatposition);
+                    Vector3 newPos = Player.transform.position;
+                    //Vector3 newPos = transform.position ;
+                    agent.SetDestination(newPos);
+                }
+            }
+            else if (distance < this.GetComponent<EnemyStat>().WakeUpDistance)
             {
                 if (enemy6_teleport_checker <= 0)
                 {
-                    target =GameObject.FindGameObjectWithTag("Enemy_6_transport_position");
-                    agent.Warp(new Vector3 (target.transform.position.x, 0.5f, target.transform.position.z));
+                    target = GameObject.FindGameObjectWithTag("Enemy_6_transport_position");
+                    agent.Warp(new Vector3(target.transform.position.x, 0.5f, target.transform.position.z));
                     enemy6_teleport_checker = enemy6_teleport;
                     target = GameObject.Find("Ashe");
+                    EASChecker = 0.5f;
                 }
-                target = GameObject.Find("Ashe");
-                Vector3 lookatposition = new Vector3(target.transform.position.x, 0.5f, target.transform.position.z);
-                transform.LookAt(lookatposition);
-                Vector3 newPos = Player.transform.position;
-                //Vector3 newPos = transform.position ;
-                agent.SetDestination(newPos);
+                else 
+                {
+                    target = GameObject.Find("Ashe");
+                    Vector3 lookatposition = new Vector3(target.transform.position.x, 0.5f, target.transform.position.z);
+                    transform.LookAt(lookatposition);
+                    Vector3 newPos = Player.transform.position;
+                    //Vector3 newPos = transform.position ;
+                    agent.SetDestination(newPos);
+                }
+                
             }
 
            /* if (EASChecker <= 0)
