@@ -17,9 +17,10 @@ TagManager:
   - Wall
   - Undefined
   - UIButton
-  - Enemy5
   - Enemy_5
   - Background Music
+  - Enemy_6
+  - Enemy_6_transport_position
   layers:
   - Default
   - TransparentFX
