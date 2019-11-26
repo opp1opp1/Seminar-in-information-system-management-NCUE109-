@@ -219,7 +219,8 @@ public class EnemyBehavior : MonoBehaviour
                     target = GameObject.Find("Ashe");
                     Vector3 lookatposition = new Vector3(target.transform.position.x, 0.1f, target.transform.position.z);
                     transform.LookAt(lookatposition);
-                    Instantiate(Enemy6_warning_square, new Vector3(Mathf.Lerp(transform.position.x, Player.transform.position.x, 0.5f), 0.1f, Mathf.Lerp(transform.position.z, Player.transform.position.z, 0.5f)), Quaternion.Euler(0f,this.transform.rotation.y , 0f));
+                    Instantiate(Enemy6_warning_square, new Vector3(Mathf.Lerp(transform.position.x, Player.transform.position.x, 0.8f), 0.1f, Mathf.Lerp(transform.position.z, Player.transform.position.z, 0.8f)),transform.rotation);
+                    
                     EASChecker = EAS;
                 }
                 else
