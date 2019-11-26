@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class AttackGenerator : MonoBehaviour {
-    private float attackfixtime = 0.5f;
+    private float attackfixtime = 1.5f;
     private GameObject target;
-	// Use this for initialization
-	void Start () {
+    private GameObject Enemy6;
+    // Use this for initialization
+    void Start () {
 		
 	}
 	
@@ -15,11 +16,14 @@ public class AttackGenerator : MonoBehaviour {
         attackfixtime -= Time.deltaTime;
         if (attackfixtime >= 0)
         {
-            target = GameObject.Find("Ashe");
-            transform.LookAt(target.transform.position);
+            //target = GameObject.Find("Ashe");
+            //transform.LookAt(target.transform.position);
+            
+            
         }
         else
         {
+            
             Destroy(this.gameObject);
         }
 	}

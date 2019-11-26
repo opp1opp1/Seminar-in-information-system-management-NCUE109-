@@ -26,6 +26,7 @@ public class EnemyBehavior : MonoBehaviour
     private float burncounter = 0f;
     public float burndamage;
     private float tempDamage;
+    private float Freezetime;
     public float stuntimer = 0f;
     private bool Instantiateonce = false;
     public Transform emission;
@@ -219,8 +220,9 @@ public class EnemyBehavior : MonoBehaviour
                     target = GameObject.Find("Ashe");
                     Vector3 lookatposition = new Vector3(target.transform.position.x, 0.1f, target.transform.position.z);
                     transform.LookAt(lookatposition);
-                    Instantiate(Enemy6_warning_square, new Vector3(Mathf.Lerp(transform.position.x, Player.transform.position.x, 0.8f), 0.1f, Mathf.Lerp(transform.position.z, Player.transform.position.z, 0.8f)),transform.rotation);
-                    
+                    Instantiate(Enemy6_warning_square, new Vector3(Mathf.Lerp(transform.position.x, Player.transform.position.x, 0.8f), 0.1f, Mathf.Lerp(transform.position.z, Player.transform.position.z, 0.8f)),transform.rotation,this.gameObject.transform);
+                    //Instantiate(Enemy6_warning_square, new Vector3(transform.position.x, transform.position.y, transform.position.z), transform.rotation, this.gameObject.transform);
+                    Freeze(1.5f);
                     EASChecker = EAS;
                 }
                 else
@@ -533,6 +535,16 @@ public class EnemyBehavior : MonoBehaviour
             }
         }
 
+    }
+    private void Freeze(float time)
+    {
+        time -= Time.deltaTime;
+
+        gameObject.GetComponent<NavMeshAgent>().isStopped = true;
+        if (time <= 0f)
+        {
+            gameObject.GetComponent<NavMeshAgent>().isStopped = false;
+        }
     }
 }
 

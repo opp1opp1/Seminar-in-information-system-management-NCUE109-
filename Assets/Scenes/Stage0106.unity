@@ -1471,6 +1471,10 @@ Prefab:
       propertyPath: m_FillMethod
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1233935734821248, guid: 697cde0d259cf0c44a3d6bede04ebcc6, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 697cde0d259cf0c44a3d6bede04ebcc6, type: 2}
   m_IsPrefabParent: 0
@@ -2929,6 +2933,10 @@ Prefab:
       propertyPath: m_Name
       value: Enemy5_ghost (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 1233935734821248, guid: 697cde0d259cf0c44a3d6bede04ebcc6, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 697cde0d259cf0c44a3d6bede04ebcc6, type: 2}
   m_IsPrefabParent: 0
@@ -4169,6 +4177,10 @@ Prefab:
       propertyPath: randomSeed
       value: 187481326
       objectReference: {fileID: 0}
+    - target: {fileID: 1233935734821248, guid: 697cde0d259cf0c44a3d6bede04ebcc6, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 697cde0d259cf0c44a3d6bede04ebcc6, type: 2}
   m_IsPrefabParent: 0
@@ -4394,6 +4406,10 @@ Prefab:
     - target: {fileID: 1233935734821248, guid: 697cde0d259cf0c44a3d6bede04ebcc6, type: 2}
       propertyPath: m_Name
       value: Enemy5_ghost (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1233935734821248, guid: 697cde0d259cf0c44a3d6bede04ebcc6, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 697cde0d259cf0c44a3d6bede04ebcc6, type: 2}
@@ -4677,6 +4693,10 @@ Prefab:
       propertyPath: m_Name
       value: Enemy5_ghost (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1233935734821248, guid: 697cde0d259cf0c44a3d6bede04ebcc6, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 697cde0d259cf0c44a3d6bede04ebcc6, type: 2}
   m_IsPrefabParent: 0
@@ -4837,6 +4857,10 @@ Prefab:
         type: 2}
       propertyPath: randomSeed
       value: 993138801
+      objectReference: {fileID: 0}
+    - target: {fileID: 1233935734821248, guid: 697cde0d259cf0c44a3d6bede04ebcc6, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 697cde0d259cf0c44a3d6bede04ebcc6, type: 2}
