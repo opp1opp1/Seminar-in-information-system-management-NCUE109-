@@ -24,8 +24,19 @@ public class PlayerGetKnockOut : MonoBehaviour {
         {
             SceneManager.LoadScene("MainScene");
             PlayerIni.currentHealth = PlayerIni.basicHealth;
-            PlayerIni.currentSheild = PlayerIni.basicSheild;    
-        }
+            PlayerIni.currentSheild = PlayerIni.basicSheild;
+
+            PlayerIni.Muitishot = false; //連續射擊
+            PlayerIni.MuitishotSecondChecker = false; //連續射擊的第二發判斷器
+            PlayerIni.FrontArrow = false; //齊射
+            PlayerIni.DiagonalArrow = false; //多重射擊
+            PlayerIni.IceArrow = false; //冰屬性
+            PlayerIni.FireArrow = false; //冰屬性
+            PlayerIni.WindArrow = false; //風屬性
+            PlayerIni.EarthArrow = false; //土屬性
+
+
+}
         
     }
     }
