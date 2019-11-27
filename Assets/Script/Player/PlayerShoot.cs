@@ -54,7 +54,7 @@ public class PlayerShoot : MonoBehaviour
     void Update()
     {
         Muitishot = PlayerIni.Muitishot; //連續射擊
-        MuitishotSecondChecker = PlayerIni.MuitishotSecondChecker; //連續射擊的第二發判斷器
+        //MuitishotSecondChecker = PlayerIni.MuitishotSecondChecker; //連續射擊的第二發判斷器
         FrontArrow = PlayerIni.FrontArrow; //齊射
         DiagonalArrow = PlayerIni.DiagonalArrow; //多重射擊
         IceArrow = PlayerIni.IceArrow; //冰屬性
@@ -87,7 +87,7 @@ public class PlayerShoot : MonoBehaviour
                 if (rapidshoot == false)
                 { Instantiate(arrow, transform.position, transform.rotation);
                     CAS = 1/target.GetComponent<PlayerStats>().currentAttackSpeed;
-                    CASChecker = CAS * 2.3f;
+                    CASChecker = CAS * 0.3f;
                     rapidshoot = true;
                 }
                 else if(rapidshoot == true)
@@ -135,7 +135,7 @@ public class PlayerShoot : MonoBehaviour
                                 Instantiate(arrow, transform.position, transform.rotation * Quaternion.AngleAxis(-45, transform.up));
                             }
                             CAS = 1/target.GetComponent<PlayerStats>().currentAttackSpeed;
-                            CASChecker = CAS * 2.3f;
+                            CASChecker = CAS * 0.3f;
                             MuitishotSecondChecker = true;
 
                         }
@@ -197,7 +197,7 @@ public class PlayerShoot : MonoBehaviour
                                 Instantiate(arrow, transform.position, transform.rotation * Quaternion.AngleAxis(-45, transform.up));
                             }
                             CAS = 1/target.GetComponent<PlayerStats>().currentAttackSpeed;
-                            CASChecker = CAS * 2.3f;
+                            CASChecker = CAS * 0.3f;
                             MuitishotSecondChecker = true;
 
                         }
@@ -259,7 +259,7 @@ public class PlayerShoot : MonoBehaviour
                                 Instantiate(arrow, transform.position, transform.rotation * Quaternion.AngleAxis(-45, transform.up));
                             }
                             CAS = 1/target.GetComponent<PlayerStats>().currentAttackSpeed;
-                            CASChecker = CAS * 2.3f;
+                            CASChecker = CAS * 0.3f;
                             MuitishotSecondChecker = true;
 
                         }
@@ -320,11 +320,11 @@ public class PlayerShoot : MonoBehaviour
                                 Instantiate(arrow, transform.position, transform.rotation * Quaternion.AngleAxis(-45, transform.up));
                             }
                             CAS = 1/target.GetComponent<PlayerStats>().currentAttackSpeed;
-                            CASChecker = CAS * 2.3f;
+                            CASChecker = CAS * 0.3f;
                             MuitishotSecondChecker = true;
 
                         }
-                        else
+                        else if (MuitishotSecondChecker == true)
                         {
                             if (FrontArrow == true) //齊射
                             {
@@ -381,11 +381,11 @@ public class PlayerShoot : MonoBehaviour
                                 Instantiate(arrow, transform.position, transform.rotation * Quaternion.AngleAxis(-45, transform.up));
                             }
                             CAS = 1/target.GetComponent<PlayerStats>().currentAttackSpeed;
-                            CASChecker = CAS * 2.3f;
+                            CASChecker = CAS * 0.3f;
                             MuitishotSecondChecker = true;
 
                         }
-                        else
+                        else if (MuitishotSecondChecker == true)
                         {
                             if (FrontArrow == true) //齊射
                             {
@@ -442,11 +442,11 @@ public class PlayerShoot : MonoBehaviour
                                 Instantiate(arrow, transform.position, transform.rotation * Quaternion.AngleAxis(-45, transform.up));
                             }
                             CAS = 1/target.GetComponent<PlayerStats>().currentAttackSpeed;
-                            CASChecker = CAS * 2.3f;
+                            CASChecker = CAS * 0.3f;
                             MuitishotSecondChecker = true;
 
                         }
-                        else
+                        else if (MuitishotSecondChecker == true)
                         {
                             if (FrontArrow == true) //齊射
                             {
@@ -503,11 +503,11 @@ public class PlayerShoot : MonoBehaviour
                                 Instantiate(arrow, transform.position, transform.rotation * Quaternion.AngleAxis(-45, transform.up));
                             }
                             CAS = 1/target.GetComponent<PlayerStats>().currentAttackSpeed;
-                            CASChecker = CAS * 2.3f;
+                            CASChecker = CAS * 0.3f;
                             MuitishotSecondChecker = true;
 
                         }
-                        else
+                        else if (MuitishotSecondChecker == true)
                         {
                             if (FrontArrow == true) //齊射
                             {
@@ -564,11 +564,11 @@ public class PlayerShoot : MonoBehaviour
                                 Instantiate(arrow, transform.position, transform.rotation * Quaternion.AngleAxis(-45, transform.up));
                             }
                             CAS = 1/target.GetComponent<PlayerStats>().currentAttackSpeed;
-                            CASChecker = CAS * 2.3f;
+                            CASChecker = CAS * 0.3f;
                             MuitishotSecondChecker = true;
 
                         }
-                        else
+                        else if (MuitishotSecondChecker == true)
                         {
                             if (FrontArrow == true) //齊射
                             {
@@ -625,7 +625,7 @@ public class PlayerShoot : MonoBehaviour
                                 Instantiate(arrow, transform.position, transform.rotation * Quaternion.AngleAxis(-45, transform.up));
                             }
                             CAS = 1/target.GetComponent<PlayerStats>().currentAttackSpeed;
-                            CASChecker = CAS * 2.3f;
+                            CASChecker = CAS * 0.3f;
                             MuitishotSecondChecker = true;
 
                         }
@@ -687,11 +687,11 @@ public class PlayerShoot : MonoBehaviour
                                 Instantiate(arrow, transform.position, transform.rotation * Quaternion.AngleAxis(-45, transform.up));
                             }
                             CAS = 1/target.GetComponent<PlayerStats>().currentAttackSpeed;
-                            CASChecker = CAS * 2.3f;
+                            CASChecker = CAS * 0.3f;
                             MuitishotSecondChecker = true;
 
                         }
-                        else
+                        else if (MuitishotSecondChecker == true)
                         {
                             if (FrontArrow == true) //齊射
                             {
@@ -736,6 +736,7 @@ public class PlayerShoot : MonoBehaviour
                     {
                         if (MuitishotSecondChecker == false) //判斷是否是第一次射擊
                         {
+                            MuitishotSecondChecker = true;
                             if (FrontArrow == true) //齊射
                             {
                                 Instantiate(arrow, transform.position + (transform.right * 0.2f), transform.rotation);
@@ -750,11 +751,12 @@ public class PlayerShoot : MonoBehaviour
                             }
                             CAS = 1/target.GetComponent<PlayerStats>().currentAttackSpeed;
                             CASChecker = CAS * 0.3f;
-                            MuitishotSecondChecker = true;
+                            
 
                         }
-                        else
+                        else if (MuitishotSecondChecker == true)
                         {
+                            MuitishotSecondChecker = false;
                             if (FrontArrow == true) //齊射
                             {
                                 Instantiate(arrow, transform.position + (transform.right * 0.2f), transform.rotation);
@@ -769,7 +771,7 @@ public class PlayerShoot : MonoBehaviour
                             }
                             CAS = 1/target.GetComponent<PlayerStats>().currentAttackSpeed;
                             CASChecker = CAS * 0.7f;
-                            MuitishotSecondChecker = false;
+                            
                         }
                     }
                     else//沒有土連射
@@ -810,11 +812,11 @@ public class PlayerShoot : MonoBehaviour
                                 Instantiate(arrow, transform.position, transform.rotation * Quaternion.AngleAxis(-45, transform.up));
                             }
                             CAS = 1/target.GetComponent<PlayerStats>().currentAttackSpeed;
-                            CASChecker = CAS * 2.3f;
+                            CASChecker = CAS * 0.3f;
                             MuitishotSecondChecker = true;
 
                         }
-                        else
+                        else if (MuitishotSecondChecker == true)
                         {
                             if (FrontArrow == true) //齊射
                             {
