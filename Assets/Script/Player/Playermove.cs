@@ -99,15 +99,37 @@ public class Playermove : MonoBehaviour {
         }
 
         //移動
-        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D))
+        
+        
+         if ((Input.GetKey(KeyCode.A) && Input.GetKey(KeyCode.W))||( Input.GetKey(KeyCode.A) && Input.GetKey(KeyCode.S))|| (Input.GetKey(KeyCode.D) && Input.GetKey(KeyCode.S))||(Input.GetKey(KeyCode.D) && Input.GetKey(KeyCode.W)))
         {
             Characterismoving = true;
-            
-            _animator.SetBool("Characterismoving",true);
-                 //moveDirection.y = moveDirection.y + (Physics.gravity.y * gravityScale * Time.deltaTime);   //賦予角色跳起來後跳下來的速度
+
+            _animator.SetBool("Characterismoving", true);
+            //moveDirection.y = moveDirection.y + (Physics.gravity.y * gravityScale * Time.deltaTime);   //賦予角色跳起來後跳下來的速度
             controller.Move(moveDirection * Time.deltaTime);  //用deltatime去控制每台顯示器不同的平衡
             //moveDirection = new Vector3(Input.GetAxis("Horizontal") * MoveSpeed, moveDirection.y, Input.GetAxis("Vertical") * MoveSpeed);
-            moveDirection = new Vector3(Input.GetAxis("Horizontal") * MoveSpeed, 0 , Input.GetAxis("Vertical") * MoveSpeed);
+            moveDirection = new Vector3(Input.GetAxis("Horizontal") / Mathf.Sqrt(2)*MoveSpeed, 0, Input.GetAxis("Vertical") / Mathf.Sqrt(2) * MoveSpeed);
+        }
+        else if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
+        {
+            Characterismoving = true;
+
+            _animator.SetBool("Characterismoving", true);
+            //moveDirection.y = moveDirection.y + (Physics.gravity.y * gravityScale * Time.deltaTime);   //賦予角色跳起來後跳下來的速度
+            controller.Move(moveDirection * Time.deltaTime);  //用deltatime去控制每台顯示器不同的平衡
+            //moveDirection = new Vector3(Input.GetAxis("Horizontal") * MoveSpeed, moveDirection.y, Input.GetAxis("Vertical") * MoveSpeed);
+            moveDirection = new Vector3(Input.GetAxis("Horizontal") * MoveSpeed, 0, 0);
+        }
+        else if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S))
+        {
+            Characterismoving = true;
+
+            _animator.SetBool("Characterismoving", true);
+            //moveDirection.y = moveDirection.y + (Physics.gravity.y * gravityScale * Time.deltaTime);   //賦予角色跳起來後跳下來的速度
+            controller.Move(moveDirection * Time.deltaTime);  //用deltatime去控制每台顯示器不同的平衡
+            //moveDirection = new Vector3(Input.GetAxis("Horizontal") * MoveSpeed, moveDirection.y, Input.GetAxis("Vertical") * MoveSpeed);
+            moveDirection = new Vector3(0, 0, Input.GetAxis("Vertical") * MoveSpeed);
         }
         else
         {
