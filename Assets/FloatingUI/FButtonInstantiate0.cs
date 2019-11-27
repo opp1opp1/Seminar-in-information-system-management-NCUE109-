@@ -37,49 +37,49 @@ public class FButtonInstantiate0 : MonoBehaviour {  //隨機生成三個指定�
         {
             if (PlayerIni.EarthArrow == true)
             {
-                Ins_Objs1();
+                return Ins_Objs1();
             }
         }
         if (Random_Objects == 4)
         {
             if (PlayerIni.FireArrow == true)
             {
-                Ins_Objs1();
+                return Ins_Objs1();
             }
         }
         if (Random_Objects == 5)
         {
             if (PlayerIni.IceArrow == true)
             {
-                Ins_Objs1();
+                return Ins_Objs1();
             }
         }
         if (Random_Objects == 6)
         {
             if (PlayerIni.WindArrow == true)
             {
-                Ins_Objs1();
+                return Ins_Objs1();
             }
         }
         if (Random_Objects == 7)
         {
             if (PlayerIni.DiagonalArrow == true)
             {
-                Ins_Objs1();
+                return Ins_Objs1();
             }
         }
         if (Random_Objects == 8)
         {
             if (PlayerIni.FrontArrow == true)
             {
-                Ins_Objs1();
+                return Ins_Objs1();
             }
         }
         if (Random_Objects == 9)
         {
             if (PlayerIni.Muitishot == true)
             {
-                Ins_Objs1();
+                return Ins_Objs1();
             }
         }
         clone_01 = Instantiate(Objects[Random_Objects], point_01.transform.position,    //生成物件
@@ -95,49 +95,49 @@ public class FButtonInstantiate0 : MonoBehaviour {  //隨機生成三個指定�
         {
             if (PlayerIni.EarthArrow == true)
             {
-                Ins_Objs2();
+                return Ins_Objs2();
             }
         }
         if (Random_Objects == 4)
         {
             if (PlayerIni.FireArrow == true)
             {
-                Ins_Objs2();
+                return Ins_Objs2();
             }
         }
         if (Random_Objects == 5)
         {
             if (PlayerIni.IceArrow == true)
             {
-                Ins_Objs2();
+                return Ins_Objs2();
             }
         }
         if (Random_Objects == 6)
         {
             if (PlayerIni.WindArrow == true)
             {
-                Ins_Objs2();
+                return Ins_Objs2();
             }
         }
         if (Random_Objects == 7)
         {
             if (PlayerIni.DiagonalArrow == true)
             {
-                Ins_Objs2();
+                return Ins_Objs2();
             }
         }
         if (Random_Objects == 8)
         {
             if (PlayerIni.FrontArrow == true)
             {
-                Ins_Objs2();
+                return Ins_Objs2();
             }
         }
         if (Random_Objects == 9)
         {
             if (PlayerIni.Muitishot == true)
             {
-                Ins_Objs2();
+                return Ins_Objs2();
             }
         }
         clone_02 = Instantiate(Objects[Random_Objects], point_02.transform.position,
@@ -153,49 +153,49 @@ public class FButtonInstantiate0 : MonoBehaviour {  //隨機生成三個指定�
         {
             if (PlayerIni.EarthArrow == true)
             {
-                Ins_Objs3();
+                return Ins_Objs3();
             }
         }
         if (Random_Objects == 4)
         {
             if (PlayerIni.FireArrow == true)
             {
-                Ins_Objs3();
+                return Ins_Objs3();
             }
         }
         if (Random_Objects == 5)
         {
             if (PlayerIni.IceArrow == true)
             {
-                Ins_Objs3();
+                return Ins_Objs3();
             }
         }
         if (Random_Objects == 6)
         {
             if (PlayerIni.WindArrow == true)
             {
-                Ins_Objs3();
+                return Ins_Objs3();
             }
         }
         if (Random_Objects == 7)
         {
             if (PlayerIni.DiagonalArrow == true)
             {
-                Ins_Objs3();
+                return Ins_Objs3();
             }
         }
         if (Random_Objects == 8)
         {
             if (PlayerIni.FrontArrow == true)
             {
-                Ins_Objs3();
+                return Ins_Objs3();
             }
         }
         if (Random_Objects == 9)
         {
             if (PlayerIni.Muitishot == true)
             {
-                Ins_Objs3();
+                return Ins_Objs3();
             }
         }
         clone_03 = Instantiate(Objects[Random_Objects], point_03.transform.position,
