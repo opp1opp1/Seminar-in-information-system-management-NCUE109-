@@ -21,13 +21,13 @@ public class Elementalpower : MonoBehaviour {
     {
 
     }
-    public void OnClick()
+    public void OnClick()   //出現按鈕 點及按鈕 產生按鈕效果 把按鈕物件變成null
     {
         if (this.gameObject.name == "earth(Clone)")
         {
             PlayerIni.EarthArrow = true;
             Debug.Log("Yes! Earth is on!!!");
-            //obj.GetComponent<FButtonInstantiate0>().Objects[3] = null;
+            //obj.GetComponent<FButtonInstantiate0>().Objects[3] = null; 
         }
         if (this.gameObject.name == "fire(Clone)")
         {
