@@ -1,10 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public static class PlayerIni
-{
-    public static float basicHealth = 100;
+{   
+    
+    public static float basicHealth = PlayerPrefs.GetFloat("Health");
     public static float basicSheild = 100;
     public static float currentHealth = 100;
     public static float currentSheild = 0;
@@ -24,6 +26,6 @@ public static class PlayerIni
 
 
 
-
+   
 }
 
