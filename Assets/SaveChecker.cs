@@ -11,6 +11,15 @@ public class SaveChecker : MonoBehaviour {
         {
             PlayerPrefs.SetFloat("Health", 120.0F);
         }
+        if (PlayerPrefs.GetFloat("Attack") == 0)
+        {
+            PlayerPrefs.SetFloat("Attack", 20.0F);
+        }
+        if (PlayerPrefs.GetFloat("AttackSpeed") == 0)
+        {
+            PlayerPrefs.SetFloat("AttackSpeed", 1.0F);
+        }
+        PlayerPrefs.GetFloat("Money");
 
     }
 	
