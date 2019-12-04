@@ -42,43 +42,21 @@ public class Playermove : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        
+
 #if UNITY_IOS || UNITY_ANDROID
 
-        float moveY = 0;// 上下移动的速度         
-        float moveX = 0;//左右移动的速度
-        if (Input.touchCount > 0)   //当触摸数量大于0
+
+        int touchNum = Input.touchCount;
+
+        if (touchNum > 0)
         {
-            for (int i = 0; i < Input.touchCount; i++)
+            Touch touch = Input.GetTouch(0);
+            if (touch.phase == TouchPhase.Moved)
             {
-                Touch touch = Input.touches[i];     //实例化当前触摸点
-                touchPosition = touch.position; //获取触摸点坐标
-                if (Input.GetTouch(0).phase == TouchPhase.Moved)
-                {
-                    if (touchPosition.x < screenWeight / 2)   //触摸点坐标的x如果在屏幕左半方
-                    {
-                        if (fristPos.y < twoPos.y && Camera.main.WorldToScreenPoint(transform.position).y < Screen.height)
-                        {
-                            moveY += m_speed * Time.deltaTime;
-                        }
-                        //判断向下移动,并且不出下边屏幕 
-                        if (fristPos.y > twoPos.y && Camera.main.WorldToScreenPoint(transform.position).y > 0)
-                        {
-                            moveY -= m_speed * Time.deltaTime;
-                        }
-                        //判断向左移动,并且不出左边屏幕 
-                        if (fristPos.x > twoPos.x && Camera.main.WorldToScreenPoint(transform.position).x > 0)
-                        {
-                            moveX -= m_speed * Time.deltaTime;
-                        }
-                        //判断向右移动,并且不出右边屏幕 
-                        if (fristPos.x < twoPos.x && Camera.main.WorldToScreenPoint(transform.position).x < Screen.width)
-                        {
-                            moveX += m_speed *  Time.deltaTime;
-                        }
-                        transform.Translate(moveX, moveY, 0);
-                    }
-                }
+                Characterismoving = true;
+                _animator.SetBool("Characterismoving", true);
+                Vector3 dir = new Vector3(touch.deltaPosition.x, touch.deltaPosition.y, 0f) *MoveSpeed;
+                controller.Move(dir * Time.deltaTime);
             }
         }
 #endif
