@@ -21,7 +21,7 @@ public class PauseScript : MonoBehaviour {
             //繼續音樂
             bgMusicAudioSource.UnPause();
           
-            Time.timeScale = 1;
+            Time.timeScale = 1; 
             isPaused = false;
             Instantiate(Showmusic, transform.position, transform.rotation);
 

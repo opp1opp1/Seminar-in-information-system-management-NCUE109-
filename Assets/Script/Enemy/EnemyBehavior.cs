@@ -186,12 +186,22 @@ public class EnemyBehavior : MonoBehaviour
                 Vector3 dir3 = transform.position  +new Vector3(-1.0f, 3.0f, 0.0f);
                 Vector3 dir4 = transform.position  +new Vector3(0.0f, 3.0f, 1.0f);
                 Vector3 dir5 = transform.position  +new Vector3(0.0f, 3.0f, -1.0f);
+                Vector3 dir6 = transform.position + new Vector3(1.0f, 1.5f, 0.0f);
+                Vector3 dir7 = transform.position + new Vector3(0.0f, 1.5f, 0.0f);
+                Vector3 dir8 = transform.position + new Vector3(-1.0f,1.5f, 0.0f);
+                Vector3 dir9 = transform.position + new Vector3(0.0f, 1.5f, 1.0f);
+                Vector3 dir10 = transform.position + new Vector3(0.0f, 1.5f, -1.0f);
 
                 Instantiate(Enemy4_ball, dir1, transform.rotation);
                 Instantiate(Enemy4_ball, dir2, transform.rotation);
                 Instantiate(Enemy4_ball, dir3, transform.rotation);
                 Instantiate(Enemy4_ball, dir4, transform.rotation);
                 Instantiate(Enemy4_ball, dir5, transform.rotation);
+                Instantiate(Enemy4_ball, dir6, transform.rotation);
+                Instantiate(Enemy4_ball, dir7, transform.rotation);
+                Instantiate(Enemy4_ball, dir8, transform.rotation);
+                Instantiate(Enemy4_ball, dir9, transform.rotation);
+                Instantiate(Enemy4_ball, dir10, transform.rotation);
 
                 EASChecker = EAS;
             }
