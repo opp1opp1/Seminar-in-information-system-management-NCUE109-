@@ -5,15 +5,15 @@ using UnityEngine;
 public class WallMove : MonoBehaviour {
     private int direction =1;
     public float changetime = 1f;
-    public GameObject ash;
+    public GameObject ashe;
     // Use this for initialization
     void Start () {
-        ash = GameObject.Find("Ashe");
+        ashe = GameObject.Find("Ashe");
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        if (!ash.GetComponent<FUIAppear>().isPaused)
+        if (!ashe.GetComponent<FUIAppear>().isPaused)
         {
             changetime -= Time.deltaTime;
             transform.Translate(0, 0, 0.1f * direction);
