@@ -16,7 +16,6 @@ public class FButtonInstantiate0 : MonoBehaviour {  //隨機生成三個指定�
     // Use this for initialization
     void Start () {
         gameFPanel = GameObject.Find("FPanel"); //拿來把clone放到FPanel底下之用
-        
     }
 
     // Update is called once per frame
