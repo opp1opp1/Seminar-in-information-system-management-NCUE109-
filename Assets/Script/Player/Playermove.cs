@@ -8,7 +8,7 @@ public class Playermove : MonoBehaviour {
     //private float rotationz = 0.0f;         //Z轴旋转量
     //public float rotateSpeed_Axisy = 45f;     //绕Z轴旋转速度
     private Vector2 touchPosition;          //触摸点坐标
-    //private float screenWeight;             //屏幕宽度
+    private float screenWeight;             //屏幕宽度
     public Vector3 fristPos;//接触时的position 
     public Vector3 twoPos;//移动后的position 
 
@@ -44,7 +44,6 @@ public class Playermove : MonoBehaviour {
 	void Update () {
         
 #if UNITY_IOS || UNITY_ANDROID
-...//这里的代码在IOS和Android平台都会编译
 
         float moveY = 0;// 上下移动的速度         
         float moveX = 0;//左右移动的速度
