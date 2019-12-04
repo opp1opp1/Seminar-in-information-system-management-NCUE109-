@@ -254,6 +254,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 2038717439}
     m_Modifications:
+    - target: {fileID: 114322448789122942, guid: bf90cab2e66d45446a8876c05a0fe40d,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 224527509806712492, guid: bf90cab2e66d45446a8876c05a0fe40d,
         type: 2}
       propertyPath: m_LocalPosition.x
@@ -344,9 +349,51 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 114322448789122942, guid: bf90cab2e66d45446a8876c05a0fe40d,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114322448789122942, guid: bf90cab2e66d45446a8876c05a0fe40d,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114322448789122942, guid: bf90cab2e66d45446a8876c05a0fe40d,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 200709773}
+    - target: {fileID: 114322448789122942, guid: bf90cab2e66d45446a8876c05a0fe40d,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: pauseGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 114322448789122942, guid: bf90cab2e66d45446a8876c05a0fe40d,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bf90cab2e66d45446a8876c05a0fe40d, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &200709772 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1158287768012118, guid: bf90cab2e66d45446a8876c05a0fe40d,
+    type: 2}
+  m_PrefabInternal: {fileID: 200709771}
+--- !u!114 &200709773
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 200709772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 563f2778e0ed1db4aa02b7c0e7752d80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Showmusic: {fileID: 0}
 --- !u!1 &203686354
 GameObject:
   m_ObjectHideFlags: 0
