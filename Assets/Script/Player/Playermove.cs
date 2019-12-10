@@ -55,7 +55,7 @@ public class Playermove : MonoBehaviour {
             {
                 Characterismoving = true;
                 _animator.SetBool("Characterismoving", true);
-                Vector3 dir = new Vector3(touch.deltaPosition.x/touch.deltaPosition.y+ touch.deltaPosition.x, 0f,touch.deltaPosition.y / touch.deltaPosition.y + touch.deltaPosition.x);
+                Vector3 dir = new Vector3(Mathf.Sqrt(Mathf.Pow(touch.deltaPosition.x,2)/(Mathf.Pow(touch.deltaPosition.y,2)+Mathf.Pow(touch.deltaPosition.x,2))), 0f, Mathf.Sqrt(Mathf.Pow(touch.deltaPosition.y, 2) / (Mathf.Pow(touch.deltaPosition.y, 2) + Mathf.Pow(touch.deltaPosition.x, 2))));
                 controller.Move(dir *MoveSpeed* Time.deltaTime);
             }
         }
