@@ -22,7 +22,8 @@ public class Playermove : MonoBehaviour {
     public float gravityScale;
     public bool Characterismoving =false;
     private Animator _animator;
-
+    private Vector2 FirstTouch;
+    private Vector2 direction;
     //碰撞
     //包含上述MoveSpeed
     public float deltaTime;
@@ -50,12 +51,18 @@ public class Playermove : MonoBehaviour {
 
         if (touchNum > 0)
         {
+            
             Touch touch = Input.GetTouch(0);
-            if (touch.phase == TouchPhase.Moved)
+            if (touch.phase == TouchPhase.Began)
+            {
+                 FirstTouch = touch.position;
+            }
+            if ((touch.phase == TouchPhase.Moved) || (touch.phase == TouchPhase.Stationary))
             {
                 Characterismoving = true;
                 _animator.SetBool("Characterismoving", true);
-                Vector3 dir = new Vector3(Mathf.Sqrt(Mathf.Pow(touch.deltaPosition.x,2)/(Mathf.Pow(touch.deltaPosition.y,2)+Mathf.Pow(touch.deltaPosition.x,2))), 0f, Mathf.Sqrt(Mathf.Pow(touch.deltaPosition.y, 2) / (Mathf.Pow(touch.deltaPosition.y, 2) + Mathf.Pow(touch.deltaPosition.x, 2))));
+                direction =  touch.position-FirstTouch;
+                Vector3 dir = new Vector3(direction.x / Mathf.Sqrt(Mathf.Pow(direction.x, 2) + Mathf.Pow(direction.y, 2)), 0f, direction.y / Mathf.Sqrt(Mathf.Pow(direction.x, 2) + Mathf.Pow(direction.y, 2)));
                 controller.Move(dir *MoveSpeed* Time.deltaTime);
             }
         }
