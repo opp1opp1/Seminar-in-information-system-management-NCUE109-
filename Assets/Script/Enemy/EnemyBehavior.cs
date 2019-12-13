@@ -103,7 +103,7 @@ public class EnemyBehavior : MonoBehaviour
             {
                 hand.GetComponent<handanimation>().hand_animator.SetBool("Attacking", true);
                 target = GameObject.Find("Ashe");
-                transform.LookAt(target.transform.position);
+                transform.LookAt(target.transform.position, transform.up);
                 Instantiate(Enemy2_bullet, transform.position, transform.rotation);
                 EASChecker = EAS;
             }
@@ -136,8 +136,8 @@ public class EnemyBehavior : MonoBehaviour
                 {
 
                     
-                    Vector3 lookatposition = new Vector3(target.transform.position.x, 1f, target.transform.position.z);
-                    transform.LookAt(lookatposition);
+                    Vector3 lookatposition = new Vector3(target.transform.position.x, transform.position.y, target.transform.position.z);
+                    transform.LookAt(lookatposition, transform.up);
                     do
                     {
                         Instantiate(Enemy3_Sword, new Vector3(Mathf.Lerp(transform.position.x, Player.transform.position.x, 0.5f), 1f, Mathf.Lerp(transform.position.z, Player.transform.position.z, 0.5f)), transform.rotation);
@@ -151,8 +151,8 @@ public class EnemyBehavior : MonoBehaviour
             else if (distance < this.GetComponent<EnemyStat>().WakeUpDistance)
             {
                 
-                Vector3 lookatposition = new Vector3(target.transform.position.x, 1f, target.transform.position.z);
-                transform.LookAt(lookatposition);
+                Vector3 lookatposition = new Vector3(target.transform.position.x, transform.position.y, target.transform.position.z);
+                transform.LookAt(lookatposition, transform.up);
                 Vector3 newPos = Player.transform.position;
                 //Vector3 newPos = transform.position ;
                 agent.SetDestination(newPos);
@@ -178,7 +178,7 @@ public class EnemyBehavior : MonoBehaviour
               
                 target = GameObject.Find("Ashe");
 
-                transform.LookAt(target.transform.position);
+                transform.LookAt(target.transform.position, transform.up);
                 // transform.rotation = Quaternion.Slerp(transform.rotation, change_angle, 0.2f);
                 //transform.position += new Vector3(0.0f, 3.0f, 0.0f);
                 Vector3 dir1 = transform.position  +new Vector3(1.0f, 3.0f, 0.0f);
@@ -229,7 +229,7 @@ public class EnemyBehavior : MonoBehaviour
                 {
                     target = GameObject.Find("Ashe");
                     Vector3 lookatposition = new Vector3(target.transform.position.x, 0.1f, target.transform.position.z);
-                    transform.LookAt(lookatposition);
+                    transform.LookAt(lookatposition, transform.up);
                     Instantiate(Enemy6_warning_square, new Vector3(Mathf.Lerp(transform.position.x, Player.transform.position.x, 0.8f), 0.1f, Mathf.Lerp(transform.position.z, Player.transform.position.z, 0.8f)),transform.rotation,this.gameObject.transform);
                     //Instantiate(Enemy6_warning_square, new Vector3(transform.position.x, transform.position.y, transform.position.z), transform.rotation, this.gameObject.transform);
                     Freeze(1.5f);
@@ -239,7 +239,7 @@ public class EnemyBehavior : MonoBehaviour
                 {
                     target = GameObject.Find("Ashe");
                     Vector3 lookatposition = new Vector3(target.transform.position.x, 0.5f, target.transform.position.z);
-                    transform.LookAt(lookatposition);
+                    transform.LookAt(lookatposition, transform.up);
                     Vector3 newPos = Player.transform.position;
                     //Vector3 newPos = transform.position ;
                     agent.SetDestination(newPos);
@@ -259,7 +259,7 @@ public class EnemyBehavior : MonoBehaviour
                 {
                     target = GameObject.Find("Ashe");
                     Vector3 lookatposition = new Vector3(target.transform.position.x, 0.5f, target.transform.position.z);
-                    transform.LookAt(lookatposition);
+                    transform.LookAt(lookatposition, transform.up);
                     Vector3 newPos = Player.transform.position;
                     //Vector3 newPos = transform.position ;
                     agent.SetDestination(newPos);
@@ -267,15 +267,15 @@ public class EnemyBehavior : MonoBehaviour
                 
             }
 
-           /* if (EASChecker <= 0)
-            {
-                
-                target = GameObject.Find("Ashe");
-                transform.LookAt(target.transform.position);
-                Instantiate(Enemy2_bullet, transform.position, transform.rotation);
-                EASChecker = EAS;
-            }
-            */
+            /* if (EASChecker <= 0)
+             {
+
+                 target = GameObject.Find("Ashe");
+                 transform.LookAt(target.transform.position, transform.up);
+                 Instantiate(Enemy2_bullet, transform.position, transform.rotation);
+                 EASChecker = EAS;
+             }
+             */
         }
         if (slowtimer > 0.1f)
         {

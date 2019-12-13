@@ -39,13 +39,16 @@ public class PlayerRotation : MonoBehaviour
          */
         if (OnGetEnemy() != null)
         {
-            transform.LookAt(new Vector3(OnGetEnemy().position.x, 0.5f, OnGetEnemy().position.z));
+            transform.LookAt(new Vector3(OnGetEnemy().position.x, transform.position.y, OnGetEnemy().position.z), transform.up);
+           // Vector3 lookVector = OnGetEnemy().transform.position - transform.position;
+           // lookVector.y = transform.position.y;
+           // Quaternion rot = Quaternion.LookRotation(lookVector);
+           // transform.rotation = Quaternion.Slerp(transform.rotation, rot, 1);
         }
         else
         {
             transform.rotation = Quaternion.Euler(0,0,0);
         }
-        
     }
     public Transform OnGetEnemy()
     {
