@@ -99,7 +99,6 @@ GameObject:
   - component: {fileID: 114825469269544968}
   - component: {fileID: 198146413763531072}
   - component: {fileID: 199155909389271060}
-  - component: {fileID: 95616963584508318}
   m_Layer: 9
   m_Name: Enemy1
   m_TagString: Enemy_1
@@ -337,23 +336,6 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!95 &95616963584508318
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1768816727181462}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: acc3964b7a9039e4eac59c7b5a10071f, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &114285462944406048
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -434,6 +416,7 @@ MonoBehaviour:
   emission: {fileID: 0}
   XiangYu: {fileID: 0}
   hand: {fileID: 0}
+  Enemy6_warning_square: {fileID: 0}
 --- !u!114 &114793262677546234
 MonoBehaviour:
   m_ObjectHideFlags: 1

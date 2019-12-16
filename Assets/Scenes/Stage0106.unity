@@ -1411,6 +1411,17 @@ MonoBehaviour:
   m_VoxelSize: 0.06666667
   m_BuildHeightMesh: 0
   m_NavMeshData: {fileID: 23800000, guid: 2cd6fb9353ace2f4894daecbfd57c9b1, type: 2}
+--- !u!114 &729567038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 729567036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c2a6306ed3cbb941a6fe379adafb2cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &729567039
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4126,6 +4137,10 @@ Prefab:
       propertyPath: m_TagString
       value: Wall
       objectReference: {fileID: 0}
+    - target: {fileID: 9500000, guid: 6c4bb31b6a481764887ae722b141439c, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 04e1b873469d0d54d857d8dc65e05e88, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6c4bb31b6a481764887ae722b141439c, type: 3}
   m_IsPrefabParent: 0

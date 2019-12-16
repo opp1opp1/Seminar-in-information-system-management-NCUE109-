@@ -21,7 +21,7 @@ public class FUIAppear : MonoBehaviour {//套在Ashe身上
 	}
     private void OnTriggerEnter(Collider col)   //碰撞事件:用Trigger和Collider，因為是要碰撞到可穿透的物件
     {
-        if(col.gameObject.name == "powerup(Clone)") //如果Ashe撞到powerup
+        if(col.gameObject.name == "powerup(Clone)"|| col.gameObject.name == "powerup(Tutorial)") //如果Ashe撞到powerup
         {
             gameFPanel.GetComponent<FButtonInstantiate0>().stop = true; //吃到powerup時則會出現panel
             gameFPanel.gameObject.SetActive(true);  //顯示FPanel

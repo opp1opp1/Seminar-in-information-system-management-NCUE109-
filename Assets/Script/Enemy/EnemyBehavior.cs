@@ -15,6 +15,7 @@ public class EnemyBehavior : MonoBehaviour
     private GameObject target;
     private GameObject arrow;
     public GameObject PowerUp;
+    public GameObject PowerUpTutorial;
     private float targethealth;
     private float targetShield;
     public float EAS;
@@ -503,13 +504,24 @@ public class EnemyBehavior : MonoBehaviour
                 if (Instantiateonce == false)
                 {
                     int f = Random.Range(0, 100);
-                    if (f >= 40)
+                    if (this.gameObject.name != "Dummy")
                     {
-                        Instantiate(PowerUp, transform.position, transform.rotation);
-                        Instantiateonce = true;
+                        if (f >= 40)
+                        {
+                            Instantiate(PowerUp, transform.position, transform.rotation);
+                            Instantiateonce = true;
+                        }
+                        else
+                        {
+                            Destroy(gameObject);
+                        }
                     }
                     else
+                    {
+                        Instantiate(PowerUpTutorial, transform.position, transform.rotation);
+                        Instantiateonce = true;
                         Destroy(gameObject);
+                    }
                 }
 
 
