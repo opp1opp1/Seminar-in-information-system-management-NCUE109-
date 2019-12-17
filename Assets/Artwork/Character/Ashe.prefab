@@ -1532,7 +1532,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8cf31f2f6df0e3b4fa3c7df762495bcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameFPanel: {fileID: 0}
+  Mask: {fileID: 0}
   isPaused: 0
+  stop_button: {fileID: 0}
+  st: 0
 --- !u!114 &114523119960540650
 MonoBehaviour:
   m_ObjectHideFlags: 1

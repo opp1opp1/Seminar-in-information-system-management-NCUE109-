@@ -370,7 +370,6 @@ GameObject:
   - component: {fileID: 33750817224934168}
   - component: {fileID: 65446498794608718}
   - component: {fileID: 23904496967136498}
-  - component: {fileID: 114798499270419156}
   m_Layer: 0
   m_Name: powerup(Tutorial)
   m_TagString: Untagged
@@ -940,15 +939,3 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114798499270419156
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1902206376596412}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b531c8f3101af041ad4564935b07898, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Mask: {fileID: 1168202916060220, guid: 25fb9ddf69a67d747a67f6bcd9aebc0c, type: 2}
