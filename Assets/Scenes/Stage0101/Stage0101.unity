@@ -1770,7 +1770,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1240925123
-  m_SortingLayer: 1
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -4832,6 +4832,11 @@ Prefab:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 224185577999013764, guid: d244b02b734e36b49a7f1e9dc5e7835a,
+        type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 200
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d244b02b734e36b49a7f1e9dc5e7835a, type: 2}
   m_IsPrefabParent: 0
@@ -5016,7 +5021,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.06666667
   m_BuildHeightMesh: 0
-  m_NavMeshData: {fileID: 23800000, guid: 5f088a8132ca96342a3a31ac6c5b5a3e, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 111585eceb795fa4896a567623d38ecf, type: 2}
 --- !u!4 &1922669332
 Transform:
   m_ObjectHideFlags: 0
