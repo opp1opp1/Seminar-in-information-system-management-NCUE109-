@@ -35,7 +35,7 @@ TagManager:
   - Enemy_bullet
   - Player_bullet
   - 
-  - 
+  - FloatingUI
   - 
   - backPause
   - 
@@ -57,4 +57,10 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: FloatingUI
+    uniqueID: 3054042173
+    locked: 0
+  - name: UI
+    uniqueID: 596629245
     locked: 0
