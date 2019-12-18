@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 222454859851047538}
   - component: {fileID: 114260854200356132}
   - component: {fileID: 212106415942966118}
+  - component: {fileID: 114547013631665650}
   m_Layer: 5
   m_Name: HP
   m_TagString: Untagged
@@ -62,6 +63,18 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: HP
+--- !u!114 &114547013631665650
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1423824216680770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c696fe0dc5e7fd46b5f74097af37ceb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Ashe: {fileID: 1528883516536896, guid: 80578e19eccc31142a9e3e02a69aa601, type: 2}
 --- !u!212 &212106415942966118
 SpriteRenderer:
   m_ObjectHideFlags: 1
