@@ -13,6 +13,7 @@ public class EnemyBehavior : MonoBehaviour
     //public float WakeUpDistance;
     //public float ColliderDamage;
     private GameObject target;
+    private GameObject destroyobject;
     private GameObject arrow;
     public GameObject PowerUp;
     public GameObject PowerUpTutorial;
@@ -37,6 +38,10 @@ public class EnemyBehavior : MonoBehaviour
     private float enemy6_teleport = 5.0f;
     private float enemy6_teleport_checker;
     public GameObject Enemy6_warning_square;
+    public GameObject Enemy4_warning;
+    
+
+
     // Use this for initialization
     void Start()
     {
@@ -50,8 +55,12 @@ public class EnemyBehavior : MonoBehaviour
         EAS = GetComponent<EnemyStat>().enemyattackspeed;
         EASChecker = EAS;
         slowagentspeed = agentspeed * 0.75f;
-        
+
+
+
     }
+   
+   
      void Awake()
     {
         if (this.gameObject.tag == "Enemy_3")
@@ -171,18 +180,36 @@ public class EnemyBehavior : MonoBehaviour
                 Vector3 newPos = transform.position + dirToPlayer;
                 //Vector3 newPos = transform.position ;
                 agent.SetDestination(newPos);
+
+                destroyobject = GameObject.Find("enemy4_warning(Clone)");
+                Destroy(destroyobject);
+                //Quaternion change_angle = Quaternion.Euler(0, 0, 90);
+
+                target = GameObject.Find("Ashe");
+
+                Vector3 lookatposition = new Vector3(target.transform.position.x, 0.1f, target.transform.position.z);
+                transform.LookAt(lookatposition, transform.up);
+                Instantiate(Enemy4_warning, lookatposition, transform.rotation, this.gameObject.transform);
+
+
+
             }
 
             if (EASChecker <= 0)
             {
-                //Quaternion change_angle = Quaternion.Euler(0, 0, 90);
-              
+
+
+                //Freeze(0.5f);
+
                 target = GameObject.Find("Ashe");
+
+
+
 
                 transform.LookAt(target.transform.position, transform.up);
                 // transform.rotation = Quaternion.Slerp(transform.rotation, change_angle, 0.2f);
                 //transform.position += new Vector3(0.0f, 3.0f, 0.0f);
-                Vector3 dir1 = transform.position  +new Vector3(1.0f, 3.0f, 0.0f);
+               /* Vector3 dir1 = transform.position  +new Vector3(1.0f, 3.0f, 0.0f);
                 Vector3 dir2 = transform.position  +new Vector3(0.0f, 3.0f, 0.0f);
                 Vector3 dir3 = transform.position  +new Vector3(-1.0f, 3.0f, 0.0f);
                 Vector3 dir4 = transform.position  +new Vector3(0.0f, 3.0f, 1.0f);
@@ -191,7 +218,31 @@ public class EnemyBehavior : MonoBehaviour
                 Vector3 dir7 = transform.position + new Vector3(0.0f, 1.5f, 0.0f);
                 Vector3 dir8 = transform.position + new Vector3(-1.0f,1.5f, 0.0f);
                 Vector3 dir9 = transform.position + new Vector3(0.0f, 1.5f, 1.0f);
-                Vector3 dir10 = transform.position + new Vector3(0.0f, 1.5f, -1.0f);
+                Vector3 dir10 = transform.position + new Vector3(0.0f, 1.5f, -1.0f);*/
+
+
+                 Vector3 dir1 = transform.position + new Vector3(1.15f, 3.5f, 0.0f);
+                Vector3 dir2 = transform.position + new Vector3(0.0f, 3.0f, 0.0f);
+                Vector3 dir3 = transform.position + new Vector3(-1.15f, 3.5f, 0.0f);
+                Vector3 dir4 = transform.position + new Vector3(0.0f, 3.5f, 1.15f);
+                Vector3 dir5 = transform.position + new Vector3(0.0f, 3.5f, -1.15f);
+
+                Vector3 dir6 = transform.position + new Vector3(1.0f, 2.0f, 0.0f);
+                Vector3 dir7 = transform.position + new Vector3(0.0f, 1.5f, 0.0f);
+                Vector3 dir8 = transform.position + new Vector3(-1.0f, 2.0f, 0.0f);
+                Vector3 dir9 = transform.position + new Vector3(0.0f, 2.0f, 1.0f);
+                Vector3 dir10 = transform.position + new Vector3(0.0f, 2.0f, -1.0f);
+
+                /*Vector3 dir1 = transform.position;
+                Vector3 dir2 = transform.position;
+                Vector3 dir3 = transform.position;
+                Vector3 dir4 = transform.position;
+                Vector3 dir5 = transform.position;
+                Vector3 dir6 = transform.position;
+                Vector3 dir7 = transform.position;
+                Vector3 dir8 = transform.position;
+                Vector3 dir9 = transform.position;
+                Vector3 dir10 = transform.position;*/
 
                 Instantiate(Enemy4_ball, dir1, transform.rotation);
                 Instantiate(Enemy4_ball, dir2, transform.rotation);
@@ -205,6 +256,7 @@ public class EnemyBehavior : MonoBehaviour
                 Instantiate(Enemy4_ball, dir10, transform.rotation);
 
                 EASChecker = EAS;
+
             }
 
         }

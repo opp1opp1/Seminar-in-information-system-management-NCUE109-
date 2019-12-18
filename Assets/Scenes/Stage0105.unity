@@ -678,7 +678,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   changetime: 2
-  ash: {fileID: 0}
+  ashe: {fileID: 0}
 --- !u!1 &465366285
 GameObject:
   m_ObjectHideFlags: 0
@@ -1441,6 +1441,17 @@ Prefab:
       value: 
       objectReference: {fileID: 1947008128475744, guid: 159df70f9cfdead4580051007043f032,
         type: 2}
+    - target: {fileID: 114994052768037632, guid: 63c439e91d4186c4db6ed448e83f434b,
+        type: 2}
+      propertyPath: Enemy4_warning
+      value: 
+      objectReference: {fileID: 1376437306000642, guid: 0f43c5d2a8e3b8e419c94cae5ecff225,
+        type: 2}
+    - target: {fileID: 198871933988112636, guid: 63c439e91d4186c4db6ed448e83f434b,
+        type: 2}
+      propertyPath: randomSeed
+      value: 1476816308
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 63c439e91d4186c4db6ed448e83f434b, type: 2}
   m_IsPrefabParent: 0
@@ -2595,7 +2606,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   changetime: 1
-  ash: {fileID: 0}
+  ashe: {fileID: 0}
 --- !u!1 &1390382391
 GameObject:
   m_ObjectHideFlags: 0
@@ -4103,7 +4114,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   changetime: 1
-  ash: {fileID: 0}
+  ashe: {fileID: 0}
 --- !u!1 &2072892852
 GameObject:
   m_ObjectHideFlags: 0
