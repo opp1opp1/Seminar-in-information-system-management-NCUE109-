@@ -1,0 +1,12 @@
+fileFormatVersion: 2
+guid: 2c696fe0dc5e7fd46b5f74097af37ceb
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - Ashe: {fileID: 1528883516536896, guid: 80578e19eccc31142a9e3e02a69aa601, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
