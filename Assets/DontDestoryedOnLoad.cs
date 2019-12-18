@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class DontDestoryedOnLoad : MonoBehaviour {
-private static DontDestoryedOnLoad instance = null;
+    private static DontDestoryedOnLoad instance = null;
     public static DontDestoryedOnLoad Instance {
         get { return instance; }
     }
