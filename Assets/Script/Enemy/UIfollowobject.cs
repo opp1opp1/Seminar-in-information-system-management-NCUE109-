@@ -14,7 +14,7 @@ public class UIfollowobject : MonoBehaviour
     void Update()
     {
         Vector3 namePose = Camera.main.WorldToScreenPoint(this.transform.position);
-        HPlable.transform.position = namePose;
+        HPlable.transform.position = namePose +new Vector3 (60,20,0);
         healthbarback.transform.position = namePose;
         healthbar.transform.position = namePose;
     }
