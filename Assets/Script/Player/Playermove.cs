@@ -48,29 +48,32 @@ public class Playermove : MonoBehaviour {
 
 
         int touchNum = Input.touchCount;
-
-        if (touchNum > 0)
+        if(Time.timeScale!=0)
         {
-
-            Touch touch = Input.GetTouch(0);
-            if (touch.phase == TouchPhase.Began)
+            if (touchNum > 0)
             {
-                FirstTouch = touch.position;
-            }
-            if ((touch.phase == TouchPhase.Moved) || (touch.phase == TouchPhase.Stationary))
-            {
-                Characterismoving = true;
-                _animator.SetBool("Characterismoving", true);
-                direction = touch.position - FirstTouch;
-                Vector3 dir = new Vector3(direction.x / Mathf.Sqrt(Mathf.Pow(direction.x, 2) + Mathf.Pow(direction.y, 2)), 0f, direction.y / Mathf.Sqrt(Mathf.Pow(direction.x, 2) + Mathf.Pow(direction.y, 2)));
-                controller.Move(dir * MoveSpeed * Time.deltaTime);
-            }
-            else
-            { 
-                Characterismoving = false;
-            _animator.SetBool("Characterismoving", false);
-        }
 
+                Touch touch = Input.GetTouch(0);
+                if (touch.phase == TouchPhase.Began)
+                {
+                    FirstTouch = touch.position;
+                }
+                if ((touch.phase == TouchPhase.Moved) || (touch.phase == TouchPhase.Stationary))
+                //if (touch.phase == TouchPhase.Stationary)
+                {
+                    Characterismoving = true;
+                    _animator.SetBool("Characterismoving", true);
+                    direction = touch.position - FirstTouch;
+                    Vector3 dir = new Vector3(direction.x / Mathf.Sqrt(Mathf.Pow(direction.x, 2) + Mathf.Pow(direction.y, 2)), 0f, direction.y / Mathf.Sqrt(Mathf.Pow(direction.x, 2) + Mathf.Pow(direction.y, 2)));
+                    controller.Move(dir * MoveSpeed * Time.fixedDeltaTime);
+                    // this.gameObject.transform.position = transform.position + dir * MoveSpeed * Time.deltaTime;
+                }
+                else
+                {
+                    Characterismoving = false;
+                    _animator.SetBool("Characterismoving", false);
+                }
+            }
         }
 #endif
 

@@ -21,29 +21,32 @@ EditorBuildSettings:
     path: Assets/Script/Maybe Useful/ScoreScene.unity
     guid: 861c7bac97e9b9c4682835dc6b298bf2
   - enabled: 1
-    path: Assets/Scenes/SetScene.unity
+    path: Assets/Scenes/SetScene/SetScene.unity
     guid: 13de4a8359f8e9440abb20dd0a8caa7f
   - enabled: 1
     path: Assets/Script/Maybe Useful/StartScene.unity
     guid: 6c62685db21331b4086585804fc875e5
   - enabled: 1
-    path: Assets/Scenes/Stage0101.unity
+    path: Assets/Scenes/Stage0101/Stage0101.unity
     guid: 9bd9da8a96fe1174e9bc2ed3586ccaf6
   - enabled: 1
-    path: Assets/Scenes/Stage0102.unity
+    path: Assets/Scenes/Stage0102/Stage0102.unity
     guid: d3980b1c54128d845b86af83defa9077
   - enabled: 1
-    path: Assets/Scenes/Stage0103.unity
+    path: Assets/Scenes/Stage0103/Stage0103.unity
     guid: f653de016898860478e2bfc91e12276f
   - enabled: 1
-    path: Assets/Scenes/Stage0104.unity
+    path: Assets/Scenes/Stage0104/Stage0104.unity
     guid: edfccbe5563834545b5b110b919ab546
   - enabled: 1
-    path: Assets/Scenes/Stage0105.unity
+    path: Assets/Scenes/Stage0105/Stage0105.unity
     guid: 2b53603f7b1036d4babcb1550be756ea
   - enabled: 1
-    path: Assets/Scenes/Stage0106.unity
+    path: Assets/Scenes/Stage0106/Stage0106.unity
     guid: 50fb28b18c4f7a44ebf88d6c2ec3ae50
+  - enabled: 1
+    path: Assets/Scenes/StageFirstStage/StageFirstStage.unity
+    guid: 0192dc90276e4c840a132f6fc18ee297
   - enabled: 1
     path: Assets/Scenes/Stage0107.unity
     guid: d897502a3c9bd6a4493427c551a0426b
