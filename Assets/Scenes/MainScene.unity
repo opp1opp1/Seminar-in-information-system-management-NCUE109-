@@ -1401,6 +1401,7 @@ GameObject:
   - component: {fileID: 1857962745}
   - component: {fileID: 1857962744}
   - component: {fileID: 1857962743}
+  - component: {fileID: 1857962746}
   m_Layer: 0
   m_Name: Main Music
   m_TagString: Main Music

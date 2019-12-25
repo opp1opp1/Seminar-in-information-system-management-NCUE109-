@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class BackgoundMusicControl : MonoBehaviour {
     AudioSource background;
+    //AudioSource main;
     static BackgoundMusicControl instanceB;
 
 void Awake()
@@ -24,6 +25,7 @@ void Awake()
     }
     void Start () {
         background = GameObject.FindGameObjectWithTag("Background Music").GetComponent<AudioSource>();
+        //main = GameObject.FindGameObjectWithTag("Main Music").GetComponent<AudioSource>();
         Button btn = this.GetComponent<Button>();
         btn.onClick.AddListener(OnClick);
     }
@@ -36,5 +38,6 @@ void Awake()
     private void OnClick()
     {
         background.mute = !background.mute;
+        //main.mute = !main.mute;
     }
 }
