@@ -32,6 +32,10 @@ public class BackgroundMusicChecker : MonoBehaviour {
         DontDestroyOnLoad(this.gameObject);
     }
 	
+    void Start()
+    {
+
+    }
 	// Update is called once per frame
 	void Update () {
         if (SceneManager.GetActiveScene().name == "MainScene" || SceneManager.GetActiveScene().name == "SetScene"
