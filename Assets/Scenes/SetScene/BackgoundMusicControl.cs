@@ -4,9 +4,24 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class BackgoundMusic : MonoBehaviour {
+public class BackgoundMusicControl : MonoBehaviour {
     AudioSource background;
-    // Use this for initialization
+    static BackgoundMusicControl instanceB;
+
+void Awake()
+    {
+        if(instanceB == null)
+        {
+            instanceB = this;
+            DontDestroyOnLoad(this);
+        }
+        else if (this != instanceB)
+        {
+            
+            Destroy(gameObject);
+
+        }
+    }
     void Start () {
         background = GameObject.FindGameObjectWithTag("Background Music").GetComponent<AudioSource>();
         Button btn = this.GetComponent<Button>();
