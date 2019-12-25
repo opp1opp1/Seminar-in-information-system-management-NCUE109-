@@ -39,12 +39,13 @@ public class EnemyBehavior : MonoBehaviour
     private float enemy6_teleport_checker;
     public GameObject Enemy6_warning_square;
     public GameObject Enemy4_warning;
-    
-
+    private float ColidCheckTime;
+    private GameObject point;
 
     // Use this for initialization
     void Start()
     {
+        point = GameObject.Find("Point Counter");
         Player = GameObject.Find("Ashe");
         agent = GetComponent<NavMeshAgent>();
         //agentspeed = GetComponent<EnemyStat>().agentspeed;
@@ -82,6 +83,7 @@ public class EnemyBehavior : MonoBehaviour
     void Update()
     {
         EASChecker -= Time.deltaTime;
+        ColidCheckTime -= Time.deltaTime;
         float distance = Vector3.Distance(transform.position, Player.transform.position);
         if (GetComponent<EnemyStat>().currentenemyhealth <= 0)  //如果敵人血量低於0就掰掰
         {
@@ -382,10 +384,10 @@ public class EnemyBehavior : MonoBehaviour
             if (other.name == "Ashe")
             {
                 target = GameObject.Find("Ashe");
-                if (EASChecker <= 0)
+                if (ColidCheckTime <= 0)
                 {
-                    
-                    
+
+                    ColidCheckTime = 0.5f;
                     if (target.GetComponent<PlayerStats>().itisinvincinble != true)
                     {
                         Debug.Log("沒有無敵");
@@ -457,7 +459,7 @@ public class EnemyBehavior : MonoBehaviour
                     GetComponent<EnemyStat>().currentenemyhealth -= GetComponent<EnemyStat>().ColliderDamage * target.GetComponent<PlayerStats>().reflectdamageratio;
                 }
                 Debug.Log("Health:" + target.GetComponent<PlayerStats>().currentHealth + "Sheild:" + target.GetComponent<PlayerStats>().currentSheild + "EnemyHealth" + GetComponent<EnemyStat>().currentenemyhealth);
-                EASChecker = EAS;
+                
             }
         }
         /*
