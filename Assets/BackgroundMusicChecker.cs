@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class BackgroundMusicChecker : MonoBehaviour {
-
+    AudioSource bmm;
 	// Use this for initialization
 	void Start () {
-        if (GameObject.Find("Background Music") ==true)
+        bmm = GameObject.FindGameObjectWithTag("Background Music").GetComponent<AudioSource>();
+        if (bmm ==true)
         {
             //Destroy(GameObject.Find("Background Music"));
-            GameObject.Find("Background Music").SetActive(false);
+            bmm.enabled = false;
         }
 	}
 	

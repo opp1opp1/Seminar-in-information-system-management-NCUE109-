@@ -15,11 +15,11 @@ public class DontDestoryedOnLoad : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (SceneManager.GetActiveScene().name != "MainScene" || SceneManager.GetActiveScene().name != "SetScene" 
+        /*if (SceneManager.GetActiveScene().name != "MainScene" || SceneManager.GetActiveScene().name != "SetScene" 
             || SceneManager.GetActiveScene().name != "BoxScene")
         {
             GameObject.Find("Background Music").SetActive(true);
-        }
+        }*/
 	}
     
     
