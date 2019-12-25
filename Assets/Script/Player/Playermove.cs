@@ -65,7 +65,7 @@ public class Playermove : MonoBehaviour {
                     _animator.SetBool("Characterismoving", true);
                     direction = touch.position - FirstTouch;
                     Vector3 dir = new Vector3(direction.x / Mathf.Sqrt(Mathf.Pow(direction.x, 2) + Mathf.Pow(direction.y, 2)), 0f, direction.y / Mathf.Sqrt(Mathf.Pow(direction.x, 2) + Mathf.Pow(direction.y, 2)));
-                    controller.Move(dir * MoveSpeed * Time.fixedDeltaTime);
+                    controller.Move(dir * MoveSpeed * Time.fixedDeltaTime *Time.timeScale);
                     // this.gameObject.transform.position = transform.position + dir * MoveSpeed * Time.deltaTime;
                 }
                 else

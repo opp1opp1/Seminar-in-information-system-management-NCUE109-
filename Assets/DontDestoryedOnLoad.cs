@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DontDestoryedOnLoad : MonoBehaviour {
     private static DontDestoryedOnLoad instance = null;
@@ -14,7 +15,11 @@ public class DontDestoryedOnLoad : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+        if (SceneManager.GetActiveScene().name != "MainScene" || SceneManager.GetActiveScene().name != "SetScene" 
+            || SceneManager.GetActiveScene().name != "BoxScene")
+        {
+            GameObject.Find("Background Music").SetActive(true);
+        }
 	}
     
     
