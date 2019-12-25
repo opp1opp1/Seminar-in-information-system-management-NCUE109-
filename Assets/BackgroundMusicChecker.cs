@@ -6,15 +6,31 @@ using UnityEngine.SceneManagement;
 public class BackgroundMusicChecker : MonoBehaviour {
     AudioSource bmm;
     AudioSource mmm;
-	// Use this for initialization
-	void Awake () {
+    private static BackgroundMusicChecker instance = null;
+    public static BackgroundMusicChecker Instance
+    {
+        get { return instance; }
+    }
+    // Use this for initialization
+    void Awake () {
         bmm = GameObject.FindGameObjectWithTag("Background Music").GetComponent<AudioSource>();
         mmm = GameObject.FindGameObjectWithTag("Main Music").GetComponent<AudioSource>();
         if (mmm.enabled == true)
         {
             bmm.enabled = false;
         }
-	}
+
+        if (instance != null && instance != this)
+        {
+            Destroy(this.gameObject);
+            return;
+        }
+        else
+        {
+            instance = this;
+        }
+        DontDestroyOnLoad(this.gameObject);
+    }
 	
 	// Update is called once per frame
 	void Update () {
