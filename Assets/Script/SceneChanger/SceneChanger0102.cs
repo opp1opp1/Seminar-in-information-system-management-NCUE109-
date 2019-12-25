@@ -14,7 +14,14 @@ public class SceneChanger0102 : MonoBehaviour {
 
 	void Update()
     {
-        if (SceneManager.GetActiveScene().name == "Stage0101")
+        if (SceneManager.GetActiveScene().name == "StageFirstStage")
+        {
+            if (p_transform.position.z > 12)
+            {
+                SceneManager.LoadScene("Stage0101");
+            }
+        }
+        else if (SceneManager.GetActiveScene().name == "Stage0101")
         {
             if (p_transform.position.z > 13)
             {
