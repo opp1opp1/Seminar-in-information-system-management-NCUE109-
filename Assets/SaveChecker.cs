@@ -19,6 +19,7 @@ public class SaveChecker : MonoBehaviour {
         {
             PlayerPrefs.SetFloat("AttackSpeed", 1.0F);
         }
+        PlayerPrefs.GetFloat("Money");
 
     }
 	
