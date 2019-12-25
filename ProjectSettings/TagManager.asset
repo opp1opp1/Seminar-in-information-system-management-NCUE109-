@@ -21,6 +21,7 @@ TagManager:
   - Background Music
   - Enemy_6
   - Enemy_6_transport_position
+  - Main Music
   layers:
   - Default
   - TransparentFX
