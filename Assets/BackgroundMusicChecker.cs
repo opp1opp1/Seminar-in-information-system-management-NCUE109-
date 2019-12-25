@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BackgroundMusicChecker : MonoBehaviour {
     AudioSource bmm;
@@ -17,9 +18,20 @@ public class BackgroundMusicChecker : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        if (SceneManager.GetActiveScene().name == "MainScene" || SceneManager.GetActiveScene().name == "SetScene"
+            || SceneManager.GetActiveScene().name == "BoxScene")
+        {
+            mmm.enabled = true;
+        }
+        else
+        {
+            mmm.enabled = false;
+        }
+
         if (mmm.enabled == true)
         {
             bmm.enabled = false;
         }
+        
     }
 }

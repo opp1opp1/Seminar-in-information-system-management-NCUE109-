@@ -6,15 +6,16 @@ using UnityEngine.SceneManagement;
 
 public class BackgroundMusicController : MonoBehaviour {
     AudioSource bm;
+    AudioSource mm;
 	// Use this for initialization
-	void Start () {
+    void Awake()
+    {       
         bm = GameObject.FindGameObjectWithTag("Background Music").GetComponent<AudioSource>();
         bm.enabled = true;
-        /*foreach (var dontobj in Background Music)
-        {
-            GameObject.Find("Background Music").SetActive(true);
-        }*/
-
+    }
+	void Start () {
+        mm = GameObject.FindGameObjectWithTag("Main Music").GetComponent<AudioSource>();
+        mm.enabled = false;
     }
 	
 	// Update is called once per frame
