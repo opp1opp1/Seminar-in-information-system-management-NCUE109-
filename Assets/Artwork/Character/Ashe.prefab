@@ -1546,7 +1546,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameFPanel: {fileID: 0}
   Mask: {fileID: 0}
-  isPaused: 0
+  isPaused: 1
   stop_button: {fileID: 0}
   st: 0
 --- !u!114 &114523119960540650
@@ -1614,7 +1614,7 @@ MonoBehaviour:
   fristPos: {x: 0, y: 0, z: 0}
   twoPos: {x: 0, y: 0, z: 0}
   speeduptimer: 0
-  MoveSpeed: 6.5
+  MoveSpeed: 7
   jumpForce: 8
   controller: {fileID: 0}
   gravityScale: 2

@@ -4,9 +4,10 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class PointScript : MonoBehaviour {
-    public int point;
-	// Use this for initialization
-	void Start () {
+    public float point;
+    public float money;
+    // Use this for initialization
+    void Start () {
 		
 	}
 	
@@ -14,7 +15,9 @@ public class PointScript : MonoBehaviour {
 	void Update () {
         if (SceneManager.GetActiveScene().name == "MainScene") 
         {
-            PlayerPrefs.SetFloat("Money",++point);
+            money =PlayerPrefs.GetFloat("Money");
+            point += money;
+            PlayerPrefs.SetFloat("Money",  + point);
             Debug.Log(PlayerPrefs.GetFloat("Money"));
             point = 0;
             Destroy(this.gameObject);
