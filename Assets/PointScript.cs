@@ -12,7 +12,7 @@ public class PointScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (SceneManager.GetActiveScene().name == "MainScene")
+        if (SceneManager.GetActiveScene().name == "MainScene") 
         {
             PlayerPrefs.SetFloat("Money",++point);
             Debug.Log(PlayerPrefs.GetFloat("Money"));
