@@ -90,7 +90,7 @@ public class bulletdestroy : MonoBehaviour
     //弓箭射到物體時消失
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Enemy_1" || other.tag == "Enemy_2" || other.tag == "Enemy_3" || other.tag == "Enemy_4" || other.tag == "Enemy_5")
+        if (other.tag == "Enemy_1" || other.tag == "Enemy_2" || other.tag == "Enemy_3" || other.tag == "Enemy_4" || other.tag == "Enemy_5" || other.tag == "Enemy_6" || other.tag == "Enemy_7")
         {
             if (this.gameObject.tag == "Bullet")
             {
