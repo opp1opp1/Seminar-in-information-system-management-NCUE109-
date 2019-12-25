@@ -8,7 +8,8 @@ public class BackgroundMusicChecker : MonoBehaviour {
 	void Start () {
         if (GameObject.Find("Background Music") ==true)
         {
-            Destroy(GameObject.Find("Background Music"));
+            //Destroy(GameObject.Find("Background Music"));
+            GameObject.Find("Background Music").SetActive(false);
         }
 	}
 	
