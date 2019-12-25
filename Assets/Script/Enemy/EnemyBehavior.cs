@@ -622,6 +622,22 @@ public class EnemyBehavior : MonoBehaviour
             gameObject.GetComponent<NavMeshAgent>().isStopped = false;
         }
     }
+    void OnDestroy()
+    {
+        int f = Random.Range(0, 3);
+        if (this.gameObject.tag == "Enemy_1"|| this.gameObject.tag == "Enemy_2"|| this.gameObject.tag == "Enemy_5")
+        {
+            point.GetComponent<PointScript>().point += f * 1;
+        }
+        else if (this.gameObject.tag == "Enemy_4" || this.gameObject.tag == "Enemy_6")
+        {
+            point.GetComponent<PointScript>().point += f * 2;
+        }
+        else if (this.gameObject.tag == "Enemy_3")
+        {
+            point.GetComponent<PointScript>().point += f * 5;
+        }
+    }
 }
 
 
