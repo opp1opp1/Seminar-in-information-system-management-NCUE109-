@@ -39,8 +39,12 @@ public class EnemyBehavior : MonoBehaviour
     private float enemy6_teleport_checker;
     public GameObject Enemy6_warning_square;
     public GameObject Enemy4_warning;
+    public GameObject little_enemy7;
     private float ColidCheckTime;
     private GameObject point;
+
+    private float enemy7_health;
+    private bool Is_divided = false;
 
     // Use this for initialization
     void Start()
@@ -325,14 +329,35 @@ public class EnemyBehavior : MonoBehaviour
             /* if (EASChecker <= 0)
              {
 
-                 target = GameObject.Find("Ashe");
+                 target = GameObject.Find("Ashe");d
                  transform.LookAt(target.transform.position, transform.up);
                  Instantiate(Enemy2_bullet, transform.position, transform.rotation);
                  EASChecker = EAS;
              }
              */
         }
-        if (slowtimer > 0.1f)
+        else if (this.gameObject.tag == ("Enemy_7"))
+        {
+            enemy7_health = GetComponent<EnemyStat>().currentenemyhealth;
+
+            if (distance <= this.GetComponent<EnemyStat>().WakeUpDistance)
+            {
+                Vector3 newPos = Player.transform.position;
+                agent.SetDestination(newPos);
+            }
+            if(Is_divided==false && enemy7_health <= 40)
+            {
+                Instantiate(little_enemy7, transform.position, transform.rotation);
+                Instantiate(little_enemy7, transform.position, transform.rotation);
+                Instantiate(little_enemy7, transform.position, transform.rotation);
+                Is_divided = true;
+            }
+            
+
+
+
+        }
+            if (slowtimer > 0.1f)
         {
             slowtimer -= Time.deltaTime;
 
@@ -379,7 +404,7 @@ public class EnemyBehavior : MonoBehaviour
     }
     private void OnTriggerStay(Collider other)
     {
-        if (gameObject.tag == "Enemy_1"|| gameObject.tag == "Enemy_2"|| gameObject.tag == "Enemy_3"|| gameObject.tag == "Enemy_4"|| gameObject.tag == "Enemy_5")
+        if (gameObject.tag == "Enemy_1"|| gameObject.tag == "Enemy_2"|| gameObject.tag == "Enemy_3"|| gameObject.tag == "Enemy_4"|| gameObject.tag == "Enemy_5" || gameObject.tag == "Enemy_6" || gameObject.tag == "Enemy_7")
         {
             if (other.name == "Ashe")
             {
@@ -629,7 +654,7 @@ public class EnemyBehavior : MonoBehaviour
         {
             point.GetComponent<PointScript>().point += f * 1;
         }
-        else if (this.gameObject.tag == "Enemy_4" || this.gameObject.tag == "Enemy_6")
+        else if (this.gameObject.tag == "Enemy_4" || this.gameObject.tag == "Enemy_6" )
         {
             point.GetComponent<PointScript>().point += f * 2;
         }
