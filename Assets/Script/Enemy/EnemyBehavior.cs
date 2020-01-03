@@ -360,8 +360,13 @@ public class EnemyBehavior : MonoBehaviour
 
                 Is_divided = true;
             }
-            
 
+            if (this.gameObject.name == ("Enemy(Clone)"))
+            {
+                transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
+                Debug.Log("縮小2");
+
+            }
 
 
         }

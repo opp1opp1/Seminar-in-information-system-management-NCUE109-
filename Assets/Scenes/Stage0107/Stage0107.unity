@@ -477,7 +477,7 @@ GameObject:
   - component: {fileID: 160360225}
   - component: {fileID: 160360224}
   m_Layer: 0
-  m_Name: Main Camera (1)
+  m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1107,7 +1107,7 @@ Prefab:
     - target: {fileID: 114825469269544968, guid: d244b02b734e36b49a7f1e9dc5e7835a,
         type: 2}
       propertyPath: enemytype
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1768816727181462, guid: d244b02b734e36b49a7f1e9dc5e7835a, type: 2}
       propertyPath: m_TagString
@@ -1335,7 +1335,7 @@ Prefab:
     - target: {fileID: 114825469269544968, guid: d244b02b734e36b49a7f1e9dc5e7835a,
         type: 2}
       propertyPath: enemytype
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1768816727181462, guid: d244b02b734e36b49a7f1e9dc5e7835a, type: 2}
       propertyPath: m_TagString
@@ -2000,7 +2000,7 @@ Prefab:
     - target: {fileID: 114825469269544968, guid: d244b02b734e36b49a7f1e9dc5e7835a,
         type: 2}
       propertyPath: enemytype
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1768816727181462, guid: d244b02b734e36b49a7f1e9dc5e7835a, type: 2}
       propertyPath: m_TagString
