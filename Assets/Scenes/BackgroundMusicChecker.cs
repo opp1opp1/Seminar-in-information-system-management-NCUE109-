@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 public class BackgroundMusicChecker : MonoBehaviour {
     AudioSource bmm;
     AudioSource mmm;
+    
+
     /*private static BackgroundMusicChecker instance = null;
     public static BackgroundMusicChecker Instance
     {
@@ -40,10 +42,12 @@ public class BackgroundMusicChecker : MonoBehaviour {
     {
         
     }
+
 	// Update is called once per frame
 	void Update () {
         bmm = GameObject.FindGameObjectWithTag("Background Music").GetComponent<AudioSource>();
         mmm = GameObject.FindGameObjectWithTag("Main Music").GetComponent<AudioSource>();
+        
 
         if (SceneManager.GetActiveScene().name == "MainScene" || SceneManager.GetActiveScene().name == "SetScene"
             || SceneManager.GetActiveScene().name == "BoxScene")
@@ -55,10 +59,11 @@ public class BackgroundMusicChecker : MonoBehaviour {
             mmm.enabled = false;
         }
 
-        if (mmm.enabled == true)
+        if (mmm.enabled == true)    //當main music開著時，關掉background music
         {
             bmm.enabled = false;
         }
+
         
     }
 }
