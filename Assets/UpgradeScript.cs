@@ -34,7 +34,7 @@ public class UpgradeScript : MonoBehaviour {
         }
         else if (this.gameObject.name == "ASPDup")
         {
-            multiplevalue = (int)((PlayerPrefs.GetFloat("AttackSpeed") - 1) / 0.01);
+            multiplevalue = (int)((PlayerPrefs.GetFloat("AttackSpeed") - 1) / 0.015);
             if (multiplevalue == 0)
             {
                 multiplevalue = 1;
@@ -87,7 +87,7 @@ public class UpgradeScript : MonoBehaviour {
                 PlayerPrefs.SetFloat("Money", value);
                 value = PlayerPrefs.GetFloat("AttackSpeed");
                 Debug.Log(value);
-                value += 0.01f;
+                value += 0.015f;
                 Debug.Log(value);
                 PlayerPrefs.SetFloat("AttackSpeed", value);
             }

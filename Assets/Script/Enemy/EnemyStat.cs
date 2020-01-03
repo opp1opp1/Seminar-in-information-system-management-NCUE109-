@@ -71,6 +71,13 @@ public class EnemyStat : MonoBehaviour {
                 enemyattackspeed = 1f;
                 ColliderDamage = 20f;
                 WakeUpDistance = 15f;
+                agentspeed = 0f;
+                break;
+            case 8:
+                basicenemyhealth = 100;
+                enemyattackspeed = 1f;
+                ColliderDamage = 20f;
+                WakeUpDistance = 15f;
                 agentspeed = 5f;
                 break;
             default:

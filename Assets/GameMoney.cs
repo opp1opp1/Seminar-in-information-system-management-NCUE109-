@@ -15,12 +15,11 @@ public class GameMoney : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
-        if (target != null)
-        { 
+        
             if (target.GetComponent<PlayerRotation>().enemychecker == false)
             {
                 this.GetComponent<Text>().text = "" + point.GetComponent<PointScript>().point;
             }
-        }
+        
 	}
 }

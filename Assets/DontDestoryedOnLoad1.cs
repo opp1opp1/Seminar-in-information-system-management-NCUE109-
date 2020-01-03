@@ -15,12 +15,7 @@ public class DontDestoryedOnLoad1 : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
-        if (SceneManager.GetActiveScene().name == "MainScene")
-        {
-            Destroy(this.gameObject);
-        }
-	}
+	
 
     void Awake()
     {

@@ -26,7 +26,10 @@ public class AttackSpeedUpScript : MonoBehaviour {
             PlayerIni.currentAttackSpeed = 2.5f;
         }
         Player.GetComponent<PlayerStats>().currentAttackSpeed = PlayerIni.currentAttackSpeed;
-        
+        if (GameObject.Find("TutorialMask") == true)
+        {
+            GameObject.Find("TutorialMask").SetActive(false);
+        }
 
 
         Debug.Log(Player.GetComponent<PlayerStats>().currentAttackSpeed + "" + Player.GetComponent<PlayerStats>().basicAttackSpeed);

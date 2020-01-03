@@ -13,6 +13,7 @@ public class TutorialMaskScript : MonoBehaviour {
     private GameObject Powerup_Text;
     private GameObject Congratulation_Text;
     private GameObject Congratulation_Text2;
+    private GameObject ArrowS;
   //  private GameObject dummy;
    // private float dummy_health;
     //private bool dummy_dead_already;
@@ -30,10 +31,12 @@ public class TutorialMaskScript : MonoBehaviour {
         AttentionText = GameObject.Find("Attention Text");
         stop_button = GameObject.Find("stop_button");
         Powerup_Text = GameObject.Find("PowerUp Text");
+        ArrowS = GameObject.Find("ArrowS");
         //Congratulation_Text = GameObject.Find("Congratulation Text");
         //Congratulation_Text2 = GameObject.Find("Congratulation Text2");
         //dummy = GameObject.Find("Dummy");
-       // dummy_health = dummy.GetComponent<EnemyStat>().currentenemyhealth;
+        // dummy_health = dummy.GetComponent<EnemyStat>().currentenemyhealth;
+        ArrowS.SetActive(false);
         stop_button.SetActive(false);
         StandshootText.SetActive(false);
         AttentionText.SetActive(false);
@@ -85,6 +88,7 @@ public class TutorialMaskScript : MonoBehaviour {
             AttentionText.SetActive(false);
             stop_button.SetActive(true);
             Powerup_Text.SetActive(true);
+            ArrowS.SetActive(true);
             Mask.SetActive(false);
             stop_button.GetComponent<PauseScript>().pauseGame();
 

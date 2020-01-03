@@ -477,7 +477,7 @@ GameObject:
   - component: {fileID: 160360225}
   - component: {fileID: 160360224}
   m_Layer: 0
-  m_Name: Main Camera (1)
+  m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1097,7 +1097,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1768816727181462, guid: d244b02b734e36b49a7f1e9dc5e7835a, type: 2}
       propertyPath: m_Name
-      value: Enemy(1)
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 23118187420157190, guid: d244b02b734e36b49a7f1e9dc5e7835a,
         type: 2}
@@ -1107,12 +1107,17 @@ Prefab:
     - target: {fileID: 114825469269544968, guid: d244b02b734e36b49a7f1e9dc5e7835a,
         type: 2}
       propertyPath: enemytype
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1768816727181462, guid: d244b02b734e36b49a7f1e9dc5e7835a, type: 2}
       propertyPath: m_TagString
       value: Enemy_7
       objectReference: {fileID: 0}
+    - target: {fileID: 114721832934290624, guid: d244b02b734e36b49a7f1e9dc5e7835a,
+        type: 2}
+      propertyPath: little_enemy7
+      value: 
+      objectReference: {fileID: 435525955}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d244b02b734e36b49a7f1e9dc5e7835a, type: 2}
   m_IsPrefabParent: 0
@@ -1330,7 +1335,7 @@ Prefab:
     - target: {fileID: 114825469269544968, guid: d244b02b734e36b49a7f1e9dc5e7835a,
         type: 2}
       propertyPath: enemytype
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1768816727181462, guid: d244b02b734e36b49a7f1e9dc5e7835a, type: 2}
       propertyPath: m_TagString
@@ -1980,7 +1985,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1768816727181462, guid: d244b02b734e36b49a7f1e9dc5e7835a, type: 2}
       propertyPath: m_Name
-      value: Enemy(2)
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 198146413763531072, guid: d244b02b734e36b49a7f1e9dc5e7835a,
         type: 2}
@@ -1995,12 +2000,17 @@ Prefab:
     - target: {fileID: 114825469269544968, guid: d244b02b734e36b49a7f1e9dc5e7835a,
         type: 2}
       propertyPath: enemytype
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1768816727181462, guid: d244b02b734e36b49a7f1e9dc5e7835a, type: 2}
       propertyPath: m_TagString
       value: Enemy_7
       objectReference: {fileID: 0}
+    - target: {fileID: 114721832934290624, guid: d244b02b734e36b49a7f1e9dc5e7835a,
+        type: 2}
+      propertyPath: little_enemy7
+      value: 
+      objectReference: {fileID: 435525955}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d244b02b734e36b49a7f1e9dc5e7835a, type: 2}
   m_IsPrefabParent: 0

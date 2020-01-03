@@ -347,13 +347,26 @@ public class EnemyBehavior : MonoBehaviour
             }
             if(Is_divided==false && enemy7_health <= 40)
             {
-                Instantiate(little_enemy7, transform.position, transform.rotation);
-                Instantiate(little_enemy7, transform.position, transform.rotation);
-                Instantiate(little_enemy7, transform.position, transform.rotation);
+                if (this.gameObject.name != ("Enemy(Clone)"))
+                {
+                    Instantiate(little_enemy7, transform.position, transform.rotation);
+                    Instantiate(little_enemy7, transform.position, transform.rotation);
+                }
+
+
+               /* Instantiate(little_enemy7, transform.position, transform.rotation);
+                Instantiate(little_enemy7, transform.position, transform.rotation);*/
+                
+
                 Is_divided = true;
             }
-            
 
+            if (this.gameObject.name == ("Enemy(Clone)"))
+            {
+                transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
+                Debug.Log("縮小2");
+
+            }
 
 
         }
@@ -650,7 +663,7 @@ public class EnemyBehavior : MonoBehaviour
     void OnDestroy()
     {
         int f = Random.Range(0, 3);
-        if (this.gameObject.tag == "Enemy_1"|| this.gameObject.tag == "Enemy_2"|| this.gameObject.tag == "Enemy_5")
+        if (this.gameObject.tag == "Enemy_1" && this.gameObject.name != "Dummy" || this.gameObject.tag == "Enemy_2"|| this.gameObject.tag == "Enemy_5")
         {
             point.GetComponent<PointScript>().point += f * 1;
         }
