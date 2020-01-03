@@ -14,6 +14,7 @@ public class TutorialMaskScript : MonoBehaviour {
     private GameObject Congratulation_Text;
     private GameObject Congratulation_Text2;
     private GameObject ArrowS;
+    private GameObject ClickAnyWayText;
   //  private GameObject dummy;
    // private float dummy_health;
     //private bool dummy_dead_already;
@@ -31,7 +32,8 @@ public class TutorialMaskScript : MonoBehaviour {
         AttentionText = GameObject.Find("Attention Text");
         stop_button = GameObject.Find("stop_button");
         Powerup_Text = GameObject.Find("PowerUp Text");
-        ArrowS = GameObject.Find("ArrowS");
+        ClickAnyWayText = GameObject.Find("Click Anywhere Text");
+        ArrowS = GameObject.Find("ArrowS"); 
         //Congratulation_Text = GameObject.Find("Congratulation Text");
         //Congratulation_Text2 = GameObject.Find("Congratulation Text2");
         //dummy = GameObject.Find("Dummy");
@@ -84,6 +86,7 @@ public class TutorialMaskScript : MonoBehaviour {
         }
         else if (Showtime == 1)
         {
+            ClickAnyWayText.GetComponent<Text>().text = ("點擊升級道具繼續!");
             StandshootText.SetActive(false);
             AttentionText.SetActive(false);
             stop_button.SetActive(true);
@@ -91,6 +94,7 @@ public class TutorialMaskScript : MonoBehaviour {
             ArrowS.SetActive(true);
             Mask.SetActive(false);
             stop_button.GetComponent<PauseScript>().pauseGame();
+            
 
             //Showtime++;
         }
