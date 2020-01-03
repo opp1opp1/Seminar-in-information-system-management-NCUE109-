@@ -20,7 +20,7 @@ public class PointScript : MonoBehaviour {
             PlayerPrefs.SetFloat("Money",  + point);
             Debug.Log(PlayerPrefs.GetFloat("Money"));
             point = 0;
-            Destroy(this.gameObject);
+            Destroy(this.gameObject.transform.parent.gameObject);
         }
     }
 }
