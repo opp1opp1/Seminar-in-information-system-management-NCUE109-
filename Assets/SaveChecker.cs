@@ -9,7 +9,7 @@ public class SaveChecker : MonoBehaviour {
     void Start () {
         if (PlayerPrefs.GetFloat("Health") == 0)
         {
-            PlayerPrefs.SetFloat("Health", 120.0F);
+            PlayerPrefs.SetFloat("Health", 100.0F);
         }
         if (PlayerPrefs.GetFloat("Attack") == 0)
         {

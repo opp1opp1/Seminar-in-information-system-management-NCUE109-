@@ -12,12 +12,15 @@ public class GameMoney : MonoBehaviour {
         point = GameObject.Find("Point Counter");
         this.GetComponent<Text>().text = "" + 0;
     }
-	
-	// Update is called once per frame
-	void Update () {
-        if (target.GetComponent<PlayerRotation>().enemychecker == false)
-        {
-            this.GetComponent<Text>().text = "" + point.GetComponent<PointScript>().point;
+
+    // Update is called once per frame
+    void Update() {
+        if (target != null)
+        { 
+            if (target.GetComponent<PlayerRotation>().enemychecker == false)
+            {
+                this.GetComponent<Text>().text = "" + point.GetComponent<PointScript>().point;
+            }
         }
 	}
 }

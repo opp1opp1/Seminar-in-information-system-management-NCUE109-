@@ -306,6 +306,7 @@ GameObject:
   - component: {fileID: 156973364}
   - component: {fileID: 156973363}
   - component: {fileID: 156973362}
+  - component: {fileID: 156973365}
   m_Layer: 5
   m_Name: ASPDup
   m_TagString: Untagged
@@ -405,6 +406,18 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 156973360}
+--- !u!114 &156973365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 156973360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc62ba0004637e14db2fdb0df5772373, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  multiplevalue: 0
 --- !u!1 &198169200
 GameObject:
   m_ObjectHideFlags: 0
@@ -547,6 +560,7 @@ GameObject:
   - component: {fileID: 459459571}
   - component: {fileID: 459459570}
   - component: {fileID: 459459569}
+  - component: {fileID: 459459572}
   m_Layer: 5
   m_Name: ATKup
   m_TagString: Untagged
@@ -646,6 +660,18 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 459459567}
+--- !u!114 &459459572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 459459567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc62ba0004637e14db2fdb0df5772373, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  multiplevalue: 0
 --- !u!1 &503504976
 GameObject:
   m_ObjectHideFlags: 0
@@ -656,8 +682,9 @@ GameObject:
   - component: {fileID: 503504977}
   - component: {fileID: 503504979}
   - component: {fileID: 503504978}
+  - component: {fileID: 503504980}
   m_Layer: 5
-  m_Name: 'ATK Upgrade Text '
+  m_Name: ATK Upgrade Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -720,6 +747,17 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 503504976}
+--- !u!114 &503504980
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 503504976}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53df971f037088c40b15ee02b9b75239, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &608067856
 GameObject:
   m_ObjectHideFlags: 0
@@ -997,6 +1035,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc62ba0004637e14db2fdb0df5772373, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  multiplevalue: 0
 --- !u!1 &1176718016
 GameObject:
   m_ObjectHideFlags: 0
@@ -1072,8 +1111,9 @@ GameObject:
   - component: {fileID: 1279969429}
   - component: {fileID: 1279969431}
   - component: {fileID: 1279969430}
+  - component: {fileID: 1279969432}
   m_Layer: 5
-  m_Name: 'ASPD Upgrade Text '
+  m_Name: ASPD Upgrade Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1136,6 +1176,17 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1279969428}
+--- !u!114 &1279969432
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1279969428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53df971f037088c40b15ee02b9b75239, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1658962657
 GameObject:
   m_ObjectHideFlags: 0
@@ -1234,6 +1285,7 @@ GameObject:
   - component: {fileID: 1753146419}
   - component: {fileID: 1753146421}
   - component: {fileID: 1753146420}
+  - component: {fileID: 1753146422}
   m_Layer: 5
   m_Name: Hp Upgrade Text
   m_TagString: Untagged
@@ -1298,6 +1350,17 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1753146418}
+--- !u!114 &1753146422
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1753146418}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53df971f037088c40b15ee02b9b75239, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1795972811
 GameObject:
   m_ObjectHideFlags: 0
