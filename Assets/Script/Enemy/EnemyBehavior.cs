@@ -347,9 +347,17 @@ public class EnemyBehavior : MonoBehaviour
             }
             if(Is_divided==false && enemy7_health <= 40)
             {
-                Instantiate(little_enemy7, transform.position, transform.rotation);
-                Instantiate(little_enemy7, transform.position, transform.rotation);
-                Instantiate(little_enemy7, transform.position, transform.rotation);
+                if (this.gameObject.name != ("Enemy(Clone)"))
+                {
+                    Instantiate(little_enemy7, transform.position, transform.rotation);
+                    Instantiate(little_enemy7, transform.position, transform.rotation);
+                }
+
+
+               /* Instantiate(little_enemy7, transform.position, transform.rotation);
+                Instantiate(little_enemy7, transform.position, transform.rotation);*/
+                
+
                 Is_divided = true;
             }
             
