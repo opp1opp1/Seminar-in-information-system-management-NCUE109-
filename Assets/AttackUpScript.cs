@@ -22,9 +22,10 @@ public class AttackUpScript : MonoBehaviour {
         Player = GameObject.Find("Ashe");
         PlayerIni.currentAttackDamage += Player.GetComponent<PlayerStats>().basicAttackDamage * AttackUpPercent;
         Player.GetComponent<PlayerStats>().currentAttackDamage = PlayerIni.currentAttackDamage;
-        
-    
-       
         Debug.Log(Player.GetComponent<PlayerStats>().currentAttackDamage +""+ Player.GetComponent<PlayerStats>().basicAttackDamage);
+        if (GameObject.Find("TutorialMask") == true)
+        {
+            GameObject.Find("TutorialMask").SetActive(false);
+        }
     }
 }

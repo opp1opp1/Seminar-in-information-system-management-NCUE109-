@@ -27,7 +27,10 @@ public class AddHealthLimit : MonoBehaviour {
         PlayerIni.currentHealth += AddHealth;
         Player.GetComponent<PlayerStats>().currentHealthLimit = PlayerIni.currentHealthLimit;
         Player.GetComponent<PlayerStats>().currentHealth = PlayerIni.currentHealth;
+        if (GameObject.Find("TutorialMask") == true)
+        {
+            GameObject.Find("TutorialMask").SetActive(false);
+        }
 
-        
     }
 }

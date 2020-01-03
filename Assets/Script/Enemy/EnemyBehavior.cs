@@ -650,7 +650,7 @@ public class EnemyBehavior : MonoBehaviour
     void OnDestroy()
     {
         int f = Random.Range(0, 3);
-        if (this.gameObject.tag == "Enemy_1"|| this.gameObject.tag == "Enemy_2"|| this.gameObject.tag == "Enemy_5")
+        if (this.gameObject.tag == "Enemy_1" && this.gameObject.name != "Dummy" || this.gameObject.tag == "Enemy_2"|| this.gameObject.tag == "Enemy_5")
         {
             point.GetComponent<PointScript>().point += f * 1;
         }
