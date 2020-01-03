@@ -20,7 +20,7 @@ public class SaveChecker : MonoBehaviour {
             PlayerPrefs.SetFloat("AttackSpeed", 1.0F);
         }
         PlayerPrefs.GetFloat("Money");
-
+        PlayerPrefs.GetFloat("Tutotial");
     }
 	
 	// Update is called once per frame
