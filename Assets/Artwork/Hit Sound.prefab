@@ -21,9 +21,10 @@ GameObject:
   - component: {fileID: 4343343481368574}
   - component: {fileID: 82677538656054474}
   - component: {fileID: 114593204669137084}
+  - component: {fileID: 114449291410399154}
   m_Layer: 0
   m_Name: Hit Sound
-  m_TagString: Untagged
+  m_TagString: SFX
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -121,6 +122,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &114449291410399154
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1900760773586354}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ec504792e5447f43817d489c0f5ae89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sf: {fileID: 0}
 --- !u!114 &114593204669137084
 MonoBehaviour:
   m_ObjectHideFlags: 1

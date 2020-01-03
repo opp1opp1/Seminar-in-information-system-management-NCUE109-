@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class BackgoundMusicControl : MonoBehaviour {
     AudioSource background;
     AudioSource main;
-    static BackgoundMusicControl instanceB;
+    Sprite o, f;
 
     /*
     void Awake()
@@ -31,6 +31,8 @@ public class BackgoundMusicControl : MonoBehaviour {
         main = GameObject.FindGameObjectWithTag("Main Music").GetComponent<AudioSource>();
         Button btn = this.GetComponent<Button>();
         btn.onClick.AddListener(OnClick);
+        o = Resources.Load<Sprite>("on 1");
+        f = Resources.Load<Sprite>("off 1");
     }
 	
 	// Update is called once per frame
@@ -42,5 +44,13 @@ public class BackgoundMusicControl : MonoBehaviour {
     {
         background.mute = !background.mute;
         main.mute = !main.mute;
+        if(this.GetComponent<Image>().sprite == o)
+        {
+            this.GetComponent<Image>().sprite = f;
+        }
+        else
+        {
+            this.GetComponent<Image>().sprite = o;
+        }
     }
 }
