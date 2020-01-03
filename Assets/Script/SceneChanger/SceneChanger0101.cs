@@ -16,6 +16,10 @@ public class SceneChanger0101 : MonoBehaviour {
         {
             SceneManager.LoadScene("Stage0101");
         }
-        
+        PlayerIni.basicHealth = PlayerPrefs.GetFloat("Health");
+        PlayerIni.currentAttackDamage = PlayerPrefs.GetFloat("Attack");
+        PlayerIni.currentAttackSpeed = PlayerPrefs.GetFloat("AttackSpeed");
+        PlayerIni.currentHealthLimit = PlayerPrefs.GetFloat("Health");
     }
 }
+
