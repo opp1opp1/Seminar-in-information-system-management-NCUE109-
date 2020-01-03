@@ -9,7 +9,8 @@ public class BackgoundMusicControl : MonoBehaviour {
     AudioSource main;
     static BackgoundMusicControl instanceB;
 
-void Awake()
+    /*
+    void Awake()
     {
         if(instanceB == null)
         {
@@ -23,6 +24,8 @@ void Awake()
 
         }
     }
+    */
+
     void Start () {
         background = GameObject.FindGameObjectWithTag("Background Music").GetComponent<AudioSource>();
         main = GameObject.FindGameObjectWithTag("Main Music").GetComponent<AudioSource>();
