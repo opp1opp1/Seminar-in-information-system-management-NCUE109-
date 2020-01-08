@@ -46,7 +46,11 @@ public class bulletdestroy : MonoBehaviour
             maxTime = 0.25f;
 
         }
-        if (this.gameObject.name == "Ashe_Arrow(Clone)")
+        if (this.gameObject.name == "Enemy9_Sword(Clone)")
+        {
+            maxTime = 0.3f;
+        }
+            if (this.gameObject.name == "Ashe_Arrow(Clone)")
         {
             bullet_damage = PlayerIni.currentAttackDamage;
         }
@@ -257,7 +261,7 @@ public class bulletdestroy : MonoBehaviour
                 }
             }
         }
-        if (other.tag == "Wall"&& (this.gameObject.name != "Explosion"|| this.gameObject.tag != "BurnGround"|| this.gameObject.tag != "IceGround" || this.gameObject.tag =="Enemy_Bullet"))
+        if (other.tag == "Wall"&& (this.gameObject.name != "Explosion"|| this.gameObject.tag != "BurnGround"|| this.gameObject.tag != "IceGround"))
         {
             Destroy(this.gameObject);
         }

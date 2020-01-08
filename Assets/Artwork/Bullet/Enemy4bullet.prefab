@@ -113,7 +113,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxTime: 3
-  bullet_damage: 15
+  bullet_damage: 10
   sword_damage: 80
   slowTime: 2
   burnTime: 4

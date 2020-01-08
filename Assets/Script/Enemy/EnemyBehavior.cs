@@ -5,6 +5,7 @@ using UnityEngine.AI;
 
 public class EnemyBehavior : MonoBehaviour
 {
+    private GameObject rotate;
     public GameObject Enemy2_bullet;
     public GameObject Enemy3_Sword;
     public GameObject Enemy4_ball;
@@ -392,7 +393,15 @@ public class EnemyBehavior : MonoBehaviour
                     transform.LookAt(target.transform.position, transform.up);
 
                     // Instantiate(Enemy3_Sword, transform.position, transform.rotation);
-                    Instantiate(Enemy3_Sword, new Vector3(Mathf.Lerp(transform.position.x, Player.transform.position.x, 0.5f), 1f, Mathf.Lerp(transform.position.z, Player.transform.position.z, 0.5f)), transform.rotation);
+                    Instantiate(Enemy9_Sword, new Vector3(Mathf.Lerp(transform.position.x, Player.transform.position.x, 0.5f), 1f, Mathf.Lerp(transform.position.z, Player.transform.position.z, 0.5f)), transform.rotation);
+
+                    rotate = GameObject.Find("Enemy9_Sword(Clone)");
+                    if (rotate) {
+                        Debug.Log("rotate");
+                    }
+
+                    //rotate.transform.RotateAround(this.transform.position, new Vector3 (0f,0f,0f), 90f * Time.deltaTime);   //讓短劍旋轉 但目前沒用
+
                     EASChecker = EAS;
                 }
             }
@@ -404,6 +413,7 @@ public class EnemyBehavior : MonoBehaviour
                     target = GameObject.Find("Ashe");
                     transform.LookAt(target.transform.position, transform.up);
 
+                    
                     Instantiate(Enemy2_bullet, transform.position, transform.rotation);
                     Instantiate(Enemy2_bullet, transform.position, transform.rotation * Quaternion.AngleAxis(10, transform.up));
                     Instantiate(Enemy2_bullet, transform.position, transform.rotation * Quaternion.AngleAxis(20, transform.up));

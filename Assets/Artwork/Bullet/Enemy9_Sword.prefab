@@ -56,6 +56,7 @@ GameObject:
   - component: {fileID: 23687193108890960}
   - component: {fileID: 114362896582833460}
   - component: {fileID: 114884678240337322}
+  - component: {fileID: 114103968714905726}
   m_Layer: 0
   m_Name: Enemy9_Sword
   m_TagString: Enemy_Bullet
@@ -101,7 +102,7 @@ Transform:
   m_GameObject: {fileID: 1487847847974738}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 0, y: 1.52, z: -2.57}
-  m_LocalScale: {x: 4, y: 2, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 3.5}
   m_Children:
   - {fileID: 4856223600027136}
   m_Father: {fileID: 0}
@@ -280,6 +281,18 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114103968714905726
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1487847847974738}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 841ca5ce5807ebc428cd6145f16e8a28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1
 --- !u!114 &114362896582833460
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -316,4 +329,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 408e59589a781a54ca656e732f9f6090, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Bullet_Fly_speed: 5
+  Bullet_Fly_speed: 3
