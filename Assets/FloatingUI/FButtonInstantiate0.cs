@@ -11,7 +11,7 @@ public class FButtonInstantiate0 : MonoBehaviour {  //隨機生成三個指定�
     public GameObject clone_02; //複製出來的物件
     public GameObject clone_03; //複製出來的物件
     public GameObject gameFPanel;   //複製出來後，要放到FPanel的層級底下
-    public bool stop = true;   //避免無線複製，用來控制按鈕被點擊後立刻再生
+    public bool stop = false;   //避免無線複製，用來控制按鈕被點擊後立刻再生
 
     // Use this for initialization
     void Start () {
