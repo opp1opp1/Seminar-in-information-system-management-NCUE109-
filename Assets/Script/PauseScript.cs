@@ -29,11 +29,10 @@ public class PauseScript : MonoBehaviour {
     {
 
         if (isPaused)
-        {   
-            //繼續音樂
-            bgMusicAudioSource.UnPause();
+        {
+            bgMusicAudioSource.Pause(); //繼續音樂
           
-            Time.timeScale = 1; 
+            Time.timeScale = 0; 
             isPaused = false;
             Instantiate(Showmusic, transform.position, transform.rotation);
 
@@ -41,9 +40,9 @@ public class PauseScript : MonoBehaviour {
         }
         else
         {
-            //暫停音樂
-            bgMusicAudioSource.Pause();
-            Time.timeScale = 0;
+            bgMusicAudioSource.UnPause();//暫停音樂
+
+            Time.timeScale = 1;
             isPaused = true;
             Instantiate(Showmusic, transform.position, transform.rotation);
 
