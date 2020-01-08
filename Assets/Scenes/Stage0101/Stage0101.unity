@@ -2164,7 +2164,7 @@ Prefab:
     - target: {fileID: 224686296211239540, guid: af84beb71ebe73148b86039c8b54d3b9,
         type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 224686296211239540, guid: af84beb71ebe73148b86039c8b54d3b9,
         type: 2}
@@ -2227,6 +2227,26 @@ Prefab:
     - target: {fileID: 1453085133007638, guid: af84beb71ebe73148b86039c8b54d3b9, type: 2}
       propertyPath: m_Layer
       value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 114670003092672596, guid: af84beb71ebe73148b86039c8b54d3b9,
+        type: 2}
+      propertyPath: Objects.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114670003092672596, guid: af84beb71ebe73148b86039c8b54d3b9,
+        type: 2}
+      propertyPath: Objects.Array.data[7]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114670003092672596, guid: af84beb71ebe73148b86039c8b54d3b9,
+        type: 2}
+      propertyPath: Objects.Array.data[8]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114670003092672596, guid: af84beb71ebe73148b86039c8b54d3b9,
+        type: 2}
+      propertyPath: Objects.Array.data[9]
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: af84beb71ebe73148b86039c8b54d3b9, type: 2}
@@ -3629,7 +3649,7 @@ Prefab:
     - target: {fileID: 224811020101868952, guid: 13821816e6d170143925cc8040225c8e,
         type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 224811020101868952, guid: 13821816e6d170143925cc8040225c8e,
         type: 2}
