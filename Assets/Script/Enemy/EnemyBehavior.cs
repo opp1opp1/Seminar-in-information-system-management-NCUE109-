@@ -495,7 +495,7 @@ public class EnemyBehavior : MonoBehaviour
                         if (target.GetComponent<PlayerStats>().reducedamage == true)
                         {
                             Debug.Log("有減傷");
-                            tempDamage = GetComponent<EnemyStat>().ColliderDamage * 0.8f;
+                            tempDamage = GetComponent<EnemyStat>().ColliderDamage * target.GetComponent<PlayerStats>().reducedamageratio;
                             if (targetShield >= tempDamage)
                             {
                                 Debug.Log("護盾擋住了(有減傷)");
@@ -555,6 +555,36 @@ public class EnemyBehavior : MonoBehaviour
                         do
                         {
                             GetComponent<EnemyStat>().currentenemyhealth -= GetComponent<EnemyStat>().ColliderDamage * target.GetComponent<PlayerStats>().reflectdamageratio;
+                            if (GetComponent<EnemyStat>().currentenemyhealth <= 0)  //如果敵人血量低於0就掰掰
+                            {
+
+                                if (Instantiateonce == false)
+                                {
+                                    int f = Random.Range(0, 100);
+                                    if (this.gameObject.name != "Dummy")
+                                    {
+                                        if (f >= 40)
+                                        {
+                                            Instantiate(PowerUp, transform.position, transform.rotation);
+                                            Instantiateonce = true;
+                                        }
+                                        else
+                                        {
+                                            Destroy(gameObject);
+                                        }
+                                    }
+                                    else
+                                    {
+                                        Instantiate(PowerUpTutorial, transform.position, transform.rotation);
+                                        Instantiateonce = true;
+                                        Destroy(gameObject);
+                                    }
+                                }
+
+
+
+                                Destroy(gameObject);
+                            }
                         } while (n > 1);
                     }
                     else

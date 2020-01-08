@@ -23,8 +23,9 @@ public class PlayerStats : MonoBehaviour
     public bool itisinvincinble;
     private float nextinvincinbletime = 0.5f;
     public bool reflectdamage = false;
-    public float reflectdamageratio = 0.35f;
+    public float reflectdamageratio = 0.75f;
     public bool reducedamage = false;
+    public float reducedamageratio = 0.8f;
     // Use this for initialization
     void Start()
     {

@@ -67,6 +67,10 @@ public class PlayerShoot : MonoBehaviour
         {
             target.GetComponent<PlayerStats>().reflectdamage = true;
         }
+        else if (IceArrow && EarthArrow == true) //冰+土 =減少傷害
+        {
+            target.GetComponent<PlayerStats>().reducedamage = true;
+        }
             if (target.GetComponent<PlayerRotation>().enemychecker == true) //判斷是否有敵人
         {
             /*  舊射擊程式碼
