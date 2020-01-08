@@ -44,6 +44,7 @@ public class EnemyBehavior : MonoBehaviour
     private GameObject point;
 
     private float enemy7_health;
+    private float enemy8_health;
     private bool Is_divided = false;
 
     // Use this for initialization
@@ -370,7 +371,47 @@ public class EnemyBehavior : MonoBehaviour
 
 
         }
-            if (slowtimer > 0.1f)
+        else if (this.gameObject.tag == ("Enemy_8"))
+        {
+            enemy8_health = GetComponent<EnemyStat>().currentenemyhealth;
+
+            if (distance <= this.GetComponent<EnemyStat>().WakeUpDistance)
+            {
+                Vector3 newPos = Player.transform.position;
+                agent.SetDestination(newPos);
+            }
+            /*if (distance < this.GetComponent<EnemyStat>().WakeUpDistance)
+            {
+                Vector3 dirToPlayer = transform.position - Player.transform.position;
+                Vector3 newPos = transform.position + dirToPlayer;
+                hand.GetComponent<handanimation>().hand_animator.SetBool("Escaping", true);
+                //Vector3 newPos = transform.position ;
+                agent.SetDestination(newPos);
+            }*/
+
+            if (EASChecker <= 0)
+            {
+               
+                target = GameObject.Find("Ashe");
+                transform.LookAt(target.transform.position, transform.up);
+
+                Instantiate(Enemy2_bullet, transform.position, transform.rotation);
+                Instantiate(Enemy2_bullet, transform.position, transform.rotation * Quaternion.AngleAxis(10, transform.up));
+                Instantiate(Enemy2_bullet, transform.position, transform.rotation * Quaternion.AngleAxis(20, transform.up));
+                Instantiate(Enemy2_bullet, transform.position, transform.rotation * Quaternion.AngleAxis(-10, transform.up));
+                Instantiate(Enemy2_bullet, transform.position, transform.rotation * Quaternion.AngleAxis(-20, transform.up));
+
+               
+                EASChecker = EAS;
+                EASChecker = EAS;
+                EASChecker = EAS;
+                EASChecker = EAS;
+                EASChecker = EAS;       
+            }
+
+
+        }
+        if (slowtimer > 0.1f)
         {
             slowtimer -= Time.deltaTime;
 
@@ -417,7 +458,7 @@ public class EnemyBehavior : MonoBehaviour
     }
     private void OnTriggerStay(Collider other)
     {
-        if (gameObject.tag == "Enemy_1"|| gameObject.tag == "Enemy_2"|| gameObject.tag == "Enemy_3"|| gameObject.tag == "Enemy_4"|| gameObject.tag == "Enemy_5" || gameObject.tag == "Enemy_6" || gameObject.tag == "Enemy_7")
+        if (gameObject.tag == "Enemy_1"|| gameObject.tag == "Enemy_2"|| gameObject.tag == "Enemy_3"|| gameObject.tag == "Enemy_4"|| gameObject.tag == "Enemy_5" || gameObject.tag == "Enemy_6" || gameObject.tag == "Enemy_7" || gameObject.tag == "Enemy_8 ")
         {
             if (other.name == "Ashe")
             {
