@@ -81,10 +81,11 @@ public class EnemyStat : MonoBehaviour {
                 agentspeed = 5f;
                 break;
             case 9:
-                basicenemyhealth = 500;
+                basicenemyhealth = 1000;
                 enemyattackspeed = 1f;
                 ColliderDamage = 20f;
                 WakeUpDistance = 15f;
+                AttackDistance = 3.5f;
                 agentspeed = 2f;
                 break;
 

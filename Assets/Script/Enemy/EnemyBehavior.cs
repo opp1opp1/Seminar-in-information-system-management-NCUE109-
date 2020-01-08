@@ -39,6 +39,7 @@ public class EnemyBehavior : MonoBehaviour
     private float enemy6_teleport_checker;
     public GameObject Enemy6_warning_square;
     public GameObject Enemy4_warning;
+    public GameObject Enemy9_Sword;
     public GameObject little_enemy7;
     private float ColidCheckTime;
     private GameObject point;
@@ -157,7 +158,7 @@ public class EnemyBehavior : MonoBehaviour
                     transform.LookAt(lookatposition, transform.up);
                     do
                     {
-                        Instantiate(Enemy3_Sword, new Vector3(Mathf.Lerp(transform.position.x, Player.transform.position.x, 0.5f), 1f, Mathf.Lerp(transform.position.z, Player.transform.position.z, 0.5f)), transform.rotation);
+                        Instantiate(Enemy9_Sword, new Vector3(Mathf.Lerp(transform.position.x, Player.transform.position.x, 0.5f), 1f, Mathf.Lerp(transform.position.z, Player.transform.position.z, 0.5f)), transform.rotation);
                         EASChecker = EAS;
                         XiangYu.GetComponent<XiangYuAnimation>().XiangYu_animator.SetBool("Attacking", false);
                         onlyshootonce = false;
@@ -348,7 +349,7 @@ public class EnemyBehavior : MonoBehaviour
             }
             if(Is_divided==false && enemy7_health <= 40)
             {
-                if (this.gameObject.name != ("Enemy(Clone)"))
+                if (this.gameObject.name != ("Enemy7(Clone)"))
                 {
                     Instantiate(little_enemy7, transform.position, transform.rotation);
                     Instantiate(little_enemy7, transform.position, transform.rotation);
@@ -362,7 +363,7 @@ public class EnemyBehavior : MonoBehaviour
                 Is_divided = true;
             }
 
-            if (this.gameObject.name == ("Enemy(Clone)"))
+            if (this.gameObject.name == ("Enemy7(Clone)"))
             {
                 transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
                 Debug.Log("縮小2");
@@ -380,34 +381,44 @@ public class EnemyBehavior : MonoBehaviour
                 Vector3 newPos = Player.transform.position;
                 agent.SetDestination(newPos);
             }
-            /*if (distance < this.GetComponent<EnemyStat>().WakeUpDistance)
+
+            if (distance < this.GetComponent<EnemyStat>().AttackDistance) //進入近戰範圍
             {
-                Vector3 dirToPlayer = transform.position - Player.transform.position;
-                Vector3 newPos = transform.position + dirToPlayer;
-                hand.GetComponent<handanimation>().hand_animator.SetBool("Escaping", true);
-                //Vector3 newPos = transform.position ;
-                agent.SetDestination(newPos);
-            }*/
+                Debug.Log("近戰攻擊!");
+                if (EASChecker <= 0)
+                {
 
-            if (EASChecker <= 0)
-            {
-               
-                target = GameObject.Find("Ashe");
-                transform.LookAt(target.transform.position, transform.up);
+                    target = GameObject.Find("Ashe");
+                    transform.LookAt(target.transform.position, transform.up);
 
-                Instantiate(Enemy2_bullet, transform.position, transform.rotation);
-                Instantiate(Enemy2_bullet, transform.position, transform.rotation * Quaternion.AngleAxis(10, transform.up));
-                Instantiate(Enemy2_bullet, transform.position, transform.rotation * Quaternion.AngleAxis(20, transform.up));
-                Instantiate(Enemy2_bullet, transform.position, transform.rotation * Quaternion.AngleAxis(-10, transform.up));
-                Instantiate(Enemy2_bullet, transform.position, transform.rotation * Quaternion.AngleAxis(-20, transform.up));
-
-               
-                EASChecker = EAS;
-                EASChecker = EAS;
-                EASChecker = EAS;
-                EASChecker = EAS;
-                EASChecker = EAS;       
+                    // Instantiate(Enemy3_Sword, transform.position, transform.rotation);
+                    Instantiate(Enemy3_Sword, new Vector3(Mathf.Lerp(transform.position.x, Player.transform.position.x, 0.5f), 1f, Mathf.Lerp(transform.position.z, Player.transform.position.z, 0.5f)), transform.rotation);
+                    EASChecker = EAS;
+                }
             }
+            else //不在近戰範圍內就遠程散彈攻擊!
+            {
+                if (EASChecker <= 0)
+                {
+
+                    target = GameObject.Find("Ashe");
+                    transform.LookAt(target.transform.position, transform.up);
+
+                    Instantiate(Enemy2_bullet, transform.position, transform.rotation);
+                    Instantiate(Enemy2_bullet, transform.position, transform.rotation * Quaternion.AngleAxis(10, transform.up));
+                    Instantiate(Enemy2_bullet, transform.position, transform.rotation * Quaternion.AngleAxis(20, transform.up));
+                    Instantiate(Enemy2_bullet, transform.position, transform.rotation * Quaternion.AngleAxis(-10, transform.up));
+                    Instantiate(Enemy2_bullet, transform.position, transform.rotation * Quaternion.AngleAxis(-20, transform.up));
+
+
+                    EASChecker = EAS;
+                    EASChecker = EAS;
+                    EASChecker = EAS;
+                    EASChecker = EAS;
+                    EASChecker = EAS;
+                }
+            }
+               
 
 
         }
