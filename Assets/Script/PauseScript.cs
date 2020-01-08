@@ -20,34 +20,47 @@ public class PauseScript : MonoBehaviour {
 
     void Start()
     {
+        //Button btn = this.GetComponent<Button>();
+        //btn.onClick.AddListener(OnClick);
+
         st = Resources.Load<Sprite>("stop");    //設定圖片，要設定的圖片要丟到Resource資料夾裡
         go = Resources.Load<Sprite>("play");
         im = this.GetComponent<Image>();
     }
-
+    
+    void Update()
+    {
+        if(isPaused == true)
+        {
+            im.sprite = go; //暫停時圖片變成play
+        }
+        else
+        {
+            im.sprite = st; //繼續時圖片變成stop
+        }
+    }
+    
     public void pauseGame()
     {
 
         if (isPaused)
         {
-            bgMusicAudioSource.Pause(); //繼續音樂
-          
-            Time.timeScale = 0; 
+            bgMusicAudioSource.UnPause();//繼續音樂
+
+            Time.timeScale = 1; 
             isPaused = false;
             Instantiate(Showmusic, transform.position, transform.rotation);
 
-            im.sprite = st; //繼續時圖片變成stop
         }
         else
         {
-            bgMusicAudioSource.UnPause();//暫停音樂
+            bgMusicAudioSource.Pause(); //暫停音樂
 
-            Time.timeScale = 1;
+            Time.timeScale = 0;
             isPaused = true;
             Instantiate(Showmusic, transform.position, transform.rotation);
 
-            im.sprite = go; //暫停時圖片變成play
         }
     }
-
+    
 }
