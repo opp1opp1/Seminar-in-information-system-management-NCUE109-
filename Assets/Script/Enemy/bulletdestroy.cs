@@ -28,7 +28,7 @@ public class bulletdestroy : MonoBehaviour
     {
         
         lifeTime = 0.0f;
-        Explosion_damage = 0.25f * bullet_damage;
+        Explosion_damage = 0.5f * bullet_damage;
         if (this.gameObject.tag == "Explosion")
         {
             maxTime = 0.25f;
@@ -105,7 +105,7 @@ public class bulletdestroy : MonoBehaviour
                 if (this.gameObject.name == "Fire_Arrow(Clone)")
                 {
                     other.GetComponent<EnemyBehavior>().burntimer = burnTime;
-                    other.GetComponent<EnemyBehavior>().burndamage = bullet_damage * 0.2f * 0.25f;
+                    other.GetComponent<EnemyBehavior>().burndamage = bullet_damage * 0.5f * 0.25f;
                 }
                 if (this.gameObject.name == "Wind_Arrow(Clone)")
                 {
@@ -124,7 +124,8 @@ public class bulletdestroy : MonoBehaviour
                 }
                 if (this.gameObject.name == "Explosion_Arrow(Clone)")
                 {
-                    Instantiate(Explosion, transform.position, transform.rotation);
+                    Instantiate(Explosion,this.transform.position, transform.rotation);
+                    Destroy(gameObject);
                 }
             }
 
@@ -141,7 +142,7 @@ public class bulletdestroy : MonoBehaviour
                     if (target.GetComponent<PlayerStats>().reducedamage == true)//檢查是否有減傷
                     {
 
-                        tempDamage = bullet_damage * 0.8f;
+                        tempDamage = bullet_damage * target.GetComponent<PlayerStats>().reducedamageratio;
                         if (targetShield >= tempDamage)//檢查護盾是不是可以擋下傷害
                         {
                             targetShield -= tempDamage;
@@ -205,7 +206,7 @@ public class bulletdestroy : MonoBehaviour
                     if (target.GetComponent<PlayerStats>().reducedamage == true)//檢查是否有減傷
                     {
 
-                        tempDamage = sword_damage * 0.8f;
+                        tempDamage = sword_damage * target.GetComponent<PlayerStats>().reducedamageratio;
                         if (targetShield >= tempDamage)//檢查護盾是不是可以擋下傷害
                         {
                             targetShield -= tempDamage;
