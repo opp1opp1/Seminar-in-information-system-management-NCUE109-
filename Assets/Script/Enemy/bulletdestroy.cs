@@ -90,7 +90,7 @@ public class bulletdestroy : MonoBehaviour
     //弓箭射到物體時消失
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Enemy_1" || other.tag == "Enemy_2" || other.tag == "Enemy_3" || other.tag == "Enemy_4" || other.tag == "Enemy_5" || other.tag == "Enemy_6" || other.tag == "Enemy_7")
+        if (other.tag == "Enemy_1" || other.tag == "Enemy_2" || other.tag == "Enemy_3" || other.tag == "Enemy_4" || other.tag == "Enemy_5" || other.tag == "Enemy_6" || other.tag == "Enemy_7"|| other.tag == "Enemy_8")
         {
             if (this.gameObject.tag == "Bullet")
             {
@@ -129,7 +129,7 @@ public class bulletdestroy : MonoBehaviour
             }
 
         }
-        if (this.gameObject.name == "Enemy2bullet(Clone)" || this.gameObject.name == "Enemy4bullet(Clone)")
+        if (this.gameObject.name == "Enemy2bullet(Clone)" || this.gameObject.name == "Enemy4bullet(Clone)" || this.gameObject.name == "Enemy8bullet(Clone)")
         {
             if (other.gameObject.tag == "Player")
             {
