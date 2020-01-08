@@ -63,8 +63,11 @@ public class PlayerShoot : MonoBehaviour
         EarthArrow = PlayerIni.EarthArrow; //土屬性
 
         CASChecker -= Time.deltaTime;
-
-        if (target.GetComponent<PlayerRotation>().enemychecker == true) //判斷是否有敵人
+        if (FireArrow && EarthArrow == true) //火+土 =反彈傷害
+        {
+            target.GetComponent<PlayerStats>().reflectdamage = true;
+        }
+            if (target.GetComponent<PlayerRotation>().enemychecker == true) //判斷是否有敵人
         {
             /*  舊射擊程式碼
             if (target.GetComponent<Playermove>().Characterismoving == false && CASChecker <= 0f && Multipleshoot == 1) //散射

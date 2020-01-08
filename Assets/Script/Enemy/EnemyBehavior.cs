@@ -539,15 +539,20 @@ public class EnemyBehavior : MonoBehaviour
                             }
                         }
                     }
+                    if (target.GetComponent<PlayerStats>().reflectdamage == true)
+                    {
+                        int n = 0;
+                        do
+                        {
+                            GetComponent<EnemyStat>().currentenemyhealth -= GetComponent<EnemyStat>().ColliderDamage * target.GetComponent<PlayerStats>().reflectdamageratio;
+                        } while (n > 1);
+                    }
                     else
                     {
                         Debug.Log("invincinble");
                     }
                 }
-                if (target.GetComponent<PlayerStats>().reflectdamage == true)
-                {
-                    GetComponent<EnemyStat>().currentenemyhealth -= GetComponent<EnemyStat>().ColliderDamage * target.GetComponent<PlayerStats>().reflectdamageratio;
-                }
+                
                 Debug.Log("Health:" + target.GetComponent<PlayerStats>().currentHealth + "Sheild:" + target.GetComponent<PlayerStats>().currentSheild + "EnemyHealth" + GetComponent<EnemyStat>().currentenemyhealth);
                 
             }
