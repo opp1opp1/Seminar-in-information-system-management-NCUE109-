@@ -27,12 +27,12 @@ public class FUIAppear : MonoBehaviour {//套在Ashe身上
         {
             do
             {
+                Destroy(col.gameObject);    //摧毀powerup
                 gameFPanel.GetComponent<FButtonInstantiate0>().stop = true; //吃到powerup時則會出現panel
                 gameFPanel.gameObject.SetActive(true);  //顯示FPanel
                 Vector3 st = stop_button.transform.position;    //暫時隱藏暫停鈕
                 st = new Vector3(st.x - 1000, st.y, st.z);
                 stop_button.transform.position = st;
-                Destroy(col.gameObject);    //摧毀powerup
                 PauseGame();    //暫停遊戲
                 haha = 0;
             } while (haha == 1);
