@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.43846613, g: 0.4865542, b: 0.5668264, a: 1}
+  m_IndirectSpecularColor: {r: 0.4384668, g: 0.48655474, b: 0.5668273, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -1522,6 +1522,16 @@ Prefab:
       propertyPath: randomSeed
       value: 1476816308
       objectReference: {fileID: 0}
+    - target: {fileID: 224270288559895072, guid: 63c439e91d4186c4db6ed448e83f434b,
+        type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224270288559895072, guid: 63c439e91d4186c4db6ed448e83f434b,
+        type: 2}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 63c439e91d4186c4db6ed448e83f434b, type: 2}
   m_IsPrefabParent: 0
@@ -2229,12 +2239,12 @@ Prefab:
     - target: {fileID: 224085963898133960, guid: 1d1892f35750a6143b1a0ad676a06478,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: -20.000004
+      value: 250
       objectReference: {fileID: 0}
     - target: {fileID: 224085963898133960, guid: 1d1892f35750a6143b1a0ad676a06478,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 80.000015
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 224085963898133960, guid: 1d1892f35750a6143b1a0ad676a06478,
         type: 2}
@@ -2609,7 +2619,7 @@ Prefab:
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1351749674}
+      objectReference: {fileID: 0}
     - target: {fileID: 114322448789122942, guid: bf90cab2e66d45446a8876c05a0fe40d,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
@@ -2636,26 +2646,9 @@ Prefab:
   m_IsPrefabParent: 0
 --- !u!224 &1351749672 stripped
 RectTransform:
-  m_PrefabParentObject: {fileID: 224527509806712492, guid: bf90cab2e66d45446a8876c05a0fe40d,
+  m_PrefabParentObject: {fileID: 224187829350139978, guid: bf90cab2e66d45446a8876c05a0fe40d,
     type: 2}
   m_PrefabInternal: {fileID: 1351749671}
---- !u!1 &1351749673 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1158287768012118, guid: bf90cab2e66d45446a8876c05a0fe40d,
-    type: 2}
-  m_PrefabInternal: {fileID: 1351749671}
---- !u!114 &1351749674
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1351749673}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 563f2778e0ed1db4aa02b7c0e7752d80, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Showmusic: {fileID: 0}
 --- !u!1001 &1352268343
 Prefab:
   m_ObjectHideFlags: 0
@@ -2893,7 +2886,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb9adda5138a94b4ca3bce1de72a9967, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HPlable: {fileID: 1740017534}
+  HPlabel: {fileID: 0}
+  HPlabel2: {fileID: 0}
   healthbarback: {fileID: 1048393541}
   healthbar: {fileID: 1797776145}
 --- !u!23 &1390382394

@@ -50,7 +50,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 8767be1e1ee953749a55dc3cadba68c5, type: 3}
     m_FontSize: 22
     m_FontStyle: 0
     m_BestFit: 0
@@ -74,7 +74,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c696fe0dc5e7fd46b5f74097af37ceb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Ashe: {fileID: 1528883516536896, guid: 80578e19eccc31142a9e3e02a69aa601, type: 2}
+  Ashe: {fileID: 0}
 --- !u!212 &212106415942966118
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -140,6 +140,6 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -20.000004, y: 80.000015}
+  m_AnchoredPosition: {x: 250, y: 150}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}

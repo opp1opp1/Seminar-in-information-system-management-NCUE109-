@@ -11,7 +11,7 @@ public class Playermove : MonoBehaviour {
     private float screenWeight;             //屏幕宽度
     public Vector3 fristPos;//接触时的position 
     public Vector3 twoPos;//移动后的position 
-
+    private Vector3 lastposition;
     private Vector3 moveDirection;
     public float speeduptimer;
     public float MoveSpeed;
@@ -24,6 +24,7 @@ public class Playermove : MonoBehaviour {
     private Animator _animator;
     private Vector2 FirstTouch;
     private Vector2 direction;
+    private float Checktime;
     //碰撞
     //包含上述MoveSpeed
     public float deltaTime;
@@ -46,7 +47,8 @@ public class Playermove : MonoBehaviour {
 
 #if UNITY_IOS || UNITY_ANDROID
 
-
+       
+        
         int touchNum = Input.touchCount;
         if(Time.timeScale!=0)
         {
@@ -57,22 +59,25 @@ public class Playermove : MonoBehaviour {
                 if (touch.phase == TouchPhase.Began)
                 {
                     FirstTouch = touch.position;
+                    Characterismoving = true;
+                    _animator.SetBool("Characterismoving", true);
                 }
                 if ((touch.phase == TouchPhase.Moved) || (touch.phase == TouchPhase.Stationary))
                 //if (touch.phase == TouchPhase.Stationary)
                 {
-                    Characterismoving = true;
-                    _animator.SetBool("Characterismoving", true);
                     direction = touch.position - FirstTouch;
                     Vector3 dir = new Vector3(direction.x / Mathf.Sqrt(Mathf.Pow(direction.x, 2) + Mathf.Pow(direction.y, 2)), 0f, direction.y / Mathf.Sqrt(Mathf.Pow(direction.x, 2) + Mathf.Pow(direction.y, 2)));
+                    
                     controller.Move(dir * MoveSpeed * Time.fixedDeltaTime *Time.timeScale);
                     // this.gameObject.transform.position = transform.position + dir * MoveSpeed * Time.deltaTime;
                 }
-                else
+                if (touch.phase == TouchPhase.Ended)
                 {
                     Characterismoving = false;
                     _animator.SetBool("Characterismoving", false);
                 }
+                    
+                
             }
         }
 #endif
@@ -92,9 +97,9 @@ public class Playermove : MonoBehaviour {
         }
 
         //移動
-        
-        
-         if ((Input.GetKey(KeyCode.A) && Input.GetKey(KeyCode.W))||( Input.GetKey(KeyCode.A) && Input.GetKey(KeyCode.S))|| (Input.GetKey(KeyCode.D) && Input.GetKey(KeyCode.S))||(Input.GetKey(KeyCode.D) && Input.GetKey(KeyCode.W)))
+
+#if UNITY_EDITOR || UNITY_STANDALONE_WIN
+        if ((Input.GetKey(KeyCode.A) && Input.GetKey(KeyCode.W))||( Input.GetKey(KeyCode.A) && Input.GetKey(KeyCode.S))|| (Input.GetKey(KeyCode.D) && Input.GetKey(KeyCode.S))||(Input.GetKey(KeyCode.D) && Input.GetKey(KeyCode.W)))
         {
             Characterismoving = true;
 
@@ -124,11 +129,14 @@ public class Playermove : MonoBehaviour {
             //moveDirection = new Vector3(Input.GetAxis("Horizontal") * MoveSpeed, moveDirection.y, Input.GetAxis("Vertical") * MoveSpeed);
             moveDirection = new Vector3(0, 0, Input.GetAxis("Vertical") * MoveSpeed);
         }
+
         else
         {
             Characterismoving = false;
             _animator.SetBool("Characterismoving", false);
         }
+#endif
+
 
         //碰撞
         //deltaMove = MoveSpeed * Time.deltaTime;
