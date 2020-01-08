@@ -23,6 +23,8 @@ TagManager:
   - Enemy_6_transport_position
   - Main Music
   - SFX
+  - Enemy_8
+  - Enemy_7
   layers:
   - Default
   - TransparentFX
