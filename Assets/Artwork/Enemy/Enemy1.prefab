@@ -119,11 +119,11 @@ GameObject:
   - component: {fileID: 199155909389271060}
   m_Layer: 9
   m_Name: Enemy1
-  m_TagString: Enemy_1
+  m_TagString: Enemy_7
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1834166368020260
 GameObject:
   m_ObjectHideFlags: 0
@@ -180,7 +180,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1768816727181462}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4, y: 0.5, z: -1}
+  m_LocalPosition: {x: 4, y: 0.5, z: 7.95}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4610613191217048}
@@ -531,7 +531,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa270c56f7bbfb940be0677db7499753, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemytype: 1
+  enemytype: 8
   basicenemyhealth: 100
   currentenemyhealth: 100
   enemyattackspeed: 1
@@ -709,7 +709,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 975235029
+  randomSeed: -428211505
   InitialModule:
     serializedVersion: 3
     enabled: 1

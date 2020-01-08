@@ -28,7 +28,7 @@ public class HitHpScript : MonoBehaviour {
             if (this.GetComponent<Text>().text != "")
             {
                 Hp2.GetComponent<Text>().text = this.GetComponent<Text>().text;
-                Hp2Disappertimer = 0.7f - Disappertimer;
+                Hp2Disappertimer = 0.7f - Disappertimer +0.5f;
             }
             
                 this.GetComponent<Text>().text = "" + HitHealth +"!";
