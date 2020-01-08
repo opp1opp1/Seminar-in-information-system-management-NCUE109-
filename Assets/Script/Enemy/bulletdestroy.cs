@@ -129,7 +129,7 @@ public class bulletdestroy : MonoBehaviour
             }
 
         }
-        if (this.gameObject.name == "Enemy2bullet(Clone)" || this.gameObject.name == "Enemy4bullet(Clone)" || this.gameObject.name == "Enemy8bullet(Clone)")
+        if (this.gameObject.name == "Enemy2bullet(Clone)" || this.gameObject.name == "Enemy4bullet(Clone)" || this.gameObject.name == "Enemy8bullet(Clone)" || this.gameObject.name == "Enemy9_Sword(Clone)")
         {
             if (other.gameObject.tag == "Player")
             {
@@ -257,7 +257,7 @@ public class bulletdestroy : MonoBehaviour
                 }
             }
         }
-        if (other.tag == "Wall"&& (this.gameObject.name != "Explosion"|| this.gameObject.tag != "BurnGround"|| this.gameObject.tag != "IceGround"))
+        if (other.tag == "Wall"&& (this.gameObject.name != "Explosion"|| this.gameObject.tag != "BurnGround"|| this.gameObject.tag != "IceGround" || this.gameObject.tag =="Enemy_Bullet"))
         {
             Destroy(this.gameObject);
         }
