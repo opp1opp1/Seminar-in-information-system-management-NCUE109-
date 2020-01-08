@@ -8,6 +8,7 @@ public class FUIAppear : MonoBehaviour {//套在Ashe身上
     public bool isPaused = false;    //讓update裡的動作暫停
     public GameObject stop_button; //用來在選擇能力時將暫停鈕隱藏，避免選擇能力時觸碰到暫停鈕
     public int st;
+    private int haha;   //暫停while避免重複生成按鈕用
 
 	// Use this for initialization
 	void Awake () {
@@ -24,13 +25,18 @@ public class FUIAppear : MonoBehaviour {//套在Ashe身上
     {
         if(col.gameObject.name == "powerup(Clone)") //如果Ashe撞到powerup
         {
-            gameFPanel.GetComponent<FButtonInstantiate0>().stop = true; //吃到powerup時則會出現panel
-            gameFPanel.gameObject.SetActive(true);  //顯示FPanel
-            Vector3 st = stop_button.transform.position;    //暫時隱藏暫停鈕
-            st = new Vector3(st.x - 1000, st.y, st.z);
-            stop_button.transform.position = st;
-            Destroy(col.gameObject);    //摧毀powerup
-            PauseGame();    //暫停遊戲
+            do
+            {
+                gameFPanel.GetComponent<FButtonInstantiate0>().stop = true; //吃到powerup時則會出現panel
+                gameFPanel.gameObject.SetActive(true);  //顯示FPanel
+                Vector3 st = stop_button.transform.position;    //暫時隱藏暫停鈕
+                st = new Vector3(st.x - 1000, st.y, st.z);
+                stop_button.transform.position = st;
+                Destroy(col.gameObject);    //摧毀powerup
+                PauseGame();    //暫停遊戲
+                haha = 0;
+            } while (haha == 1);
+            
         }
         if (col.gameObject.name == "powerup(Tutorial)(Clone)")
         {
