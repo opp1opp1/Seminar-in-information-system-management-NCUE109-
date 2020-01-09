@@ -23,9 +23,9 @@ public class PlayerGetKnockOut : MonoBehaviour {
         if (currentHealth <= 0)
         {
             SceneManager.LoadScene("MainScene");
-            PlayerIni.currentHealth = PlayerIni.basicHealth;
+            PlayerIni.currentHealth = PlayerPrefs.GetFloat("Health");
             PlayerIni.currentSheild = 0;
-
+            
             PlayerIni.Muitishot = false; //連續射擊
             PlayerIni.MuitishotSecondChecker = false; //連續射擊的第二發判斷器
             PlayerIni.FrontArrow = false; //齊射
