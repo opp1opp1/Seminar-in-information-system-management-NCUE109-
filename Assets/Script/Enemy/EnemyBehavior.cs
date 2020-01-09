@@ -159,7 +159,7 @@ public class EnemyBehavior : MonoBehaviour
                     transform.LookAt(lookatposition, transform.up);
                     do
                     {
-                        Instantiate(Enemy9_Sword, new Vector3(Mathf.Lerp(transform.position.x, Player.transform.position.x, 0.5f), 1f, Mathf.Lerp(transform.position.z, Player.transform.position.z, 0.5f)), transform.rotation);
+                        //Instantiate(Enemy9_Sword, new Vector3(Mathf.Lerp(transform.position.x, Player.transform.position.x, 0.5f), 1f, Mathf.Lerp(transform.position.z, Player.transform.position.z, 0.5f)), transform.rotation);
                         EASChecker = EAS;
                         XiangYu.GetComponent<XiangYuAnimation>().XiangYu_animator.SetBool("Attacking", false);
                         onlyshootonce = false;

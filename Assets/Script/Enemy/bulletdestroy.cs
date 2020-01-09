@@ -50,7 +50,7 @@ public class bulletdestroy : MonoBehaviour
         {
             maxTime = 0.3f;
         }
-            if (this.gameObject.name == "Ashe_Arrow(Clone)")
+            if (this.gameObject.tag == "Bullet")
         {
             bullet_damage = PlayerIni.currentAttackDamage;
         }

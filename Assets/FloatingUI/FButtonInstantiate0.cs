@@ -81,8 +81,7 @@ public class FButtonInstantiate0 : MonoBehaviour {  //隨機生成三個指定�
                 return Ins_Objs1();
             }
         }
-        clone_01 = Instantiate(Objects[Random_Objects], point_01.transform.position,    //生成物件
-            point_01.transform.rotation);
+        clone_01 = Instantiate(Objects[Random_Objects], point_01.transform.position,point_01.transform.rotation);//生成物件
         clone_01.transform.parent = gameFPanel.transform;  //複製出FButton後，將他放到FPanel底下，才顯現得出來
         return 0;
     }

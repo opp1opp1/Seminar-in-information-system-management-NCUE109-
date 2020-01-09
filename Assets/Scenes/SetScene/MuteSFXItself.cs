@@ -14,9 +14,12 @@ public class MuteSFXItself : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (sf.GetComponent<SFXChecker>().sfx == false)
-            sfa.mute = true;
-        else
-            sfa.mute = false;
+        if (sf)
+        {
+            if (sf.GetComponent<SFXChecker>().sfx == false)
+                sfa.mute = true;
+            else
+                sfa.mute = false;
+        }
     }
 }

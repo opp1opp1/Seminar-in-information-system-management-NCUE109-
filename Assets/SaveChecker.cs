@@ -19,12 +19,18 @@ public class SaveChecker : MonoBehaviour {
         {
             PlayerPrefs.SetFloat("AttackSpeed", 1.0F);
         }
+        if (PlayerPrefs.GetFloat("Money") == 0)
+        {
+            PlayerPrefs.SetFloat("Money", 200);
+        }
         PlayerPrefs.GetFloat("Money");
         PlayerPrefs.GetFloat("Tutotial");
+        /*PlayerPrefs.DeleteAll(); 
+        清除存檔用*/
     }
 	
 	// Update is called once per frame
 	void Update () {
-		
-	}
+        
+    }
 }

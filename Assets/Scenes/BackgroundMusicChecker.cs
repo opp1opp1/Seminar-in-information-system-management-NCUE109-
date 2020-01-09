@@ -47,9 +47,9 @@ public class BackgroundMusicChecker : MonoBehaviour {
 	void Update () {
         bmm = GameObject.FindGameObjectWithTag("Background Music").GetComponent<AudioSource>();
         mmm = GameObject.FindGameObjectWithTag("Main Music").GetComponent<AudioSource>();
-        
 
-        if (SceneManager.GetActiveScene().name == "MainScene" || SceneManager.GetActiveScene().name == "SetScene"
+
+        if ((bmm!=null)&&SceneManager.GetActiveScene().name == "MainScene" || SceneManager.GetActiveScene().name == "SetScene"
             || SceneManager.GetActiveScene().name == "BoxScene")
         {
             mmm.enabled = true;
@@ -59,7 +59,7 @@ public class BackgroundMusicChecker : MonoBehaviour {
             mmm.enabled = false;
         }
 
-        if (mmm.enabled == true)    //當main music開著時，關掉background music
+        if ((mmm != null) && mmm.enabled == true)    //當main music開著時，關掉background music
         {
             bmm.enabled = false;
         }
