@@ -7,6 +7,7 @@ public class SceneChangerCharacter : MonoBehaviour {
 
 	public void CharacterScene()
     {
-        SceneManager.LoadScene("CharacterScene");
+        // SceneManager.LoadScene("CharacterScene");
+        SceneManager.LoadScene("Arena");
     }
 }

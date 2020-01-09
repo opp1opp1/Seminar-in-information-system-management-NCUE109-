@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameMoney : MonoBehaviour {
@@ -18,6 +19,11 @@ public class GameMoney : MonoBehaviour {
         if (target)
         {
             if (target.GetComponent<PlayerRotation>().enemychecker == false)
+
+            {
+                this.GetComponent<Text>().text = "" + point.GetComponent<PointScript>().point;
+            }
+            if (SceneManager.GetActiveScene().name == "Arena")
             {
                 this.GetComponent<Text>().text = "" + point.GetComponent<PointScript>().point;
             }
