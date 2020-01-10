@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyCreateor : MonoBehaviour {
     public GameObject[] Objects;
     public Transform[] Points;
-    public float Ins_Time = 1;
+    public float Ins_Time = 3;
     // Use this for initialization
     void Start () {
         InvokeRepeating("Ins_Objs", Ins_Time, Ins_Time);

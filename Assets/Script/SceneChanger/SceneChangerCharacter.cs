@@ -9,5 +9,9 @@ public class SceneChangerCharacter : MonoBehaviour {
     {
         // SceneManager.LoadScene("CharacterScene");
         SceneManager.LoadScene("Arena");
+        PlayerIni.basicHealth = PlayerPrefs.GetFloat("Health");
+        PlayerIni.currentAttackDamage = PlayerPrefs.GetFloat("Attack");
+        PlayerIni.currentAttackSpeed = PlayerPrefs.GetFloat("AttackSpeed");
+        PlayerIni.currentHealthLimit = PlayerPrefs.GetFloat("Health");
     }
 }
