@@ -24,13 +24,21 @@ public class HitHpScript : MonoBehaviour {
         Hp2Disappertimer -= Time.fixedDeltaTime;
         if (Enemy.GetComponent<EnemyStat>().currentenemyhealth != lastHealth)
         {
-            HitHealth = lastHealth - Enemy.GetComponent<EnemyStat>().currentenemyhealth;
-            if (this.GetComponent<Text>().text != "")
-            {
-                Hp2.GetComponent<Text>().text = this.GetComponent<Text>().text;
-                Hp2Disappertimer = 0.7f - Disappertimer +0.5f;
-            }
             
+            if (this.GetComponent<Text>().text != "" )
+            {
+                if (lastHealth - Enemy.GetComponent<EnemyStat>().currentenemyhealth > HitHealth)
+                {
+                    Hp2.GetComponent<Text>().text = this.GetComponent<Text>().text;
+                    Hp2Disappertimer = 0.7f - Disappertimer + 0.5f;
+                }
+                else
+                {
+                    Hp2.GetComponent<Text>().text = ""+(lastHealth - Enemy.GetComponent<EnemyStat>().currentenemyhealth)+"!";
+                    Hp2Disappertimer = 0.7f - Disappertimer + 0.5f;
+                }
+            }
+            HitHealth = lastHealth - Enemy.GetComponent<EnemyStat>().currentenemyhealth;
                 this.GetComponent<Text>().text = "" + HitHealth +"!";
             
             

@@ -17,7 +17,7 @@ public class UpgradeCostTextScript : MonoBehaviour {
         }
         if (this.gameObject.name == "ASPD Upgrade Text")
         {
-            target = GameObject.Find("HPup");
+            target = GameObject.Find("ASPDup");
         }
     }
 	

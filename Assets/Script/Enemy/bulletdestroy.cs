@@ -71,24 +71,7 @@ public class bulletdestroy : MonoBehaviour
             ExplosionTimeChecker = ExplosionTime;
         }
         */
-        if (this.gameObject.name == "FireWind_Arrow(Clone)")
-        {
-            InstantiateGroundTimer -= Time.deltaTime;
-            if (InstantiateGroundTimer <= 0)
-            {
-                Instantiate(BurnGround, transform.position+new Vector3(0,-0.0f,0), transform.rotation);
-                InstantiateGroundTimer = InstantiateGroundTime;
-            }
-        }
-        if (this.gameObject.name == "IceWind_Arrow(Clone)")
-        {
-            InstantiateGroundTimer -= Time.deltaTime;
-            if (InstantiateGroundTimer <= 0)
-            {
-                Instantiate(IceGround, transform.position + new Vector3(0, -0.0f, 0), transform.rotation);
-                InstantiateGroundTimer = InstantiateGroundTime;
-            }
-        }
+       
     }
 
     //弓箭射到物體時消失
@@ -130,6 +113,18 @@ public class bulletdestroy : MonoBehaviour
                 {
                     Instantiate(Explosion,this.transform.position, transform.rotation);
                     Destroy(gameObject);
+                }
+                if (this.gameObject.name == "FireWind_Arrow(Clone)")
+                {
+                    
+                        Instantiate(BurnGround, transform.position + new Vector3(0, -0.0f, 0), transform.rotation);
+                       
+                }
+                if (this.gameObject.name == "IceWind_Arrow(Clone)")
+                {
+                   
+                        Instantiate(IceGround, transform.position + new Vector3(0, -0.0f, 0), transform.rotation);
+                       
                 }
             }
 
