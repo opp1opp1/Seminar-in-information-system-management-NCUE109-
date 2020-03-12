@@ -132,7 +132,7 @@ MonoBehaviour:
   stunTime: 0.5
   Explosion: {fileID: 0}
   BurnGround: {fileID: 0}
-  IceGround: {fileID: 1704584529107266}
+  IceGround: {fileID: 1176007364930628, guid: 83c89d7f27fc0dd4f96caffb0a76718c, type: 2}
   ExplosionTime: 0.5
   Explosion_damage: 0
   InstantiateGroundTime: 1
