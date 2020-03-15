@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 212010300618465426}
   - component: {fileID: 114080727123003112}
   m_Layer: 5
-  m_Name: Addhp
+  m_Name: hp 1
   m_TagString: UIButton
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

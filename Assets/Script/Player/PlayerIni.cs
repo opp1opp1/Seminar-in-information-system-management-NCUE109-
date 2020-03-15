@@ -22,10 +22,10 @@ public static class PlayerIni
     public static bool FireArrow = false; //火屬性
     public static bool WindArrow = false; //風屬性
     public static bool EarthArrow = false; //土屬性
+    public static bool penetration =true; //穿透
 
 
 
 
-   
 }
 
