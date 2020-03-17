@@ -23,17 +23,19 @@ public class bulletdestroy : MonoBehaviour
     private float targetShield;
     private float tempDamage;
     public GameObject Hitsound;
+    private bool penetration; //穿透
+    private bool CollideAlready = false;
     // Use this for initialization
     void Start()
     {
-        
+        penetration = PlayerIni.penetration;
         lifeTime = 0.0f;
         Explosion_damage = 0.5f * bullet_damage;
         if (this.gameObject.tag == "Explosion")
         {
             maxTime = 0.25f;
         }
-        if (this.gameObject.tag == "BurnGround")        {
+        if (this.gameObject.tag == "BurnGround"||this.gameObject.tag == "IceGround" )       {
             maxTime = 0.75f;
         }
         if (this.gameObject.name == "FireWind_Arrow(Clone)")
@@ -71,24 +73,7 @@ public class bulletdestroy : MonoBehaviour
             ExplosionTimeChecker = ExplosionTime;
         }
         */
-        if (this.gameObject.name == "FireWind_Arrow(Clone)")
-        {
-            InstantiateGroundTimer -= Time.deltaTime;
-            if (InstantiateGroundTimer <= 0)
-            {
-                Instantiate(BurnGround, transform.position+new Vector3(0,-0.0f,0), transform.rotation);
-                InstantiateGroundTimer = InstantiateGroundTime;
-            }
-        }
-        if (this.gameObject.name == "IceWind_Arrow(Clone)")
-        {
-            InstantiateGroundTimer -= Time.deltaTime;
-            if (InstantiateGroundTimer <= 0)
-            {
-                Instantiate(IceGround, transform.position + new Vector3(0, -0.0f, 0), transform.rotation);
-                InstantiateGroundTimer = InstantiateGroundTime;
-            }
-        }
+       
     }
 
     //弓箭射到物體時消失
@@ -98,39 +83,61 @@ public class bulletdestroy : MonoBehaviour
         {
             if (this.gameObject.tag == "Bullet")
             {
-                Instantiate(Hitsound, transform.position, transform.rotation);
-                Destroy(gameObject);
+                if (CollideAlready == false) {
+                    Instantiate(Hitsound, transform.position, transform.rotation);
+                    if (penetration != true)
+                    {
+                        Destroy(gameObject);
+                    }
+                    else
+                    {
+                        CollideAlready = true;
+                    }
                 
-                if (this.gameObject.name == "Ice_Arrow(Clone)")
-                {
-                    //other.GetComponent<EnemyBehavior>().agentspeed = other.GetComponent<EnemyBehavior>().agentspeed * 0.8f;
-                    other.GetComponent<EnemyBehavior>().slowtimer = slowTime;
+                    if (this.gameObject.name == "Ice_Arrow(Clone)")
+                    {
+                        //other.GetComponent<EnemyBehavior>().agentspeed = other.GetComponent<EnemyBehavior>().agentspeed * 0.8f;
+                        other.GetComponent<EnemyBehavior>().slowtimer = slowTime;
+                    }
+                    if (this.gameObject.name == "Fire_Arrow(Clone)")
+                    {
+                        other.GetComponent<EnemyBehavior>().burntimer = burnTime;
+                        other.GetComponent<EnemyBehavior>().burndamage = bullet_damage * 0.5f * 0.25f;
+                    }
+                    if (this.gameObject.name == "Wind_Arrow(Clone)")
+                    {
+                        target = GameObject.Find("Ashe");
+                        target.GetComponent<Playermove>().speeduptimer += 2.0f;
+                    }
+                    if (this.gameObject.name == "Earth_Arrow(Clone)")
+                    {
+                        target = GameObject.Find("Ashe");
+                        //target.GetComponent<PlayerStats>().currentSheild += 7.5f;
+                        PlayerIni.currentSheild+= 10f;
+                    }
+                    if (this.gameObject.name == "Stun_Arrow(Clone)")
+                    {
+                        other.GetComponent<EnemyBehavior>().stuntimer = stunTime;
+                    }
+                    if (this.gameObject.name == "Explosion_Arrow(Clone)")
+                    {
+                        Instantiate(Explosion,this.transform.position, transform.rotation);
+                        Destroy(gameObject);
+                    }
+                    if (this.gameObject.name == "FireWind_Arrow(Clone)")
+                    {
+                    
+                            Instantiate(BurnGround, transform.position + new Vector3(0, -0.0f, 0), transform.rotation);
+                       
+                    }
+                    if (this.gameObject.name == "IceWind_Arrow(Clone)")
+                    {
+                   
+                            Instantiate(IceGround, transform.position + new Vector3(0, -0.0f, 0), transform.rotation);
+                       
+                    }
                 }
-                if (this.gameObject.name == "Fire_Arrow(Clone)")
-                {
-                    other.GetComponent<EnemyBehavior>().burntimer = burnTime;
-                    other.GetComponent<EnemyBehavior>().burndamage = bullet_damage * 0.5f * 0.25f;
-                }
-                if (this.gameObject.name == "Wind_Arrow(Clone)")
-                {
-                    target = GameObject.Find("Ashe");
-                    target.GetComponent<Playermove>().speeduptimer += 2.0f;
-                }
-                if (this.gameObject.name == "Earth_Arrow(Clone)")
-                {
-                    target = GameObject.Find("Ashe");
-                    //target.GetComponent<PlayerStats>().currentSheild += 7.5f;
-                    PlayerIni.currentSheild+= 10f;
-                }
-                if (this.gameObject.name == "Stun_Arrow(Clone)")
-                {
-                    other.GetComponent<EnemyBehavior>().stuntimer = stunTime;
-                }
-                if (this.gameObject.name == "Explosion_Arrow(Clone)")
-                {
-                    Instantiate(Explosion,this.transform.position, transform.rotation);
-                    Destroy(gameObject);
-                }
+                
             }
 
         }

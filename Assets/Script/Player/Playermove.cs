@@ -59,12 +59,13 @@ public class Playermove : MonoBehaviour {
                 if (touch.phase == TouchPhase.Began)
                 {
                     FirstTouch = touch.position;
-                    Characterismoving = true;
+                    
                     _animator.SetBool("Characterismoving", true);
                 }
                 if ((touch.phase == TouchPhase.Moved) || (touch.phase == TouchPhase.Stationary))
                 //if (touch.phase == TouchPhase.Stationary)
                 {
+                    Characterismoving = true;
                     direction = touch.position - FirstTouch;
                     Vector3 dir = new Vector3(direction.x / Mathf.Sqrt(Mathf.Pow(direction.x, 2) + Mathf.Pow(direction.y, 2)), 0f, direction.y / Mathf.Sqrt(Mathf.Pow(direction.x, 2) + Mathf.Pow(direction.y, 2)));
                     
@@ -98,7 +99,7 @@ public class Playermove : MonoBehaviour {
 
         //移動
 
-#if UNITY_EDITOR || UNITY_STANDALONE_WIN
+#if UNITY_EDITOR || UNITY_STANDALONE_WIN    
         if ((Input.GetKey(KeyCode.A) && Input.GetKey(KeyCode.W))||( Input.GetKey(KeyCode.A) && Input.GetKey(KeyCode.S))|| (Input.GetKey(KeyCode.D) && Input.GetKey(KeyCode.S))||(Input.GetKey(KeyCode.D) && Input.GetKey(KeyCode.W)))
         {
             Characterismoving = true;

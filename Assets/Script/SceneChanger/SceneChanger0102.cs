@@ -57,5 +57,10 @@ public class SceneChanger0102 : MonoBehaviour {
             if (p_transform.position.z > 13)
                 SceneManager.LoadScene("Stage0107");
         }
+        else if (SceneManager.GetActiveScene().name == "Stage0107")
+        {
+            if (p_transform.position.z > 11)
+                SceneManager.LoadScene("MainScene");
+        }
     }
 }
